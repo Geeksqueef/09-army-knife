@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>2009Scape World Transportation Map</title>
+    <title>2009Scape Swiss Army Knife</title>
     <meta charset="utf-8"/>
 
 <!-- BEG overlay head -->
@@ -91,6 +91,47 @@ width: 157;
 height: 26px;
 }
 
+.navbar {
+  background-image: url(./dialog/2009-bg_footer.png);
+  background-color: #876a38;
+  background-position: center;
+  padding: 10px 0;
+  border-bottom: 2px solid #5c4a2a;
+}
+
+.navbar a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0 15px;
+  padding: 5px 10px;
+  border: 1px solid #5c4a2a;
+  background-color: #2a1a0a;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  background-color: #5c4a2a;
+  color: #ffffff;
+}
+
+.navbar-btn {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 5px 10px;
+  border: 1px solid #5c4a2a;
+  background-color: #2a1a0a;
+  display: inline-block;
+}
+
+.navbar-btn:hover {
+  background-color: #5c4a2a;
+  color: #ffffff;
+}
+
 msg { 
   background: green;
   border-radius: 10px;
@@ -150,9 +191,17 @@ function off() {
     <table width="1164">
    <tr>
       <td colspan="3">
+         <div class="navbar">
+            <center>
+               <a href="worldmap.html">Full Map</a>
+               <a href="shopsearch.html">Shop Viewer</a>
+               <a href="droptables/index.html">Droptables</a>
+               <a href="npc/index.html">NPC Viewer</a>
+            </center>
+         </div>
           <table width="1164">
               <td class="litd"></td>   
-              <td class="citd"><center><font color="yellow"><strong>2009Scape's World Transportation Map</strong></font></center></td>
+              <td class="citd"><center><font color="yellow"><strong>2009Scape Swiss Army Knife</strong></font></center></td>
               <td class="ritd"></td>
          </table>
       </td>
@@ -172,8 +221,8 @@ function off() {
     <tr>
       <td>
       <div class="bcontainer">
-            <center><i><strong>For full view click <a href="worldmap.html">here</a> Drop Tables click <a href="droptables/index.html">here</a></strong></i></center>
-         <br><center><i><strong>To search shop inventories in 2009Scape click <a href="shopsearch.html">here</a> NPC Viewer click <a href="npc/index.html">here</a> </strong></i></center>
+            <center><br>
+                <a href="worldmap.html" class="navbar-btn">Fullscreen Map</a>
       </div>
       </td>
    </tr>
