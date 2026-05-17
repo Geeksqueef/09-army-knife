@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/common.js"></script>
+    <title>Drop Table Tool - Search NPC/Monster</title>
+</head>
+<script src="./js/bynpc.js"></script>
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<div id="wrapper">
+    <center>
+        <a href="./"><img src="./img/logo.png"></a>
+        <h2>2009Scape Drop Table Tool</h2>
+        <center><p>To return to the main page click <a href="../index.html">here</a></p></center>
+    </center>
+    <input id="search" class="form-control input-lg" placeholder="Monster/NPC Name"></input>
+    <center>
+    <p>If you'd like to search by item name click <a href="byitem.html">here</a> Full item data and bonuses <a href="itemdata.html">here</a></p>
+    <p>Notes: RDT Slot = Rare Drop Table <a href="rdt.html">(link)</a>, Summoning Charms are rolled separately <input type="checkbox" id="debug-toggle" name="debug"><lable>Show ID's</lable></p>
+    </center>
+    <div class="loading" style="display: none;">
+        <div class="stage"><h1>Loading JSON</h1></div>
+        <div class="stage"><div class="dot-pulse"></div></div>
+    </div>
+    <div id="content"></div>
+    <script>
+        var timeoutId = 0;
+        $('#search').keydown(function () { 
+            console.log("Keydown")
+            console.log(($('#search').val()))
+            clearTimeout(timeoutId); // doesn't matter if it's 0
+            timeoutId = setTimeout(function() { 
+                search($('#search').val()) 
+            }, 500);
+        });
+    </script>
+</div>
+</html>
