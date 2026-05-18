@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        h1 {
+            color: #ffd700;
+            text-align: center;
+        }
+        .calculator-container {
+            background-color: #2a1a0a;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #5c4a2a;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        .input-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #5c4a2a;
+            border-radius: 6px;
+            border: 1px solid #876a38;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .input-group label {
+            margin-bottom: 5px;
+            color: #ffd700;
+            font-weight: bold;
+        }
+        .input-group input, .input-group select {
+            padding: 8px;
+            border: 1px solid #876a38;
+            border-radius: 4px;
+            background-color: #2a1a0a;
+            color: #ffffff;
+            font-size: 14px;
+        }
+        .input-group input:focus, .input-group select:focus {
+            outline: none;
+            border-color: #ffd700;
+        }
+        .info-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #2a1a0a;
+            border-radius: 6px;
+            border: 1px solid #5c4a2a;
+        }
+        .info-item {
+            text-align: center;
+        }
+        .info-label {
+            color: #ffd700;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .info-value {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 800px;
+        }
+        th, td {
+            border: 1px solid #876a38;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #876a38;
+            color: #ffd700;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #2a1a0a;
+        }
+        tr:hover {
+            background-color: #5c4a2a;
+        }
+        .skill-tabs {
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .skill-tab {
+            padding: 10px 20px;
+            background-color: #2a1a0a;
+            border: 1px solid #5c4a2a;
+            color: #ffd700;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s;
+            font-weight: bold;
+        }
+        .skill-tab:hover {
+            background-color: #5c4a2a;
+            color: #ffffff;
+        }
+        .skill-tab.active {
+            background-color: #876a38;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        #loading {
+            text-align: center;
+            padding: 40px;
+            font-size: 18px;
+            color: #ffd700;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        #prayer-section {
+            display: none;
+        }
+        #brawler-section {
+            display: none;
+        }
+        #penguin-points-section {
+            display: none;
+        }
+        .penguin-description {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        .calculate-btn {
+            padding: 12px 24px;
+            background-color: #876a38;
+            color: #ffd700;
+            border: 2px solid #ffd700;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .calculate-btn:hover {
+            background-color: #ffd700;
+            color: #2a1a0a;
+        }
+    </style>
+</head>
+<body>
+    <h1>2009Scape Skill Calculator</h1>
+    <center><p>To go back to the main page click <a href="index.html">here</a></p></center>
+    <div id="loading">Loading calculator...</div>
+    <div id="calculator" class="calculator-container" style="display: none;">
+        <div class="skill-tabs" id="skill-tabs"></div>
+        
+        <div id="penguin-points-section">
+            <h2 class="penguin-description">Calculate how many levels you will get with penguin points</h2>
+            
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="penguin-current-xp">Current XP</label>
+                    <input type="number" id="penguin-current-xp" value="0" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="penguin-current-level">Current Level (1-98)</label>
+                    <input type="number" id="penguin-current-level" value="1" min="1" max="98">
+                </div>
+                <div class="input-group">
+                    <label for="penguin-points">Number of Penguin Points (1-255)</label>
+                    <input type="number" id="penguin-points" value="1" min="1" max="255">
+                </div>
+            </div>
+
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="penguin-brawler">Brawler Gloves</label>
+                    <select id="penguin-brawler">
+                        <option value="none">None</option>
+                        <option value="non-wildy">Non-Wilderness (1.5x)</option>
+                        <option value="wildy">Wilderness (4x)</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="penguin-xp-rate">XP Rate</label>
+                    <select id="penguin-xp-rate">
+                        <option value="1">1x</option>
+                        <option value="2">2x</option>
+                        <option value="3">3x</option>
+                        <option value="4">4x</option>
+                        <option value="5" selected>5x</option>
+                        <option value="10">10x</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>&nbsp;</label>
+                    <button class="calculate-btn" onclick="calculatePenguinPoints()">Calculate</button>
+                </div>
+            </div>
+
+            <div class="info-section" id="penguin-results" style="display: none;">
+                <div class="info-item">
+                    <div class="info-label">Base XP</div>
+                    <div class="info-value" id="penguin-base-xp">0</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Actual XP</div>
+                    <div class="info-value" id="penguin-actual-xp">0</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">XP After Points</div>
+                    <div class="info-value" id="penguin-xp-after">0</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">New Level</div>
+                    <div class="info-value" id="penguin-new-level">1</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Levels Gained</div>
+                    <div class="info-value" id="penguin-levels-gained">0</div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="skill-calculator-section">
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="starting-xp">Starting XP</label>
+                    <input type="number" id="starting-xp" value="0" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="goal-level">Goal Level</label>
+                    <input type="number" id="goal-level" value="99" min="1" max="99">
+                </div>
+                <div class="input-group">
+                    <label for="xp-rate">XP Rate Multiplier</label>
+                    <input type="number" id="xp-rate" value="5" min="0.1" step="0.1">
+                </div>
+            </div>
+
+            <div class="input-section" id="prayer-section">
+                <div class="input-group">
+                    <label for="prayer-method">Prayer Method</label>
+                    <select id="prayer-method">
+                        <option value="none">None</option>
+                        <option value="altar">Altar</option>
+                        <option value="ectofunctus">Ectofunctus</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="burners">Burners (0-2)</label>
+                    <input type="number" id="burners" value="0" min="0" max="2">
+                </div>
+            </div>
+
+            <div class="input-section" id="brawler-section">
+                <div class="input-group">
+                    <label for="brawler-gloves">Brawler Gloves</label>
+                    <select id="brawler-gloves">
+                        <option value="none">None</option>
+                        <option value="wildy">Wilderness (4x)</option>
+                        <option value="non-wildy">Non-Wilderness (1.5x)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-item">
+                    <div class="info-label">Current Level</div>
+                    <div class="info-value" id="current-level">1</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Goal XP</div>
+                    <div class="info-value" id="goal-xp">13,034,431</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">XP Needed</div>
+                    <div class="info-value" id="xp-needed">13,034,431</div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table id="items-table">
+                    <thead>
+                        <tr>
+                            <th>Level</th>
+                            <th>Item</th>
+                            <th>Type</th>
+                            <th>Base XP</th>
+                            <th>Actual XP</th>
+                            <th>Actions Needed</th>
+                        </tr>
+                    </thead>
+                    <tbody id="items-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let skillData = null;
+        let currentSkill = 'Cooking';
+        let currentTab = 'skill'; // 'skill' or 'penguin'
+
+        const brawlerSkills = ['Agility', 'Prayer', 'Smithing', 'Mining', 'Fishing', 'Hunter', 'Thieving', 'Cooking'];
+
+        async function loadData() {
+            try {
+                const response = await fetch('skill_data.json');
+                skillData = await response.json();
+                
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('calculator').style.display = 'block';
+                
+                // Create skill tabs
+                const tabsContainer = document.getElementById('skill-tabs');
+                
+                // Add skill tabs
+                Object.keys(skillData.skills).forEach((skillName, index) => {
+                    const tab = document.createElement('button');
+                    tab.className = 'skill-tab' + (skillName === currentSkill && currentTab === 'skill' ? ' active' : '');
+                    tab.textContent = skillName;
+                    tab.onclick = () => selectSkill(skillName);
+                    tabsContainer.appendChild(tab);
+                });
+                
+                // Add penguin points tab
+                const penguinTab = document.createElement('button');
+                penguinTab.className = 'skill-tab' + (currentTab === 'penguin' ? ' active' : '');
+                penguinTab.textContent = 'Penguin Points';
+                penguinTab.onclick = () => selectPenguinPoints();
+                tabsContainer.appendChild(penguinTab);
+                
+                // event listeners for inputs
+                document.getElementById('starting-xp').addEventListener('input', updateCalculations);
+                document.getElementById('goal-level').addEventListener('input', updateCalculations);
+                document.getElementById('xp-rate').addEventListener('input', updateCalculations);
+                document.getElementById('prayer-method').addEventListener('input', updateCalculations);
+                document.getElementById('burners').addEventListener('input', updateCalculations);
+                document.getElementById('brawler-gloves').addEventListener('input', updateCalculations);
+                
+                // Penguin points event listeners
+                document.getElementById('penguin-current-xp').addEventListener('input', handlePenguinXpChange);
+                document.getElementById('penguin-current-level').addEventListener('input', handlePenguinLevelChange);
+                
+                //  calculation
+                updateCalculations();
+            } catch (error) {
+                document.getElementById('loading').textContent = 'Error loading calculator: ' + error.message;
+                console.error('Error loading calculator:', error);
+            }
+        }
+
+        function selectSkill(skillName) {
+            currentSkill = skillName;
+            currentTab = 'skill';
+            
+            document.querySelectorAll('.skill-tab').forEach(tab => {
+                tab.classList.toggle('active', tab.textContent === skillName);
+            });
+            
+            // Show/hide sections
+            document.getElementById('penguin-points-section').style.display = 'none';
+            document.getElementById('skill-calculator-section').style.display = 'block';
+            
+            // Show/hide prayer-specific section
+            const prayerSection = document.getElementById('prayer-section');
+            if (skillName === 'Prayer') {
+                prayerSection.style.display = 'grid';
+            } else {
+                prayerSection.style.display = 'none';
+            }
+            
+            // Show/hide brawler section
+            const brawlerSection = document.getElementById('brawler-section');
+            if (brawlerSkills.includes(skillName)) {
+                brawlerSection.style.display = 'grid';
+            } else {
+                brawlerSection.style.display = 'none';
+            }
+            
+            updateCalculations();
+        }
+
+        function selectPenguinPoints() {
+            currentTab = 'penguin';
+            
+            document.querySelectorAll('.skill-tab').forEach(tab => {
+                tab.classList.toggle('active', tab.textContent === 'Penguin Points');
+            });
+            
+            // Show penguin points section
+            document.getElementById('penguin-points-section').style.display = 'block';
+            document.getElementById('skill-calculator-section').style.display = 'none';
+        }
+
+        function handlePenguinXpChange() {
+            const xp = parseInt(document.getElementById('penguin-current-xp').value) || 0;
+            const level = getLevelFromXp(xp);
+            document.getElementById('penguin-current-level').value = level;
+        }
+
+        function handlePenguinLevelChange() {
+            const level = parseInt(document.getElementById('penguin-current-level').value) || 1;
+            const xp = getXpForLevel(level);
+            document.getElementById('penguin-current-xp').value = xp;
+        }
+
+        function calculatePenguinPoints() {
+            const currentXp = parseInt(document.getElementById('penguin-current-xp').value) || 0;
+            const currentLevel = parseInt(document.getElementById('penguin-current-level').value) || 1;
+            const points = parseInt(document.getElementById('penguin-points').value) || 1;
+            const brawler = document.getElementById('penguin-brawler').value;
+            const xpRate = parseFloat(document.getElementById('penguin-xp-rate').value) || 5;
+
+            // Base calculation: points * (current level * 25)
+            const baseXp = points * (currentLevel * 25);
+            
+            // Apply multipliers
+            let multiplier = xpRate;
+            
+            if (brawler === 'wildy') {
+                multiplier *= 4;
+            } else if (brawler === 'non-wildy') {
+                multiplier *= 1.5;
+            }
+            
+            const actualXp = baseXp * multiplier;
+            const xpAfter = currentXp + actualXp;
+            const newLevel = getLevelFromXp(xpAfter);
+            const levelsGained = newLevel - currentLevel;
+
+            // Display results
+            document.getElementById('penguin-results').style.display = 'grid';
+            document.getElementById('penguin-base-xp').textContent = baseXp.toLocaleString();
+            document.getElementById('penguin-actual-xp').textContent = actualXp.toLocaleString();
+            document.getElementById('penguin-xp-after').textContent = xpAfter.toLocaleString();
+            document.getElementById('penguin-new-level').textContent = newLevel;
+            document.getElementById('penguin-levels-gained').textContent = levelsGained;
+        }
+
+        function getLevelFromXp(xp) {
+            const xpTable = skillData.xp_table;
+            for (let i = xpTable.length - 1; i >= 0; i--) {
+                if (xp >= xpTable[i].total_xp) {
+                    return xpTable[i].level;
+                }
+            }
+            return 1;
+        }
+
+        function getXpForLevel(level) {
+            const xpTable = skillData.xp_table;
+            const entry = xpTable.find(e => e.level === level);
+            return entry ? entry.total_xp : 0;
+        }
+
+        function getPrayerMultiplier() {
+            if (currentSkill !== 'Prayer') return 1;
+            
+            const method = document.getElementById('prayer-method').value;
+            const burners = parseInt(document.getElementById('burners').value) || 0;
+            
+            let multiplier = 1;
+            
+            if (method === 'altar') {
+                multiplier = 3; // 3x for altar
+            } else if (method === 'ectofunctus') {
+                multiplier = 4; // 4x for ectofunctus
+            }
+            
+            // Add burner bonus (50% per burner)
+            multiplier += (burners * 0.5);
+            
+            return multiplier;
+        }
+
+        function getBrawlerMultiplier() {
+            if (!brawlerSkills.includes(currentSkill)) return 1;
+            
+            const brawler = document.getElementById('brawler-gloves').value;
+            
+            if (brawler === 'wildy') {
+                return 4;
+            } else if (brawler === 'non-wildy') {
+                return 1.5;
+            }
+            
+            return 1;
+        }
+
+        function updateCalculations() {
+            const startingXp = parseInt(document.getElementById('starting-xp').value) || 0;
+            const goalLevel = parseInt(document.getElementById('goal-level').value) || 99;
+            const xpRate = parseFloat(document.getElementById('xp-rate').value) || 5;
+
+            // Calc current level
+            const currentLevel = getLevelFromXp(startingXp);
+            document.getElementById('current-level').textContent = currentLevel;
+
+            // Calc goal XP and XP needed
+            const goalXp = getXpForLevel(goalLevel);
+            const xpNeeded = Math.max(0, goalXp - startingXp);
+            
+            document.getElementById('goal-xp').textContent = goalXp.toLocaleString();
+            document.getElementById('xp-needed').textContent = xpNeeded.toLocaleString();
+
+            // Get multipliers
+            const prayerMultiplier = getPrayerMultiplier();
+            const brawlerMultiplier = getBrawlerMultiplier();
+
+            // Update items table
+            const itemsBody = document.getElementById('items-body');
+            itemsBody.innerHTML = '';
+            
+            const skillItems = skillData.skills[currentSkill] || [];
+            
+            skillItems.forEach(item => {
+                const actualXp = item.base_xp * xpRate * prayerMultiplier * brawlerMultiplier;
+                const actionsNeeded = actualXp > 0 ? Math.ceil(xpNeeded / actualXp) : 0;
+                
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${item.level}</td>
+                    <td>${item.item}</td>
+                    <td>${item.type || '-'}</td>
+                    <td>${item.base_xp.toFixed(2)}</td>
+                    <td>${actualXp.toFixed(2)}</td>
+                    <td>${actionsNeeded.toLocaleString()}</td>
+                `;
+                itemsBody.appendChild(row);
+            });
+        }
+
+        // Load the calculator when page loads
+        loadData();
+    </script>
+</body>
+</html>

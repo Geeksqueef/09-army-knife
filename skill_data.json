@@ -1,0 +1,7709 @@
+{
+  "xp_table": [
+    {
+      "level": 1,
+      "total_xp": 0
+    },
+    {
+      "level": 2,
+      "total_xp": 83
+    },
+    {
+      "level": 3,
+      "total_xp": 174
+    },
+    {
+      "level": 4,
+      "total_xp": 276
+    },
+    {
+      "level": 5,
+      "total_xp": 388
+    },
+    {
+      "level": 6,
+      "total_xp": 512
+    },
+    {
+      "level": 7,
+      "total_xp": 650
+    },
+    {
+      "level": 8,
+      "total_xp": 801
+    },
+    {
+      "level": 9,
+      "total_xp": 969
+    },
+    {
+      "level": 10,
+      "total_xp": 1154
+    },
+    {
+      "level": 11,
+      "total_xp": 1358
+    },
+    {
+      "level": 12,
+      "total_xp": 1584
+    },
+    {
+      "level": 13,
+      "total_xp": 1833
+    },
+    {
+      "level": 14,
+      "total_xp": 2107
+    },
+    {
+      "level": 15,
+      "total_xp": 2411
+    },
+    {
+      "level": 16,
+      "total_xp": 2746
+    },
+    {
+      "level": 17,
+      "total_xp": 3115
+    },
+    {
+      "level": 18,
+      "total_xp": 3523
+    },
+    {
+      "level": 19,
+      "total_xp": 3973
+    },
+    {
+      "level": 20,
+      "total_xp": 4470
+    },
+    {
+      "level": 21,
+      "total_xp": 5018
+    },
+    {
+      "level": 22,
+      "total_xp": 5624
+    },
+    {
+      "level": 23,
+      "total_xp": 6291
+    },
+    {
+      "level": 24,
+      "total_xp": 7028
+    },
+    {
+      "level": 25,
+      "total_xp": 7842
+    },
+    {
+      "level": 26,
+      "total_xp": 8740
+    },
+    {
+      "level": 27,
+      "total_xp": 9730
+    },
+    {
+      "level": 28,
+      "total_xp": 10824
+    },
+    {
+      "level": 29,
+      "total_xp": 12031
+    },
+    {
+      "level": 30,
+      "total_xp": 13363
+    },
+    {
+      "level": 31,
+      "total_xp": 14833
+    },
+    {
+      "level": 32,
+      "total_xp": 16456
+    },
+    {
+      "level": 33,
+      "total_xp": 18247
+    },
+    {
+      "level": 34,
+      "total_xp": 20224
+    },
+    {
+      "level": 35,
+      "total_xp": 22406
+    },
+    {
+      "level": 36,
+      "total_xp": 24815
+    },
+    {
+      "level": 37,
+      "total_xp": 27473
+    },
+    {
+      "level": 38,
+      "total_xp": 30408
+    },
+    {
+      "level": 39,
+      "total_xp": 33648
+    },
+    {
+      "level": 40,
+      "total_xp": 37224
+    },
+    {
+      "level": 41,
+      "total_xp": 41171
+    },
+    {
+      "level": 42,
+      "total_xp": 45529
+    },
+    {
+      "level": 43,
+      "total_xp": 50339
+    },
+    {
+      "level": 44,
+      "total_xp": 55649
+    },
+    {
+      "level": 45,
+      "total_xp": 61512
+    },
+    {
+      "level": 46,
+      "total_xp": 67983
+    },
+    {
+      "level": 47,
+      "total_xp": 75127
+    },
+    {
+      "level": 48,
+      "total_xp": 83014
+    },
+    {
+      "level": 49,
+      "total_xp": 91721
+    },
+    {
+      "level": 50,
+      "total_xp": 101333
+    },
+    {
+      "level": 51,
+      "total_xp": 111945
+    },
+    {
+      "level": 52,
+      "total_xp": 123660
+    },
+    {
+      "level": 53,
+      "total_xp": 136594
+    },
+    {
+      "level": 54,
+      "total_xp": 150872
+    },
+    {
+      "level": 55,
+      "total_xp": 166636
+    },
+    {
+      "level": 56,
+      "total_xp": 184040
+    },
+    {
+      "level": 57,
+      "total_xp": 203254
+    },
+    {
+      "level": 58,
+      "total_xp": 224466
+    },
+    {
+      "level": 59,
+      "total_xp": 247886
+    },
+    {
+      "level": 60,
+      "total_xp": 273742
+    },
+    {
+      "level": 61,
+      "total_xp": 302288
+    },
+    {
+      "level": 62,
+      "total_xp": 333804
+    },
+    {
+      "level": 63,
+      "total_xp": 368599
+    },
+    {
+      "level": 64,
+      "total_xp": 407015
+    },
+    {
+      "level": 65,
+      "total_xp": 449428
+    },
+    {
+      "level": 66,
+      "total_xp": 496254
+    },
+    {
+      "level": 67,
+      "total_xp": 547953
+    },
+    {
+      "level": 68,
+      "total_xp": 605032
+    },
+    {
+      "level": 69,
+      "total_xp": 668051
+    },
+    {
+      "level": 70,
+      "total_xp": 737627
+    },
+    {
+      "level": 71,
+      "total_xp": 814445
+    },
+    {
+      "level": 72,
+      "total_xp": 899257
+    },
+    {
+      "level": 73,
+      "total_xp": 992895
+    },
+    {
+      "level": 74,
+      "total_xp": 1096278
+    },
+    {
+      "level": 75,
+      "total_xp": 1210421
+    },
+    {
+      "level": 76,
+      "total_xp": 1336443
+    },
+    {
+      "level": 77,
+      "total_xp": 1475581
+    },
+    {
+      "level": 78,
+      "total_xp": 1629200
+    },
+    {
+      "level": 79,
+      "total_xp": 1798808
+    },
+    {
+      "level": 80,
+      "total_xp": 1986068
+    },
+    {
+      "level": 81,
+      "total_xp": 2192818
+    },
+    {
+      "level": 82,
+      "total_xp": 2421087
+    },
+    {
+      "level": 83,
+      "total_xp": 2673114
+    },
+    {
+      "level": 84,
+      "total_xp": 2951373
+    },
+    {
+      "level": 85,
+      "total_xp": 3258594
+    },
+    {
+      "level": 86,
+      "total_xp": 3597792
+    },
+    {
+      "level": 87,
+      "total_xp": 3972294
+    },
+    {
+      "level": 88,
+      "total_xp": 4385776
+    },
+    {
+      "level": 89,
+      "total_xp": 4842295
+    },
+    {
+      "level": 90,
+      "total_xp": 5346332
+    },
+    {
+      "level": 91,
+      "total_xp": 5902831
+    },
+    {
+      "level": 92,
+      "total_xp": 6517253
+    },
+    {
+      "level": 93,
+      "total_xp": 7195629
+    },
+    {
+      "level": 94,
+      "total_xp": 7944614
+    },
+    {
+      "level": 95,
+      "total_xp": 8771558
+    },
+    {
+      "level": 96,
+      "total_xp": 9684577
+    },
+    {
+      "level": 97,
+      "total_xp": 10692629
+    },
+    {
+      "level": 98,
+      "total_xp": 11805606
+    },
+    {
+      "level": 99,
+      "total_xp": 13034431
+    }
+  ],
+  "skills": {
+    "Magic": [
+      {
+        "level": 1,
+        "item": "Wind Strike",
+        "base_xp": 5.5,
+        "type": "Damge"
+      },
+      {
+        "level": 3,
+        "item": "Confuse",
+        "base_xp": 13.0,
+        "type": "Effect"
+      },
+      {
+        "level": 4,
+        "item": "Opal Bolt",
+        "base_xp": 9.0,
+        "type": "Bolt Enchant"
+      },
+      {
+        "level": 5,
+        "item": "Water Strike",
+        "base_xp": 7.5,
+        "type": "Damge"
+      },
+      {
+        "level": 7,
+        "item": "Sapphire Enchant",
+        "base_xp": 17.5,
+        "type": "Enchant"
+      },
+      {
+        "level": 7,
+        "item": "Sapphire Bolt",
+        "base_xp": 17.5,
+        "type": "Bolt Enchant"
+      },
+      {
+        "level": 9,
+        "item": "Earth Strike",
+        "base_xp": 9.5,
+        "type": "Damge"
+      },
+      {
+        "level": 11,
+        "item": "Weaken",
+        "base_xp": 20.5,
+        "type": "Effect"
+      },
+      {
+        "level": 13,
+        "item": "Fire Strike",
+        "base_xp": 11.5,
+        "type": "Damge"
+      },
+      {
+        "level": 14,
+        "item": "Jade Bolt",
+        "base_xp": 19.0,
+        "type": "Bolt Enchant"
+      },
+      {
+        "level": 15,
+        "item": "Bones to Bananas",
+        "base_xp": 25.0,
+        "type": "Misc"
+      },
+      {
+        "level": 17,
+        "item": "Wind Bolt",
+        "base_xp": 13.5,
+        "type": "Damge"
+      },
+      {
+        "level": 19,
+        "item": "Curse",
+        "base_xp": 29.0,
+        "type": "Effect"
+      },
+      {
+        "level": 20,
+        "item": "Bind",
+        "base_xp": 30.0,
+        "type": "Effect"
+      },
+      {
+        "level": 21,
+        "item": "Low Alchemy",
+        "base_xp": 31.0,
+        "type": "Misc"
+      },
+      {
+        "level": 23,
+        "item": "Water Bolt",
+        "base_xp": 16.5,
+        "type": "Damge"
+      },
+      {
+        "level": 24,
+        "item": "Pearl Bolt",
+        "base_xp": 29.0,
+        "type": "Bolt Enchant"
+      },
+      {
+        "level": 25,
+        "item": "Varrcock Teleport",
+        "base_xp": 35.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 27,
+        "item": "Emerald Enchant",
+        "base_xp": 37.0,
+        "type": "Enchant"
+      },
+      {
+        "level": 27,
+        "item": "Emerald Bolt",
+        "base_xp": 37.0,
+        "type": "Bolt Enchant"
+      },
+      {
+        "level": 29,
+        "item": "Red Topaz Bolt",
+        "base_xp": 33.0,
+        "type": "Bolt Enchant"
+      },
+      {
+        "level": 29,
+        "item": "Earth Bolt",
+        "base_xp": 19.5,
+        "type": "Damge"
+      },
+      {
+        "level": 31,
+        "item": "Lumbridge Teleport",
+        "base_xp": 41.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 33,
+        "item": "Telekinetic Grab",
+        "base_xp": 43.0,
+        "type": "Misc"
+      },
+      {
+        "level": 35,
+        "item": "Fire Bolt",
+        "base_xp": 21.5,
+        "type": "Damge"
+      },
+      {
+        "level": 37,
+        "item": "Falador Teleport",
+        "base_xp": 47.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 39,
+        "item": "Crumble Undead",
+        "base_xp": 24.5,
+        "type": "Damge"
+      },
+      {
+        "level": 40,
+        "item": "House Teleport",
+        "base_xp": 30.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 41,
+        "item": "Wind Blast",
+        "base_xp": 25.5,
+        "type": "Damge"
+      },
+      {
+        "level": 43,
+        "item": "Superheat Item",
+        "base_xp": 53.0,
+        "type": "Misc"
+      },
+      {
+        "level": 45,
+        "item": "Camelot Teleport",
+        "base_xp": 55.5,
+        "type": "Teleport"
+      },
+      {
+        "level": 47,
+        "item": "Water Blast",
+        "base_xp": 28.5,
+        "type": "Damge"
+      },
+      {
+        "level": 49,
+        "item": "Ruby Enchant",
+        "base_xp": 59.0,
+        "type": "Enchant"
+      },
+      {
+        "level": 49,
+        "item": "Ruby Bolt",
+        "base_xp": 59.0,
+        "type": "Bolt Enchant"
+      },
+      {
+        "level": 50,
+        "item": "Ibans Blast",
+        "base_xp": 30.0,
+        "type": "Damge"
+      },
+      {
+        "level": 50,
+        "item": "Magic Dart",
+        "base_xp": 30.0,
+        "type": "Damge"
+      },
+      {
+        "level": 50,
+        "item": "Snare",
+        "base_xp": 60.0,
+        "type": "Effect"
+      },
+      {
+        "level": 50,
+        "item": "Smoke Rush",
+        "base_xp": 30.0,
+        "type": "Damge"
+      },
+      {
+        "level": 51,
+        "item": "Ardougne Teleport",
+        "base_xp": 61.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 52,
+        "item": "Shadow Rush",
+        "base_xp": 31.0,
+        "type": "Damge"
+      },
+      {
+        "level": 53,
+        "item": "Earth Blast",
+        "base_xp": 31.5,
+        "type": "Damge"
+      },
+      {
+        "level": 54,
+        "item": "Paddewwa Teleport",
+        "base_xp": 64.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 55,
+        "item": "High Alchemy",
+        "base_xp": 65.0,
+        "type": "Misc"
+      },
+      {
+        "level": 56,
+        "item": "Charge Water Orb",
+        "base_xp": 56.0,
+        "type": "Misc"
+      },
+      {
+        "level": 56,
+        "item": "Blood Rush",
+        "base_xp": 33.0,
+        "type": "Damge"
+      },
+      {
+        "level": 57,
+        "item": "Diamond Enchant",
+        "base_xp": 67.0,
+        "type": "Enchant"
+      },
+      {
+        "level": 57,
+        "item": "Diamond Bolt",
+        "base_xp": 67.0,
+        "type": "Bolt Enchant"
+      },
+      {
+        "level": 58,
+        "item": "Watchtower Teleport",
+        "base_xp": 68.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 58,
+        "item": "Ice Rush",
+        "base_xp": 34.0,
+        "type": "Damge"
+      },
+      {
+        "level": 59,
+        "item": "Fire Blast",
+        "base_xp": 34.5,
+        "type": "Damge"
+      },
+      {
+        "level": 60,
+        "item": "Bones to Peaches",
+        "base_xp": 35.5,
+        "type": "Misc"
+      },
+      {
+        "level": 60,
+        "item": "Charge Earth Orb",
+        "base_xp": 70.0,
+        "type": "Misc"
+      },
+      {
+        "level": 60,
+        "item": "Senntisten Teleport",
+        "base_xp": 70.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 60,
+        "item": "God Spell",
+        "base_xp": 61.0,
+        "type": "Damge"
+      },
+      {
+        "level": 61,
+        "item": "Trollheim Teleport",
+        "base_xp": 68.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 61,
+        "item": "Miasmic Rush",
+        "base_xp": 36.0,
+        "type": "Damge"
+      },
+      {
+        "level": 62,
+        "item": "Wind Wave",
+        "base_xp": 36.0,
+        "type": "Damge"
+      },
+      {
+        "level": 62,
+        "item": "Smoke Burst",
+        "base_xp": 36.0,
+        "type": "Damge"
+      },
+      {
+        "level": 63,
+        "item": "Charge Fire Orb",
+        "base_xp": 73.0,
+        "type": "Misc"
+      },
+      {
+        "level": 64,
+        "item": "Ape Atoll Teleport",
+        "base_xp": 74.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 64,
+        "item": "Shadow Burst",
+        "base_xp": 37.0,
+        "type": "Damge"
+      },
+      {
+        "level": 64,
+        "item": "Ice Barrage",
+        "base_xp": 52.0,
+        "type": "Damge"
+      },
+      {
+        "level": 65,
+        "item": "Bake Pie",
+        "base_xp": 60.0,
+        "type": "Skill"
+      },
+      {
+        "level": 65,
+        "item": "Water Wave",
+        "base_xp": 37.5,
+        "type": "Damge"
+      },
+      {
+        "level": 66,
+        "item": "Charge Air Orb",
+        "base_xp": 76.0,
+        "type": "Misc"
+      },
+      {
+        "level": 66,
+        "item": "Cure Plant",
+        "base_xp": 60.0,
+        "type": "Skill"
+      },
+      {
+        "level": 66,
+        "item": "Kharyrll Teleport",
+        "base_xp": 76.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 66,
+        "item": "Vulnerability",
+        "base_xp": 76.0,
+        "type": "Effect"
+      },
+      {
+        "level": 66,
+        "item": "Monster Examine",
+        "base_xp": 61.0,
+        "type": "Misc"
+      },
+      {
+        "level": 67,
+        "item": "NPC Contact",
+        "base_xp": 63.0,
+        "type": "Skill"
+      },
+      {
+        "level": 68,
+        "item": "Dragonstone Enchant",
+        "base_xp": 78.0,
+        "type": "Enchant"
+      },
+      {
+        "level": 68,
+        "item": "Dragonstone Bolt",
+        "base_xp": 78.0,
+        "type": "Bolt Enchant"
+      },
+      {
+        "level": 68,
+        "item": "Humidify",
+        "base_xp": 65.0,
+        "type": "Skill"
+      },
+      {
+        "level": 68,
+        "item": "Cure Other",
+        "base_xp": 65.0,
+        "type": "Effect"
+      },
+      {
+        "level": 68,
+        "item": "Blood Burst",
+        "base_xp": 39.0,
+        "type": "Damge"
+      },
+      {
+        "level": 69,
+        "item": "Moonclan Teleport",
+        "base_xp": 66.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 70,
+        "item": "Tele-Group Moonclan",
+        "base_xp": 67.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 70,
+        "item": "Earth Wave",
+        "base_xp": 40.0,
+        "type": "Damge"
+      },
+      {
+        "level": 70,
+        "item": "Ice Burst",
+        "base_xp": 40.0,
+        "type": "Damge"
+      },
+      {
+        "level": 71,
+        "item": "Hunter Kit",
+        "base_xp": 70.0,
+        "type": "Skill"
+      },
+      {
+        "level": 71,
+        "item": "Ourania Teleport",
+        "base_xp": 69.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 71,
+        "item": "Cure Me",
+        "base_xp": 69.0,
+        "type": "Effect"
+      },
+      {
+        "level": 72,
+        "item": "Waterbirth Teleport",
+        "base_xp": 71.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 72,
+        "item": "Lassar Teleport",
+        "base_xp": 82.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 73,
+        "item": "Tele-group Waterbirth",
+        "base_xp": 72.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 73,
+        "item": "Enfeeble",
+        "base_xp": 83.0,
+        "type": "Effect"
+      },
+      {
+        "level": 73,
+        "item": "Miasmic Burst",
+        "base_xp": 42.0,
+        "type": "Damge"
+      },
+      {
+        "level": 74,
+        "item": "Tele-Other Lumbridge",
+        "base_xp": 84.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 74,
+        "item": "Cure Group",
+        "base_xp": 74.0,
+        "type": "Effect"
+      },
+      {
+        "level": 74,
+        "item": "Smoke Blitz",
+        "base_xp": 42.0,
+        "type": "Damge"
+      },
+      {
+        "level": 75,
+        "item": "Barbarian Teleport",
+        "base_xp": 76.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 75,
+        "item": "Fire Wave",
+        "base_xp": 42.5,
+        "type": "Damge"
+      },
+      {
+        "level": 75,
+        "item": "Stat Spy",
+        "base_xp": 76.0,
+        "type": "Misc"
+      },
+      {
+        "level": 76,
+        "item": "Tele-group Barbarian",
+        "base_xp": 77.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 76,
+        "item": "Shadow Blitz",
+        "base_xp": 43.0,
+        "type": "Damge"
+      },
+      {
+        "level": 77,
+        "item": "Superglass Make",
+        "base_xp": 78.0,
+        "type": "Skill"
+      },
+      {
+        "level": 78,
+        "item": "Khazard Teleport",
+        "base_xp": 80.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 78,
+        "item": "Dareeyak Teleport",
+        "base_xp": 88.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 79,
+        "item": "Tele-group Khazard",
+        "base_xp": 81.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 79,
+        "item": "Entangle",
+        "base_xp": 89.0,
+        "type": "Effect"
+      },
+      {
+        "level": 80,
+        "item": "String Jewellery",
+        "base_xp": 87.0,
+        "type": "Skill"
+      },
+      {
+        "level": 80,
+        "item": "Stagger",
+        "base_xp": 90.0,
+        "type": "Effect"
+      },
+      {
+        "level": 80,
+        "item": "Blood Blitz",
+        "base_xp": 45.0,
+        "type": "Damge"
+      },
+      {
+        "level": 81,
+        "item": "Stat Restore Share",
+        "base_xp": 84.0,
+        "type": "Effect"
+      },
+      {
+        "level": 82,
+        "item": "Tele-Other Falador",
+        "base_xp": 92.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 82,
+        "item": "Magic Imbue",
+        "base_xp": 86.0,
+        "type": "Skill"
+      },
+      {
+        "level": 82,
+        "item": "Ice Blitz",
+        "base_xp": 46.0,
+        "type": "Damge"
+      },
+      {
+        "level": 83,
+        "item": "Fertile Soil",
+        "base_xp": 87.0,
+        "type": "Skill"
+      },
+      {
+        "level": 84,
+        "item": "Carralanger Teleport",
+        "base_xp": 94.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 84,
+        "item": "Boost Potion Share",
+        "base_xp": 88.0,
+        "type": "Effect"
+      },
+      {
+        "level": 85,
+        "item": "Tele-block",
+        "base_xp": 80.0,
+        "type": "Misc"
+      },
+      {
+        "level": 85,
+        "item": "Fishing Guild Teleport",
+        "base_xp": 89.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 85,
+        "item": "Miasmic Blitz",
+        "base_xp": 48.0,
+        "type": "Damge"
+      },
+      {
+        "level": 86,
+        "item": "Plank Make",
+        "base_xp": 90.0,
+        "type": "Skill"
+      },
+      {
+        "level": 86,
+        "item": "Tele-group Fishing Guild",
+        "base_xp": 90.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 86,
+        "item": "Smoke Barrage",
+        "base_xp": 48.0,
+        "type": "Damge"
+      },
+      {
+        "level": 87,
+        "item": "Onyx Enchant",
+        "base_xp": 87.0,
+        "type": "Enchant"
+      },
+      {
+        "level": 87,
+        "item": "Onyx Bolt",
+        "base_xp": 97.0,
+        "type": "Bolt Enchant"
+      },
+      {
+        "level": 87,
+        "item": "Catherby Teleport",
+        "base_xp": 92.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 88,
+        "item": "Tele-group Catherby",
+        "base_xp": 93.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 88,
+        "item": "Shadow Barrage",
+        "base_xp": 48.0,
+        "type": "Damge"
+      },
+      {
+        "level": 89,
+        "item": "Ice Plateau Teleport",
+        "base_xp": 96.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 90,
+        "item": "Tele-Other Camelot",
+        "base_xp": 90.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 90,
+        "item": "Tele-group Ice Plateau",
+        "base_xp": 99.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 90,
+        "item": "Abbakarl Telport",
+        "base_xp": 100.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 92,
+        "item": "Heal Other",
+        "base_xp": 101.0,
+        "type": "Effect"
+      },
+      {
+        "level": 92,
+        "item": "Blood Barrage",
+        "base_xp": 51.0,
+        "type": "Damge"
+      },
+      {
+        "level": 93,
+        "item": "Vengeance Other",
+        "base_xp": 108.0,
+        "type": "Effect"
+      },
+      {
+        "level": 94,
+        "item": "Vengeance",
+        "base_xp": 112.0,
+        "type": "Effect"
+      },
+      {
+        "level": 95,
+        "item": "Heal Group",
+        "base_xp": 124.0,
+        "type": "Effect"
+      },
+      {
+        "level": 96,
+        "item": "SpellBook Swap",
+        "base_xp": 130.0,
+        "type": "Skill"
+      },
+      {
+        "level": 96,
+        "item": "Ghorrock Teleport",
+        "base_xp": 106.0,
+        "type": "Teleport"
+      },
+      {
+        "level": 97,
+        "item": "Miasmic Barrage",
+        "base_xp": 54.0,
+        "type": "Damge"
+      }
+    ],
+    "Summoning": [
+      {
+        "level": 1,
+        "item": "Spirit Wolf",
+        "base_xp": 4.8,
+        "type": "Gold"
+      },
+      {
+        "level": 4,
+        "item": "Dreadfowl",
+        "base_xp": 9.3,
+        "type": "Gold"
+      },
+      {
+        "level": 10,
+        "item": "Spirit Spider",
+        "base_xp": 12.6,
+        "type": "Gold"
+      },
+      {
+        "level": 13,
+        "item": "Thorny Snail",
+        "base_xp": 12.6,
+        "type": "Gold"
+      },
+      {
+        "level": 16,
+        "item": "Granite Crab",
+        "base_xp": 21.6,
+        "type": "Gold"
+      },
+      {
+        "level": 17,
+        "item": "Spirit Mosquito",
+        "base_xp": 46.5,
+        "type": "Gold"
+      },
+      {
+        "level": 40,
+        "item": "Bull Ant",
+        "base_xp": 52.8,
+        "type": "Gold"
+      },
+      {
+        "level": 52,
+        "item": "Spirit Terrorbird",
+        "base_xp": 68.4,
+        "type": "Gold"
+      },
+      {
+        "level": 66,
+        "item": "Barker Toad",
+        "base_xp": 87.0,
+        "type": "Gold"
+      },
+      {
+        "level": 67,
+        "item": "War Tortoise",
+        "base_xp": 58.6,
+        "type": "Gold"
+      },
+      {
+        "level": 71,
+        "item": "Arctic Bear",
+        "base_xp": 93.2,
+        "type": "Gold"
+      },
+      {
+        "level": 18,
+        "item": "Desert Wyrm",
+        "base_xp": 31.2,
+        "type": "Green"
+      },
+      {
+        "level": 28,
+        "item": "Compost Mound",
+        "base_xp": 49.8,
+        "type": "Green"
+      },
+      {
+        "level": 33,
+        "item": "Beaver",
+        "base_xp": 57.6,
+        "type": "Green"
+      },
+      {
+        "level": 34,
+        "item": "Void Ravager",
+        "base_xp": 59.6,
+        "type": "Green"
+      },
+      {
+        "level": 41,
+        "item": "Macaw",
+        "base_xp": 72.4,
+        "type": "Green"
+      },
+      {
+        "level": 43,
+        "item": "Spirit Cockatrices",
+        "base_xp": 75.2,
+        "type": "Green"
+      },
+      {
+        "level": 47,
+        "item": "Magpie",
+        "base_xp": 83.2,
+        "type": "Green"
+      },
+      {
+        "level": 54,
+        "item": "Abyssal Parasite",
+        "base_xp": 94.8,
+        "type": "Green"
+      },
+      {
+        "level": 56,
+        "item": "Ibis",
+        "base_xp": 98.8,
+        "type": "Green"
+      },
+      {
+        "level": 62,
+        "item": "Abyssal Lurker",
+        "base_xp": 109.6,
+        "type": "Green"
+      },
+      {
+        "level": 68,
+        "item": "Bunyip",
+        "base_xp": 119.2,
+        "type": "Green"
+      },
+      {
+        "level": 69,
+        "item": "Fruit Bat",
+        "base_xp": 121.2,
+        "type": "Green"
+      },
+      {
+        "level": 76,
+        "item": "Forge Regent",
+        "base_xp": 134.0,
+        "type": "Green"
+      },
+      {
+        "level": 78,
+        "item": "Giant Ent",
+        "base_xp": 136.8,
+        "type": "Green"
+      },
+      {
+        "level": 80,
+        "item": "Hydra",
+        "base_xp": 140.8,
+        "type": "Green"
+      },
+      {
+        "level": 88,
+        "item": "Unicorn Stallion",
+        "base_xp": 154.4,
+        "type": "Green"
+      },
+      {
+        "level": 93,
+        "item": "Abyssal Titan",
+        "base_xp": 163.2,
+        "type": "Green"
+      },
+      {
+        "level": 19,
+        "item": "Spirit Scorpion",
+        "base_xp": 83.2,
+        "type": "Crimson"
+      },
+      {
+        "level": 22,
+        "item": "Spirit Tz-Kih",
+        "base_xp": 96.8,
+        "type": "Crimson"
+      },
+      {
+        "level": 31,
+        "item": "Vampire Bat",
+        "base_xp": 136.0,
+        "type": "Crimson"
+      },
+      {
+        "level": 32,
+        "item": "Honey Badge",
+        "base_xp": 140.8,
+        "type": "Crimson"
+      },
+      {
+        "level": 42,
+        "item": "Evil Turnip",
+        "base_xp": 184.8,
+        "type": "Crimson"
+      },
+      {
+        "level": 46,
+        "item": "Pyrelord",
+        "base_xp": 202.4,
+        "type": "Crimson"
+      },
+      {
+        "level": 49,
+        "item": "Bloated Leech",
+        "base_xp": 215.2,
+        "type": "Crimson"
+      },
+      {
+        "level": 61,
+        "item": "Smoke Devil",
+        "base_xp": 268.0,
+        "type": "Crimson"
+      },
+      {
+        "level": 63,
+        "item": "Spirit Cobra",
+        "base_xp": 276.8,
+        "type": "Crimson"
+      },
+      {
+        "level": 64,
+        "item": "Stranger Plant",
+        "base_xp": 281.6,
+        "type": "Crimson"
+      },
+      {
+        "level": 70,
+        "item": "Ravenous Locust",
+        "base_xp": 132.0,
+        "type": "Crimson"
+      },
+      {
+        "level": 72,
+        "item": "Phoenix",
+        "base_xp": 301.8,
+        "type": "Crimson"
+      },
+      {
+        "level": 74,
+        "item": "Granite Lobster",
+        "base_xp": 325.6,
+        "type": "Crimson"
+      },
+      {
+        "level": 75,
+        "item": "Praying Mantis",
+        "base_xp": 329.6,
+        "type": "Crimson"
+      },
+      {
+        "level": 77,
+        "item": "Talon Beast",
+        "base_xp": 1015.2,
+        "type": "Crimson"
+      },
+      {
+        "level": 83,
+        "item": "Spirit Dagannoth",
+        "base_xp": 364.8,
+        "type": "Crimson"
+      },
+      {
+        "level": 85,
+        "item": "Swamp Titan",
+        "base_xp": 373.6,
+        "type": "Crimson"
+      },
+      {
+        "level": 92,
+        "item": "Wolpertinger",
+        "base_xp": 404.8,
+        "type": "Crimson"
+      },
+      {
+        "level": 95,
+        "item": "Iron Titan",
+        "base_xp": 417.6,
+        "type": "Crimson"
+      },
+      {
+        "level": 96,
+        "item": "Pack Yak",
+        "base_xp": 422.4,
+        "type": "Crimson"
+      },
+      {
+        "level": 99,
+        "item": "Steel Titan",
+        "base_xp": 435.2,
+        "type": "Crimson"
+      },
+      {
+        "level": 23,
+        "item": "Albino Rat",
+        "base_xp": 202.4,
+        "type": "Blue"
+      },
+      {
+        "level": 25,
+        "item": "Spirit Kalphite",
+        "base_xp": 220.0,
+        "type": "Blue"
+      },
+      {
+        "level": 29,
+        "item": "Giant Chinchompa",
+        "base_xp": 255.2,
+        "type": "Blue"
+      },
+      {
+        "level": 34,
+        "item": "Void Shifter",
+        "base_xp": 59.6,
+        "type": "Blue"
+      },
+      {
+        "level": 34,
+        "item": "Void Spinner",
+        "base_xp": 59.6,
+        "type": "Blue"
+      },
+      {
+        "level": 34,
+        "item": "Void Torcher",
+        "base_xp": 59.6,
+        "type": "Blue"
+      },
+      {
+        "level": 36,
+        "item": "Bronze Minotaur",
+        "base_xp": 316.8,
+        "type": "Blue"
+      },
+      {
+        "level": 46,
+        "item": "Iron Minotaur",
+        "base_xp": 404.8,
+        "type": "Blue"
+      },
+      {
+        "level": 55,
+        "item": "Spirit Jelly",
+        "base_xp": 484.0,
+        "type": "Blue"
+      },
+      {
+        "level": 56,
+        "item": "Steel Minotaur",
+        "base_xp": 492.8,
+        "type": "Blue"
+      },
+      {
+        "level": 57,
+        "item": "Spirit Graahk",
+        "base_xp": 501.6,
+        "type": "Blue"
+      },
+      {
+        "level": 57,
+        "item": "Spirit Kyatt",
+        "base_xp": 501.6,
+        "type": "Blue"
+      },
+      {
+        "level": 57,
+        "item": "Spirit Larupia",
+        "base_xp": 501.6,
+        "type": "Blue"
+      },
+      {
+        "level": 58,
+        "item": "Karam Overlord",
+        "base_xp": 510.4,
+        "type": "Blue"
+      },
+      {
+        "level": 66,
+        "item": "Mithril Minotaur",
+        "base_xp": 580.8,
+        "type": "Blue"
+      },
+      {
+        "level": 73,
+        "item": "Obsidian Golem",
+        "base_xp": 642.4,
+        "type": "Blue"
+      },
+      {
+        "level": 76,
+        "item": "Adamant Minotaur",
+        "base_xp": 668.8,
+        "type": "Blue"
+      },
+      {
+        "level": 79,
+        "item": "Fire Titan",
+        "base_xp": 695.2,
+        "type": "Blue"
+      },
+      {
+        "level": 79,
+        "item": "Ice Titan",
+        "base_xp": 695.2,
+        "type": "Blue"
+      },
+      {
+        "level": 79,
+        "item": "Moss Titan",
+        "base_xp": 695.2,
+        "type": "Blue"
+      },
+      {
+        "level": 83,
+        "item": "Lava Titan",
+        "base_xp": 730.4,
+        "type": "Blue"
+      },
+      {
+        "level": 86,
+        "item": "Rune Minotaur",
+        "base_xp": 756.8,
+        "type": "Blue"
+      },
+      {
+        "level": 89,
+        "item": "Geyser Titan",
+        "base_xp": 783.2,
+        "type": "Blue"
+      }
+    ],
+    "Cooking": [
+      {
+        "level": 1,
+        "item": "Shrimp",
+        "base_xp": 150.0,
+        "type": "Fish"
+      },
+      {
+        "level": 1,
+        "item": "Anchovies",
+        "base_xp": 150.0,
+        "type": "Fish"
+      },
+      {
+        "level": 1,
+        "item": "Sardine",
+        "base_xp": 200.0,
+        "type": "Fish"
+      },
+      {
+        "level": 5,
+        "item": "Herring",
+        "base_xp": 250.0,
+        "type": "Fish"
+      },
+      {
+        "level": 10,
+        "item": "Mackerel",
+        "base_xp": 300.0,
+        "type": "Fish"
+      },
+      {
+        "level": 15,
+        "item": "Trout",
+        "base_xp": 350.0,
+        "type": "Fish"
+      },
+      {
+        "level": 18,
+        "item": "Cod",
+        "base_xp": 375.0,
+        "type": "Fish"
+      },
+      {
+        "level": 20,
+        "item": "Pike",
+        "base_xp": 400.0,
+        "type": "Fish"
+      },
+      {
+        "level": 25,
+        "item": "Salmon",
+        "base_xp": 450.0,
+        "type": "Fish"
+      },
+      {
+        "level": 28,
+        "item": "Slimey Eel",
+        "base_xp": 475.0,
+        "type": "Fish"
+      },
+      {
+        "level": 30,
+        "item": "Tuna",
+        "base_xp": 500.0,
+        "type": "Fish"
+      },
+      {
+        "level": 30,
+        "item": "Karambwan",
+        "base_xp": 950.0,
+        "type": "Fish"
+      },
+      {
+        "level": 35,
+        "item": "Rainbow",
+        "base_xp": 550.0,
+        "type": "Fish"
+      },
+      {
+        "level": 40,
+        "item": "Lobster",
+        "base_xp": 600.0,
+        "type": "Fish"
+      },
+      {
+        "level": 43,
+        "item": "Bass",
+        "base_xp": 650.0,
+        "type": "Fish"
+      },
+      {
+        "level": 45,
+        "item": "Swordfish",
+        "base_xp": 700.0,
+        "type": "Fish"
+      },
+      {
+        "level": 53,
+        "item": "Lava Eel",
+        "base_xp": 150.0,
+        "type": "Fish"
+      },
+      {
+        "level": 62,
+        "item": "Monkfish ",
+        "base_xp": 750.0,
+        "type": "Fish"
+      },
+      {
+        "level": 80,
+        "item": "Shark",
+        "base_xp": 1050.0,
+        "type": "Fish"
+      },
+      {
+        "level": 82,
+        "item": "Sea Turtle",
+        "base_xp": 1056.5,
+        "type": "Fish"
+      },
+      {
+        "level": 91,
+        "item": "Manta Ray",
+        "base_xp": 1081.0,
+        "type": "Fish"
+      },
+      {
+        "level": 1,
+        "item": "Cooked Meat",
+        "base_xp": 150.0,
+        "type": "Meat"
+      },
+      {
+        "level": 1,
+        "item": "Cooked Chicken",
+        "base_xp": 150.0,
+        "type": "Meat"
+      },
+      {
+        "level": 1,
+        "item": "Cooked Rabbit",
+        "base_xp": 250.0,
+        "type": "Meat"
+      },
+      {
+        "level": 1,
+        "item": "Sinew",
+        "base_xp": 50.0,
+        "type": "Meat"
+      },
+      {
+        "level": 11,
+        "item": "Roasted Bird Meat",
+        "base_xp": 310.0,
+        "type": "Meat"
+      },
+      {
+        "level": 16,
+        "item": "Roasted Rabbit",
+        "base_xp": 360.0,
+        "type": "Meat"
+      },
+      {
+        "level": 16,
+        "item": "Spider on Stick",
+        "base_xp": 400.0,
+        "type": "Meat"
+      },
+      {
+        "level": 21,
+        "item": "Crab Meat",
+        "base_xp": 500.0,
+        "type": "Meat"
+      },
+      {
+        "level": 21,
+        "item": "Roasted Beast Meat",
+        "base_xp": 410.0,
+        "type": "Meat"
+      },
+      {
+        "level": 30,
+        "item": "Cooked Chompy",
+        "base_xp": 700.0,
+        "type": "Meat"
+      },
+      {
+        "level": 40,
+        "item": "Cooked Jubbly",
+        "base_xp": 800.0,
+        "type": "Meat"
+      },
+      {
+        "level": 50,
+        "item": "Oomlie Wrap",
+        "base_xp": 150.0,
+        "type": "Meat"
+      },
+      {
+        "level": 1,
+        "item": "Uthanki Meat",
+        "base_xp": 200.0,
+        "type": "Meat"
+      },
+      {
+        "level": 12,
+        "item": "Thin Snail",
+        "base_xp": 350.0,
+        "type": "Meat"
+      },
+      {
+        "level": 17,
+        "item": "Lean Snail",
+        "base_xp": 400.0,
+        "type": "Meat"
+      },
+      {
+        "level": 22,
+        "item": "Fat Snail",
+        "base_xp": 475.0,
+        "type": "Meat"
+      },
+      {
+        "level": 1,
+        "item": "Bread",
+        "base_xp": 200.0,
+        "type": "Bread"
+      },
+      {
+        "level": 58,
+        "item": "Pitta Bread",
+        "base_xp": 200.0,
+        "type": "Bread"
+      },
+      {
+        "level": 10,
+        "item": "Redberry Pie",
+        "base_xp": 390.0,
+        "type": "Pie"
+      },
+      {
+        "level": 20,
+        "item": "Meat Pie",
+        "base_xp": 550.0,
+        "type": "Pie"
+      },
+      {
+        "level": 29,
+        "item": "Mud Pie",
+        "base_xp": 640.0,
+        "type": "Pie"
+      },
+      {
+        "level": 30,
+        "item": "Apple Pie",
+        "base_xp": 650.0,
+        "type": "Pie"
+      },
+      {
+        "level": 34,
+        "item": "Garden Pie",
+        "base_xp": 640.0,
+        "type": "Pie"
+      },
+      {
+        "level": 47,
+        "item": "Fish Pie",
+        "base_xp": 820.0,
+        "type": "Pie"
+      },
+      {
+        "level": 70,
+        "item": "Admiral Pie",
+        "base_xp": 1050.0,
+        "type": "Pie"
+      },
+      {
+        "level": 85,
+        "item": "Wild Pie",
+        "base_xp": 1200.0,
+        "type": "Pie"
+      },
+      {
+        "level": 95,
+        "item": "Summer Pie",
+        "base_xp": 1300.0,
+        "type": "Pie"
+      },
+      {
+        "level": 25,
+        "item": "Stew",
+        "base_xp": 585.0,
+        "type": "Stew"
+      },
+      {
+        "level": 60,
+        "item": "Curry",
+        "base_xp": 1400.0,
+        "type": "Stew"
+      },
+      {
+        "level": 35,
+        "item": "Plain Pizza",
+        "base_xp": 715.0,
+        "type": "Pizza"
+      },
+      {
+        "level": 45,
+        "item": "Meat Pizza",
+        "base_xp": 130.0,
+        "type": "Pizza"
+      },
+      {
+        "level": 45,
+        "item": "Full Meat Pizza",
+        "base_xp": 845.0,
+        "type": "Pizza"
+      },
+      {
+        "level": 55,
+        "item": "Anchovy Pizza",
+        "base_xp": 195.0,
+        "type": "Pizza"
+      },
+      {
+        "level": 55,
+        "item": "Full Anchovy Pizza",
+        "base_xp": 910.0,
+        "type": "Pizza"
+      },
+      {
+        "level": 65,
+        "item": "Pineapple Pizza",
+        "base_xp": 260.0,
+        "type": "Pizza"
+      },
+      {
+        "level": 65,
+        "item": "Full Pineapple Pizza",
+        "base_xp": 975.0,
+        "type": "Pizza"
+      },
+      {
+        "level": 31,
+        "item": "Cooked Fishcake",
+        "base_xp": 500.0,
+        "type": "Cake"
+      },
+      {
+        "level": 40,
+        "item": "Cake",
+        "base_xp": 900.0,
+        "type": "Cake"
+      },
+      {
+        "level": 50,
+        "item": "Chocolate Cake",
+        "base_xp": 1050.0,
+        "type": "Cake"
+      },
+      {
+        "level": 21,
+        "item": "Pot of Cream",
+        "base_xp": 115.0,
+        "type": "Dairy"
+      },
+      {
+        "level": 28,
+        "item": "Pat of Butter",
+        "base_xp": 200.0,
+        "type": "Dairy"
+      },
+      {
+        "level": 48,
+        "item": "Cheese",
+        "base_xp": 320.0,
+        "type": "Dairy"
+      },
+      {
+        "level": 35,
+        "item": "Wine",
+        "base_xp": 1000.0,
+        "type": "Drink"
+      },
+      {
+        "level": 20,
+        "item": "Nettle Tea",
+        "base_xp": 260.0,
+        "type": "Drink"
+      },
+      {
+        "level": 14,
+        "item": "Cider",
+        "base_xp": 910.0,
+        "type": "Drink"
+      },
+      {
+        "level": 19,
+        "item": "Dwarven Stout",
+        "base_xp": 1075.0,
+        "type": "Drink"
+      },
+      {
+        "level": 24,
+        "item": "Asgarnian Ale",
+        "base_xp": 1240.0,
+        "type": "Drink"
+      },
+      {
+        "level": 29,
+        "item": "Greenman's Ale",
+        "base_xp": 1405.0,
+        "type": "Drink"
+      },
+      {
+        "level": 34,
+        "item": "Wizard's Mind Bomb",
+        "base_xp": 1570.0,
+        "type": "Drink"
+      },
+      {
+        "level": 39,
+        "item": "Dragon Bitter",
+        "base_xp": 1735.0,
+        "type": "Drink"
+      },
+      {
+        "level": 44,
+        "item": "Moonlight Mead",
+        "base_xp": 1900.0,
+        "type": "Drink"
+      },
+      {
+        "level": 49,
+        "item": "Axeman's Folly",
+        "base_xp": 2065.0,
+        "type": "Drink"
+      },
+      {
+        "level": 54,
+        "item": "Chef's Delight",
+        "base_xp": 2230.0,
+        "type": "Drink"
+      },
+      {
+        "level": 59,
+        "item": "Slayer's Respite",
+        "base_xp": 2395.0,
+        "type": "Drink"
+      },
+      {
+        "level": 6,
+        "item": "Fruit Blast",
+        "base_xp": 250.0,
+        "type": "Gnome Cooking"
+      },
+      {
+        "level": 8,
+        "item": "Pineapple Punch",
+        "base_xp": 350.0,
+        "type": "Gnome Cooking"
+      },
+      {
+        "level": 10,
+        "item": "Toad Crunchies",
+        "base_xp": 500.0,
+        "type": "Gnome Cooking"
+      },
+      {
+        "level": 12,
+        "item": "Spicy Crunchies",
+        "base_xp": 500.0,
+        "type": "Gnome Cooking"
+      },
+      {
+        "level": 14,
+        "item": "Worm Crunchies",
+        "base_xp": 500.0,
+        "type": "Gnome Cooking"
+      },
+      {
+        "level": 16,
+        "item": "Chocchip Crunchies",
+        "base_xp": 500.0,
+        "type": "Gnome Cooking"
+      },
+      {
+        "level": 18,
+        "item": "Wizard Blizzard",
+        "base_xp": 550.0,
+        "type": "Gnome Cooking"
+      },
+      {
+        "level": 20,
+        "item": "Short Green Guy",
+        "base_xp": 600.0,
+        "type": "Gnome Cooking"
+      },
+      {
+        "level": 25,
+        "item": "Fruit Batta",
+        "base_xp": 750.0,
+        "type": "Gnome Cooking"
+      },
+      {
+        "level": 26,
+        "item": "Toad Batta",
+        "base_xp": 760.0,
+        "type": "Gnome Cooking"
+      },
+      {
+        "level": 27,
+        "item": "Worm Batta",
+        "base_xp": 770.0,
+        "type": "Gnome Cooking"
+      },
+      {
+        "level": 28,
+        "item": "Vegetable Batta",
+        "base_xp": 780.0,
+        "type": "Gnome Cooking"
+      },
+      {
+        "level": 29,
+        "item": "Cheese and Tomato Batta",
+        "base_xp": 790.0,
+        "type": "Gnome Cooking"
+      },
+      {
+        "level": 30,
+        "item": "Worm Hole",
+        "base_xp": 850.0,
+        "type": "Gnome Cooking"
+      },
+      {
+        "level": 32,
+        "item": "Drunk Dragon",
+        "base_xp": 800.0,
+        "type": "Gnome Cooking"
+      },
+      {
+        "level": 33,
+        "item": "Choc Saturday",
+        "base_xp": 850.0,
+        "type": "Gnome Cooking"
+      },
+      {
+        "level": 35,
+        "item": "Vegetable Ball",
+        "base_xp": 875.0,
+        "type": "Gnome Cooking"
+      },
+      {
+        "level": 37,
+        "item": "Blurberry SPecial",
+        "base_xp": 900.0,
+        "type": "Gnome Cooking"
+      },
+      {
+        "level": 40,
+        "item": "Tangled Toad's Legs",
+        "base_xp": 925.0,
+        "type": "Gnome Cooking"
+      },
+      {
+        "level": 42,
+        "item": "Chocolate Bomb",
+        "base_xp": 950.0,
+        "type": "Gnome Cooking"
+      },
+      {
+        "level": 28,
+        "item": "Cooked Sweetcorn",
+        "base_xp": 520.0,
+        "type": "Baked Potato Topping"
+      },
+      {
+        "level": 9,
+        "item": "Spicy Sauce",
+        "base_xp": 125.0,
+        "type": "Baked Potato Topping"
+      },
+      {
+        "level": 11,
+        "item": "Chilli Con Carne",
+        "base_xp": 275.0,
+        "type": "Baked Potato Topping"
+      },
+      {
+        "level": 13,
+        "item": "Scrambled Egg",
+        "base_xp": 250.0,
+        "type": "Baked Potato Topping"
+      },
+      {
+        "level": 23,
+        "item": "Egg and Tomato",
+        "base_xp": 250.0,
+        "type": "Baked Potato Topping"
+      },
+      {
+        "level": 42,
+        "item": "Fried Onions",
+        "base_xp": 300.0,
+        "type": "Baked Potato Topping"
+      },
+      {
+        "level": 46,
+        "item": "Fried Mushrooms",
+        "base_xp": 300.0,
+        "type": "Baked Potato Topping"
+      },
+      {
+        "level": 57,
+        "item": "Mushroom and Onion",
+        "base_xp": 600.0,
+        "type": "Baked Potato Topping"
+      },
+      {
+        "level": 67,
+        "item": "Tuna and Corn",
+        "base_xp": 1020.0,
+        "type": "Baked Potato Topping"
+      },
+      {
+        "level": 7,
+        "item": "Baked Potato",
+        "base_xp": 75.0,
+        "type": "Baked Potato"
+      },
+      {
+        "level": 39,
+        "item": "Potato with Butter",
+        "base_xp": 477.5,
+        "type": "Baked Potato"
+      },
+      {
+        "level": 41,
+        "item": "Chilli Potato",
+        "base_xp": 827.5,
+        "type": "Baked Potato"
+      },
+      {
+        "level": 47,
+        "item": "Potato with Cheese",
+        "base_xp": 997.5,
+        "type": "Baked Potato"
+      },
+      {
+        "level": 51,
+        "item": "Egg Potato",
+        "base_xp": 977.5,
+        "type": "Baked Potato"
+      },
+      {
+        "level": 64,
+        "item": "Mushroom and Onion Potato",
+        "base_xp": 1352.5,
+        "type": "Baked Potato"
+      },
+      {
+        "level": 68,
+        "item": "Tuna Potato",
+        "base_xp": 1547.5,
+        "type": "Baked Potato"
+      }
+    ],
+    "Farming": [
+      {
+        "level": 1,
+        "item": "Potato (P)",
+        "base_xp": 8.0,
+        "type": "Allotment"
+      },
+      {
+        "level": 1,
+        "item": "Potato (H)",
+        "base_xp": 9.0,
+        "type": "Allotment"
+      },
+      {
+        "level": 5,
+        "item": "Onion (P)",
+        "base_xp": 9.5,
+        "type": "Allotment"
+      },
+      {
+        "level": 5,
+        "item": "Onion (H)",
+        "base_xp": 10.5,
+        "type": "Allotment"
+      },
+      {
+        "level": 7,
+        "item": "Cabbage (P)",
+        "base_xp": 10.0,
+        "type": "Allotment"
+      },
+      {
+        "level": 7,
+        "item": "Cabbage (H)",
+        "base_xp": 11.5,
+        "type": "Allotment"
+      },
+      {
+        "level": 12,
+        "item": "Tomato (P)",
+        "base_xp": 12.5,
+        "type": "Allotment"
+      },
+      {
+        "level": 12,
+        "item": "Tomato (H)",
+        "base_xp": 14.0,
+        "type": "Allotment"
+      },
+      {
+        "level": 20,
+        "item": "Sweetcorn (P)",
+        "base_xp": 17.0,
+        "type": "Allotment"
+      },
+      {
+        "level": 20,
+        "item": "Sweetcorn (H)",
+        "base_xp": 19.0,
+        "type": "Allotment"
+      },
+      {
+        "level": 31,
+        "item": "Strawberry (P)",
+        "base_xp": 26.0,
+        "type": "Allotment"
+      },
+      {
+        "level": 31,
+        "item": "Strawberry (H)",
+        "base_xp": 29.0,
+        "type": "Allotment"
+      },
+      {
+        "level": 47,
+        "item": "Watermelon (P)",
+        "base_xp": 48.5,
+        "type": "Allotment"
+      },
+      {
+        "level": 47,
+        "item": "Watermelon (H)",
+        "base_xp": 54.5,
+        "type": "Allotment"
+      },
+      {
+        "level": 2,
+        "item": "Marigold (P)",
+        "base_xp": 8.5,
+        "type": "Flowers"
+      },
+      {
+        "level": 2,
+        "item": "Marigold (H)",
+        "base_xp": 47.0,
+        "type": "Flowers"
+      },
+      {
+        "level": 11,
+        "item": "Rosemary (P)",
+        "base_xp": 12.0,
+        "type": "Flowers"
+      },
+      {
+        "level": 11,
+        "item": "Rosemary (H)",
+        "base_xp": 66.5,
+        "type": "Flowers"
+      },
+      {
+        "level": 24,
+        "item": "Nasturtium (P)",
+        "base_xp": 19.5,
+        "type": "Flowers"
+      },
+      {
+        "level": 24,
+        "item": "Nasturtium (H)",
+        "base_xp": 111.0,
+        "type": "Flowers"
+      },
+      {
+        "level": 25,
+        "item": "Woad (P)",
+        "base_xp": 20.5,
+        "type": "Flowers"
+      },
+      {
+        "level": 25,
+        "item": "Woad (H)",
+        "base_xp": 115.5,
+        "type": "Flowers"
+      },
+      {
+        "level": 26,
+        "item": "Limpwurt (P)",
+        "base_xp": 21.5,
+        "type": "Flowers"
+      },
+      {
+        "level": 26,
+        "item": "Limpwurt (H)",
+        "base_xp": 120.0,
+        "type": "Flowers"
+      },
+      {
+        "level": 52,
+        "item": "White Lily (P)",
+        "base_xp": 70.0,
+        "type": "Flowers"
+      },
+      {
+        "level": 52,
+        "item": "White Lily (H)",
+        "base_xp": 250.0,
+        "type": "Hops"
+      },
+      {
+        "level": 3,
+        "item": "Barley (P)",
+        "base_xp": 8.5,
+        "type": "Hops"
+      },
+      {
+        "level": 3,
+        "item": "Barley (H)",
+        "base_xp": 9.5,
+        "type": "Hops"
+      },
+      {
+        "level": 4,
+        "item": "Hammerstone (P)",
+        "base_xp": 9.0,
+        "type": "Hops"
+      },
+      {
+        "level": 4,
+        "item": "Hammerstone (H)",
+        "base_xp": 10.0,
+        "type": "Hops"
+      },
+      {
+        "level": 8,
+        "item": "Asgarnian (P)",
+        "base_xp": 10.5,
+        "type": "Hops"
+      },
+      {
+        "level": 8,
+        "item": "Asgarnian (H)",
+        "base_xp": 12.0,
+        "type": "Hops"
+      },
+      {
+        "level": 13,
+        "item": "Jute (P)",
+        "base_xp": 13.0,
+        "type": "Hops"
+      },
+      {
+        "level": 13,
+        "item": "Jute (G)",
+        "base_xp": 14.5,
+        "type": "Hops"
+      },
+      {
+        "level": 16,
+        "item": "Yanillian (P)",
+        "base_xp": 14.5,
+        "type": "Hops"
+      },
+      {
+        "level": 16,
+        "item": "Yanillian (H)",
+        "base_xp": 16.0,
+        "type": "Hops"
+      },
+      {
+        "level": 21,
+        "item": "Krandorian (P)",
+        "base_xp": 17.5,
+        "type": "Hops"
+      },
+      {
+        "level": 21,
+        "item": "Krandorian (H)",
+        "base_xp": 19.0,
+        "type": "Hops"
+      },
+      {
+        "level": 28,
+        "item": "Wildblood (P)",
+        "base_xp": 23.0,
+        "type": "Hops"
+      },
+      {
+        "level": 28,
+        "item": "Wildblood (H)",
+        "base_xp": 26.0,
+        "type": "Hops"
+      },
+      {
+        "level": 10,
+        "item": "Redberry (P)",
+        "base_xp": 11.5,
+        "type": "Bush"
+      },
+      {
+        "level": 10,
+        "item": "Redberry (C)",
+        "base_xp": 64.0,
+        "type": "Bush"
+      },
+      {
+        "level": 10,
+        "item": "Redberry (H)",
+        "base_xp": 4.5,
+        "type": "Bush"
+      },
+      {
+        "level": 22,
+        "item": "Cadavaberry (P)",
+        "base_xp": 18.0,
+        "type": "Bush"
+      },
+      {
+        "level": 22,
+        "item": "Cadavaberry (C)",
+        "base_xp": 102.5,
+        "type": "Bush"
+      },
+      {
+        "level": 22,
+        "item": "Cadavaberry (H)",
+        "base_xp": 7.0,
+        "type": "Bush"
+      },
+      {
+        "level": 36,
+        "item": "Dwellberry (P)",
+        "base_xp": 31.5,
+        "type": "Bush"
+      },
+      {
+        "level": 36,
+        "item": "Dwellberry (C)",
+        "base_xp": 177.5,
+        "type": "Bush"
+      },
+      {
+        "level": 36,
+        "item": "Dwellberry (H)",
+        "base_xp": 12.0,
+        "type": "Bush"
+      },
+      {
+        "level": 48,
+        "item": "Jangerberry (P)",
+        "base_xp": 50.5,
+        "type": "Bush"
+      },
+      {
+        "level": 48,
+        "item": "Jangerberry (C)",
+        "base_xp": 284.5,
+        "type": "Bush"
+      },
+      {
+        "level": 48,
+        "item": "Jangerberry (H)",
+        "base_xp": 19.0,
+        "type": "Bush"
+      },
+      {
+        "level": 59,
+        "item": "Whiteberry (P)",
+        "base_xp": 78.0,
+        "type": "Bush"
+      },
+      {
+        "level": 59,
+        "item": "Whiteberry (C)",
+        "base_xp": 437.5,
+        "type": "Bush"
+      },
+      {
+        "level": 59,
+        "item": "Whiteberry (H)",
+        "base_xp": 29.0,
+        "type": "Bush"
+      },
+      {
+        "level": 70,
+        "item": "Poison Ivy (P)",
+        "base_xp": 120.0,
+        "type": "Bush"
+      },
+      {
+        "level": 70,
+        "item": "Poison Ivy (C)",
+        "base_xp": 674.0,
+        "type": "Bush"
+      },
+      {
+        "level": 70,
+        "item": "Poison Ivy (H)",
+        "base_xp": 45.0,
+        "type": "Bush"
+      },
+      {
+        "level": 15,
+        "item": "Acorn (P)",
+        "base_xp": 14.0,
+        "type": "Tree"
+      },
+      {
+        "level": 15,
+        "item": "Acorn (C)",
+        "base_xp": 467.3,
+        "type": "Tree"
+      },
+      {
+        "level": 30,
+        "item": "Willow (P)",
+        "base_xp": 25.0,
+        "type": "Tree"
+      },
+      {
+        "level": 30,
+        "item": "Willow (C)",
+        "base_xp": 1456.3,
+        "type": "Tree"
+      },
+      {
+        "level": 45,
+        "item": "Maple (P)",
+        "base_xp": 45.0,
+        "type": "Tree"
+      },
+      {
+        "level": 45,
+        "item": "Maple (C)",
+        "base_xp": 3403.4,
+        "type": "Tree"
+      },
+      {
+        "level": 60,
+        "item": "Yew (P)",
+        "base_xp": 81.0,
+        "type": "Tree"
+      },
+      {
+        "level": 60,
+        "item": "Yew (C)",
+        "base_xp": 7069.9,
+        "type": "Tree"
+      },
+      {
+        "level": 75,
+        "item": "Magic (P)",
+        "base_xp": 145.5,
+        "type": "Tree"
+      },
+      {
+        "level": 75,
+        "item": "Magic (C)",
+        "base_xp": 13768.3,
+        "type": "Tree"
+      },
+      {
+        "level": 27,
+        "item": "Apple (P)",
+        "base_xp": 22.0,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 27,
+        "item": "Apple (C)",
+        "base_xp": 1199.5,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 27,
+        "item": "Apple (H)",
+        "base_xp": 8.5,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 33,
+        "item": "Banana (P)",
+        "base_xp": 28.0,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 33,
+        "item": "Banana (C)",
+        "base_xp": 1750.5,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 33,
+        "item": "Banana (H)",
+        "base_xp": 10.5,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 39,
+        "item": "Orange (P)",
+        "base_xp": 35.5,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 39,
+        "item": "Orange (C)",
+        "base_xp": 2470.2,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 39,
+        "item": "Orange (H)",
+        "base_xp": 13.5,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 42,
+        "item": "Curry (P)",
+        "base_xp": 40.0,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 42,
+        "item": "Curry (C)",
+        "base_xp": 2906.9,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 42,
+        "item": "Curry (H)",
+        "base_xp": 15.0,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 51,
+        "item": "Pineapple (P)",
+        "base_xp": 57.0,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 51,
+        "item": "Pineapple (C)",
+        "base_xp": 4605.7,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 51,
+        "item": "Pineapple (H)",
+        "base_xp": 21.5,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 57,
+        "item": "Papaya (P)",
+        "base_xp": 72.0,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 57,
+        "item": "Papaya (C)",
+        "base_xp": 6146.4,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 57,
+        "item": "Papaya (H)",
+        "base_xp": 27.0,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 68,
+        "item": "Palm (P)",
+        "base_xp": 110.5,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 68,
+        "item": "Palm (C)",
+        "base_xp": 10150.1,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 68,
+        "item": "Palm (H)",
+        "base_xp": 41.5,
+        "type": "Fruit Tree"
+      },
+      {
+        "level": 9,
+        "item": "Guam (P)",
+        "base_xp": 11.0,
+        "type": "Herb"
+      },
+      {
+        "level": 9,
+        "item": "Guam (H)",
+        "base_xp": 12.5,
+        "type": "Herb"
+      },
+      {
+        "level": 14,
+        "item": "Marrentill (P)",
+        "base_xp": 13.5,
+        "type": "Herb"
+      },
+      {
+        "level": 14,
+        "item": "Marrentill (H)",
+        "base_xp": 15.0,
+        "type": "Herb"
+      },
+      {
+        "level": 19,
+        "item": "Tarromin (P)",
+        "base_xp": 16.0,
+        "type": "Herb"
+      },
+      {
+        "level": 19,
+        "item": "Tarromin (H)",
+        "base_xp": 18.0,
+        "type": "Herb"
+      },
+      {
+        "level": 26,
+        "item": "Harralander (P)",
+        "base_xp": 21.5,
+        "type": "Herb"
+      },
+      {
+        "level": 26,
+        "item": "Harralander (H)",
+        "base_xp": 24.0,
+        "type": "Herb"
+      },
+      {
+        "level": 29,
+        "item": "Gout Tuber (P)",
+        "base_xp": 105.0,
+        "type": "Herb"
+      },
+      {
+        "level": 29,
+        "item": "Gout Tuber (H)",
+        "base_xp": 45.0,
+        "type": "Herb"
+      },
+      {
+        "level": 32,
+        "item": "Ranarr (P)",
+        "base_xp": 27.0,
+        "type": "Herb"
+      },
+      {
+        "level": 32,
+        "item": "Ranarr (H)",
+        "base_xp": 30.5,
+        "type": "Herb"
+      },
+      {
+        "level": 36,
+        "item": "Spirit Weed (P)",
+        "base_xp": 32.0,
+        "type": "Herb"
+      },
+      {
+        "level": 36,
+        "item": "Spirit Weed (H)",
+        "base_xp": 36.0,
+        "type": "Herb"
+      },
+      {
+        "level": 38,
+        "item": "Toadflax (P)",
+        "base_xp": 34.0,
+        "type": "Herb"
+      },
+      {
+        "level": 38,
+        "item": "Toadflax (H)",
+        "base_xp": 38.5,
+        "type": "Herb"
+      },
+      {
+        "level": 44,
+        "item": "Irit (P)",
+        "base_xp": 43.0,
+        "type": "Herb"
+      },
+      {
+        "level": 44,
+        "item": "Irit (H)",
+        "base_xp": 48.5,
+        "type": "Herb"
+      },
+      {
+        "level": 50,
+        "item": "Avantoe (P)",
+        "base_xp": 54.5,
+        "type": "Herb"
+      },
+      {
+        "level": 50,
+        "item": "Avantoe (H)",
+        "base_xp": 61.5,
+        "type": "Herb"
+      },
+      {
+        "level": 56,
+        "item": "Kwuarm (P)",
+        "base_xp": 69.0,
+        "type": "Herb"
+      },
+      {
+        "level": 56,
+        "item": "Kwuarm (H)",
+        "base_xp": 78.0,
+        "type": "Herb"
+      },
+      {
+        "level": 62,
+        "item": "Snapdragon (P)",
+        "base_xp": 87.5,
+        "type": "Herb"
+      },
+      {
+        "level": 62,
+        "item": "Snapdragon (H)",
+        "base_xp": 98.5,
+        "type": "Herb"
+      },
+      {
+        "level": 67,
+        "item": "Cadantine (P)",
+        "base_xp": 106.5,
+        "type": "Herb"
+      },
+      {
+        "level": 67,
+        "item": "Cadantine (H)",
+        "base_xp": 120.0,
+        "type": "Herb"
+      },
+      {
+        "level": 73,
+        "item": "Lantadyme (P)",
+        "base_xp": 134.5,
+        "type": "Herb"
+      },
+      {
+        "level": 73,
+        "item": "Lantadyme (H)",
+        "base_xp": 151.5,
+        "type": "Herb"
+      },
+      {
+        "level": 79,
+        "item": "Dwarf Weed (P)",
+        "base_xp": 170.5,
+        "type": "Herb"
+      },
+      {
+        "level": 79,
+        "item": "Dwarf Weed (H)",
+        "base_xp": 192.0,
+        "type": "Herb"
+      },
+      {
+        "level": 85,
+        "item": "Torstol (P)",
+        "base_xp": 199.5,
+        "type": "Herb"
+      },
+      {
+        "level": 85,
+        "item": "Torstol (H)",
+        "base_xp": 224.5,
+        "type": "Herb"
+      },
+      {
+        "level": 42,
+        "item": "Evil Turnip (P)",
+        "base_xp": 41.0,
+        "type": "Special"
+      },
+      {
+        "level": 42,
+        "item": "Evil Turnip (H)",
+        "base_xp": 46.0,
+        "type": "Special"
+      },
+      {
+        "level": 53,
+        "item": "Mushroom (P)",
+        "base_xp": 61.5,
+        "type": "Special"
+      },
+      {
+        "level": 53,
+        "item": "Mushroom (H)",
+        "base_xp": 57.7,
+        "type": "Special"
+      },
+      {
+        "level": 53,
+        "item": "Jade Vine (P)",
+        "base_xp": 76.0,
+        "type": "Special"
+      },
+      {
+        "level": 53,
+        "item": "Jade Vine (C)",
+        "base_xp": 1500.0,
+        "type": "Special"
+      },
+      {
+        "level": 55,
+        "item": "Cactus (P)",
+        "base_xp": 66.5,
+        "type": "Special"
+      },
+      {
+        "level": 55,
+        "item": "Cactus (C)",
+        "base_xp": 374.0,
+        "type": "Special"
+      },
+      {
+        "level": 55,
+        "item": "Cactus (H)",
+        "base_xp": 25.0,
+        "type": "Special"
+      },
+      {
+        "level": 63,
+        "item": "Belladonna (P)",
+        "base_xp": 91.0,
+        "type": "Special"
+      },
+      {
+        "level": 63,
+        "item": "Belladonna (H)",
+        "base_xp": 512.0,
+        "type": "Special"
+      },
+      {
+        "level": 72,
+        "item": "Calquat (P)",
+        "base_xp": 129.5,
+        "type": "Special"
+      },
+      {
+        "level": 72,
+        "item": "Calquat (C)",
+        "base_xp": 12096.0,
+        "type": "Special"
+      },
+      {
+        "level": 72,
+        "item": "Calquat (H)",
+        "base_xp": 48.5,
+        "type": "Special"
+      },
+      {
+        "level": 83,
+        "item": "Spirit Tree (P)",
+        "base_xp": 199.5,
+        "type": "Special"
+      },
+      {
+        "level": 83,
+        "item": "Spirit Tree (C)",
+        "base_xp": 19301.8,
+        "type": "Special"
+      },
+      {
+        "level": 1,
+        "item": "Compost Bucket",
+        "base_xp": 4.5,
+        "type": "Other"
+      },
+      {
+        "level": 1,
+        "item": "Super Compost Bucket",
+        "base_xp": 8.5,
+        "type": "Other"
+      },
+      {
+        "level": 1,
+        "item": "Apply Compost",
+        "base_xp": 18.0,
+        "type": "Other"
+      },
+      {
+        "level": 1,
+        "item": "Apply Super Compost",
+        "base_xp": 26.0,
+        "type": "Other"
+      },
+      {
+        "level": 1,
+        "item": "Rotten Tomatoes",
+        "base_xp": 4.5,
+        "type": "Other"
+      },
+      {
+        "level": 1,
+        "item": "Rake weed",
+        "base_xp": 4.0,
+        "type": "Other"
+      },
+      {
+        "level": 30,
+        "item": "Willow Branch",
+        "base_xp": 12.0,
+        "type": "Tree"
+      }
+    ],
+    "Thieving": [
+      {
+        "level": 1,
+        "item": "Man/Woman",
+        "base_xp": 40.0,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 10,
+        "item": "Farmer",
+        "base_xp": 75.0,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 15,
+        "item": "Female HAM",
+        "base_xp": 92.5,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 20,
+        "item": "Male Ham",
+        "base_xp": 112.5,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 25,
+        "item": "Warrior Woman",
+        "base_xp": 130.0,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 25,
+        "item": "Al-Kharid Warrior",
+        "base_xp": 130.0,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 32,
+        "item": "Rogue",
+        "base_xp": 177.5,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 36,
+        "item": "Cave Goblin",
+        "base_xp": 200.0,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 38,
+        "item": "Master Farmer",
+        "base_xp": 215.0,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 40,
+        "item": "Guard",
+        "base_xp": 232.5,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 45,
+        "item": "Fremennik Citizen",
+        "base_xp": 325.0,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 45,
+        "item": "Beared Pollnivnian Bandit",
+        "base_xp": 325.0,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 53,
+        "item": "Desert Bandit",
+        "base_xp": 397.5,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 55,
+        "item": "Knight of Ardougne",
+        "base_xp": 421.5,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 55,
+        "item": "Pollnivnian Bandit",
+        "base_xp": 420.0,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 65,
+        "item": "Yanille Watchman",
+        "base_xp": 687.5,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 65,
+        "item": "Menaphite Thug",
+        "base_xp": 687.5,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 70,
+        "item": "Paladin",
+        "base_xp": 758.75,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 75,
+        "item": "Gnome",
+        "base_xp": 992.5,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 80,
+        "item": "Hero",
+        "base_xp": 1375.0,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 85,
+        "item": "Elf",
+        "base_xp": 1765.0,
+        "type": "Pickpocket"
+      },
+      {
+        "level": 2,
+        "item": "Vegetable Stall",
+        "base_xp": 50.0,
+        "type": "Stall"
+      },
+      {
+        "level": 5,
+        "item": "Baker's Stall",
+        "base_xp": 80.0,
+        "type": "Stall"
+      },
+      {
+        "level": 5,
+        "item": "Crafting Stall",
+        "base_xp": 80.0,
+        "type": "Stall"
+      },
+      {
+        "level": 5,
+        "item": "Monkey Food Stall",
+        "base_xp": 80.0,
+        "type": "Stall"
+      },
+      {
+        "level": 5,
+        "item": "Monkey General Store",
+        "base_xp": 80.0,
+        "type": "Stall"
+      },
+      {
+        "level": 5,
+        "item": "Tea Stall",
+        "base_xp": 80.0,
+        "type": "Stall"
+      },
+      {
+        "level": 20,
+        "item": "Silk Stall",
+        "base_xp": 120.0,
+        "type": "Stall"
+      },
+      {
+        "level": 22,
+        "item": "Wine Stall",
+        "base_xp": 135.0,
+        "type": "Stall"
+      },
+      {
+        "level": 27,
+        "item": "Seed Stall",
+        "base_xp": 50.0,
+        "type": "Stall"
+      },
+      {
+        "level": 35,
+        "item": "Fur Steel",
+        "base_xp": 180.0,
+        "type": "Stall"
+      },
+      {
+        "level": 42,
+        "item": "Fish Stall",
+        "base_xp": 210.0,
+        "type": "Stall"
+      },
+      {
+        "level": 49,
+        "item": "Crossbow Stall",
+        "base_xp": 260.0,
+        "type": "Stall"
+      },
+      {
+        "level": 50,
+        "item": "Silver Stall",
+        "base_xp": 270.0,
+        "type": "Stall"
+      },
+      {
+        "level": 63,
+        "item": "Custom Evidence File",
+        "base_xp": 375.0,
+        "type": "Stall"
+      },
+      {
+        "level": 65,
+        "item": "Spice Stall",
+        "base_xp": 405.0,
+        "type": "Stall"
+      },
+      {
+        "level": 65,
+        "item": "Magic Stall",
+        "base_xp": 500.0,
+        "type": "Stall"
+      },
+      {
+        "level": 65,
+        "item": "Scimitar Stall",
+        "base_xp": 500.0,
+        "type": "Stall"
+      },
+      {
+        "level": 75,
+        "item": "Gem Stall",
+        "base_xp": 80.0,
+        "type": "Stall"
+      },
+      {
+        "level": 10,
+        "item": "10-Coin Chest",
+        "base_xp": 35.0,
+        "type": "Chest"
+      },
+      {
+        "level": 20,
+        "item": "Ogre Coffin",
+        "base_xp": 135.0,
+        "type": "Chest"
+      },
+      {
+        "level": 28,
+        "item": "Nature Rune Chest",
+        "base_xp": 125.0,
+        "type": "Chest"
+      },
+      {
+        "level": 43,
+        "item": "50-Coin Chest",
+        "base_xp": 625.0,
+        "type": "Chest"
+      },
+      {
+        "level": 39,
+        "item": "Pirates' Hideout Chest",
+        "base_xp": 37.5,
+        "type": "Chest"
+      },
+      {
+        "level": 47,
+        "item": "Arrowtip Chest",
+        "base_xp": 750.0,
+        "type": "Chest"
+      },
+      {
+        "level": 52,
+        "item": "Dorgesh-Kaan Avearage Chest",
+        "base_xp": 1000.0,
+        "type": "Chest"
+      },
+      {
+        "level": 59,
+        "item": "Blood Rune CHest",
+        "base_xp": 1250.0,
+        "type": "Chest"
+      },
+      {
+        "level": 72,
+        "item": "Paladin Chest",
+        "base_xp": 2500.0,
+        "type": "Chest"
+      },
+      {
+        "level": 78,
+        "item": "Dorgesh-Kaan Rich Chest",
+        "base_xp": 3250.0,
+        "type": "Chest"
+      },
+      {
+        "level": 1,
+        "item": "Door to 10 Coin-Chest",
+        "base_xp": 17.5,
+        "type": "Door"
+      },
+      {
+        "level": 14,
+        "item": "Door to Nature Rune Chest",
+        "base_xp": 75.0,
+        "type": "Door"
+      },
+      {
+        "level": 14,
+        "item": "Ardougne House door",
+        "base_xp": 75.0,
+        "type": "Door"
+      },
+      {
+        "level": 17,
+        "item": "HAM Trapdoor",
+        "base_xp": 20.0,
+        "type": "Door"
+      },
+      {
+        "level": 32,
+        "item": "Axe Hut Door",
+        "base_xp": 125.0,
+        "type": "Door"
+      },
+      {
+        "level": 32,
+        "item": "Ardougne Sewer Gate",
+        "base_xp": 125.0,
+        "type": "Door"
+      },
+      {
+        "level": 39,
+        "item": "Pirates' Hideout Door",
+        "base_xp": 175.0,
+        "type": "Door"
+      },
+      {
+        "level": 46,
+        "item": "Chaos Druid Tower Door",
+        "base_xp": 187.5,
+        "type": "Door"
+      },
+      {
+        "level": 61,
+        "item": "Paladin Door",
+        "base_xp": 250.0,
+        "type": "Door"
+      },
+      {
+        "level": 82,
+        "item": "Yanille Dungeon Door",
+        "base_xp": 250.0,
+        "type": "Door"
+      },
+      {
+        "level": 20,
+        "item": "Candle Table",
+        "base_xp": 100.0,
+        "type": "Other"
+      },
+      {
+        "level": 50,
+        "item": "Wall Safe",
+        "base_xp": 350.0,
+        "type": "Other"
+      }
+    ],
+    "Agility": [
+      {
+        "level": 1,
+        "item": "Gnome Log Balance",
+        "base_xp": 37.5,
+        "type": "Course - Part"
+      },
+      {
+        "level": 1,
+        "item": "Gnome Net Climb",
+        "base_xp": 37.5,
+        "type": "Course - Part"
+      },
+      {
+        "level": 1,
+        "item": "Gnome Branch Climb",
+        "base_xp": 25.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 1,
+        "item": "Gnome Balance Rope",
+        "base_xp": 37.5,
+        "type": "Course - Part"
+      },
+      {
+        "level": 1,
+        "item": "Gnome Net Climb 2",
+        "base_xp": 37.5,
+        "type": "Course - Part"
+      },
+      {
+        "level": 1,
+        "item": "Gnome Tunnel",
+        "base_xp": 37.5,
+        "type": "Course - Part"
+      },
+      {
+        "level": 1,
+        "item": "Gnome Course",
+        "base_xp": 432.5,
+        "type": "Course - Full"
+      },
+      {
+        "level": 1,
+        "item": "Toy Mouse",
+        "base_xp": 15.0,
+        "type": "Toy"
+      },
+      {
+        "level": 1,
+        "item": "Brimhaven Low Wall",
+        "base_xp": 40.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 1,
+        "item": "Brimhaven Rope Swing",
+        "base_xp": 100.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 1,
+        "item": "Brimhaven Log Balance",
+        "base_xp": 60.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 1,
+        "item": "Brimhaven Ledge",
+        "base_xp": 80.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 1,
+        "item": "Brimhaven Plank Balance",
+        "base_xp": 30.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 1,
+        "item": "Brimhaven Pillars",
+        "base_xp": 90.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 1,
+        "item": "Brimhaven Monkey Bars",
+        "base_xp": 70.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 1,
+        "item": "Brimhaven Rope Balance",
+        "base_xp": 50.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 1,
+        "item": "Single Brimhaven Ticket",
+        "base_xp": 1200.0,
+        "type": "Reward"
+      },
+      {
+        "level": 1,
+        "item": "10 Brimhaven Tickets",
+        "base_xp": 12400.0,
+        "type": "Reward"
+      },
+      {
+        "level": 1,
+        "item": "100 Brimhaven Tickets",
+        "base_xp": 140000.0,
+        "type": "Reward"
+      },
+      {
+        "level": 1,
+        "item": "1000 Brimhaven Tickets",
+        "base_xp": 1600000.0,
+        "type": "Reward"
+      },
+      {
+        "level": 1,
+        "item": "Stiles",
+        "base_xp": 15.0,
+        "type": "Short Cut"
+      },
+      {
+        "level": 5,
+        "item": "North Yanille Wall Climbing Rocks",
+        "base_xp": 125.0,
+        "type": "Short Cut"
+      },
+      {
+        "level": 5,
+        "item": "Falador Crumbling Wall",
+        "base_xp": 2.5,
+        "type": "Short Cut"
+      },
+      {
+        "level": 8,
+        "item": "Lumbridge Broken Raft Grapple",
+        "base_xp": 75.0,
+        "type": "Grapple"
+      },
+      {
+        "level": 10,
+        "item": "Brimhaven West Rope Swing",
+        "base_xp": 15.0,
+        "type": "Short Cut"
+      },
+      {
+        "level": 12,
+        "item": "Brimhaven Dungeon Stepping Stones",
+        "base_xp": 15.0,
+        "type": "Short Cut"
+      },
+      {
+        "level": 15,
+        "item": "Edgeville Monkey Bars",
+        "base_xp": 100.0,
+        "type": "Short Cut"
+      },
+      {
+        "level": 18,
+        "item": "Yanille Watchtower Trellis",
+        "base_xp": 155.0,
+        "type": "Short Cut"
+      },
+      {
+        "level": 20,
+        "item": "Brimhaven Spiked Floor",
+        "base_xp": 120.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 20,
+        "item": "Brimhaven Pressure Pads",
+        "base_xp": 130.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 20,
+        "item": "Brimhaven Handholds",
+        "base_xp": 110.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 20,
+        "item": "Coal Truck Log Balance",
+        "base_xp": 42.5,
+        "type": "Short Cut"
+      },
+      {
+        "level": 22,
+        "item": "Brimhaven Dungeon Moss Pipe Squeeze",
+        "base_xp": 42.5,
+        "type": "Short Cut"
+      },
+      {
+        "level": 25,
+        "item": "Werewolf Skull Ball",
+        "base_xp": 3750.0,
+        "type": "Course - Full"
+      },
+      {
+        "level": 25,
+        "item": "Eagles Peak Rock Climb",
+        "base_xp": 5.0,
+        "type": "Short Cut"
+      },
+      {
+        "level": 30,
+        "item": "Penguin Platform Climb",
+        "base_xp": 275.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 30,
+        "item": "Penguin Platform Jumps",
+        "base_xp": 400.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 30,
+        "item": "Penguin Icicles",
+        "base_xp": 200.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 30,
+        "item": "Penguin Ice Slop",
+        "base_xp": 900.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 30,
+        "item": "Penguin Course",
+        "base_xp": 2700.0,
+        "type": "Course - Full"
+      },
+      {
+        "level": 30,
+        "item": "Agility Pyramid Rolling Blocks",
+        "base_xp": 60.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 30,
+        "item": "Agility Pyramid Low Wall",
+        "base_xp": 40.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 30,
+        "item": "Agility Pyramid Ledge",
+        "base_xp": 260.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 30,
+        "item": "Agility Pyramid Plank",
+        "base_xp": 282.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 30,
+        "item": "Agility Pyramid Cross Gap",
+        "base_xp": 282.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 30,
+        "item": "Agility Pyramid Jump Gap",
+        "base_xp": 110.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 30,
+        "item": "Agility Pyramid Course",
+        "base_xp": 5070.0,
+        "type": "Course - Full"
+      },
+      {
+        "level": 31,
+        "item": "River Lum Stepping Stones",
+        "base_xp": 15.0,
+        "type": "Short Cut"
+      },
+      {
+        "level": 32,
+        "item": "Catherby to Taverly Grapple",
+        "base_xp": 75.0,
+        "type": "Grapple"
+      },
+      {
+        "level": 33,
+        "item": "Ardougne Log Balance",
+        "base_xp": 20.0,
+        "type": "Short Cut"
+      },
+      {
+        "level": 34,
+        "item": "Brimhaven Dungeon Demon Pipe Squeeze",
+        "base_xp": 50.0
+      },
+      {
+        "level": 35,
+        "item": "Barbarian Entrance",
+        "base_xp": 50.0,
+        "type": "Accessway"
+      },
+      {
+        "level": 35,
+        "item": "Barbarian Rope Swing",
+        "base_xp": 110.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 35,
+        "item": "Barbarian Balance Log",
+        "base_xp": 67.5,
+        "type": "Course - Part"
+      },
+      {
+        "level": 35,
+        "item": "Barbarian Net",
+        "base_xp": 40.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 35,
+        "item": "Barbarian Balance Ledge",
+        "base_xp": 110.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 35,
+        "item": "Barbarian Wall Climb",
+        "base_xp": 67.5,
+        "type": "Course - Part"
+      },
+      {
+        "level": 35,
+        "item": "Barbarian Course",
+        "base_xp": 760.0,
+        "type": "Course - Full"
+      },
+      {
+        "level": 36,
+        "item": "Water Obelisk Grapple",
+        "base_xp": 75.0,
+        "type": "Grapple"
+      },
+      {
+        "level": 39,
+        "item": "South Yanille Wall Grapple",
+        "base_xp": 75.0,
+        "type": "Grapple"
+      },
+      {
+        "level": 40,
+        "item": "Brimhaven Spinning Blades",
+        "base_xp": 140.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 40,
+        "item": "Brimhaven Darts",
+        "base_xp": 150.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 48,
+        "item": "Ape Atoll Stepping stones",
+        "base_xp": 200.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 48,
+        "item": "Ape Atoll Climbing Tree",
+        "base_xp": 200.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 48,
+        "item": "Ape Atoll Monkey Bars",
+        "base_xp": 200.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 48,
+        "item": "Ape Atoll Skull Slope",
+        "base_xp": 300.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 48,
+        "item": "Ape Atoll Rope Swing",
+        "base_xp": 500.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 48,
+        "item": "Ape Atoll Zip Vine",
+        "base_xp": 1500.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 48,
+        "item": "Ape Atoll Course",
+        "base_xp": 2900.0,
+        "type": "Course - Full"
+      },
+      {
+        "level": 52,
+        "item": "Wilderness Pipe",
+        "base_xp": 62.5,
+        "type": "Course - Part"
+      },
+      {
+        "level": 52,
+        "item": "Wilderness Rope Swing",
+        "base_xp": 100.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 52,
+        "item": "Wilderness Stepping Stones",
+        "base_xp": 100.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 52,
+        "item": "Wilderness Log Balance",
+        "base_xp": 100.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 52,
+        "item": "Wilderness Course",
+        "base_xp": 2857.5,
+        "type": "Course - Full"
+      },
+      {
+        "level": 53,
+        "item": "Karamaja Rock Grapple",
+        "base_xp": 75.0,
+        "type": "Grapple"
+      },
+      {
+        "level": 60,
+        "item": "Werewolf Stepping Stones",
+        "base_xp": 250.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 60,
+        "item": "Werewolf Hurdles",
+        "base_xp": 300.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 60,
+        "item": "Werewolf Tunnels",
+        "base_xp": 75.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 60,
+        "item": "Werewolf Skull Slope",
+        "base_xp": 125.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 60,
+        "item": "Werewolf Deathslide",
+        "base_xp": 1000.0,
+        "type": "Course - Part"
+      },
+      {
+        "level": 60,
+        "item": "Werewolf Course",
+        "base_xp": 2700.0,
+        "type": "Course - Full"
+      },
+      {
+        "level": 70,
+        "item": "Dorgesh-Kann Full",
+        "base_xp": 13750.0,
+        "type": "Course - Full"
+      },
+      {
+        "level": 70,
+        "item": "Dorgesh-Kann Half",
+        "base_xp": 7220.0,
+        "type": "Course - Full"
+      },
+      {
+        "level": 70,
+        "item": "Dorgesh-Kann Range",
+        "base_xp": 540.0,
+        "type": "Course - Full"
+      },
+      {
+        "level": 70,
+        "item": "Taverly Dungeon Pipe Squeeze",
+        "base_xp": 50.0,
+        "type": "Short Cut"
+      },
+      {
+        "level": 80,
+        "item": "Taverly Dungeon Strange Floor",
+        "base_xp": 62.5,
+        "type": "Short Cut"
+      }
+    ],
+    "Construction": [
+      {
+        "level": 1,
+        "item": "Planks",
+        "base_xp": 32.25
+      },
+      {
+        "level": 1,
+        "item": "Bagged Plant 1",
+        "base_xp": 31.0
+      },
+      {
+        "level": 2,
+        "item": "Bolt of Cloth",
+        "base_xp": 15.0
+      },
+      {
+        "level": 5,
+        "item": "Soft Clay",
+        "base_xp": 10.0
+      },
+      {
+        "level": 5,
+        "item": "Steel Bar",
+        "base_xp": 20.0
+      },
+      {
+        "level": 5,
+        "item": "Limestone",
+        "base_xp": 20.0
+      },
+      {
+        "level": 5,
+        "item": "Bagged Dead Tree",
+        "base_xp": 31.0
+      },
+      {
+        "level": 6,
+        "item": "Bagged Plant 2",
+        "base_xp": 70.0
+      },
+      {
+        "level": 10,
+        "item": "Bagged Nice Tree",
+        "base_xp": 44.0
+      },
+      {
+        "level": 12,
+        "item": "Bagged Plant 3",
+        "base_xp": 100.0
+      },
+      {
+        "level": 15,
+        "item": "Oak Planks",
+        "base_xp": 60.0
+      },
+      {
+        "level": 15,
+        "item": "Bagged Oak Tree",
+        "base_xp": 70.0
+      },
+      {
+        "level": 21,
+        "item": "Molten Glass",
+        "base_xp": 1.0
+      },
+      {
+        "level": 25,
+        "item": "Clockwork",
+        "base_xp": 22.0
+      },
+      {
+        "level": 30,
+        "item": "Long Bones",
+        "base_xp": 1500.0
+      },
+      {
+        "level": 30,
+        "item": "Curved Bones",
+        "base_xp": 2250.0
+      },
+      {
+        "level": 30,
+        "item": "Bagged Willow Tree",
+        "base_xp": 100.0
+      },
+      {
+        "level": 35,
+        "item": "Teak Planks",
+        "base_xp": 90.0
+      },
+      {
+        "level": 40,
+        "item": "Mahogany Planks",
+        "base_xp": 140.0
+      },
+      {
+        "level": 41,
+        "item": "Marble Block",
+        "base_xp": 500.0
+      },
+      {
+        "level": 44,
+        "item": "Gold Leaf",
+        "base_xp": 300.0
+      },
+      {
+        "level": 45,
+        "item": "Bagged Maple Tree",
+        "base_xp": 122.0
+      },
+      {
+        "level": 56,
+        "item": "Thorny Hedge",
+        "base_xp": 72.0
+      },
+      {
+        "level": 57,
+        "item": "Bagged Cactus",
+        "base_xp": 138.0
+      },
+      {
+        "level": 60,
+        "item": "Bagged Yew Tree",
+        "base_xp": 141.0
+      },
+      {
+        "level": 60,
+        "item": "Nice Hedge",
+        "base_xp": 100.0
+      },
+      {
+        "level": 64,
+        "item": "Small Box Hedge",
+        "base_xp": 122.0
+      },
+      {
+        "level": 66,
+        "item": "Bagged Rosemary",
+        "base_xp": 70.0
+      },
+      {
+        "level": 66,
+        "item": "Bagged Sunflower",
+        "base_xp": 70.0
+      },
+      {
+        "level": 67,
+        "item": "Bagged Evergreen",
+        "base_xp": 373.0
+      },
+      {
+        "level": 68,
+        "item": "Topiary Hedge",
+        "base_xp": 141.0
+      },
+      {
+        "level": 71,
+        "item": "Bagged Daffodils",
+        "base_xp": 100.0
+      },
+      {
+        "level": 71,
+        "item": "Bagged Marigold",
+        "base_xp": 100.0
+      },
+      {
+        "level": 72,
+        "item": "Fancy Hedge",
+        "base_xp": 158.0
+      },
+      {
+        "level": 75,
+        "item": "Bagged Magic Tree",
+        "base_xp": 223.0
+      },
+      {
+        "level": 76,
+        "item": "Tall Fancy Hedge",
+        "base_xp": 223.0
+      },
+      {
+        "level": 76,
+        "item": "Bagged Bluebells",
+        "base_xp": 122.0
+      },
+      {
+        "level": 76,
+        "item": "Bagged Roses",
+        "base_xp": 122.0
+      },
+      {
+        "level": 80,
+        "item": "Tall Box Hedge",
+        "base_xp": 316.0
+      },
+      {
+        "level": 82,
+        "item": "Magic Stone",
+        "base_xp": 1000.0
+      }
+    ],
+    "Prayer": [
+      {
+        "level": 1,
+        "item": "Bones",
+        "base_xp": 45.0
+      },
+      {
+        "level": 1,
+        "item": "Wolf Bones",
+        "base_xp": 45.0
+      },
+      {
+        "level": 1,
+        "item": "Burnt Bones",
+        "base_xp": 45.0
+      },
+      {
+        "level": 1,
+        "item": "Monkey Bones",
+        "base_xp": 50.0
+      },
+      {
+        "level": 1,
+        "item": "Bat Bones",
+        "base_xp": 53.0
+      },
+      {
+        "level": 1,
+        "item": "Big Bones",
+        "base_xp": 150.0
+      },
+      {
+        "level": 1,
+        "item": "Jogre Bones",
+        "base_xp": 150.0
+      },
+      {
+        "level": 1,
+        "item": "Shaikahan Bones",
+        "base_xp": 250.0
+      },
+      {
+        "level": 1,
+        "item": "Baby Dragon Bones",
+        "base_xp": 300.0
+      },
+      {
+        "level": 1,
+        "item": "Wyvern Bones",
+        "base_xp": 500.0
+      },
+      {
+        "level": 1,
+        "item": "Dragon Bones",
+        "base_xp": 720.0
+      },
+      {
+        "level": 1,
+        "item": "Fayrg Bones",
+        "base_xp": 840.0
+      },
+      {
+        "level": 1,
+        "item": "Raurg Bones",
+        "base_xp": 960.0
+      },
+      {
+        "level": 1,
+        "item": "Dagannoth Bones",
+        "base_xp": 1250.0
+      },
+      {
+        "level": 1,
+        "item": "Ourg Bones",
+        "base_xp": 1400.0
+      }
+    ],
+    "Herblore": [
+      {
+        "level": 3,
+        "item": "Attack + Herb",
+        "base_xp": 27.5,
+        "type": "Full"
+      },
+      {
+        "level": 3,
+        "item": "Attack",
+        "base_xp": 25.0,
+        "type": "Potion"
+      },
+      {
+        "level": 3,
+        "item": "Guam",
+        "base_xp": 2.5,
+        "type": "Cleaning"
+      },
+      {
+        "level": 3,
+        "item": "Rogues Purse",
+        "base_xp": 2.5,
+        "type": "Cleaning"
+      },
+      {
+        "level": 5,
+        "item": "Marrentill",
+        "base_xp": 3.8,
+        "type": "Cleaning"
+      },
+      {
+        "level": 5,
+        "item": "Antipoison + Herb",
+        "base_xp": 41.3,
+        "type": "Full"
+      },
+      {
+        "level": 5,
+        "item": "Antipoison",
+        "base_xp": 37.5,
+        "type": "Potion"
+      },
+      {
+        "level": 8,
+        "item": "Relicym's Balm + Herb",
+        "base_xp": 42.5,
+        "type": "Full"
+      },
+      {
+        "level": 8,
+        "item": "Relicym's Balm",
+        "base_xp": 40.0,
+        "type": "Potion"
+      },
+      {
+        "level": 11,
+        "item": "Tarromin",
+        "base_xp": 5.0,
+        "type": "Cleaning"
+      },
+      {
+        "level": 12,
+        "item": "Strength + Herb",
+        "base_xp": 55.0,
+        "type": "Full"
+      },
+      {
+        "level": 12,
+        "item": "Strength",
+        "base_xp": 50.0,
+        "type": "Potion"
+      },
+      {
+        "level": 15,
+        "item": "Serum 207 + Herb",
+        "base_xp": 55.0,
+        "type": "Full"
+      },
+      {
+        "level": 15,
+        "item": "Serum 207",
+        "base_xp": 50.0,
+        "type": "Potion"
+      },
+      {
+        "level": 18,
+        "item": "Guthix Rest Tea + Herb",
+        "base_xp": 72.1,
+        "type": "Full"
+      },
+      {
+        "level": 18,
+        "item": "Guthix Rest Tea",
+        "base_xp": 59.5,
+        "type": "Potion"
+      },
+      {
+        "level": 19,
+        "item": "Guam Tar + Herb",
+        "base_xp": 32.5,
+        "type": "Full"
+      },
+      {
+        "level": 19,
+        "item": "Guam Tar",
+        "base_xp": 30.0,
+        "type": "Tar"
+      },
+      {
+        "level": 20,
+        "item": "Harralander",
+        "base_xp": 6.3,
+        "type": "Cleaning"
+      },
+      {
+        "level": 22,
+        "item": "Stat Restore + Herb",
+        "base_xp": 68.8,
+        "type": "Full"
+      },
+      {
+        "level": 22,
+        "item": "Stat Restore",
+        "base_xp": 62.5,
+        "type": "Potion"
+      },
+      {
+        "level": 22,
+        "item": "Guthix Balance + Herb",
+        "base_xp": 56.3,
+        "type": "Full"
+      },
+      {
+        "level": 22,
+        "item": "Guthix Balance",
+        "base_xp": 50.0,
+        "type": "Potion"
+      },
+      {
+        "level": 25,
+        "item": "Balmish Oil + Herb",
+        "base_xp": 86.3,
+        "type": "Full"
+      },
+      {
+        "level": 25,
+        "item": "Balmish Oil",
+        "base_xp": 80.0,
+        "type": "Potion"
+      },
+      {
+        "level": 25,
+        "item": "Ranarr",
+        "base_xp": 7.5,
+        "type": "Cleaning"
+      },
+      {
+        "level": 26,
+        "item": "Energy + Herb",
+        "base_xp": 73.8,
+        "type": "Full"
+      },
+      {
+        "level": 26,
+        "item": "Energy",
+        "base_xp": 67.5,
+        "type": "Potion"
+      },
+      {
+        "level": 30,
+        "item": "Toadflax",
+        "base_xp": 8.0,
+        "type": "Cleaning"
+      },
+      {
+        "level": 30,
+        "item": "Defence + Herb",
+        "base_xp": 82.5,
+        "type": "Full"
+      },
+      {
+        "level": 30,
+        "item": "Defence",
+        "base_xp": 75.0,
+        "type": "Potion"
+      },
+      {
+        "level": 31,
+        "item": "Marrentill Tar + Herb",
+        "base_xp": 46.3,
+        "type": "Full"
+      },
+      {
+        "level": 31,
+        "item": "Marrentill Tar",
+        "base_xp": 42.5,
+        "type": "Tar"
+      },
+      {
+        "level": 34,
+        "item": "Agility + Herb",
+        "base_xp": 88.0,
+        "type": "Full"
+      },
+      {
+        "level": 34,
+        "item": "Agility",
+        "base_xp": 80.0,
+        "type": "Potion"
+      },
+      {
+        "level": 35,
+        "item": "Spirit Weed",
+        "base_xp": 7.8,
+        "type": "Cleaning"
+      },
+      {
+        "level": 36,
+        "item": "Combat + Herb",
+        "base_xp": 90.3,
+        "type": "Full"
+      },
+      {
+        "level": 36,
+        "item": "Combat",
+        "base_xp": 84.0,
+        "type": "Potion"
+      },
+      {
+        "level": 38,
+        "item": "Prayer + Herb",
+        "base_xp": 95.0,
+        "type": "Full"
+      },
+      {
+        "level": 38,
+        "item": "Prayer",
+        "base_xp": 87.5,
+        "type": "Potion"
+      },
+      {
+        "level": 39,
+        "item": "Tarromin Tar + Herb",
+        "base_xp": 60.0,
+        "type": "Full"
+      },
+      {
+        "level": 39,
+        "item": "Tarromin Tar",
+        "base_xp": 55.0,
+        "type": "Tar"
+      },
+      {
+        "level": 40,
+        "item": "Irit",
+        "base_xp": 8.8,
+        "type": "Cleaning"
+      },
+      {
+        "level": 40,
+        "item": "Summoning + Herb",
+        "base_xp": 99.8,
+        "type": "Full"
+      },
+      {
+        "level": 40,
+        "item": "Summoning",
+        "base_xp": 92.0,
+        "type": "Potion"
+      },
+      {
+        "level": 44,
+        "item": "Harralander Tar + Herb",
+        "base_xp": 78.8,
+        "type": "Full"
+      },
+      {
+        "level": 44,
+        "item": "Harralander Tar",
+        "base_xp": 72.5,
+        "type": "Tar"
+      },
+      {
+        "level": 45,
+        "item": "Super Attack + Herb",
+        "base_xp": 108.8,
+        "type": "Full"
+      },
+      {
+        "level": 45,
+        "item": "Super Attack",
+        "base_xp": 100.0,
+        "type": "Potion"
+      },
+      {
+        "level": 48,
+        "item": "Avantoe",
+        "base_xp": 10.0,
+        "type": "Cleaning"
+      },
+      {
+        "level": 48,
+        "item": "Super Antipoison + Herb",
+        "base_xp": 115.1,
+        "type": "Full"
+      },
+      {
+        "level": 48,
+        "item": "Super Antipoison",
+        "base_xp": 106.3,
+        "type": "Potion"
+      },
+      {
+        "level": 50,
+        "item": "Fishing + Herb",
+        "base_xp": 122.5,
+        "type": "Full"
+      },
+      {
+        "level": 50,
+        "item": "Fishing",
+        "base_xp": 112.5,
+        "type": "Potion"
+      },
+      {
+        "level": 52,
+        "item": "Super Energy + Herb",
+        "base_xp": 127.5,
+        "type": "Full"
+      },
+      {
+        "level": 52,
+        "item": "Super Energy",
+        "base_xp": 117.5,
+        "type": "Potion"
+      },
+      {
+        "level": 53,
+        "item": "Hunter + Herb",
+        "base_xp": 130.0,
+        "type": "Full"
+      },
+      {
+        "level": 53,
+        "item": "Hunter",
+        "base_xp": 120.0,
+        "type": "Potion"
+      },
+      {
+        "level": 54,
+        "item": "Kwuarm",
+        "base_xp": 11.3,
+        "type": "Cleaning"
+      },
+      {
+        "level": 55,
+        "item": "Super Strength + Herb",
+        "base_xp": 136.3,
+        "type": "Full"
+      },
+      {
+        "level": 55,
+        "item": "Super Strength",
+        "base_xp": 125.0,
+        "type": "Potion"
+      },
+      {
+        "level": 57,
+        "item": "Magic Essence",
+        "base_xp": 130.0,
+        "type": "Potion"
+      },
+      {
+        "level": 59,
+        "item": "Snapdragon",
+        "base_xp": 11.8,
+        "type": "Cleaning"
+      },
+      {
+        "level": 60,
+        "item": "Weapon Poison + Herb",
+        "base_xp": 148.8,
+        "type": "Full"
+      },
+      {
+        "level": 60,
+        "item": "Weapon Poison",
+        "base_xp": 137.5,
+        "type": "Potion"
+      },
+      {
+        "level": 63,
+        "item": "Super Restore + Herb",
+        "base_xp": 154.3,
+        "type": "Full"
+      },
+      {
+        "level": 63,
+        "item": "Super Restore",
+        "base_xp": 142.5,
+        "type": "Potion"
+      },
+      {
+        "level": 65,
+        "item": "Cadantine",
+        "base_xp": 12.5,
+        "type": "Cleaning"
+      },
+      {
+        "level": 65,
+        "item": "Sanfew Serum + Herb",
+        "base_xp": 171.8,
+        "type": "Full"
+      },
+      {
+        "level": 65,
+        "item": "Sanfew Serum",
+        "base_xp": 160.0,
+        "type": "Potion"
+      },
+      {
+        "level": 66,
+        "item": "Super Defence + Herb",
+        "base_xp": 162.5,
+        "type": "Full"
+      },
+      {
+        "level": 66,
+        "item": "Super Defence",
+        "base_xp": 150.0,
+        "type": "Potion"
+      },
+      {
+        "level": 67,
+        "item": "Lantadyme",
+        "base_xp": 13.1,
+        "type": "Cleaning"
+      },
+      {
+        "level": 68,
+        "item": "Extra-Strong Antipoison + Herb",
+        "base_xp": 163.0,
+        "type": "Full"
+      },
+      {
+        "level": 68,
+        "item": "Extra-Strong Antipoison",
+        "base_xp": 155.0,
+        "type": "Potion"
+      },
+      {
+        "level": 69,
+        "item": "Anti-fire + Herb",
+        "base_xp": 170.6,
+        "type": "Full"
+      },
+      {
+        "level": 69,
+        "item": "Anti-fire",
+        "base_xp": 157.5,
+        "type": "Potion"
+      },
+      {
+        "level": 70,
+        "item": "Dwarf Weed",
+        "base_xp": 13.8,
+        "type": "Cleaning"
+      },
+      {
+        "level": 72,
+        "item": "Ranging + Herb",
+        "base_xp": 176.3,
+        "type": "Full"
+      },
+      {
+        "level": 72,
+        "item": "Ranging",
+        "base_xp": 162.5,
+        "type": "Potion"
+      },
+      {
+        "level": 73,
+        "item": "Extra-Strong Weapon Poison",
+        "base_xp": 165.0,
+        "type": "Potion"
+      },
+      {
+        "level": 75,
+        "item": "Torstol",
+        "base_xp": 15.0,
+        "type": "Cleaning"
+      },
+      {
+        "level": 76,
+        "item": "Magic + Herb",
+        "base_xp": 185.6,
+        "type": "Full"
+      },
+      {
+        "level": 76,
+        "item": "Magic",
+        "base_xp": 172.5,
+        "type": "Potion"
+      },
+      {
+        "level": 78,
+        "item": "Zamorak Brew + Herb",
+        "base_xp": 190.0,
+        "type": "Full"
+      },
+      {
+        "level": 78,
+        "item": "Zamorak Brew",
+        "base_xp": 175.0,
+        "type": "Potion"
+      },
+      {
+        "level": 79,
+        "item": "Super Strong Antipoison + Herb",
+        "base_xp": 186.3,
+        "type": "Full"
+      },
+      {
+        "level": 79,
+        "item": "Super Strong Antipoison",
+        "base_xp": 177.5,
+        "type": "Potion"
+      },
+      {
+        "level": 81,
+        "item": "Saradomin Brew + Herb",
+        "base_xp": 188.0,
+        "type": "Full"
+      },
+      {
+        "level": 81,
+        "item": "Saradomin Brew",
+        "base_xp": 180.0,
+        "type": "Potion"
+      },
+      {
+        "level": 82,
+        "item": "Super Strong Weapon Poison",
+        "base_xp": 190.0,
+        "type": "Potion"
+      }
+    ],
+    "Smithing": [
+      {
+        "level": 1,
+        "item": "Bronze Bar",
+        "base_xp": 31.0,
+        "type": "Smelting"
+      },
+      {
+        "level": 1,
+        "item": "Bronze Item",
+        "base_xp": 62.5,
+        "type": "Smithing"
+      },
+      {
+        "level": 1,
+        "item": "Bronze Item + Bar",
+        "base_xp": 93.5,
+        "type": "Smelting + Smithing"
+      },
+      {
+        "level": 8,
+        "item": "Blurite Bar",
+        "base_xp": 40.0,
+        "type": "Smelting"
+      },
+      {
+        "level": 15,
+        "item": "Iron Bar",
+        "base_xp": 62.5,
+        "type": "Smelting"
+      },
+      {
+        "level": 15,
+        "item": "Iron Item",
+        "base_xp": 125.0,
+        "type": "Smithing"
+      },
+      {
+        "level": 15,
+        "item": "Iron Item + Bar",
+        "base_xp": 187.5,
+        "type": "Smelting + Smithing"
+      },
+      {
+        "level": 20,
+        "item": "Elemental Bar",
+        "base_xp": 37.5,
+        "type": "Smelting"
+      },
+      {
+        "level": 20,
+        "item": "Silver Bar",
+        "base_xp": 67.5,
+        "type": "Smelting"
+      },
+      {
+        "level": 30,
+        "item": "Steel Bar",
+        "base_xp": 87.5,
+        "type": "Smelting"
+      },
+      {
+        "level": 30,
+        "item": "Steel Item",
+        "base_xp": 187.5,
+        "type": "Smithing"
+      },
+      {
+        "level": 30,
+        "item": "Steel Item + Bar",
+        "base_xp": 275.0,
+        "type": "Smelting + Smithing"
+      },
+      {
+        "level": 35,
+        "item": "Cannonballs",
+        "base_xp": 128.75,
+        "type": "Smelting"
+      },
+      {
+        "level": 35,
+        "item": "Cannonballs + Bar",
+        "base_xp": 216.25,
+        "type": "Smelting x2"
+      },
+      {
+        "level": 40,
+        "item": "Gold Bar",
+        "base_xp": 112.5,
+        "type": "Smelting"
+      },
+      {
+        "level": 40,
+        "item": "Gold Bar with Gauntlets",
+        "base_xp": 281.25,
+        "type": "Smelting"
+      },
+      {
+        "level": 50,
+        "item": "Mithril Bar",
+        "base_xp": 150.0,
+        "type": "Smelting"
+      },
+      {
+        "level": 50,
+        "item": "Mithril Item",
+        "base_xp": 250.0,
+        "type": "Smithing"
+      },
+      {
+        "level": 50,
+        "item": "Mithril Item + Bar",
+        "base_xp": 400.0,
+        "type": "Smelting + Smithing"
+      },
+      {
+        "level": 70,
+        "item": "Adamanite Bar",
+        "base_xp": 187.5,
+        "type": "Smelting"
+      },
+      {
+        "level": 70,
+        "item": "Adamant Item",
+        "base_xp": 312.5,
+        "type": "Smithing"
+      },
+      {
+        "level": 70,
+        "item": "Adamant Item + Bar",
+        "base_xp": 500.0,
+        "type": "Smelting + Smithing"
+      },
+      {
+        "level": 85,
+        "item": "Runite Bar",
+        "base_xp": 250.0,
+        "type": "Smelting"
+      },
+      {
+        "level": 85,
+        "item": "Rune Item",
+        "base_xp": 375.0,
+        "type": "Smithing"
+      },
+      {
+        "level": 85,
+        "item": "Rune Item + Bar",
+        "base_xp": 625.0,
+        "type": "Smelting + Smithing"
+      }
+    ],
+    "Mining": [
+      {
+        "level": 1,
+        "item": "Clay",
+        "base_xp": 12.5,
+        "type": "Misc"
+      },
+      {
+        "level": 1,
+        "item": "Rune Essence",
+        "base_xp": 12.5,
+        "type": "Misc"
+      },
+      {
+        "level": 1,
+        "item": "Copper",
+        "base_xp": 43.75,
+        "type": "Ore"
+      },
+      {
+        "level": 1,
+        "item": "Tin",
+        "base_xp": 43.75,
+        "type": "Ore"
+      },
+      {
+        "level": 10,
+        "item": "Limestone",
+        "base_xp": 66.25,
+        "type": "Misc"
+      },
+      {
+        "level": 10,
+        "item": "Blurite",
+        "base_xp": 43.75,
+        "type": "Ore"
+      },
+      {
+        "level": 15,
+        "item": "Iron",
+        "base_xp": 87.5,
+        "type": "Ore"
+      },
+      {
+        "level": 20,
+        "item": "Silver",
+        "base_xp": 100.0,
+        "type": "Ore"
+      },
+      {
+        "level": 30,
+        "item": "Pure Essence",
+        "base_xp": 12.5,
+        "type": "Misc"
+      },
+      {
+        "level": 30,
+        "item": "Coal",
+        "base_xp": 125.0,
+        "type": "Ore"
+      },
+      {
+        "level": 35,
+        "item": "Sandstone Small",
+        "base_xp": 75.0,
+        "type": "Misc"
+      },
+      {
+        "level": 35,
+        "item": "Sandstone Medium-Small",
+        "base_xp": 100.0,
+        "type": "Misc"
+      },
+      {
+        "level": 35,
+        "item": "Sandstone Medium-Large",
+        "base_xp": 125.0,
+        "type": "Misc"
+      },
+      {
+        "level": 35,
+        "item": "Sandstone Large",
+        "base_xp": 150.0,
+        "type": "Misc"
+      },
+      {
+        "level": 40,
+        "item": "Gem Rock",
+        "base_xp": 162.5,
+        "type": "Misc"
+      },
+      {
+        "level": 40,
+        "item": "Gold",
+        "base_xp": 162.5,
+        "type": "Ore"
+      },
+      {
+        "level": 45,
+        "item": "Granite Small",
+        "base_xp": 125.0,
+        "type": "Misc"
+      },
+      {
+        "level": 45,
+        "item": "Granite Medium",
+        "base_xp": 150.0,
+        "type": "Misc"
+      },
+      {
+        "level": 45,
+        "item": "Granite Large",
+        "base_xp": 187.5,
+        "type": "Misc"
+      },
+      {
+        "level": 55,
+        "item": "Mithril",
+        "base_xp": 200.0,
+        "type": "Ore"
+      },
+      {
+        "level": 70,
+        "item": "Adamant",
+        "base_xp": 237.5,
+        "type": "Ore"
+      },
+      {
+        "level": 85,
+        "item": "Runite",
+        "base_xp": 312.5,
+        "type": "Ore"
+      },
+      {
+        "level": 10,
+        "item": "Star Size 1",
+        "base_xp": 35.0,
+        "type": "Star"
+      },
+      {
+        "level": 20,
+        "item": "Star Size 2",
+        "base_xp": 62.5,
+        "type": "Star"
+      },
+      {
+        "level": 30,
+        "item": "Star Size 3",
+        "base_xp": 72.5,
+        "type": "Star"
+      },
+      {
+        "level": 40,
+        "item": "Star Size 4",
+        "base_xp": 80.0,
+        "type": "Star"
+      },
+      {
+        "level": 50,
+        "item": "Star Size 5",
+        "base_xp": 117.5,
+        "type": "Star"
+      },
+      {
+        "level": 60,
+        "item": "Star Size 6",
+        "base_xp": 177.5,
+        "type": "Star"
+      },
+      {
+        "level": 70,
+        "item": "Star Size 7",
+        "base_xp": 285.0,
+        "type": "Star"
+      },
+      {
+        "level": 80,
+        "item": "Star Size 8",
+        "base_xp": 362.5,
+        "type": "Star"
+      },
+      {
+        "level": 90,
+        "item": "Star Size 9",
+        "base_xp": 525.0,
+        "type": "Star"
+      }
+    ],
+    "Runecrafting": [
+      {
+        "level": 1,
+        "item": "Air Rune",
+        "base_xp": 12.5,
+        "type": "Normal Rune"
+      },
+      {
+        "level": 2,
+        "item": "Mind Rune",
+        "base_xp": 13.75,
+        "type": "Normal Rune"
+      },
+      {
+        "level": 5,
+        "item": "Water Rune",
+        "base_xp": 15.0,
+        "type": "Normal Rune"
+      },
+      {
+        "level": 9,
+        "item": "Earth Rune",
+        "base_xp": 16.25,
+        "type": "Normal Rune"
+      },
+      {
+        "level": 14,
+        "item": "Fire Rune",
+        "base_xp": 17.5,
+        "type": "Normal Rune"
+      },
+      {
+        "level": 20,
+        "item": "Body Rune",
+        "base_xp": 18.75,
+        "type": "Normal Rune"
+      },
+      {
+        "level": 27,
+        "item": "Cosmic Rune",
+        "base_xp": 20.0,
+        "type": "Normal Rune"
+      },
+      {
+        "level": 35,
+        "item": "Chaos Rune",
+        "base_xp": 21.25,
+        "type": "Normal Rune"
+      },
+      {
+        "level": 40,
+        "item": "Astral Rune",
+        "base_xp": 21.875,
+        "type": "Normal Rune"
+      },
+      {
+        "level": 44,
+        "item": "Nature Rune",
+        "base_xp": 22.5,
+        "type": "Normal Rune"
+      },
+      {
+        "level": 54,
+        "item": "Law Rune",
+        "base_xp": 23.75,
+        "type": "Normal Rune"
+      },
+      {
+        "level": 65,
+        "item": "Death Rune",
+        "base_xp": 25.0,
+        "type": "Normal Rune"
+      },
+      {
+        "level": 77,
+        "item": "Blood Rune",
+        "base_xp": 26.25,
+        "type": "Normal Rune"
+      },
+      {
+        "level": 6,
+        "item": "Mist Rune",
+        "base_xp": 21.25,
+        "type": "Combination Rune"
+      },
+      {
+        "level": 10,
+        "item": "Dust Rune",
+        "base_xp": 22.5,
+        "type": "Combination Rune"
+      },
+      {
+        "level": 13,
+        "item": "Mud Rune",
+        "base_xp": 23.75,
+        "type": "Combination Rune"
+      },
+      {
+        "level": 15,
+        "item": "Smoke Rune",
+        "base_xp": 23.75,
+        "type": "Combination Rune"
+      },
+      {
+        "level": 19,
+        "item": "Steam Rume",
+        "base_xp": 25.0,
+        "type": "Combination Rune"
+      },
+      {
+        "level": 23,
+        "item": "Lava Rune",
+        "base_xp": 26.25,
+        "type": "Combination Rune"
+      },
+      {
+        "level": 1,
+        "item": "Air Tiara",
+        "base_xp": 62.5,
+        "type": "Tiara"
+      },
+      {
+        "level": 2,
+        "item": "Mind Tiara",
+        "base_xp": 68.75,
+        "type": "Tiara"
+      },
+      {
+        "level": 5,
+        "item": "Water Tiara",
+        "base_xp": 75.0,
+        "type": "Tiara"
+      },
+      {
+        "level": 9,
+        "item": "Earth Tiara",
+        "base_xp": 81.25,
+        "type": "Tiara"
+      },
+      {
+        "level": 14,
+        "item": "Fire Tiara",
+        "base_xp": 87.5,
+        "type": "Tiara"
+      },
+      {
+        "level": 20,
+        "item": "Body Tiara",
+        "base_xp": 93.75,
+        "type": "Tiara"
+      },
+      {
+        "level": 27,
+        "item": "Cosmic Tiara",
+        "base_xp": 100.0,
+        "type": "Tiara"
+      },
+      {
+        "level": 35,
+        "item": "Chaos Tiara",
+        "base_xp": 106.25,
+        "type": "Tiara"
+      },
+      {
+        "level": 44,
+        "item": "Nature Tiara",
+        "base_xp": 112.5,
+        "type": "Tiara"
+      },
+      {
+        "level": 54,
+        "item": "Law Tiara",
+        "base_xp": 118.75,
+        "type": "Tiara"
+      },
+      {
+        "level": 65,
+        "item": "Death Tiara",
+        "base_xp": 125.0,
+        "type": "Tiara"
+      },
+      {
+        "level": 77,
+        "item": "Blood Tiara",
+        "base_xp": 131.25,
+        "type": "Tiara"
+      }
+    ],
+    "Fletching": [
+      {
+        "level": 1,
+        "item": "Arrow Shafts",
+        "base_xp": 5.0,
+        "type": "Arrow"
+      },
+      {
+        "level": 1,
+        "item": "Headless Arrows",
+        "base_xp": 15.0,
+        "type": "Arrow"
+      },
+      {
+        "level": 1,
+        "item": "Shaft + Headless",
+        "base_xp": 20.0,
+        "type": "Arrow"
+      },
+      {
+        "level": 1,
+        "item": "Bronze Arrows",
+        "base_xp": 39.0,
+        "type": "Arrow"
+      },
+      {
+        "level": 1,
+        "item": "Bronze + Headless",
+        "base_xp": 54.0,
+        "type": "Arrow"
+      },
+      {
+        "level": 1,
+        "item": "Bronze + Headless + Shaft",
+        "base_xp": 59.0,
+        "type": "Arrow"
+      },
+      {
+        "level": 1,
+        "item": "Bronze Dart",
+        "base_xp": 18.0,
+        "type": "Dart"
+      },
+      {
+        "level": 5,
+        "item": "Shortbow (u)",
+        "base_xp": 5.0,
+        "type": "Bow"
+      },
+      {
+        "level": 5,
+        "item": "Shortbow (s)",
+        "base_xp": 10.0,
+        "type": "Bow"
+      },
+      {
+        "level": 9,
+        "item": "Bronze Bolt",
+        "base_xp": 5.0,
+        "type": "Bolt"
+      },
+      {
+        "level": 10,
+        "item": "Longbow (u)",
+        "base_xp": 10.0,
+        "type": "Bow"
+      },
+      {
+        "level": 10,
+        "item": "Longbow (s)",
+        "base_xp": 20.0,
+        "type": "Bow"
+      },
+      {
+        "level": 11,
+        "item": "Opal Bolt Tips",
+        "base_xp": 1.5,
+        "type": "Bolt Tips"
+      },
+      {
+        "level": 11,
+        "item": "Opal Bolts",
+        "base_xp": 16.0,
+        "type": "Tipped Bolt"
+      },
+      {
+        "level": 11,
+        "item": "Opal Bolts no Gem",
+        "base_xp": 21.0,
+        "type": "Tipped Bolt no Gem"
+      },
+      {
+        "level": 11,
+        "item": "Opal Bolts Full",
+        "base_xp": 22.25,
+        "type": "Tipped Bolt Full"
+      },
+      {
+        "level": 15,
+        "item": "Iron Arrows",
+        "base_xp": 57.5,
+        "type": "Arrow"
+      },
+      {
+        "level": 15,
+        "item": "Iron + Headless",
+        "base_xp": 72.5,
+        "type": "Arrow"
+      },
+      {
+        "level": 15,
+        "item": "Iron + Headless + Shaft",
+        "base_xp": 77.5,
+        "type": "Arrow"
+      },
+      {
+        "level": 20,
+        "item": "Oak Shortbow (u)",
+        "base_xp": 16.5,
+        "type": "Bow"
+      },
+      {
+        "level": 20,
+        "item": "Oak Shortbow (s)",
+        "base_xp": 33.0,
+        "type": "Bow"
+      },
+      {
+        "level": 22,
+        "item": "Iron Dart",
+        "base_xp": 38.0,
+        "type": "Dart"
+      },
+      {
+        "level": 24,
+        "item": "Blurite Bolt",
+        "base_xp": 10.0,
+        "type": "Bolt"
+      },
+      {
+        "level": 25,
+        "item": "Oak Longbow (u)",
+        "base_xp": 25.0,
+        "type": "Bow"
+      },
+      {
+        "level": 25,
+        "item": "Oak Longbow (s)",
+        "base_xp": 50.0,
+        "type": "Bow"
+      },
+      {
+        "level": 26,
+        "item": "Kebbit Bolt",
+        "base_xp": 28.6,
+        "type": "Bolt"
+      },
+      {
+        "level": 26,
+        "item": "Jade Bolt Tips",
+        "base_xp": 2.4,
+        "type": "Bolt Tips"
+      },
+      {
+        "level": 26,
+        "item": "Jade Bolts",
+        "base_xp": 24.0,
+        "type": "Tipped Bolt"
+      },
+      {
+        "level": 26,
+        "item": "Jade Bolts no Gem",
+        "base_xp": 34.0,
+        "type": "Tipped Bolt no Gem"
+      },
+      {
+        "level": 26,
+        "item": "Jade Bolts Full",
+        "base_xp": 36.0,
+        "type": "Tipped Bolt Full"
+      },
+      {
+        "level": 30,
+        "item": "Comp Ogre Bow (u)",
+        "base_xp": 45.0,
+        "type": "Bow"
+      },
+      {
+        "level": 30,
+        "item": "Comp Ogre Bow (s)",
+        "base_xp": 90.0,
+        "type": "Bow"
+      },
+      {
+        "level": 30,
+        "item": "Steel Arrows",
+        "base_xp": 95.0,
+        "type": "Arrow"
+      },
+      {
+        "level": 30,
+        "item": "Steel + Headless",
+        "base_xp": 110.0,
+        "type": "Arrow"
+      },
+      {
+        "level": 30,
+        "item": "Steel + Headless + Shaft",
+        "base_xp": 115.0,
+        "type": "Arrow"
+      },
+      {
+        "level": 35,
+        "item": "Willow Shortbow (u)",
+        "base_xp": 33.3,
+        "type": "Bow"
+      },
+      {
+        "level": 35,
+        "item": "Willow Shortbow (s)",
+        "base_xp": 66.6,
+        "type": "Bow"
+      },
+      {
+        "level": 37,
+        "item": "Steel Dart",
+        "base_xp": 75.0,
+        "type": "Dart"
+      },
+      {
+        "level": 39,
+        "item": "Iron Bolt",
+        "base_xp": 15.0,
+        "type": "Bolt"
+      },
+      {
+        "level": 40,
+        "item": "Willow Longbow (u)",
+        "base_xp": 41.5,
+        "type": "Bow"
+      },
+      {
+        "level": 40,
+        "item": "Willow Longbow (s)",
+        "base_xp": 83.0,
+        "type": "Bow"
+      },
+      {
+        "level": 41,
+        "item": "Pearl Bolt Tips",
+        "base_xp": 3.2,
+        "type": "Bolt Tips"
+      },
+      {
+        "level": 41,
+        "item": "Pearl Bolts",
+        "base_xp": 32.0,
+        "type": "Tipped Bolt"
+      },
+      {
+        "level": 41,
+        "item": "Pearl Bolts no Gem",
+        "base_xp": 47.0,
+        "type": "Tipped Bolt no Gem"
+      },
+      {
+        "level": 41,
+        "item": "Pearl Bolts Full",
+        "base_xp": 49.66666667,
+        "type": "Tipped Bolt Full"
+      },
+      {
+        "level": 42,
+        "item": "Long Kebbit Bolt",
+        "base_xp": 47.7,
+        "type": "Bolt"
+      },
+      {
+        "level": 43,
+        "item": "Silver Bolt",
+        "base_xp": 25.0,
+        "type": "Bolt"
+      },
+      {
+        "level": 45,
+        "item": "Mithril Arrows",
+        "base_xp": 132.0,
+        "type": "Arrow"
+      },
+      {
+        "level": 45,
+        "item": "Mithril + Headless",
+        "base_xp": 147.0,
+        "type": "Arrow"
+      },
+      {
+        "level": 45,
+        "item": "Mithril + Headless + Shaft",
+        "base_xp": 152.0,
+        "type": "Arrow"
+      },
+      {
+        "level": 46,
+        "item": "Steel Bolt",
+        "base_xp": 36.0,
+        "type": "Bolt"
+      },
+      {
+        "level": 48,
+        "item": "Red Topaz Bolt Tips",
+        "base_xp": 3.9,
+        "type": "Bolt Tips"
+      },
+      {
+        "level": 48,
+        "item": "Red Topaz Bolts",
+        "base_xp": 39.0,
+        "type": "Tipped Bolt"
+      },
+      {
+        "level": 48,
+        "item": "Red Topaz Bolts no Gem",
+        "base_xp": 75.0,
+        "type": "Tipped Bolt no Gem"
+      },
+      {
+        "level": 48,
+        "item": "Red Topaz Bolts Full",
+        "base_xp": 78.25,
+        "type": "Tipped Bolt Full"
+      },
+      {
+        "level": 50,
+        "item": "Maple Shortbow (u)",
+        "base_xp": 50.0,
+        "type": "Bow"
+      },
+      {
+        "level": 50,
+        "item": "Maple Shortbow (s)",
+        "base_xp": 100.0,
+        "type": "Bow"
+      },
+      {
+        "level": 51,
+        "item": "Barbed Bolt",
+        "base_xp": 95.0,
+        "type": "Tipped Bolt"
+      },
+      {
+        "level": 51,
+        "item": "Barbed Bolt Full",
+        "base_xp": 100.0,
+        "type": "Full Bolt"
+      },
+      {
+        "level": 52,
+        "item": " Broad Arrows",
+        "base_xp": 225.0,
+        "type": "Arrow"
+      },
+      {
+        "level": 52,
+        "item": " Broad + Headless",
+        "base_xp": 240.0,
+        "type": "Arrow"
+      },
+      {
+        "level": 52,
+        "item": " Broad + Headless + Shaft",
+        "base_xp": 245.0,
+        "type": "Arrow"
+      },
+      {
+        "level": 52,
+        "item": "Mithril Dart",
+        "base_xp": 112.0,
+        "type": "Dart"
+      },
+      {
+        "level": 54,
+        "item": "Mithril Bolt",
+        "base_xp": 50.0,
+        "type": "Bolt"
+      },
+      {
+        "level": 55,
+        "item": "Maple Longbow (u)",
+        "base_xp": 58.3,
+        "type": "Bow"
+      },
+      {
+        "level": 55,
+        "item": "Maple Longbow (s)",
+        "base_xp": 116.6,
+        "type": "Bow"
+      },
+      {
+        "level": 55,
+        "item": "Broad-Tipped Bolt",
+        "base_xp": 30.0,
+        "type": "Bolt"
+      },
+      {
+        "level": 56,
+        "item": "Sapphire Bolt Tips",
+        "base_xp": 4.7,
+        "type": "Bolt Tips"
+      },
+      {
+        "level": 56,
+        "item": "Sapphire Bolts",
+        "base_xp": 47.0,
+        "type": "Tipped Bolt"
+      },
+      {
+        "level": 56,
+        "item": "Sapphire Bolts no Gem",
+        "base_xp": 97.0,
+        "type": "Tipped Bolt no Gem"
+      },
+      {
+        "level": 56,
+        "item": "Sapphire Bolts Full",
+        "base_xp": 100.9166667,
+        "type": "Tipped Bolt Full"
+      },
+      {
+        "level": 58,
+        "item": "Emerald Bolt Tips",
+        "base_xp": 5.5,
+        "type": "Bolt Tips"
+      },
+      {
+        "level": 58,
+        "item": "Emerald Bolts",
+        "base_xp": 55.0,
+        "type": "Tipped Bolt"
+      },
+      {
+        "level": 58,
+        "item": "Emerald Bolts no Gem",
+        "base_xp": 105.0,
+        "type": "Tipped Bolt no Gem"
+      },
+      {
+        "level": 58,
+        "item": "Emerald Bolts Full",
+        "base_xp": 109.5833333,
+        "type": "Tipped Bolt Full"
+      },
+      {
+        "level": 59,
+        "item": "Mithril Grapple",
+        "base_xp": 59.0,
+        "type": "Bolt"
+      },
+      {
+        "level": 60,
+        "item": "Adamant Arrows",
+        "base_xp": 169.5,
+        "type": "Arrow"
+      },
+      {
+        "level": 60,
+        "item": "Adamant + Headless",
+        "base_xp": 184.5,
+        "type": "Arrow"
+      },
+      {
+        "level": 60,
+        "item": "Adamant + Headless + Shaft",
+        "base_xp": 189.5,
+        "type": "Arrow"
+      },
+      {
+        "level": 61,
+        "item": "Adamant Bolt",
+        "base_xp": 70.0,
+        "type": "Bolt"
+      },
+      {
+        "level": 63,
+        "item": "Ruby Bolt Tips",
+        "base_xp": 6.3,
+        "type": "Bolt Tips"
+      },
+      {
+        "level": 63,
+        "item": "Ruby Bolts",
+        "base_xp": 63.0,
+        "type": "Tipped Bolt"
+      },
+      {
+        "level": 63,
+        "item": "Ruby Bolts no Gem",
+        "base_xp": 133.0,
+        "type": "Tipped Bolt no Gem"
+      },
+      {
+        "level": 63,
+        "item": "Ruby Bolts Full",
+        "base_xp": 138.25,
+        "type": "Tipped Bolt Full"
+      },
+      {
+        "level": 65,
+        "item": "Yew Shortbow (u)",
+        "base_xp": 67.5,
+        "type": "Bow"
+      },
+      {
+        "level": 65,
+        "item": "Yew Shortbow (s)",
+        "base_xp": 135.0,
+        "type": "Bow"
+      },
+      {
+        "level": 65,
+        "item": "Diamond Bolt Tips",
+        "base_xp": 7.0,
+        "type": "Bolt Tips"
+      },
+      {
+        "level": 65,
+        "item": "Diamond Bolts",
+        "base_xp": 70.0,
+        "type": "Tipped Bolt"
+      },
+      {
+        "level": 65,
+        "item": "Diamond Bolts no Gem",
+        "base_xp": 140.0,
+        "type": "Tipped Bolt no Gem"
+      },
+      {
+        "level": 65,
+        "item": "Diamond Bolts Full",
+        "base_xp": 145.8333333,
+        "type": "Tipped Bolt Full"
+      },
+      {
+        "level": 67,
+        "item": "Adamant Dart",
+        "base_xp": 150.0,
+        "type": "Dart"
+      },
+      {
+        "level": 69,
+        "item": "Rune Bolt",
+        "base_xp": 100.0,
+        "type": "Bolt"
+      },
+      {
+        "level": 70,
+        "item": "Yew Longbow (u)",
+        "base_xp": 75.0,
+        "type": "Bow"
+      },
+      {
+        "level": 70,
+        "item": "Yew Longbow (s)",
+        "base_xp": 150.0,
+        "type": "Bow"
+      },
+      {
+        "level": 71,
+        "item": "Dragonstone Bolt Tips",
+        "base_xp": 8.2,
+        "type": "Bolt Tips"
+      },
+      {
+        "level": 71,
+        "item": "Dragonstone Bolts",
+        "base_xp": 82.0,
+        "type": "Tipped Bolt"
+      },
+      {
+        "level": 71,
+        "item": "Dragonstone Bolts no Gem",
+        "base_xp": 182.0,
+        "type": "Tipped Bolt no Gem"
+      },
+      {
+        "level": 71,
+        "item": "Dragonstone Bolts Full",
+        "base_xp": 188.8333333,
+        "type": "Tipped Bolt Full"
+      },
+      {
+        "level": 73,
+        "item": "Onyx Bolt Tips",
+        "base_xp": 9.4,
+        "type": "Bolt Tips"
+      },
+      {
+        "level": 73,
+        "item": "Onyx Bolts",
+        "base_xp": 94.0,
+        "type": "Tipped Bolt"
+      },
+      {
+        "level": 73,
+        "item": "Onyx Bolts no Gem",
+        "base_xp": 194.0,
+        "type": "Tipped Bolt no Gem"
+      },
+      {
+        "level": 73,
+        "item": "Onyx Bolts Full",
+        "base_xp": 201.8333333,
+        "type": "Tipped Bolt Full"
+      },
+      {
+        "level": 75,
+        "item": "Rune Arrows",
+        "base_xp": 207.4,
+        "type": "Arrow"
+      },
+      {
+        "level": 75,
+        "item": "Rune + Headless",
+        "base_xp": 222.4,
+        "type": "Arrow"
+      },
+      {
+        "level": 75,
+        "item": "Rune + Headless + Shaft",
+        "base_xp": 227.4,
+        "type": "Arrow"
+      },
+      {
+        "level": 80,
+        "item": "Magic Shortbow (u)",
+        "base_xp": 83.3,
+        "type": "Bow"
+      },
+      {
+        "level": 80,
+        "item": "Magic Shortbow (s)",
+        "base_xp": 166.6,
+        "type": "Bow"
+      },
+      {
+        "level": 81,
+        "item": "Rune Dart",
+        "base_xp": 188.0,
+        "type": "Dart"
+      },
+      {
+        "level": 85,
+        "item": "Magic Longbow (u)",
+        "base_xp": 91.5,
+        "type": "Bow"
+      },
+      {
+        "level": 85,
+        "item": "Magic Longbow (s)",
+        "base_xp": 183.0,
+        "type": "Bow"
+      },
+      {
+        "level": 90,
+        "item": "Dragon Arrows",
+        "base_xp": 244.5,
+        "type": "Arrow"
+      },
+      {
+        "level": 90,
+        "item": "Dragon + Headless",
+        "base_xp": 259.5,
+        "type": "Arrow"
+      },
+      {
+        "level": 90,
+        "item": "Dragon + Headless + Shaft",
+        "base_xp": 264.5,
+        "type": "Arrow"
+      },
+      {
+        "level": 95,
+        "item": "Dragon Dart",
+        "base_xp": 250.0,
+        "type": "Dart"
+      }
+    ],
+    "Fire Making": [
+      {
+        "level": 1,
+        "item": "Normal",
+        "base_xp": 204.0,
+        "type": "Normal"
+      },
+      {
+        "level": 1,
+        "item": "Archery",
+        "base_xp": 204.0,
+        "type": "Normal"
+      },
+      {
+        "level": 5,
+        "item": "Pyre Logs",
+        "base_xp": 255.0,
+        "type": "Pyre"
+      },
+      {
+        "level": 15,
+        "item": "Oak",
+        "base_xp": 306.0,
+        "type": "Normal"
+      },
+      {
+        "level": 20,
+        "item": "Oak Pyre",
+        "base_xp": 357.0,
+        "type": "Pyre"
+      },
+      {
+        "level": 30,
+        "item": "Willow",
+        "base_xp": 459.0,
+        "type": "Normal"
+      },
+      {
+        "level": 35,
+        "item": "Teak",
+        "base_xp": 535.5,
+        "type": "Normal"
+      },
+      {
+        "level": 11,
+        "item": "Normal Pyre Ship",
+        "base_xp": 204.0,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 11,
+        "item": "Archery Pyre Ship",
+        "base_xp": 204.0,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 25,
+        "item": "Oak Pyre Ship",
+        "base_xp": 306.0,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 40,
+        "item": "Willow Pyre Ship",
+        "base_xp": 459.0,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 45,
+        "item": "Teak Pyre Ship",
+        "base_xp": 535.5,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 52,
+        "item": "Arctic Pyre Ship",
+        "base_xp": 637.5,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 55,
+        "item": "Maple Pyre Ship",
+        "base_xp": 688.5,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 60,
+        "item": "Mahogany Pyre Ship",
+        "base_xp": 803.25,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 68,
+        "item": "Eucalyptus Pyre Ship",
+        "base_xp": 872.1,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 70,
+        "item": "Yew Pyre Ship",
+        "base_xp": 1032.75,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 85,
+        "item": "Magic Pyre Ship",
+        "base_xp": 1549.38,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 35,
+        "item": "Willow Pyre",
+        "base_xp": 510.0,
+        "type": "Pyre"
+      },
+      {
+        "level": 40,
+        "item": "Teak Pyre",
+        "base_xp": 612.0,
+        "type": "Pyre"
+      },
+      {
+        "level": 42,
+        "item": "Arctic Pine",
+        "base_xp": 637.5,
+        "type": "Normal"
+      },
+      {
+        "level": 45,
+        "item": "Maple",
+        "base_xp": 688.5,
+        "type": "Normal"
+      },
+      {
+        "level": 47,
+        "item": "Arctic Pine Pyre",
+        "base_xp": 805.8,
+        "type": "Pyre"
+      },
+      {
+        "level": 50,
+        "item": "Maple Pyre",
+        "base_xp": 892.5,
+        "type": "Pyre"
+      },
+      {
+        "level": 50,
+        "item": "Mahogany",
+        "base_xp": 803.25,
+        "type": "Normal"
+      },
+      {
+        "level": 55,
+        "item": "Mahogany Pyre",
+        "base_xp": 1071.0,
+        "type": "Pyre"
+      },
+      {
+        "level": 58,
+        "item": "Eucalyptus",
+        "base_xp": 986.85,
+        "type": "Normal"
+      },
+      {
+        "level": 60,
+        "item": "Yew",
+        "base_xp": 1032.75,
+        "type": "Normal"
+      },
+      {
+        "level": 63,
+        "item": "Eucalyptus Pyre",
+        "base_xp": 1104.15,
+        "type": "Pyre"
+      },
+      {
+        "level": 65,
+        "item": "Yew Pyre",
+        "base_xp": 1147.5,
+        "type": "Pyre"
+      },
+      {
+        "level": 75,
+        "item": "Magic",
+        "base_xp": 1549.38,
+        "type": "Normal"
+      },
+      {
+        "level": 80,
+        "item": "Magic Pyre",
+        "base_xp": 2062.95,
+        "type": "Pyre"
+      },
+      {
+        "level": 82,
+        "item": "Cursed Magic",
+        "base_xp": 1549.38,
+        "type": "Normal"
+      }
+    ],
+    "Wood Cutting": [
+      {
+        "level": 1,
+        "item": "Normal",
+        "base_xp": 125.0
+      },
+      {
+        "level": 1,
+        "item": "Archery",
+        "base_xp": 125.0
+      },
+      {
+        "level": 10,
+        "item": "Light Jungle",
+        "base_xp": 160.0
+      },
+      {
+        "level": 15,
+        "item": "Oak",
+        "base_xp": 187.5
+      },
+      {
+        "level": 20,
+        "item": "Medium Jungle",
+        "base_xp": 275.0
+      },
+      {
+        "level": 30,
+        "item": "Willow",
+        "base_xp": 337.5
+      },
+      {
+        "level": 35,
+        "item": "Teak",
+        "base_xp": 425.0
+      },
+      {
+        "level": 35,
+        "item": "Dense Jungle",
+        "base_xp": 400.0
+      },
+      {
+        "level": 45,
+        "item": "Maple",
+        "base_xp": 500.0
+      },
+      {
+        "level": 45,
+        "item": "Maple + Seers",
+        "base_xp": 550.0
+      },
+      {
+        "level": 45,
+        "item": "Hollow",
+        "base_xp": 412.5
+      },
+      {
+        "level": 50,
+        "item": "Mahogany",
+        "base_xp": 625.0
+      },
+      {
+        "level": 54,
+        "item": "Arctic Pine",
+        "base_xp": 200.0
+      },
+      {
+        "level": 58,
+        "item": "Eucalyptus",
+        "base_xp": 825.0
+      },
+      {
+        "level": 60,
+        "item": "Yew",
+        "base_xp": 875.0
+      },
+      {
+        "level": 75,
+        "item": "Magic",
+        "base_xp": 1250.0
+      },
+      {
+        "level": 82,
+        "item": "Cursed Magic",
+        "base_xp": 1375.0
+      }
+    ],
+    "Crafting": [
+      {
+        "level": 1,
+        "item": "Opal",
+        "base_xp": 15.0,
+        "type": "Gem"
+      },
+      {
+        "level": 1,
+        "item": "Leather Gloves",
+        "base_xp": 13.75,
+        "type": "Leather"
+      },
+      {
+        "level": 1,
+        "item": "Molten Glass",
+        "base_xp": 20.0,
+        "type": "Smelting"
+      },
+      {
+        "level": 1,
+        "item": "Beer Glass",
+        "base_xp": 17.5,
+        "type": "Glass Blowing"
+      },
+      {
+        "level": 1,
+        "item": "Beer + Molten",
+        "base_xp": 37.5,
+        "type": "Full Blowing"
+      },
+      {
+        "level": 1,
+        "item": "Wool",
+        "base_xp": 2.75,
+        "type": "Spinning"
+      },
+      {
+        "level": 4,
+        "item": "Lantern",
+        "base_xp": 19.0,
+        "type": "Glass Blowing"
+      },
+      {
+        "level": 4,
+        "item": "Lantern + Molten",
+        "base_xp": 39.0,
+        "type": "Full Blowing"
+      },
+      {
+        "level": 7,
+        "item": "Boots",
+        "base_xp": 16.25,
+        "type": "Leather"
+      },
+      {
+        "level": 9,
+        "item": "Cowl",
+        "base_xp": 18.5,
+        "type": "Leather"
+      },
+      {
+        "level": 10,
+        "item": "Flax",
+        "base_xp": 15.0,
+        "type": "Spinning"
+      },
+      {
+        "level": 10,
+        "item": "Sinew",
+        "base_xp": 15.0,
+        "type": "Spinning"
+      },
+      {
+        "level": 10,
+        "item": "Roots",
+        "base_xp": 15.0,
+        "type": "Spinning"
+      },
+      {
+        "level": 11,
+        "item": "Leather Vambs",
+        "base_xp": 22.0,
+        "type": "Leather"
+      },
+      {
+        "level": 12,
+        "item": "Lamp",
+        "base_xp": 25.0,
+        "type": "Glass Blowing"
+      },
+      {
+        "level": 12,
+        "item": "Lamp + Molten",
+        "base_xp": 45.0,
+        "type": "Full Blowing"
+      },
+      {
+        "level": 13,
+        "item": "Jade",
+        "base_xp": 20.0,
+        "type": "Gem"
+      },
+      {
+        "level": 14,
+        "item": "Leather Body",
+        "base_xp": 25.0,
+        "type": "Leather"
+      },
+      {
+        "level": 15,
+        "item": "Snelm",
+        "base_xp": 32.5,
+        "type": "Snelm"
+      },
+      {
+        "level": 16,
+        "item": "Red Topaz",
+        "base_xp": 25.0,
+        "type": "Gem"
+      },
+      {
+        "level": 18,
+        "item": "Leather Chaps",
+        "base_xp": 27.0,
+        "type": "Leather"
+      },
+      {
+        "level": 19,
+        "item": "Magic Roots",
+        "base_xp": 30.0,
+        "type": "Spinning"
+      },
+      {
+        "level": 20,
+        "item": "Sapphire",
+        "base_xp": 50.0,
+        "type": "Gem"
+      },
+      {
+        "level": 20,
+        "item": "Sapphire Ring",
+        "base_xp": 40.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 20,
+        "item": "Saph Ring + Gem",
+        "base_xp": 90.0,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 22,
+        "item": "Sapphire Necklace",
+        "base_xp": 55.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 22,
+        "item": "Saph Neck + Gem",
+        "base_xp": 105.0,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 23,
+        "item": "Sapphire Bracelet",
+        "base_xp": 60.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 23,
+        "item": "Saph Brace + Gem",
+        "base_xp": 110.0,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 24,
+        "item": "Sapphire Amulet(u)",
+        "base_xp": 65.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 24,
+        "item": "Saph Ammy + Gem",
+        "base_xp": 115.0,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 27,
+        "item": "Emerald",
+        "base_xp": 67.5,
+        "type": "Gem"
+      },
+      {
+        "level": 27,
+        "item": "Emerald Ring",
+        "base_xp": 55.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 27,
+        "item": "Em Ring + Gem",
+        "base_xp": 122.5,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 28,
+        "item": "Hard Leather Body",
+        "base_xp": 35.0,
+        "type": "Leather"
+      },
+      {
+        "level": 29,
+        "item": "Emerald Necklace",
+        "base_xp": 60.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 29,
+        "item": "Em Neck + Gem",
+        "base_xp": 115.0,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 30,
+        "item": "Emerald Bracelet",
+        "base_xp": 65.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 30,
+        "item": "Em Brace+ Gem",
+        "base_xp": 120.0,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 30,
+        "item": "Yak Hair",
+        "base_xp": 25.0,
+        "type": "Spinning"
+      },
+      {
+        "level": 31,
+        "item": "Emerald Amulet(u)",
+        "base_xp": 70.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 31,
+        "item": "Em Ammy + Gem",
+        "base_xp": 192.5,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 11,
+        "item": "Normal Pyre Ship",
+        "base_xp": 10.0,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 11,
+        "item": "Archery Pyre Ship",
+        "base_xp": 10.0,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 25,
+        "item": "Oak Pyre Ship",
+        "base_xp": 15.0,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 40,
+        "item": "Willow Pyre Ship",
+        "base_xp": 22.5,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 45,
+        "item": "Teak Pyre Ship",
+        "base_xp": 26.2,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 52,
+        "item": "Arctic Pyre Ship",
+        "base_xp": 31.2,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 55,
+        "item": "Maple Pyre Ship",
+        "base_xp": 33.7,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 60,
+        "item": "Mahogany Pyre Ship",
+        "base_xp": 39.3,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 68,
+        "item": "Eucalyptus Pyre Ship",
+        "base_xp": 42.0,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 70,
+        "item": "Yew Pyre Ship",
+        "base_xp": 50.6,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 85,
+        "item": "Magic Pyre Ship",
+        "base_xp": 75.9,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 32,
+        "item": "Spiky Vambs",
+        "base_xp": 6.0,
+        "type": "Leather"
+      },
+      {
+        "level": 33,
+        "item": "Vial",
+        "base_xp": 35.0,
+        "type": "Glass Blowing"
+      },
+      {
+        "level": 33,
+        "item": "Vial + Molten",
+        "base_xp": 55.0,
+        "type": "Full Blowing"
+      },
+      {
+        "level": 34,
+        "item": "Ruby",
+        "base_xp": 85.0,
+        "type": "Gem"
+      },
+      {
+        "level": 34,
+        "item": "Ruby Ring",
+        "base_xp": 70.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 34,
+        "item": "Ruby Ring + Gem",
+        "base_xp": 155.0,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 38,
+        "item": "Coif",
+        "base_xp": 37.0,
+        "type": "Leather"
+      },
+      {
+        "level": 40,
+        "item": "Ruby Necklace",
+        "base_xp": 75.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 40,
+        "item": "Ruby Neck + Gem",
+        "base_xp": 145.0,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 41,
+        "item": "Studded Body",
+        "base_xp": 40.0,
+        "type": "Leather"
+      },
+      {
+        "level": 42,
+        "item": "Ruby Bracelet",
+        "base_xp": 80.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 42,
+        "item": "Ruby Brace + Gem",
+        "base_xp": 235.0,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 42,
+        "item": "Fishbowl",
+        "base_xp": 42.5,
+        "type": "Glass Blowing"
+      },
+      {
+        "level": 42,
+        "item": "Fishbowl + Molten",
+        "base_xp": 62.5,
+        "type": "Full Blowing"
+      },
+      {
+        "level": 43,
+        "item": "Diamond",
+        "base_xp": 107.5,
+        "type": "Gem"
+      },
+      {
+        "level": 43,
+        "item": "Diamond Ring",
+        "base_xp": 85.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 43,
+        "item": "Dia Ring + Gem",
+        "base_xp": 192.5,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 43,
+        "item": "Yak-hide Legs",
+        "base_xp": 32.0,
+        "type": "Yak-Hide"
+      },
+      {
+        "level": 44,
+        "item": "Studded Chaps",
+        "base_xp": 42.0,
+        "type": "Leather"
+      },
+      {
+        "level": 45,
+        "item": "Snakeskin Boots",
+        "base_xp": 30.0,
+        "type": "Snakeskin"
+      },
+      {
+        "level": 46,
+        "item": "Yak-hide Body",
+        "base_xp": 32.0,
+        "type": "Yak-Hide"
+      },
+      {
+        "level": 46,
+        "item": "Orb",
+        "base_xp": 52.5,
+        "type": "Glass Blowing"
+      },
+      {
+        "level": 46,
+        "item": "Orb + Molten",
+        "base_xp": 72.5,
+        "type": "Full Blowing"
+      },
+      {
+        "level": 47,
+        "item": "Snakeskin Vambs",
+        "base_xp": 35.0,
+        "type": "Snakeskin"
+      },
+      {
+        "level": 48,
+        "item": "Snakeskin Bandana",
+        "base_xp": 45.0,
+        "type": "Snakeskin"
+      },
+      {
+        "level": 49,
+        "item": "Lens",
+        "base_xp": 55.0,
+        "type": "Glass Blowing"
+      },
+      {
+        "level": 49,
+        "item": "Lens + Molten",
+        "base_xp": 75.0,
+        "type": "Full Blowing"
+      },
+      {
+        "level": 50,
+        "item": "Ruby Amulet(u)",
+        "base_xp": 85.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 50,
+        "item": "Ruby Ammy + Gem",
+        "base_xp": 117.0,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 51,
+        "item": "Snakeskin Chaps",
+        "base_xp": 50.0,
+        "type": "Snakeskin"
+      },
+      {
+        "level": 53,
+        "item": "Snakeskin Body",
+        "base_xp": 55.0,
+        "type": "Snakeskin"
+      },
+      {
+        "level": 54,
+        "item": "Water Staff",
+        "base_xp": 100.0,
+        "type": "Battlestaff"
+      },
+      {
+        "level": 54,
+        "item": "Water Staff + Orb",
+        "base_xp": 152.5,
+        "type": "Orb Staff"
+      },
+      {
+        "level": 54,
+        "item": "Water Staff + Molten",
+        "base_xp": 172.5,
+        "type": "Full Staff"
+      },
+      {
+        "level": 55,
+        "item": "Dragonstone",
+        "base_xp": 137.5,
+        "type": "Gem"
+      },
+      {
+        "level": 55,
+        "item": "Dragonstone Ring",
+        "base_xp": 100.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 55,
+        "item": "Dstone Ring+ Gem",
+        "base_xp": 237.5,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 56,
+        "item": "Diamond Necklace",
+        "base_xp": 90.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 56,
+        "item": "Dia Neck + Gem",
+        "base_xp": 227.5,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 57,
+        "item": "Green D'hide Vambs",
+        "base_xp": 62.0,
+        "type": "D'hide"
+      },
+      {
+        "level": 58,
+        "item": "Diamond Bracelet",
+        "base_xp": 95.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 58,
+        "item": "Dia Brace + Gem",
+        "base_xp": 195.0,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 58,
+        "item": "Earth Staff",
+        "base_xp": 112.5,
+        "type": "Battlestaff"
+      },
+      {
+        "level": 58,
+        "item": "Earth Staff + Orb",
+        "base_xp": 165.0,
+        "type": "Orb Staff"
+      },
+      {
+        "level": 58,
+        "item": "Earth Staff + Molten",
+        "base_xp": 185.0,
+        "type": "Full Staff"
+      },
+      {
+        "level": 60,
+        "item": "Green D'hide Chaps",
+        "base_xp": 124.0,
+        "type": "D'hide"
+      },
+      {
+        "level": 62,
+        "item": "Fire Staff",
+        "base_xp": 125.0,
+        "type": "Battlestaff"
+      },
+      {
+        "level": 62,
+        "item": "Fire Staff + Orb",
+        "base_xp": 177.5,
+        "type": "Orb Staff"
+      },
+      {
+        "level": 62,
+        "item": "Fire Staff + Molten",
+        "base_xp": 197.5,
+        "type": "Full Staff"
+      },
+      {
+        "level": 63,
+        "item": "Green D'hide Body",
+        "base_xp": 186.0,
+        "type": "D'hide"
+      },
+      {
+        "level": 66,
+        "item": "Blue D'hide Vambs",
+        "base_xp": 70.0,
+        "type": "D'hide"
+      },
+      {
+        "level": 66,
+        "item": "Air Staff",
+        "base_xp": 137.5,
+        "type": "Battlestaff"
+      },
+      {
+        "level": 66,
+        "item": "Air Staff + Orb",
+        "base_xp": 190.0,
+        "type": "Orb Staff"
+      },
+      {
+        "level": 66,
+        "item": "Air Staff +  Molten",
+        "base_xp": 210.0,
+        "type": "Full Staff"
+      },
+      {
+        "level": 67,
+        "item": "Onyx",
+        "base_xp": 167.5,
+        "type": "Gem"
+      },
+      {
+        "level": 67,
+        "item": "Onyx Ring",
+        "base_xp": 115.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 67,
+        "item": "Onyx Ring + Gem",
+        "base_xp": 282.5,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 68,
+        "item": "Blue D'hide Chaps",
+        "base_xp": 140.0,
+        "type": "D'hide"
+      },
+      {
+        "level": 70,
+        "item": "Diamond Amulet(u)",
+        "base_xp": 100.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 70,
+        "item": "Dia Ammy + Gem",
+        "base_xp": 237.5,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 71,
+        "item": "Blue D'hide Body",
+        "base_xp": 210.0,
+        "type": "D'hide"
+      },
+      {
+        "level": 72,
+        "item": "Dragonstone Necklace",
+        "base_xp": 105.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 72,
+        "item": "Dstone Neck + Gem",
+        "base_xp": 205.0,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 73,
+        "item": "Red D'hide Vambs",
+        "base_xp": 78.0,
+        "type": "D'hide"
+      },
+      {
+        "level": 74,
+        "item": "Dragonstone Bracelet",
+        "base_xp": 110.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 74,
+        "item": "Dstone Brace + Gem",
+        "base_xp": 347.5,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 75,
+        "item": "Red D'hide Chaps",
+        "base_xp": 156.0,
+        "type": "D'hide"
+      },
+      {
+        "level": 77,
+        "item": "Red D'hide Body",
+        "base_xp": 234.0,
+        "type": "D'hide"
+      },
+      {
+        "level": 79,
+        "item": "Black D'Hide Vambs",
+        "base_xp": 86.0,
+        "type": "D'hide"
+      },
+      {
+        "level": 80,
+        "item": "Dragonstone Amulet(u)",
+        "base_xp": 150.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 80,
+        "item": "Dstone Ammy + Gem",
+        "base_xp": 355.0,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 82,
+        "item": "Onyx Necklace",
+        "base_xp": 120.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 82,
+        "item": "Onyx Neck + Gem",
+        "base_xp": 206.0,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 82,
+        "item": "Black D'Hide Chaps",
+        "base_xp": 172.0,
+        "type": "D'hide"
+      },
+      {
+        "level": 84,
+        "item": "Onyx Bracelet",
+        "base_xp": 125.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 84,
+        "item": "Onyx Brace + Gem",
+        "base_xp": 275.0,
+        "type": "Gem + Jewellery"
+      },
+      {
+        "level": 84,
+        "item": "Black D'Hide Body",
+        "base_xp": 258.0,
+        "type": "D'hide"
+      },
+      {
+        "level": 87,
+        "item": "Dorg Orb",
+        "base_xp": 70.0,
+        "type": "Glass Blowing"
+      },
+      {
+        "level": 87,
+        "item": "Dorg Orb + Molten",
+        "base_xp": 90.0,
+        "type": "Full Blowing"
+      },
+      {
+        "level": 90,
+        "item": "Onyx Amulet(u)",
+        "base_xp": 165.0,
+        "type": "Jewellery"
+      },
+      {
+        "level": 90,
+        "item": "Onyx Ammy + Gem",
+        "base_xp": 371.0,
+        "type": "Gem + Jewellery"
+      }
+    ],
+    "Fishing": [
+      {
+        "level": 1,
+        "item": "Shrimp",
+        "base_xp": 50.0,
+        "type": "Net"
+      },
+      {
+        "level": 5,
+        "item": "Sardine",
+        "base_xp": 100.0,
+        "type": "Bait"
+      },
+      {
+        "level": 10,
+        "item": "Herring",
+        "base_xp": 150.0,
+        "type": "Bait"
+      },
+      {
+        "level": 15,
+        "item": "Anchovies",
+        "base_xp": 200.0,
+        "type": "Net"
+      },
+      {
+        "level": 16,
+        "item": "Mackeral",
+        "base_xp": 100.0,
+        "type": "Big Net"
+      },
+      {
+        "level": 20,
+        "item": "Trout",
+        "base_xp": 250.0,
+        "type": "Fly"
+      },
+      {
+        "level": 23,
+        "item": "Cod",
+        "base_xp": 225.0,
+        "type": "Big Net"
+      },
+      {
+        "level": 25,
+        "item": "Pike",
+        "base_xp": 300.0,
+        "type": "Bait"
+      },
+      {
+        "level": 28,
+        "item": "Slimey Eel",
+        "base_xp": 400.0,
+        "type": "Bait"
+      },
+      {
+        "level": 30,
+        "item": "Salmon",
+        "base_xp": 350.0,
+        "type": "Fly"
+      },
+      {
+        "level": 35,
+        "item": "Tuna",
+        "base_xp": 400.0,
+        "type": "Harpoon"
+      },
+      {
+        "level": 38,
+        "item": "Rainbow",
+        "base_xp": 400.0,
+        "type": "Stripy Fly"
+      },
+      {
+        "level": 40,
+        "item": "Lobster",
+        "base_xp": 450.0,
+        "type": "Cage"
+      },
+      {
+        "level": 46,
+        "item": "Bass",
+        "base_xp": 500.0,
+        "type": "Big Net"
+      },
+      {
+        "level": 50,
+        "item": "Swordfish",
+        "base_xp": 500.0,
+        "type": "Harpoon"
+      },
+      {
+        "level": 53,
+        "item": "Lava Eel",
+        "base_xp": 300.0,
+        "type": "Oily Bait"
+      },
+      {
+        "level": 58,
+        "item": "Leaping Salmon",
+        "base_xp": 350.0,
+        "type": "Barbarian"
+      },
+      {
+        "level": 62,
+        "item": "Monkfish ",
+        "base_xp": 600.0,
+        "type": "Net"
+      },
+      {
+        "level": 65,
+        "item": "Karambwan",
+        "base_xp": 250.0,
+        "type": "Vessel"
+      },
+      {
+        "level": 70,
+        "item": "Leaping Sturgeon",
+        "base_xp": 400.0,
+        "type": "Barbarian"
+      },
+      {
+        "level": 76,
+        "item": "Shark",
+        "base_xp": 550.0,
+        "type": "Harpoon"
+      },
+      {
+        "level": 79,
+        "item": "Sea Turtle",
+        "base_xp": 190.0,
+        "type": "Trawler"
+      },
+      {
+        "level": 81,
+        "item": "Manta Ray",
+        "base_xp": 345.0,
+        "type": "Trawler"
+      }
+    ],
+    "Hunter": [
+      {
+        "level": 1,
+        "item": "Crimson Swift",
+        "base_xp": 34.0,
+        "type": "Bird Snaring"
+      },
+      {
+        "level": 1,
+        "item": "Rabbit",
+        "base_xp": 30.0,
+        "type": "Feed"
+      },
+      {
+        "level": 1,
+        "item": "Polar Kebbit",
+        "base_xp": 30.0,
+        "type": "Tracking"
+      },
+      {
+        "level": 3,
+        "item": "Common Kebbit",
+        "base_xp": 36.0,
+        "type": "Tracking"
+      },
+      {
+        "level": 5,
+        "item": "Golden Warbler",
+        "base_xp": 48.0,
+        "type": "Bird Snaring"
+      },
+      {
+        "level": 7,
+        "item": "Feldip Weasel",
+        "base_xp": 48.0,
+        "type": "Tracking"
+      },
+      {
+        "level": 9,
+        "item": "Copper Longtail",
+        "base_xp": 61.0,
+        "type": "Bird Snaring"
+      },
+      {
+        "level": 11,
+        "item": "Cerulean Twitch",
+        "base_xp": 64.67,
+        "type": "Bird Snaring"
+      },
+      {
+        "level": 13,
+        "item": "Desert Devil",
+        "base_xp": 66.0,
+        "type": "Tracking"
+      },
+      {
+        "level": 15,
+        "item": "Ruby Harvest",
+        "base_xp": 24.0,
+        "type": "Butterly Net"
+      },
+      {
+        "level": 17,
+        "item": "Baby Impling (W)",
+        "base_xp": 20.0,
+        "type": "Implin g"
+      },
+      {
+        "level": 17,
+        "item": "Baby Impling (P)",
+        "base_xp": 18.0,
+        "type": "Impling"
+      },
+      {
+        "level": 19,
+        "item": "Tropical Wagtail",
+        "base_xp": 95.2,
+        "type": "Bird Snaring"
+      },
+      {
+        "level": 22,
+        "item": "Young Impling (W)",
+        "base_xp": 22.0,
+        "type": "Impling"
+      },
+      {
+        "level": 22,
+        "item": "Young Impling (P)",
+        "base_xp": 20.0,
+        "type": "Impling"
+      },
+      {
+        "level": 23,
+        "item": "Wild Kebbit",
+        "base_xp": 128.0,
+        "type": "Deadfall"
+      },
+      {
+        "level": 25,
+        "item": "Sapphire Glacialis",
+        "base_xp": 34.0,
+        "type": "Butterly Net"
+      },
+      {
+        "level": 27,
+        "item": "White Rabbit",
+        "base_xp": 144.0,
+        "type": "Rabbit"
+      },
+      {
+        "level": 27,
+        "item": "Ferret",
+        "base_xp": 115.0,
+        "type": "Box Trap"
+      },
+      {
+        "level": 27,
+        "item": "Gecko",
+        "base_xp": 100.0,
+        "type": "Box Trap"
+      },
+      {
+        "level": 27,
+        "item": "Raccoon",
+        "base_xp": 100.0,
+        "type": "Box Trap"
+      },
+      {
+        "level": 27,
+        "item": "Monkey",
+        "base_xp": 100.0,
+        "type": "Box Trap"
+      },
+      {
+        "level": 29,
+        "item": "Swamp Lizard",
+        "base_xp": 152.0,
+        "type": "Net Trap"
+      },
+      {
+        "level": 29,
+        "item": "Squirrel",
+        "base_xp": 152.0,
+        "type": "Net Trap"
+      },
+      {
+        "level": 31,
+        "item": "Spined Larupia",
+        "base_xp": 180.0,
+        "type": "Pitfall"
+      },
+      {
+        "level": 32,
+        "item": "Young Impling (W)",
+        "base_xp": 24.0,
+        "type": "Impling"
+      },
+      {
+        "level": 32,
+        "item": "Gourmet Impling (P)",
+        "base_xp": 22.0,
+        "type": "Impling"
+      },
+      {
+        "level": 33,
+        "item": "Barb-tailed Kebbit",
+        "base_xp": 168.0,
+        "type": "Deadfall"
+      },
+      {
+        "level": 35,
+        "item": "Snowy Knight",
+        "base_xp": 44.0,
+        "type": "Butterly Net"
+      },
+      {
+        "level": 36,
+        "item": "Earth Impling (W)",
+        "base_xp": 27.0,
+        "type": "Impling"
+      },
+      {
+        "level": 36,
+        "item": "Earth Impling (P)",
+        "base_xp": 25.0,
+        "type": "Impling"
+      },
+      {
+        "level": 37,
+        "item": "Prickly Kebbit",
+        "base_xp": 204.0,
+        "type": "Deadfall"
+      },
+      {
+        "level": 39,
+        "item": "Wimpy Bird",
+        "base_xp": 167.0,
+        "type": "Bird Snaring"
+      },
+      {
+        "level": 41,
+        "item": "Horned Graahk",
+        "base_xp": 240.0,
+        "type": "Pitfall"
+      },
+      {
+        "level": 42,
+        "item": "Essence Impling (W)",
+        "base_xp": 29.0,
+        "type": "Impling"
+      },
+      {
+        "level": 42,
+        "item": "Essence Impling (P)",
+        "base_xp": 27.0,
+        "type": "Impling"
+      },
+      {
+        "level": 43,
+        "item": "Spotted Kebbit",
+        "base_xp": 104.0,
+        "type": "Falconary"
+      },
+      {
+        "level": 44,
+        "item": "Diseasd Kebbit",
+        "base_xp": 200.0,
+        "type": "Deadfall"
+      },
+      {
+        "level": 45,
+        "item": "Black Warlock",
+        "base_xp": 54.0,
+        "type": "Butterly Net"
+      },
+      {
+        "level": 47,
+        "item": "Orange Salamander",
+        "base_xp": 224.0,
+        "type": "Net Trap"
+      },
+      {
+        "level": 48,
+        "item": "Platypus",
+        "base_xp": 1.0,
+        "type": "Box Trap"
+      },
+      {
+        "level": 49,
+        "item": "Razor-backed Kebbit",
+        "base_xp": 348.0,
+        "type": "Tracking"
+      },
+      {
+        "level": 50,
+        "item": "Eclectic Impling (W)",
+        "base_xp": 32.0,
+        "type": "Impling"
+      },
+      {
+        "level": 50,
+        "item": "Eclectic Impling (P)",
+        "base_xp": 30.0,
+        "type": "Impling"
+      },
+      {
+        "level": 51,
+        "item": "Sabre-toothed Kebbit",
+        "base_xp": 200.0,
+        "type": "Deadfall"
+      },
+      {
+        "level": 53,
+        "item": "Chinchompa",
+        "base_xp": 198.0,
+        "type": "Box Trap"
+      },
+      {
+        "level": 55,
+        "item": "Sabre-toothed Kyatt",
+        "base_xp": 300.0,
+        "type": "Pitfall"
+      },
+      {
+        "level": 57,
+        "item": "Dark Kebbit",
+        "base_xp": 132.0,
+        "type": "Falconary"
+      },
+      {
+        "level": 58,
+        "item": "Nature Impling (W)",
+        "base_xp": 36.0,
+        "type": "Impling"
+      },
+      {
+        "level": 58,
+        "item": "Nature Impling (P)",
+        "base_xp": 34.0,
+        "type": "Impling"
+      },
+      {
+        "level": 59,
+        "item": "Red Salamander",
+        "base_xp": 272.0,
+        "type": "Net Trap"
+      },
+      {
+        "level": 63,
+        "item": "Red Chincompa",
+        "base_xp": 265.0,
+        "type": "Box Trap"
+      },
+      {
+        "level": 65,
+        "item": "Magpie Impling (W)",
+        "base_xp": 216.0,
+        "type": "Impling"
+      },
+      {
+        "level": 65,
+        "item": "Magpie Impling (P)",
+        "base_xp": 44.0,
+        "type": "Impling"
+      },
+      {
+        "level": 66,
+        "item": "Pawya",
+        "base_xp": 400.0,
+        "type": "Box Trap"
+      },
+      {
+        "level": 67,
+        "item": "Black Salamander",
+        "base_xp": 304.0,
+        "type": "Net Trap"
+      },
+      {
+        "level": 69,
+        "item": "Dashing Kebbit",
+        "base_xp": 156.0,
+        "type": "Falconary"
+      },
+      {
+        "level": 71,
+        "item": "Imps",
+        "base_xp": 450.0,
+        "type": "Magical Box Trap"
+      },
+      {
+        "level": 74,
+        "item": "Ninja Impling (W)",
+        "base_xp": 240.0,
+        "type": "Impling"
+      },
+      {
+        "level": 74,
+        "item": "Ninja Impling (P)",
+        "base_xp": 52.0,
+        "type": "Impling"
+      },
+      {
+        "level": 77,
+        "item": "Grenwall",
+        "base_xp": 1100.0,
+        "type": "Box Trap"
+      },
+      {
+        "level": 83,
+        "item": "Dragon Impling (W)",
+        "base_xp": 300.0,
+        "type": "Impling"
+      },
+      {
+        "level": 83,
+        "item": "Dragon Impling (P)",
+        "base_xp": 65.0,
+        "type": "Impling"
+      }
+    ]
+  }
+}
