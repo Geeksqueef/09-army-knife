@@ -172,6 +172,7 @@
         
         <div id="penguin-points-section">
             <h2 class="penguin-description">Calculate how many levels you will get with penguin points</h2>
+            <p class="penguin-description" style="font-size: 14px; margin-bottom: 15px;">Enter your current level and your target level, or current number of penguin points and whether or not you'll be using brawlers and click calculate.</p>
             
             <div class="input-section">
                 <div class="input-group">
@@ -183,8 +184,12 @@
                     <input type="number" id="penguin-current-level" value="1" min="1" max="98">
                 </div>
                 <div class="input-group">
+                    <label for="penguin-target-level">Target Level (1-99)</label>
+                    <input type="number" id="penguin-target-level" value="" min="1" max="99" placeholder="Optional">
+                </div>
+                <div class="input-group">
                     <label for="penguin-points">Number of Penguin Points (1-255)</label>
-                    <input type="number" id="penguin-points" value="1" min="1" max="255">
+                    <input type="number" id="penguin-points" value="" min="1" max="255" placeholder="Optional">
                 </div>
             </div>
 
@@ -234,6 +239,10 @@
                 <div class="info-item">
                     <div class="info-label">Levels Gained</div>
                     <div class="info-value" id="penguin-levels-gained">0</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Points Needed</div>
+                    <div class="info-value" id="penguin-points-needed">0</div>
                 </div>
             </div>
         </div>
@@ -431,13 +440,22 @@
         function calculatePenguinPoints() {
             const currentXp = parseInt(document.getElementById('penguin-current-xp').value) || 0;
             const currentLevel = parseInt(document.getElementById('penguin-current-level').value) || 1;
-            const points = parseInt(document.getElementById('penguin-points').value) || 1;
+            const targetLevel = parseInt(document.getElementById('penguin-target-level').value) || 0;
+            const points = parseInt(document.getElementById('penguin-points').value) || 0;
             const brawler = document.getElementById('penguin-brawler').value;
             const xpRate = parseFloat(document.getElementById('penguin-xp-rate').value) || 5;
 
-            // Base calculation: points * (current level * 25)
-            const baseXp = points * (currentLevel * 25);
-            
+            // Validation: require either (current level + target level) OR (current level + penguin points)
+            if (!targetLevel && !points) {
+                alert('Please enter either a target level or the number of penguin points.');
+                return;
+            }
+
+            if (targetLevel && points) {
+                alert('Please enter either a target level OR penguin points, not both.');
+                return;
+            }
+
             // Apply multipliers
             let multiplier = xpRate;
             
@@ -446,19 +464,81 @@
             } else if (brawler === 'non-wildy') {
                 multiplier *= 1.5;
             }
-            
-            const actualXp = baseXp * multiplier;
-            const xpAfter = currentXp + actualXp;
-            const newLevel = getLevelFromXp(xpAfter);
-            const levelsGained = newLevel - currentLevel;
+
+            let baseXp = 0;
+            let actualXp = 0;
+            let xpAfter = currentXp;
+            let newLevel = currentLevel;
+            let levelsGained = 0;
+            let pointsNeeded = 0;
+
+            if (targetLevel) {
+                // Mode 1: Calculate points needed to reach target level
+                if (targetLevel <= currentLevel) {
+                    alert('Target level must be higher than current level.');
+                    return;
+                }
+
+                // Calculate XP needed for each level, factoring (skill level * 25) per point
+                let totalXpNeeded = 0;
+                let tempLevel = currentLevel;
+                
+                while (tempLevel < targetLevel) {
+                    const xpForNextLevel = getXpForLevel(tempLevel + 1) - getXpForLevel(tempLevel);
+                    const pointsForThisLevel = Math.ceil(xpForNextLevel / (tempLevel * 25 * multiplier));
+                    totalXpNeeded += pointsForThisLevel * (tempLevel * 25 * multiplier);
+                    tempLevel++;
+                }
+
+                baseXp = totalXpNeeded / multiplier;
+                actualXp = totalXpNeeded;
+                pointsNeeded = Math.ceil(totalXpNeeded / (currentLevel * 25 * multiplier)); // Approximate
+                levelsGained = targetLevel - currentLevel;
+                newLevel = targetLevel;
+                xpAfter = getXpForLevel(targetLevel);
+            } else {
+                // Mode 2: Calculate levels gained from penguin points
+                // Factor (skill level * 25) each time a level is gained
+                let remainingPoints = points;
+                let tempXp = currentXp;
+                let tempLevel = currentLevel;
+                let totalBaseXp = 0;
+
+                while (remainingPoints > 0 && tempLevel < 99) {
+                    const xpFromOnePoint = tempLevel * 25 * multiplier;
+                    const xpNeededForNextLevel = getXpForLevel(tempLevel + 1) - tempXp;
+                    
+                    if (xpFromOnePoint >= xpNeededForNextLevel) {
+                        // One point can get us to next level
+                        const pointsNeededForLevel = Math.ceil(xpNeededForNextLevel / xpFromOnePoint);
+                        const pointsToUse = Math.min(remainingPoints, pointsNeededForLevel);
+                        tempXp += pointsToUse * xpFromOnePoint;
+                        totalBaseXp += pointsToUse * (tempLevel * 25);
+                        remainingPoints -= pointsToUse;
+                        tempLevel++;
+                    } else {
+                        // Use remaining points
+                        tempXp += remainingPoints * xpFromOnePoint;
+                        totalBaseXp += remainingPoints * (tempLevel * 25);
+                        remainingPoints = 0;
+                    }
+                }
+
+                baseXp = totalBaseXp;
+                actualXp = baseXp * multiplier;
+                xpAfter = tempXp;
+                newLevel = getLevelFromXp(xpAfter);
+                levelsGained = newLevel - currentLevel;
+            }
 
             // Display results
             document.getElementById('penguin-results').style.display = 'grid';
-            document.getElementById('penguin-base-xp').textContent = baseXp.toLocaleString();
-            document.getElementById('penguin-actual-xp').textContent = actualXp.toLocaleString();
-            document.getElementById('penguin-xp-after').textContent = xpAfter.toLocaleString();
+            document.getElementById('penguin-base-xp').textContent = Math.round(baseXp).toLocaleString();
+            document.getElementById('penguin-actual-xp').textContent = Math.round(actualXp).toLocaleString();
+            document.getElementById('penguin-xp-after').textContent = Math.round(xpAfter).toLocaleString();
             document.getElementById('penguin-new-level').textContent = newLevel;
             document.getElementById('penguin-levels-gained').textContent = levelsGained;
+            document.getElementById('penguin-points-needed').textContent = pointsNeeded > 0 ? pointsNeeded.toLocaleString() : '-';
         }
 
         function getLevelFromXp(xp) {
