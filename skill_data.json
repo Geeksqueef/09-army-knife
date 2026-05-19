@@ -4913,7 +4913,7 @@
         "level": 15,
         "item": "Iron Item",
         "base_xp": 125.0,
-        "type": "Smithing"
+        "type": "Smithing (1 bar)"
       },
       {
         "level": 15,
@@ -4941,7 +4941,7 @@
       },
       {
         "level": 30,
-        "item": "Steel Item",
+        "item": "Steel Item (1 bar)",
         "base_xp": 187.5,
         "type": "Smithing"
       },
@@ -4961,18 +4961,18 @@
         "level": 35,
         "item": "Cannonballs + Bar",
         "base_xp": 216.25,
-        "type": "Smelting x2"
+        "type": "Smelting Bar + Ball"
       },
       {
         "level": 40,
         "item": "Gold Bar",
-        "base_xp": 112.5,
+        "base_xp": 22.5,
         "type": "Smelting"
       },
       {
         "level": 40,
         "item": "Gold Bar with Gauntlets",
-        "base_xp": 281.25,
+        "base_xp": 56.2,
         "type": "Smelting"
       },
       {
@@ -4983,7 +4983,7 @@
       },
       {
         "level": 50,
-        "item": "Mithril Item",
+        "item": "Mithril Item (1 bar)",
         "base_xp": 250.0,
         "type": "Smithing"
       },
@@ -5001,7 +5001,7 @@
       },
       {
         "level": 70,
-        "item": "Adamant Item",
+        "item": "Adamant Item (1 bar)",
         "base_xp": 312.5,
         "type": "Smithing"
       },
@@ -5019,7 +5019,7 @@
       },
       {
         "level": 85,
-        "item": "Rune Item",
+        "item": "Rune Item (1 bar)",
         "base_xp": 375.0,
         "type": "Smithing"
       },
