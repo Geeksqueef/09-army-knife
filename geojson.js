@@ -147,7 +147,7 @@ window.digInfo = [
 window.gloryInfo = [
  {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Amulet of Glory, Edgeville</div>'}, 'geometry': {'type': 'Point',   'coordinates': [8743, 5011]} }, 
  {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Amulet of Glory, Karamja</div>'}, 'geometry': {'type': 'Point', 'coordinates': [7375, 7601]} },
- {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Amulet of Glory, Al Kharid</div>'}, 'geometry': {'type': 'Point', 'coordinates': [3292, 3175]} }, 
+ {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Amulet of Glory, Al Kharid</div>'}, 'geometry': {'type': 'Point', 'coordinates': [10404, 7630]} },
  {'type': 'Feature', 'properties': {'name': '<div id="borderimg">Amulet of Glory, Draynor Village</div>'}, 'geometry': {'type': 'Point', 'coordinates': [8883, 6907]} } 
  ]
   
