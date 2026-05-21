@@ -140,6 +140,9 @@
         #penguin-points-section {
             display: none;
         }
+        #sawmill-section {
+            display: none;
+        }
         .penguin-description {
             text-align: center;
             color: #ffd700;
@@ -244,6 +247,37 @@
                 <div class="info-item">
                     <div class="info-label">Points Needed</div>
                     <div class="info-value" id="penguin-points-needed">0</div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="sawmill-section">
+            <h2 class="penguin-description">Calculate sawmill cutting costs</h2>
+            
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="sawmill-logs">Number of logs:</label>
+                    <input type="number" id="sawmill-logs" value="1" min="1">
+                </div>
+                <div class="input-group">
+                    <label for="sawmill-log-type">Type of log:</label>
+                    <select id="sawmill-log-type">
+                        <option value="normal">Normal</option>
+                        <option value="oak">Oak</option>
+                        <option value="teak">Teak</option>
+                        <option value="mahogany">Mahogany</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-item">
+                    <div class="info-label">Price per log</div>
+                    <div class="info-value" id="sawmill-price-per-log">100 gp</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Total cost</div>
+                    <div class="info-value" id="sawmill-total-cost">100 gp</div>
                 </div>
             </div>
         </div>
@@ -363,6 +397,13 @@
                 penguinTab.onclick = () => selectPenguinPoints();
                 tabsContainer.appendChild(penguinTab);
                 
+                // Add sawmill calc tab
+                const sawmillTab = document.createElement('button');
+                sawmillTab.className = 'skill-tab' + (currentTab === 'sawmill' ? ' active' : '');
+                sawmillTab.textContent = 'Sawmill Calc';
+                sawmillTab.onclick = () => selectSawmill();
+                tabsContainer.appendChild(sawmillTab);
+                
                 // event listeners for inputs
                 document.getElementById('starting-xp').addEventListener('input', updateCalculations);
                 document.getElementById('goal-level').addEventListener('input', updateCalculations);
@@ -374,6 +415,10 @@
                 // Penguin points event listeners
                 document.getElementById('penguin-current-xp').addEventListener('input', handlePenguinXpChange);
                 document.getElementById('penguin-current-level').addEventListener('input', handlePenguinLevelChange);
+                
+                // Sawmill event listeners
+                document.getElementById('sawmill-logs').addEventListener('input', calculateSawmill);
+                document.getElementById('sawmill-log-type').addEventListener('input', calculateSawmill);
                 
                 //  calculation
                 updateCalculations();
@@ -394,6 +439,7 @@
             // Show/hide sections
             document.getElementById('penguin-points-section').style.display = 'none';
             document.getElementById('skill-calculator-section').style.display = 'block';
+            document.getElementById('sawmill-section').style.display = 'none';
             
             // Show/hide prayer-specific section
             const prayerSection = document.getElementById('prayer-section');
@@ -424,6 +470,41 @@
             // Show penguin points section
             document.getElementById('penguin-points-section').style.display = 'block';
             document.getElementById('skill-calculator-section').style.display = 'none';
+            document.getElementById('sawmill-section').style.display = 'none';
+        }
+
+        function selectSawmill() {
+            currentTab = 'sawmill';
+            
+            document.querySelectorAll('.skill-tab').forEach(tab => {
+                tab.classList.toggle('active', tab.textContent === 'Sawmill Calc');
+            });
+            
+            // Show sawmill section
+            document.getElementById('sawmill-section').style.display = 'block';
+            document.getElementById('penguin-points-section').style.display = 'none';
+            document.getElementById('skill-calculator-section').style.display = 'none';
+            
+            // Initial calculation
+            calculateSawmill();
+        }
+
+        function calculateSawmill() {
+            const logs = parseInt(document.getElementById('sawmill-logs').value) || 0;
+            const logType = document.getElementById('sawmill-log-type').value;
+            
+            const prices = {
+                'normal': 100,
+                'oak': 250,
+                'teak': 500,
+                'mahogany': 1500
+            };
+            
+            const pricePerLog = prices[logType] || 0;
+            const totalCost = logs * pricePerLog;
+            
+            document.getElementById('sawmill-price-per-log').textContent = pricePerLog + ' gp';
+            document.getElementById('sawmill-total-cost').textContent = totalCost.toLocaleString() + ' gp';
         }
 
         function handlePenguinXpChange() {
