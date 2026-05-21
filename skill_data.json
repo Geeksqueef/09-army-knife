@@ -4053,204 +4053,2728 @@
     ],
     "Construction": [
       {
-        "level": 1,
-        "item": "Planks",
-        "base_xp": 32.25
-      },
-      {
-        "level": 1,
-        "item": "Bagged Plant 1",
-        "base_xp": 31.0
-      },
-      {
-        "level": 2,
-        "item": "Bolt of Cloth",
-        "base_xp": 15.0
-      },
-      {
-        "level": 5,
-        "item": "Soft Clay",
-        "base_xp": 10.0
-      },
-      {
-        "level": 5,
-        "item": "Steel Bar",
-        "base_xp": 20.0
-      },
-      {
-        "level": 5,
-        "item": "Limestone",
-        "base_xp": 20.0
-      },
-      {
-        "level": 5,
-        "item": "Bagged Dead Tree",
-        "base_xp": 31.0
-      },
-      {
-        "level": 6,
-        "item": "Bagged Plant 2",
-        "base_xp": 70.0
-      },
-      {
-        "level": 10,
-        "item": "Bagged Nice Tree",
-        "base_xp": 44.0
-      },
-      {
-        "level": 12,
-        "item": "Bagged Plant 3",
-        "base_xp": 100.0
-      },
-      {
-        "level": 15,
-        "item": "Oak Planks",
-        "base_xp": 60.0
-      },
-      {
-        "level": 15,
-        "item": "Bagged Oak Tree",
-        "base_xp": 70.0
-      },
-      {
-        "level": 21,
-        "item": "Molten Glass",
-        "base_xp": 1.0
-      },
-      {
-        "level": 25,
-        "item": "Clockwork",
-        "base_xp": 22.0
-      },
-      {
         "level": 30,
         "item": "Long Bones",
         "base_xp": 1500.0
+        "type": "NPC XP Reward - Nardok"
       },
       {
         "level": 30,
         "item": "Curved Bones",
         "base_xp": 2250.0
+        "type": "NPC XP Reward - Nardok"
       },
       {
-        "level": 30,
-        "item": "Bagged Willow Tree",
-        "base_xp": 100.0
+        "level": 1,
+        "item": "Crude Wooden Chair",
+        "base_xp": 58.0,
+        "type": "Parlour (2 Planks, 2 Nails)"
+      },
+      {
+        "level": 1,
+        "item": "Brown Rug",
+        "base_xp": 30.0,
+        "type": "Parlour (2 Cloths)"
+      },
+      {
+        "level": 2,
+        "item": "Torn Curtains",
+        "base_xp": 132.0,
+        "type": "Parlour (3 Planks, 3 Nails, 3 Cloths)"
+      },
+      {
+        "level": 3,
+        "item": "Clay Fireplace",
+        "base_xp": 30.0,
+        "type": "Parlour (3 Soft Clay)"
+      },
+      {
+        "level": 4,
+        "item": "Wooden Bookcase",
+        "base_xp": 115.0,
+        "type": "Parlour (4 Planks, 4 Nails)"
+      },
+      {
+        "level": 8,
+        "item": "Wooden Chair",
+        "base_xp": 87.0,
+        "type": "Parlour (3 Planks, 3 Nails)"
+      },
+      {
+        "level": 13,
+        "item": "Rug",
+        "base_xp": 60.0,
+        "type": "Parlour (4 Cloths)"
+      },
+      {
+        "level": 14,
+        "item": "Rocking Chair",
+        "base_xp": 87.0,
+        "type": "Parlour (3 Planks, 3 Nails)"
+      },
+      {
+        "level": 18,
+        "item": "Curtains",
+        "base_xp": 225.0,
+        "type": "Parlour (3 Oak Planks, 3 Cloths)"
+      },
+      {
+        "level": 19,
+        "item": "Oak Chair",
+        "base_xp": 120.0,
+        "type": "Parlour (2 Oak Planks)"
+      },
+      {
+        "level": 26,
+        "item": "Oak Armchair",
+        "base_xp": 180.0,
+        "type": "Parlour (3 Oak Planks)"
+      },
+      {
+        "level": 29,
+        "item": "Oak Bookcase",
+        "base_xp": 180.0,
+        "type": "Parlour (3 Oak Planks)"
+      },
+      {
+        "level": 33,
+        "item": "Stone Fireplace",
+        "base_xp": 40.0,
+        "type": "Parlour (2 Limestone Bricks)"
       },
       {
         "level": 35,
-        "item": "Teak Planks",
-        "base_xp": 90.0
+        "item": "Teak Armchair",
+        "base_xp": 180.0,
+        "type": "Parlour (2 Teak Planks)"
       },
       {
         "level": 40,
-        "item": "Mahogany Planks",
-        "base_xp": 140.0
+        "item": "Opulent Curtains",
+        "base_xp": 315.0,
+        "type": "Parlour (3 Teak Planks, 3 Cloths)"
       },
       {
-        "level": 41,
-        "item": "Marble Block",
-        "base_xp": 500.0
+        "level": 40,
+        "item": "Mahogany Bookcase",
+        "base_xp": 420.0,
+        "type": "Parlour (3 Mahogany Planks)"
       },
       {
-        "level": 44,
-        "item": "Gold Leaf",
-        "base_xp": 300.0
+        "level": 50,
+        "item": "Mahogany Armchair",
+        "base_xp": 280.0,
+        "type": "Parlour (2 Mahogany Planks)"
+      },
+      {
+        "level": 63,
+        "item": "Marble Fireplace",
+        "base_xp": 500.0,
+        "type": "Parlour (1 Marble Block)"
+      },
+      {
+        "level": 65,
+        "item": "Opulent Rug",
+        "base_xp": 360.0,
+        "type": "Parlour (4 Cloths, 1 Gold Leaf)"
+      },
+      {
+        "level": 1,
+        "item": "Plant",
+        "base_xp": 31.0,
+        "type": "Garden (1 Bagged Plant 1, 1 Watering Can)"
+      },
+      {
+        "level": 1,
+        "item": "Dock Leaf",
+        "base_xp": 31.0,
+        "type": "Garden (1 Bagged Plant 1, 1 Watering Can)"
+      },
+      {
+        "level": 1,
+        "item": "Fern",
+        "base_xp": 31.0,
+        "type": "Garden (1 Bagged Plant 1, 1 Watering Can)"
+      },
+      {
+        "level": 1,
+        "item": "Short Plant",
+        "base_xp": 31.0,
+        "type": "Garden (1 Bagged Short Plant, 1 Watering Can)"
+      },
+      {
+        "level": 5,
+        "item": "Exit Portal",
+        "base_xp": 100.0,
+        "type": "Garden (10 Iron Bars)"
+      },
+      {
+        "level": 5,
+        "item": "Decorative Rock",
+        "base_xp": 100.0,
+        "type": "Garden (5 Limestone Bricks)"
+      },
+      {
+        "level": 5,
+        "item": "Tree",
+        "base_xp": 31.0,
+        "type": "Garden (1 Bagged Tree, 1 Watering Can)"
+      },
+      {
+        "level": 6,
+        "item": "Small Fern",
+        "base_xp": 44.0,
+        "type": "Garden (1 Bagged Small Fern, 1 Watering Can)"
+      },
+      {
+        "level": 6,
+        "item": "Thistle",
+        "base_xp": 70.0,
+        "type": "Garden (1 Bagged Thistle, 1 Watering Can)"
+      },
+      {
+        "level": 6,
+        "item": "Bush",
+        "base_xp": 70.0,
+        "type": "Garden (1 Bagged Bush, 1 Watering Can)"
+      },
+      {
+        "level": 6,
+        "item": "Large Leaf Bush",
+        "base_xp": 70.0,
+        "type": "Garden (1 Large Leaf Bush, 1 Watering Can)"
+      },
+      {
+        "level": 10,
+        "item": "Pond",
+        "base_xp": 100.0,
+        "type": "Garden (10 Soft Clay)"
+      },
+      {
+        "level": 10,
+        "item": "Nice Tree",
+        "base_xp": 41.0,
+        "type": "Garden (1 Bagged Nice Tree, 1 Watering Can)"
+      },
+      {
+        "level": 12,
+        "item": "Fern",
+        "base_xp": 70.0,
+        "type": "Garden (1 Bagged Fern, 1 Watering Can)"
+      },
+      {
+        "level": 12,
+        "item": "Reeds",
+        "base_xp": 100.0,
+        "type": "Garden (1 Bagged Reeds, 1 Watering Can)"
+      },
+      {
+        "level": 12,
+        "item": "Tall Plant",
+        "base_xp": 100.0,
+        "type": "Garden (1 Bagged Tall Plant, 1 Watering Can)"
+      },
+      {
+        "level": 12,
+        "item": "Huge Plant",
+        "base_xp": 100.0,
+        "type": "Garden (1 Bagged Large Leaf Bush, 1 Watering Can)"
+      },
+      {
+        "level": 15,
+        "item": "Imp Statue",
+        "base_xp": 150.0,
+        "type": "Garden (5 Limestone Bricks, 5 Soft Clay)"
+      },
+      {
+        "level": 15,
+        "item": "Oak Tree",
+        "base_xp": 70.0,
+        "type": "Garden (1 Bagged Oak Tree, 1 Watering Can)"
+      },
+      {
+        "level": 30,
+        "item": "Willow Tree",
+        "base_xp": 100.0,
+        "type": "Garden (1 Bagged Willow Tree, 1 Watering Can)"
       },
       {
         "level": 45,
-        "item": "Bagged Maple Tree",
-        "base_xp": 122.0
+        "item": "Maple Tree",
+        "base_xp": 122.0,
+        "type": "Garden (1 Bagged Maple Tree, 1 Watering Can)"
+      },
+      {
+        "level": 60,
+        "item": "Yew Tree",
+        "base_xp": 141.0,
+        "type": "Garden (1 Bagged Yew Tree, 1 Watering Can)"
+      },
+      {
+        "level": 70,
+        "item": "Dungeon Entrance",
+        "base_xp": 500.0,
+        "type": "Garden (1 Marble Block)"
+      },
+      {
+        "level": 75,
+        "item": "Magic Tree",
+        "base_xp": 223.0,
+        "type": "Garden (1 Bagged Magic Tree, 1 Watering Can)"
+      },
+      {
+        "level": 5,
+        "item": "Firepit",
+        "base_xp": 40.0,
+        "type": "Kitchen (1 Steel Bar, 2 Soft Clay)"
+      },
+      {
+        "level": 5,
+        "item": "Cat Blanket",
+        "base_xp": 15.0,
+        "type": "Kitchen (1 Cloth)"
+      },
+      {
+        "level": 6,
+        "item": "Wooden Shelves 1",
+        "base_xp": 87.0,
+        "type": "Kitchen (3 Planks, 3 Nails)"
+      },
+      {
+        "level": 7,
+        "item": "Pump and Drain",
+        "base_xp": 100.0,
+        "type": "Kitchen (5 Steel Bars)"
+      },
+      {
+        "level": 7,
+        "item": "Beer Barrel",
+        "base_xp": 87.0,
+        "type": "Kitchen (3 Planks, 3 Nails)"
+      },
+      {
+        "level": 9,
+        "item": "Wooden Larder",
+        "base_xp": 228.0,
+        "type": "Kitchen (8 Planks, 9 Nails)"
+      },
+      {
+        "level": 11,
+        "item": "Firepit With Hook",
+        "base_xp": 60.0,
+        "type": "Kitchen (2 Steel Bars, 2 Soft Clay)"
+      },
+      {
+        "level": 12,
+        "item": "Wood Table",
+        "base_xp": 87.0,
+        "type": "Kitchen (3 Planks, 3 Nails)"
+      },
+      {
+        "level": 12,
+        "item": "Wooden Shelves 2",
+        "base_xp": 147.0,
+        "type": "Kitchen (3 Planks, 3 Nails, 6 Soft Clay)"
+      },
+      {
+        "level": 12,
+        "item": "Cider Barrel",
+        "base_xp": 91.0,
+        "type": "Kitchen (3 Planks, 3 Nails, 8 Cider)"
+      },
+      {
+        "level": 17,
+        "item": "Firepit With Pot",
+        "base_xp": 80.0,
+        "type": "Kitchen (3 Steel Bar, 2 Soft Clay)"
+      },
+      {
+        "level": 18,
+        "item": "Asgarnian Ale",
+        "base_xp": 184.0,
+        "type": "Kitchen (3 Oak Plank, 8 Asgarnian Ale)"
+      },
+      {
+        "level": 19,
+        "item": "Cat Basket",
+        "base_xp": 71.0,
+        "type": "Kitchen (2 Planks, 2 Nails)"
+      },
+      {
+        "level": 23,
+        "item": "Wooden Shelves 3",
+        "base_xp": 147.0,
+        "type": "Kitchen (3 Planks, 3 Nails, 6 Soft Clay)"
+      },
+      {
+        "level": 24,
+        "item": "Small Oven",
+        "base_xp": 80.0,
+        "type": "Kitchen (4 Steel Bars)"
+      },
+      {
+        "level": 26,
+        "item": "Greenman's Ale",
+        "base_xp": 184.0,
+        "type": "Kitchen (3 Oak Plank, 8 Greenman's Ale)"
+      },
+      {
+        "level": 27,
+        "item": "Pump and Tub",
+        "base_xp": 200.0,
+        "type": "Kitchen (10 Steel Bars)"
+      },
+      {
+        "level": 29,
+        "item": "Large Oven",
+        "base_xp": 100.0,
+        "type": "Kitchen (5 Steel Bars)"
+      },
+      {
+        "level": 32,
+        "item": "Oak Table",
+        "base_xp": 180.0,
+        "type": "Kitchen (3 Oak Planks)"
+      },
+      {
+        "level": 33,
+        "item": "Cat Basket",
+        "base_xp": 87.0,
+        "type": "Kitchen (2 Planks, 2 Nails, 2 Wool)"
+      },
+      {
+        "level": 33,
+        "item": "Oak Larder",
+        "base_xp": 480.0,
+        "type": "Kitchen (8 Oak Planks)"
+      },
+      {
+        "level": 34,
+        "item": "Oak Shelves 1",
+        "base_xp": 240.0,
+        "type": "Kitchen (3 Oak Planks, 6 Soft Clay)"
+      },
+      {
+        "level": 34,
+        "item": "Iron Range",
+        "base_xp": 120.0,
+        "type": "Kitchen (6 Steel Bars)"
+      },
+      {
+        "level": 36,
+        "item": "Dragon Bitter",
+        "base_xp": 224.0,
+        "type": "Kitchen (3 Oak Plank, 8 Dragon Bitter, 2 Steel Bars)"
+      },
+      {
+        "level": 42,
+        "item": "Fancy Range",
+        "base_xp": 160.0,
+        "type": "Kitchen (8 Steel Bars)"
+      },
+      {
+        "level": 43,
+        "item": "Teak Larder",
+        "base_xp": 750.0,
+        "type": "Kitchen (8 Teak Planks, 2 Cloths)"
+      },
+      {
+        "level": 45,
+        "item": "Oak Shelves 2",
+        "base_xp": 240.0,
+        "type": "Kitchen (3 Oak Planks, 6 Soft Clay)"
+      },
+      {
+        "level": 47,
+        "item": "Sink",
+        "base_xp": 300.0,
+        "type": "Kitchen (15 Steel Bars)"
+      },
+      {
+        "level": 48,
+        "item": "Chef's Delight",
+        "base_xp": 224.0,
+        "type": "Kitchen (3 Oak Plank, 8 Chef's Delight, 2 Steel Bars)"
+      },
+      {
+        "level": 52,
+        "item": "Teak Table",
+        "base_xp": 270.0,
+        "type": "Kitchen (3 Teak Planks)"
+      },
+      {
+        "level": 56,
+        "item": "Teak Shelves 1",
+        "base_xp": 330.0,
+        "type": "Kitchen (3 Teak Planks, 6 Soft Clay)"
+      },
+      {
+        "level": 67,
+        "item": "Teak Shelves 2",
+        "base_xp": 930.0,
+        "type": "Kitchen (3 Teak Planks, 6 Soft Clay, 2 Gold Leaves)"
+      },
+      {
+        "level": 2,
+        "item": "Torn Curtains",
+        "base_xp": 132.0,
+        "type": "Dining Room (3 Planks, 3 Nails, 3 Cloths)"
+      },
+      {
+        "level": 3,
+        "item": "Clay Fireplace",
+        "base_xp": 30.0,
+        "type": "Dining Room (3 Soft Clay)"
+      },
+      {
+        "level": 10,
+        "item": "Wood Dining Table",
+        "base_xp": 115.0,
+        "type": "Dining Room (4 Planks, 4 Nails)"
+      },
+      {
+        "level": 10,
+        "item": "Wood Bench",
+        "base_xp": 115.0,
+        "type": "Dining Room (4 Planks, 4 Nails)"
+      },
+      {
+        "level": 16,
+        "item": "Oak Decoration",
+        "base_xp": 120.0,
+        "type": "Dining Room (2 Oak Planks)"
+      },
+      {
+        "level": 18,
+        "item": "Curtains",
+        "base_xp": 225.0,
+        "type": "Dining Room (3 Oak Planks, 3 Cloths)"
+      },
+      {
+        "level": 22,
+        "item": "Oak Table",
+        "base_xp": 240.0,
+        "type": "Dining Room (4 Oak Planks)"
+      },
+      {
+        "level": 22,
+        "item": "Oak Bench",
+        "base_xp": 240.0,
+        "type": "Dining Room (4 Oak Planks)"
+      },
+      {
+        "level": 26,
+        "item": "Rope Bell-Pull",
+        "base_xp": 64.0,
+        "type": "Dining Room (1 Oak Plank, 1 Rope)"
+      },
+      {
+        "level": 31,
+        "item": "Carved Oak Table",
+        "base_xp": 360.0,
+        "type": "Dining Room (6 Oak Planks)"
+      },
+      {
+        "level": 31,
+        "item": "Carved Oak Bench",
+        "base_xp": 240.0,
+        "type": "Dining Room (4 Oak Planks)"
+      },
+      {
+        "level": 33,
+        "item": "Stone Fireplace",
+        "base_xp": 40.0,
+        "type": "Dining Room (2 Limestone Bricks)"
+      },
+      {
+        "level": 36,
+        "item": "Teak Decoration",
+        "base_xp": 180.0,
+        "type": "Dining Room (2 Teak Planks)"
+      },
+      {
+        "level": 37,
+        "item": "Bell-Pull",
+        "base_xp": 120.0,
+        "type": "Dining Room (1 Oak Plank, 2 Cloth)"
+      },
+      {
+        "level": 38,
+        "item": "Teak Table",
+        "base_xp": 360.0,
+        "type": "Dining Room (4 Teak Planks)"
+      },
+      {
+        "level": 38,
+        "item": "Teak Dining Bench",
+        "base_xp": 120.0,
+        "type": "Dining Room (1 Teak Plank, 2 Cloths)"
+      },
+      {
+        "level": 40,
+        "item": "Opulent Curtains",
+        "base_xp": 315.0,
+        "type": "Dining Room (3 Teak Planks, 3 Cloths)"
+      },
+      {
+        "level": 44,
+        "item": "Carved Teak Bench",
+        "base_xp": 360.0,
+        "type": "Dining Room (4 Teak Planks)"
+      },
+      {
+        "level": 45,
+        "item": "Carved Teak Table",
+        "base_xp": 600.0,
+        "type": "Dining Room (6 Teak Planks, 4 Cloths)"
+      },
+      {
+        "level": 52,
+        "item": "Mahogany Table",
+        "base_xp": 840.0,
+        "type": "Dining Room (6 Mahogany Planks)"
+      },
+      {
+        "level": 52,
+        "item": "Mahogany Bench",
+        "base_xp": 360.0,
+        "type": "Dining Room (4 Mahogany Planks)"
+      },
+      {
+        "level": 56,
+        "item": "Gilded Decoration",
+        "base_xp": 1020.0,
+        "type": "Dining Room (3 Mahogany Planks, 2 Gold Leaves)"
+      },
+      {
+        "level": 60,
+        "item": "Posh Bell-Pull",
+        "base_xp": 120.0,
+        "type": "Dining Room (1 Teak Plank, 2 Cloths, 1 Gold Leaf)"
+      },
+      {
+        "level": 61,
+        "item": "Gilded Bench",
+        "base_xp": 1760.0,
+        "type": "Dining Room (4 Mahogany Planks, 4 Gold Leaves)"
+      },
+      {
+        "level": 63,
+        "item": "Marble Fireplace",
+        "base_xp": 500.0,
+        "type": "Dining Room (1 Marble Blocks)"
+      },
+      {
+        "level": 72,
+        "item": "Opulent Table",
+        "base_xp": 3100.0,
+        "type": "Dining Room (6 Mahogany Planks, 4 Cloths, 4 Gold Leaves, 2 Marble Blocks)"
+      },
+      {
+        "level": 15,
+        "item": "Repair Bench",
+        "base_xp": 120.0,
+        "type": "Workshop (2 Oak Planks)"
+      },
+      {
+        "level": 15,
+        "item": "Tool Store 1",
+        "base_xp": 120.0,
+        "type": "Workshop (2 Oak Planks)"
+      },
+      {
+        "level": 16,
+        "item": "Crafting Table 1",
+        "base_xp": 240.0,
+        "type": "Workshop (4 Oak Planks)"
+      },
+      {
+        "level": 16,
+        "item": "Pluming Stand",
+        "base_xp": 120.0,
+        "type": "Workshop (2 Oak Planks)"
+      },
+      {
+        "level": 17,
+        "item": "Wooden Workbench",
+        "base_xp": 143.0,
+        "type": "Workshop (5 Planks, 5 Nails)"
+      },
+      {
+        "level": 25,
+        "item": "Tool Store 2",
+        "base_xp": 120.0,
+        "type": "Workshop (2 Oak Planks)"
+      },
+      {
+        "level": 25,
+        "item": "Crafting Table 2",
+        "base_xp": 1.0,
+        "type": "Workshop (1 Molten Glass)"
+      },
+      {
+        "level": 32,
+        "item": "Oak Workbench",
+        "base_xp": 300.0,
+        "type": "Workshop (5 Oak Planks)"
+      },
+      {
+        "level": 34,
+        "item": "Crafting Table 3",
+        "base_xp": 2.0,
+        "type": "Workshop (2 Molten Glass)"
+      },
+      {
+        "level": 35,
+        "item": "Whetstone",
+        "base_xp": 260.0,
+        "type": "Workshop (4 Oak Planks, 1 Limestone Brick)"
+      },
+      {
+        "level": 35,
+        "item": "Tool Store 3",
+        "base_xp": 120.0,
+        "type": "Workshop (2 Oak Planks)"
+      },
+      {
+        "level": 41,
+        "item": "Shield Easel",
+        "base_xp": 240.0,
+        "type": "Workshop (4 Oak Planks)"
+      },
+      {
+        "level": 42,
+        "item": "Crafting Table 4",
+        "base_xp": 120.0,
+        "type": "Workshop (2 Oak Planks)"
+      },
+      {
+        "level": 44,
+        "item": "Tool Store 4",
+        "base_xp": 120.0,
+        "type": "Workshop (2 Oak Planks)"
+      },
+      {
+        "level": 46,
+        "item": "Steel-Framed Bench",
+        "base_xp": 440.0,
+        "type": "Workshop (6 Oak Planks, 4 Steel Bars)"
+      },
+      {
+        "level": 55,
+        "item": "Armour Stand",
+        "base_xp": 500.0,
+        "type": "Workshop (8 Oak Planks, 1 Limestone Brick)"
+      },
+      {
+        "level": 55,
+        "item": "Tool Store 5",
+        "base_xp": 120.0,
+        "type": "Workshop (2 Oak Planks)"
+      },
+      {
+        "level": 62,
+        "item": "Bench With Vice",
+        "base_xp": 140.0,
+        "type": "Workshop (2 Oak Planks, 1 Steel Bar)"
+      },
+      {
+        "level": 66,
+        "item": "Banner Easel",
+        "base_xp": 510.0,
+        "type": "Workshop (8 Oak Planks, 2 Cloths)"
+      },
+      {
+        "level": 77,
+        "item": "Bench With Lathe",
+        "base_xp": 140.0,
+        "type": "Workshop (2 Oak Planks, 1 Steel Bar)"
+      },
+      {
+        "level": 2,
+        "item": "Brown Rug",
+        "base_xp": 30.0,
+        "type": "Bedroom (2 Cloths)"
+      },
+      {
+        "level": 2,
+        "item": "Torn Curtains",
+        "base_xp": 132.0,
+        "type": "Bedroom (3 Planks, 3 Nails, 3 Cloths)"
+      },
+      {
+        "level": 3,
+        "item": "Clay Fireplace",
+        "base_xp": 30.0,
+        "type": "Bedroom (3 Soft Clay)"
+      },
+      {
+        "level": 13,
+        "item": "Rug",
+        "base_xp": 60.0,
+        "type": "Bedroom (4 Cloths)"
+      },
+      {
+        "level": 18,
+        "item": "Curtains",
+        "base_xp": 225.0,
+        "type": "Bedroom (3 Oak Planks, 3 Cloths)"
+      },
+      {
+        "level": 20,
+        "item": "Wooden Bed",
+        "base_xp": 117.0,
+        "type": "Bedroom (3 Planks, 3 Nails, 2 Cloths)"
+      },
+      {
+        "level": 20,
+        "item": "Shoe Box",
+        "base_xp": 58.0,
+        "type": "Bedroom (2 Planks, 2 Nails)"
+      },
+      {
+        "level": 21,
+        "item": "Shaving Stand",
+        "base_xp": 30.0,
+        "type": "Bedroom (1 Plank, 1 Nail, 1 Molten Glass)"
+      },
+      {
+        "level": 25,
+        "item": "Oak Clock",
+        "base_xp": 142.0,
+        "type": "Bedroom (2 Oak Planks, 1 Clockwork)"
+      },
+      {
+        "level": 27,
+        "item": "Oak Drawers",
+        "base_xp": 120.0,
+        "type": "Bedroom (2 Oak Planks)"
+      },
+      {
+        "level": 29,
+        "item": "Oak Shaving Stand",
+        "base_xp": 61.0,
+        "type": "Bedroom (1 Oak Plank, 1 Molten Glass)"
+      },
+      {
+        "level": 30,
+        "item": "Oak Bed",
+        "base_xp": 210.0,
+        "type": "Bedroom (3 Oak Planks, 2 Cloths)"
+      },
+      {
+        "level": 33,
+        "item": "Stone Fireplace",
+        "base_xp": 40.0,
+        "type": "Bedroom (2 Limestone Bricks)"
+      },
+      {
+        "level": 34,
+        "item": "Large Oak Bed",
+        "base_xp": 330.0,
+        "type": "Bedroom (5 Oak Planks, 2 Cloths)"
+      },
+      {
+        "level": 37,
+        "item": "Oak Dresser",
+        "base_xp": 121.0,
+        "type": "Bedroom (2 Oak Planks, 1 Molten Glass)"
+      },
+      {
+        "level": 39,
+        "item": "Oak Wardrobe",
+        "base_xp": 180.0,
+        "type": "Bedroom (3 Oak Planks)"
+      },
+      {
+        "level": 40,
+        "item": "Opulent Curtains",
+        "base_xp": 315.0,
+        "type": "Bedroom (3 Teak Planks, 3 Cloths)"
+      },
+      {
+        "level": 40,
+        "item": "Teak Bed",
+        "base_xp": 300.0,
+        "type": "Bedroom (3 Teak Planks, 2 Cloths)"
+      },
+      {
+        "level": 45,
+        "item": "Large Teak Bed",
+        "base_xp": 480.0,
+        "type": "Bedroom (5 Teak Planks, 2 Cloths)"
+      },
+      {
+        "level": 46,
+        "item": "Teak Dresser",
+        "base_xp": 181.0,
+        "type": "Bedroom (3 Teak Planks, 1 Molten Glass)"
+      },
+      {
+        "level": 51,
+        "item": "Teak Drawers",
+        "base_xp": 180.0,
+        "type": "Bedroom (2 Teak Planks)"
+      },
+      {
+        "level": 53,
+        "item": "4-Poster",
+        "base_xp": 450.0,
+        "type": "Bedroom (3 Mahogany Planks, 2 Cloths)"
+      },
+      {
+        "level": 55,
+        "item": "Teak Clock",
+        "base_xp": 202.0,
+        "type": "Bedroom (2 Teak Planks, 1 Clockwork)"
+      },
+      {
+        "level": 56,
+        "item": "Fancy Teak Dresser",
+        "base_xp": 182.0,
+        "type": "Bedroom (2 Teak Planks, 2 Molten Glass)"
+      },
+      {
+        "level": 60,
+        "item": "Gilded 4-Poster",
+        "base_xp": 1330.0,
+        "type": "Bedroom (5 Mahogany Planks, 2 Cloths, 2 Gold Leaves)"
+      },
+      {
+        "level": 63,
+        "item": "Teak Wardrobe",
+        "base_xp": 270.0,
+        "type": "Bedroom (3 Teak Planks)"
+      },
+      {
+        "level": 63,
+        "item": "Marble Fireplace",
+        "base_xp": 500.0,
+        "type": "Bedroom (1 Marble Block)"
+      },
+      {
+        "level": 64,
+        "item": "Mahogany Dresser",
+        "base_xp": 281.0,
+        "type": "Bedroom (2 Mahogany Planks, 1 Molten Glass)"
+      },
+      {
+        "level": 65,
+        "item": "Opulent Rug",
+        "base_xp": 360.0,
+        "type": "Bedroom (4 Cloths, 1 Gold Leaf)"
+      },
+      {
+        "level": 75,
+        "item": "Mahogany Wardrobe",
+        "base_xp": 420.0,
+        "type": "Bedroom (3 Mahogany Planks)"
+      },
+      {
+        "level": 75,
+        "item": "Gilded Dresser",
+        "base_xp": 582.0,
+        "type": "Bedroom (2 Mahogany Planks, 2 Molten Glass, 1 Gold Leaf)"
+      },
+      {
+        "level": 85,
+        "item": "Gilded Clock",
+        "base_xp": 602.0,
+        "type": "Bedroom (1 Mahogany Planks, 1 Clockwork, 1 Gold Leaf)"
+      },
+      {
+        "level": 87,
+        "item": "Gilded Wardrobe",
+        "base_xp": 720.0,
+        "type": "Bedroom (3 Mahogany Planks, 1 Gold Leaf)"
+      },
+      {
+        "level": 13,
+        "item": "Rug",
+        "base_xp": 60.0,
+        "type": "Skill Hall (4 Cloths)"
+      },
+      {
+        "level": 27,
+        "item": "Oak Staircase",
+        "base_xp": 600.0,
+        "type": "Skill Hall (10 Oak Planks, 4 Steel Bars)"
+      },
+      {
+        "level": 28,
+        "item": "CWs Armour 1",
+        "base_xp": 135.0,
+        "type": "Skill Hall (2 Oak Planks, Red Decorative Helm, Body and Shield)"
+      },
+      {
+        "level": 28,
+        "item": "CWs Armour 2",
+        "base_xp": 150.0,
+        "type": "Skill Hall (2 Oak Planks, White Decorative Helm, Body and Shield)"
+      },
+      {
+        "level": 28,
+        "item": "CWs Armour 3",
+        "base_xp": 165.0,
+        "type": "Skill Hall (2 Oak Planks, Yellow Decorative Helm, Body and Shield)"
+      },
+      {
+        "level": 28,
+        "item": "Mithril Armour Stand",
+        "base_xp": 135.0,
+        "type": "Skill Hall (2 Oak Planks, Mithril Helm, Body and Plateskirt)"
+      },
+      {
+        "level": 28,
+        "item": "Adamant Armour Stand",
+        "base_xp": 150.0,
+        "type": "Skill Hall (2 Oak Planks, Adamant Helm, Body and Plateskirt)"
+      },
+      {
+        "level": 28,
+        "item": "Rune Armour Stand",
+        "base_xp": 165.0,
+        "type": "Skill Hall (2 Oak Planks, Rune Helm, Body and Plateskirt)"
+      },
+      {
+        "level": 36,
+        "item": "Mounted Bass",
+        "base_xp": 151.0,
+        "type": "Skill Hall (2 Oak Planks, 1 Stuffed Bass)"
+      },
+      {
+        "level": 38,
+        "item": "Mount Crawling",
+        "base_xp": 211.0,
+        "type": "Skill Hall (2 Teak Planks, 1 Stuffed Hand)"
+      },
+      {
+        "level": 38,
+        "item": "Mount Cockatrice",
+        "base_xp": 224.0,
+        "type": "Skill Hall (2 Teak Planks, 1 Stuffed Cockatrice)"
+      },
+      {
+        "level": 38,
+        "item": "Mount Basilisk",
+        "base_xp": 243.0,
+        "type": "Skill Hall (2 Teak Planks, 1 Stuffed Basilisk)"
+      },
+      {
+        "level": 41,
+        "item": "Rune Case 1",
+        "base_xp": 190.0,
+        "type": "Skill Hall (2 Teak Planks, 2 Molten Glass, Earth, Air, Water and Fire Runes)"
+      },
+      {
+        "level": 41,
+        "item": "Rune Case 2",
+        "base_xp": 212.0,
+        "type": "Skill Hall (2 Teak Planks, 2 Molten Glass, Body, Cosmic, Chaos and Nature Runes)"
+      },
+      {
+        "level": 48,
+        "item": "Teak Staircase",
+        "base_xp": 980.0,
+        "type": "Skill Hall (10 Teak Planks, 4 Steel Bars)"
+      },
+      {
+        "level": 56,
+        "item": "Mounted Swordfish",
+        "base_xp": 230.0,
+        "type": "Skill Hall (2 Teak Planks, 1 Stuffed Swordfish)"
+      },
+      {
+        "level": 58,
+        "item": "Mount Kurask",
+        "base_xp": 357.0,
+        "type": "Skill Hall (2 Mahogany Planks, 1 Stuffed Kurask)"
+      },
+      {
+        "level": 58,
+        "item": "Mount Abyssal",
+        "base_xp": 389.0,
+        "type": "Skill Hall (2 Mahogany Planks, 1 Stuffed Abyssal)"
+      },
+      {
+        "level": 65,
+        "item": "Opulent Rug",
+        "base_xp": 360.0,
+        "type": "Skill Hall (4 Cloths, 1 Gold Leaf)"
+      },
+      {
+        "level": 67,
+        "item": "Spiral Staircase",
+        "base_xp": 1040.0,
+        "type": "Skill Hall (10 Teak Planks, 7 Limestone Bricks)"
+      },
+      {
+        "level": 76,
+        "item": "Mounted Shark",
+        "base_xp": 350.0,
+        "type": "Skill Hall (2 Mahogany Planks, 1 Stuffed Shark)"
+      },
+      {
+        "level": 78,
+        "item": "Mount KBD",
+        "base_xp": 1103.0,
+        "type": "Skill Hall (2 Mahogany Planks, 1 Stuffed KBD, 2 Gold Leaves)"
+      },
+      {
+        "level": 78,
+        "item": "Mount KQ",
+        "base_xp": 1103.0,
+        "type": "Skill Hall (2 Mahogany Planks, 1 Stuffed KQ, 2 Gold Leaves)"
+      },
+      {
+        "level": 82,
+        "item": "Marble Staircase",
+        "base_xp": 3200.0,
+        "type": "Skill Hall (5 Mahogany Planks, 5 Marble Blocks)"
+      },
+      {
+        "level": 97,
+        "item": "Marble Spiral",
+        "base_xp": 4400.0,
+        "type": "Skill Hall (10 Teak Planks, 7 Marble Blocks)"
+      },
+      {
+        "level": 30,
+        "item": "Hoop and Stick",
+        "base_xp": 120.0,
+        "type": "Games Room (2 Oak Planks)"
+      },
+      {
+        "level": 34,
+        "item": "Oak Prize Chest",
+        "base_xp": 240.0,
+        "type": "Games Room (4 Oak Planks)"
+      },
+      {
+        "level": 37,
+        "item": "Magic Balance 1",
+        "base_xp": 176.0,
+        "type": "Games Room (500 Air, Water, Earth and Fire Runes)"
+      },
+      {
+        "level": 39,
+        "item": "Clay Attack Stone",
+        "base_xp": 100.0,
+        "type": "Games Room (10 Soft Clay)"
+      },
+      {
+        "level": 39,
+        "item": "Jester",
+        "base_xp": 360.0,
+        "type": "Games Room (4 Teak Planks)"
+      },
+      {
+        "level": 44,
+        "item": "Teak Prize Chest",
+        "base_xp": 660.0,
+        "type": "Games Room (4 Teak Planks, 1 Gold Leaf)"
+      },
+      {
+        "level": 49,
+        "item": "Treasure Hunt",
+        "base_xp": 800.0,
+        "type": "Games Room (8 Teak Planks, 4 Steel Bars)"
+      },
+      {
+        "level": 54,
+        "item": "Mahogany Prize Chest",
+        "base_xp": 860.0,
+        "type": "Games Room (4 Mahogany Planks, 1 Gold Leaf)"
+      },
+      {
+        "level": 54,
+        "item": "Dartboard",
+        "base_xp": 290.0,
+        "type": "Games Room (3 Teak Planks, 1 Steel Bar)"
+      },
+      {
+        "level": 57,
+        "item": "Magic Balance 2",
+        "base_xp": 252.0,
+        "type": "Games Room (1,000 Air, Water, Earth and Fire Runes)"
+      },
+      {
+        "level": 59,
+        "item": "Attack Stone",
+        "base_xp": 200.0,
+        "type": "Games Room (10 Limestone Bricks)"
+      },
+      {
+        "level": 59,
+        "item": "Hangman",
+        "base_xp": 1200.0,
+        "type": "Games Room (12 Teak Planks, 6 Steel Bars)"
+      },
+      {
+        "level": 77,
+        "item": "Magic Balance 3",
+        "base_xp": 356.0,
+        "type": "Games Room (2,000 Air, Water, Earth and Fire Runes)"
+      },
+      {
+        "level": 79,
+        "item": "Marble Attack Stone",
+        "base_xp": 2000.0,
+        "type": "Games Room (4 Marble Blocks)"
+      },
+      {
+        "level": 81,
+        "item": "Archery Target",
+        "base_xp": 600.0,
+        "type": "Games Room (6 Teak Planks, 3 Steel Bars)"
+      },
+      {
+        "level": 16,
+        "item": "Oak Decoration",
+        "base_xp": 120.0,
+        "type": "Combat Room (2 Oak Planks)"
+      },
+      {
+        "level": 32,
+        "item": "Boxing Ring",
+        "base_xp": 420.0,
+        "type": "Combat Room (6 Oak Planks, 4 Cloths)"
+      },
+      {
+        "level": 34,
+        "item": "Glove Rack",
+        "base_xp": 120.0,
+        "type": "Combat Room (2 Oak Planks)"
+      },
+      {
+        "level": 36,
+        "item": "Teak Decoration",
+        "base_xp": 180.0,
+        "type": "Combat Room (2 Teak Planks)"
+      },
+      {
+        "level": 41,
+        "item": "Fencing Ring",
+        "base_xp": 570.0,
+        "type": "Combat Room (8 Oak Planks, 6 Cloths)"
+      },
+      {
+        "level": 44,
+        "item": "Weapons Rack",
+        "base_xp": 180.0,
+        "type": "Combat Room (2 Teak Planks)"
+      },
+      {
+        "level": 51,
+        "item": "Combat Ring",
+        "base_xp": 630.0,
+        "type": "Combat Room (6 Teak Planks, 6 Cloths)"
+      },
+      {
+        "level": 54,
+        "item": "Extra Weapons Rack",
+        "base_xp": 440.0,
+        "type": "Combat Room (4 Teak Planks, 4 Steel Bars)"
+      },
+      {
+        "level": 56,
+        "item": "Gilded Decoration",
+        "base_xp": 1020.0,
+        "type": "Combat Room (3 Mahogany Planks, 2 Gold Leaves)"
+      },
+      {
+        "level": 71,
+        "item": "Ranging Pedestals",
+        "base_xp": 720.0,
+        "type": "Combat Room (8 Teak Planks)"
+      },
+      {
+        "level": 81,
+        "item": "Balance Beam",
+        "base_xp": 1000.0,
+        "type": "Combat Room (10 Teak Planks, 5 Steel Bars)"
+      },
+      {
+        "level": 4,
+        "item": "Wooden Bookcase",
+        "base_xp": 115.0,
+        "type": "Quest Hall (4 Planks, 4 Nails)"
+      },
+      {
+        "level": 13,
+        "item": "Rug",
+        "base_xp": 60.0,
+        "type": "Quest Hall (4 Cloths)"
+      },
+      {
+        "level": 27,
+        "item": "Oak Staircase",
+        "base_xp": 600.0,
+        "type": "Quest Hall (10 Oak Planks, 4 Steel Bars)"
+      },
+      {
+        "level": 29,
+        "item": "Oak Bookcase",
+        "base_xp": 180.0,
+        "type": "Quest Hall (3 Oak Planks)"
+      },
+      {
+        "level": 35,
+        "item": "King Arthur",
+        "base_xp": 211.0,
+        "type": "Quest Hall (2 Teak Planks, 1 Portrait of King Arthur)"
+      },
+      {
+        "level": 35,
+        "item": "Elena",
+        "base_xp": 211.0,
+        "type": "Quest Hall (2 Teak Planks, 1 Portrait of Elena)"
+      },
+      {
+        "level": 35,
+        "item": "Giant Dwarf",
+        "base_xp": 211.0,
+        "type": "Quest Hall (2 Teak Planks, 1 Portrait of Dwarf)"
+      },
+      {
+        "level": 38,
+        "item": "Small Map",
+        "base_xp": 211.0,
+        "type": "Quest Hall (2 Teak Planks, 1 Small Map)"
+      },
+      {
+        "level": 40,
+        "item": "Mahogany Bookcase",
+        "base_xp": 420.0,
+        "type": "Quest Hall (3 Mahogany Planks)"
+      },
+      {
+        "level": 42,
+        "item": "Silverlight",
+        "base_xp": 187.0,
+        "type": "Quest Hall (2 Teak Planks, Silverlight)"
+      },
+      {
+        "level": 42,
+        "item": "Excalibur",
+        "base_xp": 194.0,
+        "type": "Quest Hall (2 Teak Planks, Excalibur)"
+      },
+      {
+        "level": 42,
+        "item": "Darklight",
+        "base_xp": 202.0,
+        "type": "Quest Hall (2 Teak Planks, Darklight)"
+      },
+      {
+        "level": 44,
+        "item": "Lumbridge",
+        "base_xp": 314.0,
+        "type": "Quest Hall (3 Teak Planks, 1 Painting of Lumbridge)"
+      },
+      {
+        "level": 44,
+        "item": "Kharidian Desert",
+        "base_xp": 314.0,
+        "type": "Quest Hall (3 Teak Planks, 1 Painting of the Desert)"
+      },
+      {
+        "level": 44,
+        "item": "Morytania",
+        "base_xp": 314.0,
+        "type": "Quest Hall (3 Teak Planks, 1 Painting of Morytania)"
+      },
+      {
+        "level": 47,
+        "item": "Anti-Dragon Shield",
+        "base_xp": 280.0,
+        "type": "Quest Hall (3 Teak Planks, 1 Anti-Dragon Shield)"
+      },
+      {
+        "level": 47,
+        "item": "Amulet of Glory",
+        "base_xp": 290.0,
+        "type": "Quest Hall (3 Teak Planks, 1 Glory Amulet)"
+      },
+      {
+        "level": 47,
+        "item": "Legends Cape",
+        "base_xp": 300.0,
+        "type": "Quest Hall (3 Teak Planks, 1 Legends Cape)"
+      },
+      {
+        "level": 48,
+        "item": "Teak Staircase",
+        "base_xp": 980.0,
+        "type": "Quest Hall (10 Teak Planks, 4 Steel Bars)"
+      },
+      {
+        "level": 55,
+        "item": "Miscellanians",
+        "base_xp": 311.0,
+        "type": "Quest Hall (2 Mahogany Planks, 1 Portrait of Miscellanians)"
+      },
+      {
+        "level": 58,
+        "item": "Medium Map",
+        "base_xp": 451.0,
+        "type": "Quest Hall (3 Mahogany Planks, 1 Medium Map)"
+      },
+      {
+        "level": 65,
+        "item": "Opulent Rug",
+        "base_xp": 360.0,
+        "type": "Quest Hall (4 Cloths, 1 Gold Leaf)"
+      },
+      {
+        "level": 65,
+        "item": "Karamja",
+        "base_xp": 464.0,
+        "type": "Quest Hall (3 Mahogany Planks, 1 Painting of Karamja)"
+      },
+      {
+        "level": 65,
+        "item": "Isafdar",
+        "base_xp": 464.0,
+        "type": "Quest Hall (3 Mahogany Planks, 1 Painting of Isafdar)"
+      },
+      {
+        "level": 67,
+        "item": "Spiral Staircase",
+        "base_xp": 1040.0,
+        "type": "Quest Hall (10 Teak Planks, 7 Limestone Bricks)"
+      },
+      {
+        "level": 78,
+        "item": "Large Map",
+        "base_xp": 591.0,
+        "type": "Quest Hall (3 Mahogany Planks, 1 Large Map)"
+      },
+      {
+        "level": 82,
+        "item": "Marble Staircase",
+        "base_xp": 3200.0,
+        "type": "Quest Hall (5 Mahogany Planks, 5 Marble Blocks)"
+      },
+      {
+        "level": 97,
+        "item": "Marble Spiral",
+        "base_xp": 4400.0,
+        "type": "Quest Hall (10 Teak Planks, 7 Marble Blocks)"
+      },
+      {
+        "level": 4,
+        "item": "Wooden Bookcase",
+        "base_xp": 115.0,
+        "type": "Study (4 Planks, 4 Nails)"
+      },
+      {
+        "level": 29,
+        "item": "Oak Bookcase",
+        "base_xp": 180.0,
+        "type": "Study (3 Oak Planks)"
+      },
+      {
+        "level": 40,
+        "item": "Mahogany Bookcase",
+        "base_xp": 420.0,
+        "type": "Study (3 Mahogany Planks)"
+      },
+      {
+        "level": 40,
+        "item": "Oak Lectern",
+        "base_xp": 60.0,
+        "type": "Study (2 Oak Planks)"
+      },
+      {
+        "level": 41,
+        "item": "Globe",
+        "base_xp": 180.0,
+        "type": "Study (3 Oak Planks)"
+      },
+      {
+        "level": 42,
+        "item": "Crystal Ball",
+        "base_xp": 280.0,
+        "type": "Study (3 Teak Planks, 1 Unpowered Orb)"
+      },
+      {
+        "level": 43,
+        "item": "Alchemical Chart",
+        "base_xp": 30.0,
+        "type": "Study (2 Cloths)"
+      },
+      {
+        "level": 44,
+        "item": "Wooden Telescope",
+        "base_xp": 121.0,
+        "type": "Study (2 Oak Planks, 1 Molten Glass)"
+      },
+      {
+        "level": 47,
+        "item": "Eagle Lectern",
+        "base_xp": 120.0,
+        "type": "Study (2 Oak Planks)"
+      },
+      {
+        "level": 47,
+        "item": "Demon Lectern",
+        "base_xp": 120.0,
+        "type": "Study (2 Oak Planks)"
+      },
+      {
+        "level": 50,
+        "item": "Ornamental Globe",
+        "base_xp": 270.0,
+        "type": "Study (3 Teak Planks)"
+      },
+      {
+        "level": 54,
+        "item": "Elemental Sphere",
+        "base_xp": 580.0,
+        "type": "Study (3 Teak Planks, 1 Unpowered Orb, 1 Gold Leaf)"
+      },
+      {
+        "level": 57,
+        "item": "Teak Eagle Lectern",
+        "base_xp": 180.0,
+        "type": "Study (2 Teak Planks)"
+      },
+      {
+        "level": 57,
+        "item": "Teak Demon Lectern",
+        "base_xp": 180.0,
+        "type": "Study (2 Teak Planks)"
+      },
+      {
+        "level": 59,
+        "item": "Lunar Globe",
+        "base_xp": 570.0,
+        "type": "Study (3 Teak Planks, 1 Gold Leaf)"
+      },
+      {
+        "level": 63,
+        "item": "Astronomical Chart",
+        "base_xp": 45.0,
+        "type": "Study (3 Cloths)"
+      },
+      {
+        "level": 64,
+        "item": "Teak Telescope",
+        "base_xp": 181.0,
+        "type": "Study (2 Teak Planks, 1 Molten Glass)"
+      },
+      {
+        "level": 66,
+        "item": "Crystal of Power",
+        "base_xp": 890.0,
+        "type": "Study (2 Mahogany Planks, 1 Unpowered Orb, 2 Gold Leaves)"
+      },
+      {
+        "level": 67,
+        "item": "Mahogany Eagle Lectern",
+        "base_xp": 580.0,
+        "type": "Study (2 Mahogany Planks, 1 Gold Leaf)"
+      },
+      {
+        "level": 67,
+        "item": "Mahogany Demon Lectern",
+        "base_xp": 580.0,
+        "type": "Study (2 Mahogany Planks, 1 Gold Leaf)"
+      },
+      {
+        "level": 68,
+        "item": "Celestial Globe",
+        "base_xp": 570.0,
+        "type": "Study (3 Teak Planks, 1 Gold Leaf)"
+      },
+      {
+        "level": 77,
+        "item": "Armillary Sphere",
+        "base_xp": 960.0,
+        "type": "Study (2 Mahogany Planks, 2 Gold Leaves, 2 Steel Bars)"
+      },
+      {
+        "level": 83,
+        "item": "Infernal Chart",
+        "base_xp": 60.0,
+        "type": "Study (4 Cloths)"
+      },
+      {
+        "level": 84,
+        "item": "Mahogany Telescope",
+        "base_xp": 580.0,
+        "type": "Study (2 Mahogany Planks, 1 Gold Leaf)"
+      },
+      {
+        "level": 86,
+        "item": "Small Orrery",
+        "base_xp": 1320.0,
+        "type": "Study (3 Mahogany Planks, 3 Gold Leaves)"
+      },
+      {
+        "level": 95,
+        "item": "Large Orrery",
+        "base_xp": 1420.0,
+        "type": "Study (3 Mahogany Planks, 2 Marble Blocks)"
+      },
+      {
+        "level": 42,
+        "item": "Oak Wardrobe",
+        "base_xp": 240.0,
+        "type": "Costume Room (4 Oak Planks)"
+      },
+      {
+        "level": 44,
+        "item": "Oak Costume Box",
+        "base_xp": 120.0,
+        "type": "Costume Room (2 Oak Planks)"
+      },
+      {
+        "level": 46,
+        "item": "Oak Armor Case",
+        "base_xp": 180.0,
+        "type": "Costume Room (3 Oak Planks)"
+      },
+      {
+        "level": 48,
+        "item": "Oak Treasure Chest",
+        "base_xp": 120.0,
+        "type": "Costume Room (2 Oak Planks)"
+      },
+      {
+        "level": 50,
+        "item": "Oak Toy Box",
+        "base_xp": 120.0,
+        "type": "Costume Room (2 Oak Planks)"
+      },
+      {
+        "level": 51,
+        "item": "Carved Oak Wardrobe",
+        "base_xp": 360.0,
+        "type": "Costume Room (6 Oak Planks)"
+      },
+      {
+        "level": 54,
+        "item": "Oak Cape Rack",
+        "base_xp": 240.0,
+        "type": "Costume Room (4 Oak Planks)"
+      },
+      {
+        "level": 60,
+        "item": "Teak Wardrobe",
+        "base_xp": 360.0,
+        "type": "Costume Room (4 Teak Planks)"
+      },
+      {
+        "level": 62,
+        "item": "Teak Costume Box",
+        "base_xp": 180.0,
+        "type": "Costume Room (2 Teak Planks)"
+      },
+      {
+        "level": 63,
+        "item": "Teak Cape Rack",
+        "base_xp": 360.0,
+        "type": "Costume Room (4 Teak Planks)"
+      },
+      {
+        "level": 64,
+        "item": "Teak Armor Case",
+        "base_xp": 270.0,
+        "type": "Costume Room (3 Teak Planks)"
+      },
+      {
+        "level": 66,
+        "item": "Teak Treasure Chest",
+        "base_xp": 180.0,
+        "type": "Costume Room (2 Teak Planks)"
+      },
+      {
+        "level": 68,
+        "item": "Teak Toy Box",
+        "base_xp": 180.0,
+        "type": "Costume Room (2 Teak Planks)"
+      },
+      {
+        "level": 69,
+        "item": "Carved Teak Wardrobe",
+        "base_xp": 500.0,
+        "type": "Costume Room (6 Teak Planks)"
+      },
+      {
+        "level": 72,
+        "item": "Mahogany Cape Rack",
+        "base_xp": 560.0,
+        "type": "Costume Room (4 Mahogany Planks)"
+      },
+      {
+        "level": 78,
+        "item": "Mahogany Wardrobe",
+        "base_xp": 540.0,
+        "type": "Costume Room (4 Mahogany Planks)"
+      },
+      {
+        "level": 80,
+        "item": "Mahogany Costume Box",
+        "base_xp": 280.0,
+        "type": "Costume Room (2 Mahogany Planks)"
+      },
+      {
+        "level": 81,
+        "item": "Gilded Cape Rack",
+        "base_xp": 860.0,
+        "type": "Costume Room (4 Mahogany Planks, 1 Gold Leaf)"
+      },
+      {
+        "level": 82,
+        "item": "Mahogany Armor Case",
+        "base_xp": 420.0,
+        "type": "Costume Room (3 Mahogany Planks)"
+      },
+      {
+        "level": 84,
+        "item": "Mahogany Treasure Chest",
+        "base_xp": 280.0,
+        "type": "Costume Room (2 Mahogany Planks)"
+      },
+      {
+        "level": 86,
+        "item": "Mahogany Toy Box",
+        "base_xp": 280.0,
+        "type": "Costume Room (2 Mahogany Planks)"
+      },
+      {
+        "level": 87,
+        "item": "Gilded Wardrobe",
+        "base_xp": 860.0,
+        "type": "Costume Room (4 Oak Planks, 1 Gold Leaf)"
+      },
+      {
+        "level": 90,
+        "item": "Marble Cape Rack",
+        "base_xp": 500.0,
+        "type": "Costume Room (1 Marble Block)"
+      },
+      {
+        "level": 96,
+        "item": "Marble Wardrobe",
+        "base_xp": 500.0,
+        "type": "Costume Room (1 Marble Block)"
+      },
+      {
+        "level": 99,
+        "item": "Magical Cape Rack",
+        "base_xp": 1000.0,
+        "type": "Costume Room (1 Magic Stone)"
+      },
+      {
+        "level": 2,
+        "item": "Brown Rug",
+        "base_xp": 30.0,
+        "type": "Chapel (2 Cloths)"
+      },
+      {
+        "level": 13,
+        "item": "Rug",
+        "base_xp": 60.0,
+        "type": "Chapel (4 Cloths)"
+      },
+      {
+        "level": 45,
+        "item": "Oak Altar",
+        "base_xp": 240.0,
+        "type": "Chapel (4 Oak Planks)"
+      },
+      {
+        "level": 45,
+        "item": "Steel Torches",
+        "base_xp": 80.0,
+        "type": "Chapel (2 Steel Bars)"
+      },
+      {
+        "level": 48,
+        "item": "Saradomin Symbol",
+        "base_xp": 120.0,
+        "type": "Chapel (2 Oak Planks)"
+      },
+      {
+        "level": 48,
+        "item": "Zamorak Symbol",
+        "base_xp": 120.0,
+        "type": "Chapel (2 Oak Planks)"
+      },
+      {
+        "level": 48,
+        "item": "Guthix Symbol",
+        "base_xp": 120.0,
+        "type": "Chapel (2 Oak Planks)"
+      },
+      {
+        "level": 49,
+        "item": "Wooden Torches",
+        "base_xp": 58.0,
+        "type": "Chapel (2 Planks, 2 Nails)"
+      },
+      {
+        "level": 49,
+        "item": "Windchimes",
+        "base_xp": 323.0,
+        "type": "Chapel (4 Oak Planks, 4 Nails (any type), 4 Steel Bars)"
+      },
+      {
+        "level": 49,
+        "item": "Small Statues",
+        "base_xp": 40.0,
+        "type": "Chapel (2 Limestone Bricks)"
+      },
+      {
+        "level": 49,
+        "item": "Shuttered Window",
+        "base_xp": 228.0,
+        "type": "Chapel (8 Planks, 8 Nails)"
+      },
+      {
+        "level": 50,
+        "item": "Teak Altar",
+        "base_xp": 360.0,
+        "type": "Chapel (4 Teak Planks)"
+      },
+      {
+        "level": 53,
+        "item": "Steel Candlesticks",
+        "base_xp": 124.0,
+        "type": "Chapel (6 Steel Bars, 6 Candlesticks)"
+      },
+      {
+        "level": 56,
+        "item": "Cloth-Covered Altar",
+        "base_xp": 390.0,
+        "type": "Chapel (4 Teak Planks, 2 Cloths)"
+      },
+      {
+        "level": 57,
+        "item": "Gold Candlesticks",
+        "base_xp": 46.0,
+        "type": "Chapel (6 Gold Bars, 6 Candles)"
+      },
+      {
+        "level": 58,
+        "item": "Bells",
+        "base_xp": 480.0,
+        "type": "Chapel (4 Teak Planks, 6 Steel Bars)"
+      },
+      {
+        "level": 59,
+        "item": "Saradomin Icon",
+        "base_xp": 960.0,
+        "type": "Chapel (4 Teak Planks, 2 Gold Leaves)"
+      },
+      {
+        "level": 59,
+        "item": "Zamorak Icon",
+        "base_xp": 960.0,
+        "type": "Chapel (4 Teak Planks, 2 Gold Leaves)"
+      },
+      {
+        "level": 59,
+        "item": "Guthix Icon",
+        "base_xp": 960.0,
+        "type": "Chapel (4 Teak Planks, 2 Gold Leaves)"
+      },
+      {
+        "level": 60,
+        "item": "Mahogany Altar",
+        "base_xp": 590.0,
+        "type": "Chapel (4 Mahogany Planks, 2 Cloths)"
+      },
+      {
+        "level": 61,
+        "item": "Incense Burners",
+        "base_xp": 280.0,
+        "type": "Chapel (4 Oak Planks, 2 Steel Bars)"
+      },
+      {
+        "level": 64,
+        "item": "Limestone Altar",
+        "base_xp": 910.0,
+        "type": "Chapel (6 Mahogany Planks, 2 Cloths, 2 Limestone Bricks)"
+      },
+      {
+        "level": 65,
+        "item": "Mahogany Burners",
+        "base_xp": 600.0,
+        "type": "Chapel (4 Mahogany Planks, 2 Steel Bars)"
+      },
+      {
+        "level": 65,
+        "item": "Opulent Rug",
+        "base_xp": 360.0,
+        "type": "Chapel (4 Cloths, 1 Gold Leaf)"
+      },
+      {
+        "level": 69,
+        "item": "Marble Burners",
+        "base_xp": 1600.0,
+        "type": "Chapel (2 Marble Blocks, 2 Steel Bars)"
+      },
+      {
+        "level": 69,
+        "item": "Organ",
+        "base_xp": 680.0,
+        "type": "Chapel (4 Mahogany Planks, 6 Steel Bars)"
+      },
+      {
+        "level": 69,
+        "item": "Medium Statues",
+        "base_xp": 500.0,
+        "type": "Chapel (1 Marble Blocks)"
+      },
+      {
+        "level": 69,
+        "item": "Decorative Window",
+        "base_xp": 4.0,
+        "type": "Chapel (8 Molten Glass)"
+      },
+      {
+        "level": 70,
+        "item": "Marble Altar",
+        "base_xp": 1030.0,
+        "type": "Chapel (2 Marble Blocks, 2 Cloths)"
+      },
+      {
+        "level": 71,
+        "item": "Icon of Bob",
+        "base_xp": 1160.0,
+        "type": "Chapel (4 Mahogany Planks, 2 Gold Leaves)"
+      },
+      {
+        "level": 75,
+        "item": "Gilded Altar",
+        "base_xp": 2230.0,
+        "type": "Chapel (2 Marble Blocks, 2 Cloths, 4 Gold Leaves)"
+      },
+      {
+        "level": 89,
+        "item": "Large Statues",
+        "base_xp": 1500.0,
+        "type": "Chapel (3 Marble Blocks)"
+      },
+      {
+        "level": 89,
+        "item": "Stained Glass",
+        "base_xp": 5.0,
+        "type": "Chapel (16 Molten Glass)"
+      },
+      {
+        "level": 50,
+        "item": "Teak Portal",
+        "base_xp": 270.0,
+        "type": "Portal Chamber (3 Teak Planks)"
+      },
+      {
+        "level": 50,
+        "item": "Teleport Focus",
+        "base_xp": 40.0,
+        "type": "Portal Chamber (2 Limestone Bricks)"
+      },
+      {
+        "level": 65,
+        "item": "Mahogany Portal",
+        "base_xp": 420.0,
+        "type": "Portal Chamber (3 Mahogany Planks)"
+      },
+      {
+        "level": 65,
+        "item": "Greater Focus",
+        "base_xp": 500.0,
+        "type": "Portal Chamber (1 Marble block)"
+      },
+      {
+        "level": 80,
+        "item": "Marble Portal",
+        "base_xp": 1500.0,
+        "type": "Portal Chamber (3 Marble Blocks)"
+      },
+      {
+        "level": 80,
+        "item": "Scrying Pool",
+        "base_xp": 2000.0,
+        "type": "Portal Chamber (4 Marble Blocks)"
+      },
+      {
+        "level": 1,
+        "item": "Exit Portal",
+        "base_xp": 100.0,
+        "type": "Formal Garden (10 Iron Bars)"
+      },
+      {
+        "level": 55,
+        "item": "Boundary Stones",
+        "base_xp": 100.0,
+        "type": "Formal Garden (10 Soft Clay)"
       },
       {
         "level": 56,
         "item": "Thorny Hedge",
-        "base_xp": 72.0
+        "base_xp": 70.0,
+        "type": "Formal Garden (Bagged Thorny Hedge, Watering Can)"
       },
       {
-        "level": 57,
-        "item": "Bagged Cactus",
-        "base_xp": 138.0
-      },
-      {
-        "level": 60,
-        "item": "Bagged Yew Tree",
-        "base_xp": 141.0
+        "level": 59,
+        "item": "Wooden Fence",
+        "base_xp": 280.0,
+        "type": "Formal Garden (6 Planks)"
       },
       {
         "level": 60,
         "item": "Nice Hedge",
-        "base_xp": 100.0
+        "base_xp": 100.0,
+        "type": "Formal Garden (Bagged Nice Hedge, Watering Can)"
+      },
+      {
+        "level": 63,
+        "item": "Stone Wall",
+        "base_xp": 200.0,
+        "type": "Formal Garden (10 Limestone Bricks)"
       },
       {
         "level": 64,
         "item": "Small Box Hedge",
-        "base_xp": 122.0
+        "base_xp": 122.0,
+        "type": "Formal Garden (Bagged Small Box Hedge, Watering Can)"
+      },
+      {
+        "level": 65,
+        "item": "Gazebo",
+        "base_xp": 1200.0,
+        "type": "Formal Garden (8 Mahogany Planks, 4 Steel Bars)"
       },
       {
         "level": 66,
-        "item": "Bagged Rosemary",
-        "base_xp": 70.0
+        "item": "Sunflower",
+        "base_xp": 70.0,
+        "type": "Formal Garden (Bagged Sunflower, Watering Can)"
       },
       {
         "level": 66,
-        "item": "Bagged Sunflower",
-        "base_xp": 70.0
+        "item": "Rosemary",
+        "base_xp": 70.0,
+        "type": "Formal Garden (Bagged Rosemary, Watering Can)"
       },
       {
         "level": 67,
-        "item": "Bagged Evergreen",
-        "base_xp": 373.0
+        "item": "Iron Railings",
+        "base_xp": 220.0,
+        "type": "Formal Garden (10 Iron Bars, 5 Limestone Bricks)"
       },
       {
         "level": 68,
         "item": "Topiary Hedge",
-        "base_xp": 141.0
+        "base_xp": 141.0,
+        "type": "Formal Garden (Bagged Topiary Hedge, Watering Can)"
+      },
+      {
+        "level": 70,
+        "item": "Dungeon Entrance",
+        "base_xp": 500.0,
+        "type": "Formal Garden (1 Marble Block)"
       },
       {
         "level": 71,
-        "item": "Bagged Daffodils",
-        "base_xp": 100.0
+        "item": "Small Fountain",
+        "base_xp": 500.0,
+        "type": "Formal Garden (1 Marble Block)"
       },
       {
         "level": 71,
-        "item": "Bagged Marigold",
-        "base_xp": 100.0
+        "item": "Marigold",
+        "base_xp": 100.0,
+        "type": "Formal Garden (Bagged Marigold, Watering Can)"
+      },
+      {
+        "level": 71,
+        "item": "Daffodil",
+        "base_xp": 100.0,
+        "type": "Formal Garden (Bagged Daffodil, Watering Can)"
+      },
+      {
+        "level": 71,
+        "item": "Picket Fence",
+        "base_xp": 640.0,
+        "type": "Formal Garden (10 Oak Planks, 2 Steel Bars)"
       },
       {
         "level": 72,
         "item": "Fancy Hedge",
-        "base_xp": 158.0
+        "base_xp": 158.0,
+        "type": "Formal Garden (Bagged Fancy Hedge, Watering Can)"
       },
       {
         "level": 75,
-        "item": "Bagged Magic Tree",
-        "base_xp": 223.0
+        "item": "Large Fountain",
+        "base_xp": 1000.0,
+        "type": "Formal Garden (2 Marble Blocks)"
+      },
+      {
+        "level": 75,
+        "item": "Garden Fence",
+        "base_xp": 940.0,
+        "type": "Formal Garden (10 Teak Planks, 2 Steel Bars)"
+      },
+      {
+        "level": 76,
+        "item": "Roses",
+        "base_xp": 122.0,
+        "type": "Formal Garden (Bagged Roses, Watering Can)"
+      },
+      {
+        "level": 76,
+        "item": "Bluebell",
+        "base_xp": 122.0,
+        "type": "Formal Garden (Bagged Bluebell, Watering Can)"
       },
       {
         "level": 76,
         "item": "Tall Fancy Hedge",
-        "base_xp": 223.0
+        "base_xp": 223.0,
+        "type": "Formal Garden (Bagged Tall Fancy, Watering Can)"
       },
       {
-        "level": 76,
-        "item": "Bagged Bluebells",
-        "base_xp": 122.0
-      },
-      {
-        "level": 76,
-        "item": "Bagged Roses",
-        "base_xp": 122.0
+        "level": 79,
+        "item": "Marble Wall",
+        "base_xp": 4000.0,
+        "type": "Formal Garden (8 Marble Blocks)"
       },
       {
         "level": 80,
         "item": "Tall Box Hedge",
-        "base_xp": 316.0
+        "base_xp": 316.0,
+        "type": "Formal Garden (Bagged Tall Box Hedge, Watering Can)"
+      },
+      {
+        "level": 81,
+        "item": "Posh Fountain",
+        "base_xp": 1500.0,
+        "type": "Formal Garden (3 Marble Blocks)"
+      },
+      {
+        "level": 16,
+        "item": "Oak Decoration",
+        "base_xp": 120.0,
+        "type": "Throne Room (2 Oak Planks)"
+      },
+      {
+        "level": 36,
+        "item": "Teak Decoration",
+        "base_xp": 180.0,
+        "type": "Throne Room (2 Teak Planks)"
+      },
+      {
+        "level": 44,
+        "item": "Carved Teak Bench",
+        "base_xp": 360.0,
+        "type": "Throne Room (4 Teak Planks)"
+      },
+      {
+        "level": 52,
+        "item": "Mahogany Bench",
+        "base_xp": 560.0,
+        "type": "Throne Room (4 Mahogany Planks)"
+      },
+      {
+        "level": 56,
+        "item": "Gilded Decoration",
+        "base_xp": 1020.0,
+        "type": "Throne Room (3 Mahogany Planks, 2 Gold Leaves)"
+      },
+      {
+        "level": 60,
+        "item": "Oak Throne",
+        "base_xp": 800.0,
+        "type": "Throne Room (5 Oak Planks, 1 Marble Block)"
+      },
+      {
+        "level": 61,
+        "item": "Floor Decoration",
+        "base_xp": 700.0,
+        "type": "Throne Room (5 Mahogany Planks)"
+      },
+      {
+        "level": 61,
+        "item": "Gilded Bench",
+        "base_xp": 1760.0,
+        "type": "Throne Room (4 Mahogany Planks, 4 Gold Leaves)"
+      },
+      {
+        "level": 66,
+        "item": "Round Shield",
+        "base_xp": 120.0,
+        "type": "Throne Room (2 Oak Planks)"
+      },
+      {
+        "level": 67,
+        "item": "Teak Throne",
+        "base_xp": 1450.0,
+        "type": "Throne Room (5 Teak Planks, 2 Marble Blocks)"
+      },
+      {
+        "level": 68,
+        "item": "Steel Cage",
+        "base_xp": 1100.0,
+        "type": "Throne Room (5 Mahogany Planks, 20 Steel Bars)"
+      },
+      {
+        "level": 68,
+        "item": "Trapdoor",
+        "base_xp": 300.0,
+        "type": "Throne Room (5 Oak Planks)"
+      },
+      {
+        "level": 68,
+        "item": "Oak Lever",
+        "base_xp": 300.0,
+        "type": "Throne Room (5 Oak Planks)"
+      },
+      {
+        "level": 74,
+        "item": "Trapdoor",
+        "base_xp": 770.0,
+        "type": "Throne Room (5 Mahogany Planks, 10 Clockworks)"
+      },
+      {
+        "level": 74,
+        "item": "Mahogany Throne",
+        "base_xp": 2200.0,
+        "type": "Throne Room (5 Mahogany Planks, 3 Marble Blocks)"
+      },
+      {
+        "level": 76,
+        "item": "Square Shield",
+        "base_xp": 360.0,
+        "type": "Throne Room (4 Teak Planks)"
+      },
+      {
+        "level": 78,
+        "item": "Trapdoor",
+        "base_xp": 450.0,
+        "type": "Throne Room (5 Teak Planks)"
+      },
+      {
+        "level": 78,
+        "item": "Trapdoor",
+        "base_xp": 450.0,
+        "type": "Throne Room (5 Teak Planks)"
+      },
+      {
+        "level": 78,
+        "item": "Teak Lever",
+        "base_xp": 450.0,
+        "type": "Throne Room (5 Teak Planks)"
+      },
+      {
+        "level": 81,
+        "item": "Gilded Throne",
+        "base_xp": 1800.0,
+        "type": "Throne Room (5 Oak Planks, 5 Gold Leaves)"
       },
       {
         "level": 82,
-        "item": "Magic Stone",
-        "base_xp": 1000.0
+        "item": "Lesser Magic Cage",
+        "base_xp": 2700.0,
+        "type": "Throne Room (5 Mahogany Planks, 2 Magic Stones)"
+      },
+      {
+        "level": 86,
+        "item": "Kite Shield",
+        "base_xp": 420.0,
+        "type": "Throne Room (3 Mahogany Planks)"
+      },
+      {
+        "level": 88,
+        "item": "Skeleton Throne",
+        "base_xp": 7003.0,
+        "type": "Throne Room (5 Magic Stones, 4 Marble Blocks, 5 Bones, 2 Skulls)"
+      },
+      {
+        "level": 88,
+        "item": "Trapdoor",
+        "base_xp": 700.0,
+        "type": "Throne Room (5 Mahogany Planks)"
+      },
+      {
+        "level": 88,
+        "item": "Mahogany Lever",
+        "base_xp": 700.0,
+        "type": "Throne Room (5 Mahogany Planks)"
+      },
+      {
+        "level": 89,
+        "item": "Greater Magic Cage",
+        "base_xp": 4700.0,
+        "type": "Throne Room (5 Mahogany Planks, 4 Magic Stones)"
+      },
+      {
+        "level": 95,
+        "item": "Crystal Throne",
+        "base_xp": 15000.0,
+        "type": "Throne Room (15 Magic Stones)"
+      },
+      {
+        "level": 99,
+        "item": "Demonic Throne",
+        "base_xp": 25000.0,
+        "type": "Throne Room (25 Magic Stones)"
+      },
+      {
+        "level": 65,
+        "item": "Spikes",
+        "base_xp": 623.0,
+        "type": "Oubliette (20 Steel Bars, 50,000gp)"
+      },
+      {
+        "level": 65,
+        "item": "Oak Cage",
+        "base_xp": 640.0,
+        "type": "Oubliette (10 Oak Planks, 2 Steel Bars)"
+      },
+      {
+        "level": 68,
+        "item": "Oak Ladder",
+        "base_xp": 300.0,
+        "type": "Oubliette (5 Oak Planks)"
+      },
+      {
+        "level": 70,
+        "item": "Oak & Steel Cage",
+        "base_xp": 800.0,
+        "type": "Oubliette (10 Oak Planks, 10 Steel Bars)"
+      },
+      {
+        "level": 70,
+        "item": "Skeleton Guard",
+        "base_xp": 223.0,
+        "type": "Oubliette (50,000gp)"
+      },
+      {
+        "level": 71,
+        "item": "Tentacle Pool",
+        "base_xp": 326.0,
+        "type": "Oubliette (20 Water, 100,000gp)"
+      },
+      {
+        "level": 72,
+        "item": "Decorative Blood",
+        "base_xp": 4.0,
+        "type": "Oubliette (4 Red Dye)"
+      },
+      {
+        "level": 72,
+        "item": "Candles",
+        "base_xp": 243.0,
+        "type": "Oubliette (4 Oak Planks, 4 Lit Candles)"
+      },
+      {
+        "level": 74,
+        "item": "Guard Dog",
+        "base_xp": 273.0,
+        "type": "Oubliette (75,000gp)"
+      },
+      {
+        "level": 75,
+        "item": "Steel Cage",
+        "base_xp": 400.0,
+        "type": "Oubliette (20 Steel Bars)"
+      },
+      {
+        "level": 77,
+        "item": "Flame Pit",
+        "base_xp": 357.0,
+        "type": "Oubliette (20 Tinderboxes, 125,000gp)"
+      },
+      {
+        "level": 78,
+        "item": "Hobgoblin Guard",
+        "base_xp": 316.0,
+        "type": "Oubliette (100,000gp)"
+      },
+      {
+        "level": 78,
+        "item": "Teak Ladder",
+        "base_xp": 450.0,
+        "type": "Oubliette (5 Teak Planks)"
+      },
+      {
+        "level": 80,
+        "item": "Spiked Cage",
+        "base_xp": 500.0,
+        "type": "Oubliette (25 Steel Bars)"
+      },
+      {
+        "level": 82,
+        "item": "Baby Red Dragon",
+        "base_xp": 387.0,
+        "type": "Oubliette (150,000gp)"
+      },
+      {
+        "level": 83,
+        "item": "Rocnar",
+        "base_xp": 387.0,
+        "type": "Oubliette (150,000gp)"
+      },
+      {
+        "level": 84,
+        "item": "Decorative Pipe",
+        "base_xp": 120.0,
+        "type": "Oubliette (6 Steel Bars)"
+      },
+      {
+        "level": 84,
+        "item": "Torches",
+        "base_xp": 244.0,
+        "type": "Oubliette (4 Oak Planks, 4 Lit Torches)"
+      },
+      {
+        "level": 85,
+        "item": "Bone Cage",
+        "base_xp": 603.0,
+        "type": "Oubliette (10 Oak Planks, 10 Bones)"
+      },
+      {
+        "level": 86,
+        "item": "Huge Spider",
+        "base_xp": 447.0,
+        "type": "Oubliette (200,000gp)"
+      },
+      {
+        "level": 88,
+        "item": "Mahogany Ladder",
+        "base_xp": 700.0,
+        "type": "Oubliette (5 Mahogany Planks)"
+      },
+      {
+        "level": 90,
+        "item": "Troll Guard",
+        "base_xp": 1000.0,
+        "type": "Oubliette (1,000,000gp)"
+      },
+      {
+        "level": 94,
+        "item": "Hellhound",
+        "base_xp": 2236.0,
+        "type": "Oubliette (5,000,000gp)"
+      },
+      {
+        "level": 94,
+        "item": "Hanging Skeleton",
+        "base_xp": 3.0,
+        "type": "Oubliette (2 Skulls, 6 Bones)"
+      },
+      {
+        "level": 94,
+        "item": "Skull Torches",
+        "base_xp": 246.0,
+        "type": "Oubliette (4 Oak Planks, 4 Lit Torches, 4 Skulls)"
+      },
+      {
+        "level": 13,
+        "item": "Rug",
+        "base_xp": 60.0,
+        "type": "Dungeon Room (4 Cloths)"
+      },
+      {
+        "level": 27,
+        "item": "Oak Staircase",
+        "base_xp": 600.0,
+        "type": "Dungeon Room (10 Oak Planks, 4 Steel Bars)"
+      },
+      {
+        "level": 48,
+        "item": "Teak Staircase",
+        "base_xp": 980.0,
+        "type": "Dungeon Room (10 Teak Planks, 4 Steel Bars)"
+      },
+      {
+        "level": 65,
+        "item": "Opulent Rug",
+        "base_xp": 360.0,
+        "type": "Dungeon Room (4 Cloths, 1 Gold Leaf)"
+      },
+      {
+        "level": 67,
+        "item": "Spiral Staircase",
+        "base_xp": 1040.0,
+        "type": "Dungeon Room (10 Teak Planks, 7 Limestone Bricks)"
+      },
+      {
+        "level": 70,
+        "item": "Skeleton Guard",
+        "base_xp": 223.0,
+        "type": "Dungeon Room (50,000gp)"
+      },
+      {
+        "level": 72,
+        "item": "Spike Trap",
+        "base_xp": 223.0,
+        "type": "Dungeon Room (50,00gp)"
+      },
+      {
+        "level": 72,
+        "item": "Decorative Blood",
+        "base_xp": 4.0,
+        "type": "Dungeon Room (4 Red Dye)"
+      },
+      {
+        "level": 72,
+        "item": "Candles",
+        "base_xp": 243.0,
+        "type": "Dungeon Room (4 Oak Planks, 4 Lit Candles)"
+      },
+      {
+        "level": 74,
+        "item": "Guard Dog",
+        "base_xp": 273.0,
+        "type": "Dungeon Room (75,000gp)"
+      },
+      {
+        "level": 74,
+        "item": "Oak Door",
+        "base_xp": 600.0,
+        "type": "Dungeon Room (10 Oak Planks)"
+      },
+      {
+        "level": 76,
+        "item": "Man Trap",
+        "base_xp": 273.0,
+        "type": "Dungeon Room (75,000gp)"
+      },
+      {
+        "level": 78,
+        "item": "Hobgoblin Guard",
+        "base_xp": 316.0,
+        "type": "Dungeon Room (100,000gp)"
+      },
+      {
+        "level": 80,
+        "item": "Tangle Vine",
+        "base_xp": 316.0,
+        "type": "Dungeon Room (100,000gp)"
+      },
+      {
+        "level": 82,
+        "item": "Baby Red Dragon",
+        "base_xp": 387.0,
+        "type": "Dungeon Room (150,000gp)"
+      },
+      {
+        "level": 82,
+        "item": "Marble Staircase",
+        "base_xp": 3200.0,
+        "type": "Dungeon Room (5 Mahogany Planks, 5 Marble Blocks)"
+      },
+      {
+        "level": 83,
+        "item": "Decorative Pipe",
+        "base_xp": 120.0,
+        "type": "Dungeon Room (6 Steel Bars)"
+      },
+      {
+        "level": 84,
+        "item": "Marble Trap",
+        "base_xp": 387.0,
+        "type": "Dungeon Room (150,000gp)"
+      },
+      {
+        "level": 84,
+        "item": "Torches",
+        "base_xp": 244.0,
+        "type": "Dungeon Room (4 Oak Planks, 4 Lit Torches)"
+      },
+      {
+        "level": 84,
+        "item": "Steel-Plated Door",
+        "base_xp": 800.0,
+        "type": "Dungeon Room (10 Oak Planks, 10 Steel Bars)"
+      },
+      {
+        "level": 86,
+        "item": "Huge Spider",
+        "base_xp": 447.0,
+        "type": "Dungeon Room (200,000gp)"
+      },
+      {
+        "level": 88,
+        "item": "Teleport Trap",
+        "base_xp": 447.0,
+        "type": "Dungeon Room (200,000gp)"
+      },
+      {
+        "level": 90,
+        "item": "Troll Guard",
+        "base_xp": 1000.0,
+        "type": "Dungeon Room (1,000,000gp)"
+      },
+      {
+        "level": 94,
+        "item": "Hellhound",
+        "base_xp": 2236.0,
+        "type": "Dungeon Room (5,000,000gp)"
+      },
+      {
+        "level": 94,
+        "item": "Hanging Skeleton",
+        "base_xp": 3.0,
+        "type": "Dungeon Room (2 Skulls, 6 Bones)"
+      },
+      {
+        "level": 94,
+        "item": "Skull Torches",
+        "base_xp": 246.0,
+        "type": "Dungeon Room (4 Oak Planks, 4 Lit Torches, 4 Skulls)"
+      },
+      {
+        "level": 94,
+        "item": "Marble Door",
+        "base_xp": 2000.0,
+        "type": "Dungeon Room (4 Marble Blocks)"
+      },
+      {
+        "level": 97,
+        "item": "Marble Spiral",
+        "base_xp": 4400.0,
+        "type": "Dungeon Room (10 Teak Planks, 7 Marble Blocks)"
+      },
+      {
+        "level": 66,
+        "item": "Round Shield",
+        "base_xp": 120.0,
+        "type": "Treasure Room (2 Oak Planks)"
+      },
+      {
+        "level": 72,
+        "item": "Decorative Blood",
+        "base_xp": 4.0,
+        "type": "Treasure Room (4 Red Dye)"
+      },
+      {
+        "level": 72,
+        "item": "Candles",
+        "base_xp": 243.0,
+        "type": "Treasure Room (4 Oak Planks, 4 Lit Candles)"
+      },
+      {
+        "level": 72,
+        "item": "Oak Door",
+        "base_xp": 600.0,
+        "type": "Treasure Room (10 Oak Planks)"
+      },
+      {
+        "level": 75,
+        "item": "Demon",
+        "base_xp": 707.0,
+        "type": "Treasure Room (500,000gp)"
+      },
+      {
+        "level": 76,
+        "item": "Square Shield",
+        "base_xp": 360.0,
+        "type": "Treasure Room (4 Teak Planks)"
+      },
+      {
+        "level": 75,
+        "item": "Wooden Crate",
+        "base_xp": 143.0,
+        "type": "Treasure Room (5 Planks, 5 Nails)"
+      },
+      {
+        "level": 79,
+        "item": "Oak Chest",
+        "base_xp": 340.0,
+        "type": "Treasure Room (5 Oak Planks, 2 Steel Bars)"
+      },
+      {
+        "level": 80,
+        "item": "Kalphite Soldier",
+        "base_xp": 866.0,
+        "type": "Treasure Room (750,000gp)"
+      },
+      {
+        "level": 83,
+        "item": "Teak Chest",
+        "base_xp": 530.0,
+        "type": "Treasure Room (5 Teak Planks, 4 Steel Bars)"
+      },
+      {
+        "level": 83,
+        "item": "Decorative Pipe",
+        "base_xp": 120.0,
+        "type": "Treasure Room (6 Steel Bars)"
+      },
+      {
+        "level": 84,
+        "item": "Torches",
+        "base_xp": 244.0,
+        "type": "Treasure Room (4 Oak Planks, 4 Lit Torches)"
+      },
+      {
+        "level": 84,
+        "item": "Steel-Plated Door",
+        "base_xp": 800.0,
+        "type": "Treasure Room (10 Oak Planks, 10 Steel Bars)"
+      },
+      {
+        "level": 85,
+        "item": "Tok-xil",
+        "base_xp": 2236.0,
+        "type": "Treasure Room (5,000,000gp)"
+      },
+      {
+        "level": 86,
+        "item": "Kite Shield",
+        "base_xp": 420.0,
+        "type": "Treasure Room (3 Mahogany Planks)"
+      },
+      {
+        "level": 87,
+        "item": "Mahogany Chest",
+        "base_xp": 1000.0,
+        "type": "Treasure Room (5 Mahogany Planks, 1 Gold Leaf)"
+      },
+      {
+        "level": 90,
+        "item": "Dagannoth",
+        "base_xp": 2738.0,
+        "type": "Treasure Room (7,500,000gp)"
+      },
+      {
+        "level": 91,
+        "item": "Magic Chest",
+        "base_xp": 1000.0,
+        "type": "Treasure Room (1 Magic Stone)"
+      },
+      {
+        "level": 94,
+        "item": "Hanging Skeleton",
+        "base_xp": 3.0,
+        "type": "Treasure Room (2 Skulls, 6 Bones)"
+      },
+      {
+        "level": 94,
+        "item": "Skull Torches",
+        "base_xp": 246.0,
+        "type": "Treasure Room (4 Oak Planks, 4 Lit Torches, 4 Skulls)"
+      },
+      {
+        "level": 94,
+        "item": "Marble Door",
+        "base_xp": 2000.0,
+        "type": "Treasure Room (4 Marble Blocks)"
+      },
+      {
+        "level": 95,
+        "item": "Steel Dragon",
+        "base_xp": 3162.0,
+        "type": "Treasure Room (10,000,000gp)"
       }
     ],
     "Prayer": [
@@ -4887,7 +7411,7 @@
       },
       {
         "level": 1,
-        "item": "Bronze Item",
+        "item": "Bronze Item (1 bar)",
         "base_xp": 62.5,
         "type": "Smithing"
       },
