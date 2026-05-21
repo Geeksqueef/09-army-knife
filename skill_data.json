@@ -4055,13 +4055,13 @@
       {
         "level": 30,
         "item": "Long Bones",
-        "base_xp": 1500.0
+        "base_xp": 1500.0,
         "type": "NPC XP Reward - Nardok"
       },
       {
         "level": 30,
         "item": "Curved Bones",
-        "base_xp": 2250.0
+        "base_xp": 2250.0,
         "type": "NPC XP Reward - Nardok"
       },
       {
