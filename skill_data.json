@@ -7421,85 +7421,85 @@
       {
         "level": 1,
         "item": "Bronze Bar",
-        "base_xp": 31.0,
+        "base_xp": 6.2,
         "type": "Smelting"
       },
       {
         "level": 1,
         "item": "Bronze Item (1 bar)",
-        "base_xp": 62.5,
+        "base_xp": 12.5,
         "type": "Smithing"
       },
       {
         "level": 1,
         "item": "Bronze Item + Bar",
-        "base_xp": 93.5,
+        "base_xp": 18.7,
         "type": "Smelting + Smithing"
       },
       {
         "level": 8,
         "item": "Blurite Bar",
-        "base_xp": 40.0,
+        "base_xp": 8.0,
         "type": "Smelting"
       },
       {
         "level": 15,
         "item": "Iron Bar",
-        "base_xp": 62.5,
+        "base_xp": 12.5,
         "type": "Smelting"
       },
       {
         "level": 15,
-        "item": "Iron Item",
-        "base_xp": 125.0,
-        "type": "Smithing (1 bar)"
+        "item": "Iron Item (1 bar)",
+        "base_xp": 25.0,
+        "type": "Smithing"
       },
       {
         "level": 15,
         "item": "Iron Item + Bar",
-        "base_xp": 187.5,
+        "base_xp": 37.5,
         "type": "Smelting + Smithing"
       },
       {
         "level": 20,
         "item": "Elemental Bar",
-        "base_xp": 37.5,
+        "base_xp": 7.5,
         "type": "Smelting"
       },
       {
         "level": 20,
         "item": "Silver Bar",
-        "base_xp": 67.5,
+        "base_xp": 13.5,
         "type": "Smelting"
       },
       {
         "level": 30,
         "item": "Steel Bar",
-        "base_xp": 87.5,
+        "base_xp": 17.5,
         "type": "Smelting"
       },
       {
         "level": 30,
         "item": "Steel Item (1 bar)",
-        "base_xp": 187.5,
+        "base_xp": 37.5,
         "type": "Smithing"
       },
       {
         "level": 30,
         "item": "Steel Item + Bar",
-        "base_xp": 275.0,
+        "base_xp": 55.0,
         "type": "Smelting + Smithing"
       },
       {
         "level": 35,
         "item": "Cannonballs",
-        "base_xp": 128.75,
+        "base_xp": 25.75,
         "type": "Smelting"
       },
       {
         "level": 35,
         "item": "Cannonballs + Bar",
-        "base_xp": 216.25,
+        "base_xp": 43.25,
         "type": "Smelting Bar + Ball"
       },
       {
@@ -7511,61 +7511,61 @@
       {
         "level": 40,
         "item": "Gold Bar with Gauntlets",
-        "base_xp": 56.2,
+        "base_xp": 56.25,
         "type": "Smelting"
       },
       {
         "level": 50,
         "item": "Mithril Bar",
-        "base_xp": 150.0,
+        "base_xp": 30.0,
         "type": "Smelting"
       },
       {
         "level": 50,
         "item": "Mithril Item (1 bar)",
-        "base_xp": 250.0,
+        "base_xp": 50.0,
         "type": "Smithing"
       },
       {
         "level": 50,
         "item": "Mithril Item + Bar",
-        "base_xp": 400.0,
+        "base_xp": 80.0,
         "type": "Smelting + Smithing"
       },
       {
         "level": 70,
         "item": "Adamanite Bar",
-        "base_xp": 187.5,
+        "base_xp": 37.5,
         "type": "Smelting"
       },
       {
         "level": 70,
         "item": "Adamant Item (1 bar)",
-        "base_xp": 312.5,
+        "base_xp": 62.5,
         "type": "Smithing"
       },
       {
         "level": 70,
         "item": "Adamant Item + Bar",
-        "base_xp": 500.0,
+        "base_xp": 100.0,
         "type": "Smelting + Smithing"
       },
       {
         "level": 85,
         "item": "Runite Bar",
-        "base_xp": 250.0,
+        "base_xp": 50.0,
         "type": "Smelting"
       },
       {
         "level": 85,
         "item": "Rune Item (1 bar)",
-        "base_xp": 375.0,
+        "base_xp": 75.0,
         "type": "Smithing"
       },
       {
         "level": 85,
         "item": "Rune Item + Bar",
-        "base_xp": 625.0,
+        "base_xp": 125.0,
         "type": "Smelting + Smithing"
       }
     ],
@@ -7573,187 +7573,187 @@
       {
         "level": 1,
         "item": "Clay",
-        "base_xp": 12.5,
+        "base_xp": 5.0,
         "type": "Misc"
       },
       {
         "level": 1,
         "item": "Rune Essence",
-        "base_xp": 12.5,
+        "base_xp": 5.0,
         "type": "Misc"
       },
       {
         "level": 1,
         "item": "Copper",
-        "base_xp": 43.75,
+        "base_xp": 17.5,
         "type": "Ore"
       },
       {
         "level": 1,
         "item": "Tin",
-        "base_xp": 43.75,
+        "base_xp": 17.5,
         "type": "Ore"
       },
       {
         "level": 10,
         "item": "Limestone",
-        "base_xp": 66.25,
+        "base_xp": 26.5,
         "type": "Misc"
       },
       {
         "level": 10,
         "item": "Blurite",
-        "base_xp": 43.75,
+        "base_xp": 17.5,
         "type": "Ore"
       },
       {
         "level": 15,
         "item": "Iron",
-        "base_xp": 87.5,
+        "base_xp": 35.0,
         "type": "Ore"
       },
       {
         "level": 20,
         "item": "Silver",
-        "base_xp": 100.0,
+        "base_xp": 40.0,
         "type": "Ore"
       },
       {
         "level": 30,
         "item": "Pure Essence",
-        "base_xp": 12.5,
+        "base_xp": 5.0,
         "type": "Misc"
       },
       {
         "level": 30,
         "item": "Coal",
-        "base_xp": 125.0,
+        "base_xp": 50.0,
         "type": "Ore"
       },
       {
         "level": 35,
         "item": "Sandstone Small",
-        "base_xp": 75.0,
+        "base_xp": 30.0,
         "type": "Misc"
       },
       {
         "level": 35,
         "item": "Sandstone Medium-Small",
-        "base_xp": 100.0,
+        "base_xp": 40.0,
         "type": "Misc"
       },
       {
         "level": 35,
         "item": "Sandstone Medium-Large",
-        "base_xp": 125.0,
+        "base_xp": 50.0,
         "type": "Misc"
       },
       {
         "level": 35,
         "item": "Sandstone Large",
-        "base_xp": 150.0,
+        "base_xp": 60.0,
         "type": "Misc"
       },
       {
         "level": 40,
         "item": "Gem Rock",
-        "base_xp": 162.5,
+        "base_xp": 65.0,
         "type": "Misc"
       },
       {
         "level": 40,
         "item": "Gold",
-        "base_xp": 162.5,
+        "base_xp": 65.0,
         "type": "Ore"
       },
       {
         "level": 45,
         "item": "Granite Small",
-        "base_xp": 125.0,
+        "base_xp": 50.0,
         "type": "Misc"
       },
       {
         "level": 45,
         "item": "Granite Medium",
-        "base_xp": 150.0,
+        "base_xp": 60.0,
         "type": "Misc"
       },
       {
         "level": 45,
         "item": "Granite Large",
-        "base_xp": 187.5,
+        "base_xp": 75.0,
         "type": "Misc"
       },
       {
         "level": 55,
         "item": "Mithril",
-        "base_xp": 200.0,
+        "base_xp": 80.0,
         "type": "Ore"
       },
       {
         "level": 70,
         "item": "Adamant",
-        "base_xp": 237.5,
+        "base_xp": 95.0,
         "type": "Ore"
       },
       {
         "level": 85,
         "item": "Runite",
-        "base_xp": 312.5,
+        "base_xp": 125.0,
         "type": "Ore"
       },
       {
         "level": 10,
         "item": "Star Size 1",
-        "base_xp": 35.0,
+        "base_xp": 14.0,
         "type": "Star"
       },
       {
         "level": 20,
         "item": "Star Size 2",
-        "base_xp": 62.5,
+        "base_xp": 25.0,
         "type": "Star"
       },
       {
         "level": 30,
         "item": "Star Size 3",
-        "base_xp": 72.5,
+        "base_xp": 29.0,
         "type": "Star"
       },
       {
         "level": 40,
         "item": "Star Size 4",
-        "base_xp": 80.0,
+        "base_xp": 32.0,
         "type": "Star"
       },
       {
         "level": 50,
         "item": "Star Size 5",
-        "base_xp": 117.5,
+        "base_xp": 47.0,
         "type": "Star"
       },
       {
         "level": 60,
         "item": "Star Size 6",
-        "base_xp": 177.5,
+        "base_xp": 71.0,
         "type": "Star"
       },
       {
         "level": 70,
         "item": "Star Size 7",
-        "base_xp": 285.0,
+        "base_xp": 114.0,
         "type": "Star"
       },
       {
         "level": 80,
         "item": "Star Size 8",
-        "base_xp": 362.5,
+        "base_xp": 145.0,
         "type": "Star"
       },
       {
         "level": 90,
         "item": "Star Size 9",
-        "base_xp": 525.0,
+        "base_xp": 210.0,
         "type": "Star"
       }
     ],
@@ -7761,187 +7761,187 @@
       {
         "level": 1,
         "item": "Air Rune",
-        "base_xp": 12.5,
+        "base_xp": 5.0,
         "type": "Normal Rune"
       },
       {
         "level": 2,
         "item": "Mind Rune",
-        "base_xp": 13.75,
+        "base_xp": 5.5,
         "type": "Normal Rune"
       },
       {
         "level": 5,
         "item": "Water Rune",
-        "base_xp": 15.0,
+        "base_xp": 6.0,
         "type": "Normal Rune"
       },
       {
         "level": 9,
         "item": "Earth Rune",
-        "base_xp": 16.25,
+        "base_xp": 6.5,
         "type": "Normal Rune"
       },
       {
         "level": 14,
         "item": "Fire Rune",
-        "base_xp": 17.5,
+        "base_xp": 7.0,
         "type": "Normal Rune"
       },
       {
         "level": 20,
         "item": "Body Rune",
-        "base_xp": 18.75,
+        "base_xp": 7.5,
         "type": "Normal Rune"
       },
       {
         "level": 27,
         "item": "Cosmic Rune",
-        "base_xp": 20.0,
+        "base_xp": 8.0,
         "type": "Normal Rune"
       },
       {
         "level": 35,
         "item": "Chaos Rune",
-        "base_xp": 21.25,
+        "base_xp": 8.5,
         "type": "Normal Rune"
       },
       {
         "level": 40,
         "item": "Astral Rune",
-        "base_xp": 21.875,
+        "base_xp": 8.75,
         "type": "Normal Rune"
       },
       {
         "level": 44,
         "item": "Nature Rune",
-        "base_xp": 22.5,
+        "base_xp": 9.0,
         "type": "Normal Rune"
       },
       {
         "level": 54,
         "item": "Law Rune",
-        "base_xp": 23.75,
+        "base_xp": 9.5,
         "type": "Normal Rune"
       },
       {
         "level": 65,
         "item": "Death Rune",
-        "base_xp": 25.0,
+        "base_xp": 10.0,
         "type": "Normal Rune"
       },
       {
         "level": 77,
         "item": "Blood Rune",
-        "base_xp": 26.25,
+        "base_xp": 10.5,
         "type": "Normal Rune"
       },
       {
         "level": 6,
         "item": "Mist Rune",
-        "base_xp": 21.25,
+        "base_xp": 8.5,
         "type": "Combination Rune"
       },
       {
         "level": 10,
         "item": "Dust Rune",
-        "base_xp": 22.5,
+        "base_xp": 9.0,
         "type": "Combination Rune"
       },
       {
         "level": 13,
         "item": "Mud Rune",
-        "base_xp": 23.75,
+        "base_xp": 9.5,
         "type": "Combination Rune"
       },
       {
         "level": 15,
         "item": "Smoke Rune",
-        "base_xp": 23.75,
+        "base_xp": 9.5,
         "type": "Combination Rune"
       },
       {
         "level": 19,
         "item": "Steam Rume",
-        "base_xp": 25.0,
+        "base_xp": 10.0,
         "type": "Combination Rune"
       },
       {
         "level": 23,
         "item": "Lava Rune",
-        "base_xp": 26.25,
+        "base_xp": 10.5,
         "type": "Combination Rune"
       },
       {
         "level": 1,
         "item": "Air Tiara",
-        "base_xp": 62.5,
+        "base_xp": 25.0,
         "type": "Tiara"
       },
       {
         "level": 2,
         "item": "Mind Tiara",
-        "base_xp": 68.75,
+        "base_xp": 27.5,
         "type": "Tiara"
       },
       {
         "level": 5,
         "item": "Water Tiara",
-        "base_xp": 75.0,
+        "base_xp": 30.0,
         "type": "Tiara"
       },
       {
         "level": 9,
         "item": "Earth Tiara",
-        "base_xp": 81.25,
+        "base_xp": 32.5,
         "type": "Tiara"
       },
       {
         "level": 14,
         "item": "Fire Tiara",
-        "base_xp": 87.5,
+        "base_xp": 35.0,
         "type": "Tiara"
       },
       {
         "level": 20,
         "item": "Body Tiara",
-        "base_xp": 93.75,
+        "base_xp": 37.5,
         "type": "Tiara"
       },
       {
         "level": 27,
         "item": "Cosmic Tiara",
-        "base_xp": 100.0,
+        "base_xp": 40.0,
         "type": "Tiara"
       },
       {
         "level": 35,
         "item": "Chaos Tiara",
-        "base_xp": 106.25,
+        "base_xp": 42.5,
         "type": "Tiara"
       },
       {
         "level": 44,
         "item": "Nature Tiara",
-        "base_xp": 112.5,
+        "base_xp": 45.0,
         "type": "Tiara"
       },
       {
         "level": 54,
         "item": "Law Tiara",
-        "base_xp": 118.75,
+        "base_xp": 47.5,
         "type": "Tiara"
       },
       {
         "level": 65,
         "item": "Death Tiara",
-        "base_xp": 125.0,
+        "base_xp": 50.0,
         "type": "Tiara"
       },
       {
         "level": 77,
         "item": "Blood Tiara",
-        "base_xp": 131.25,
+        "base_xp": 52.5,
         "type": "Tiara"
       }
     ],
@@ -9727,139 +9727,139 @@
       {
         "level": 1,
         "item": "Shrimp",
-        "base_xp": 50.0,
+        "base_xp": 10.0,
         "type": "Net"
       },
       {
         "level": 5,
         "item": "Sardine",
-        "base_xp": 100.0,
+        "base_xp": 20.0,
         "type": "Bait"
       },
       {
         "level": 10,
         "item": "Herring",
-        "base_xp": 150.0,
+        "base_xp": 30.0,
         "type": "Bait"
       },
       {
         "level": 15,
         "item": "Anchovies",
-        "base_xp": 200.0,
+        "base_xp": 40.0,
         "type": "Net"
       },
       {
         "level": 16,
         "item": "Mackeral",
-        "base_xp": 100.0,
+        "base_xp": 20.0,
         "type": "Big Net"
       },
       {
         "level": 20,
         "item": "Trout",
-        "base_xp": 250.0,
+        "base_xp": 50.0,
         "type": "Fly"
       },
       {
         "level": 23,
         "item": "Cod",
-        "base_xp": 225.0,
+        "base_xp": 45.0,
         "type": "Big Net"
       },
       {
         "level": 25,
         "item": "Pike",
-        "base_xp": 300.0,
+        "base_xp": 60.0,
         "type": "Bait"
       },
       {
         "level": 28,
         "item": "Slimey Eel",
-        "base_xp": 400.0,
+        "base_xp": 80.0,
         "type": "Bait"
       },
       {
         "level": 30,
         "item": "Salmon",
-        "base_xp": 350.0,
+        "base_xp": 70.0,
         "type": "Fly"
       },
       {
         "level": 35,
         "item": "Tuna",
-        "base_xp": 400.0,
+        "base_xp": 80.0,
         "type": "Harpoon"
       },
       {
         "level": 38,
         "item": "Rainbow",
-        "base_xp": 400.0,
+        "base_xp": 80.0,
         "type": "Stripy Fly"
       },
       {
         "level": 40,
         "item": "Lobster",
-        "base_xp": 450.0,
+        "base_xp": 90.0,
         "type": "Cage"
       },
       {
         "level": 46,
         "item": "Bass",
-        "base_xp": 500.0,
+        "base_xp": 100.0,
         "type": "Big Net"
       },
       {
         "level": 50,
         "item": "Swordfish",
-        "base_xp": 500.0,
+        "base_xp": 100.0,
         "type": "Harpoon"
       },
       {
         "level": 53,
         "item": "Lava Eel",
-        "base_xp": 300.0,
+        "base_xp": 60.0,
         "type": "Oily Bait"
       },
       {
         "level": 58,
         "item": "Leaping Salmon",
-        "base_xp": 350.0,
+        "base_xp": 70.0,
         "type": "Barbarian"
       },
       {
         "level": 62,
         "item": "Monkfish ",
-        "base_xp": 600.0,
+        "base_xp": 120.0,
         "type": "Net"
       },
       {
         "level": 65,
         "item": "Karambwan",
-        "base_xp": 250.0,
+        "base_xp": 50.0,
         "type": "Vessel"
       },
       {
         "level": 70,
         "item": "Leaping Sturgeon",
-        "base_xp": 400.0,
+        "base_xp": 80.0,
         "type": "Barbarian"
       },
       {
         "level": 76,
         "item": "Shark",
-        "base_xp": 550.0,
+        "base_xp": 110.0,
         "type": "Harpoon"
       },
       {
         "level": 79,
         "item": "Sea Turtle",
-        "base_xp": 190.0,
+        "base_xp": 38.0,
         "type": "Trawler"
       },
       {
         "level": 81,
         "item": "Manta Ray",
-        "base_xp": 345.0,
+        "base_xp": 69.0,
         "type": "Trawler"
       }
     ],
