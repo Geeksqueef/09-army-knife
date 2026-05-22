@@ -90,6 +90,18 @@
             background-color: #876a38;
             color: #ffd700;
             font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+        }
+        th:hover {
+            background-color: #9a7a42;
+        }
+        th.sort-asc::after {
+            content: ' ▲';
+        }
+        th.sort-desc::after {
+            content: ' ▼';
         }
         tr:nth-child(even) {
             background-color: #5c4a2a;
@@ -348,12 +360,12 @@
                 <table id="items-table">
                     <thead>
                         <tr>
-                            <th>Level</th>
-                            <th>Item</th>
-                            <th>Type</th>
-                            <th>Base XP</th>
-                            <th>Actual XP</th>
-                            <th>Actions Needed</th>
+                            <th onclick="sortTable('level')">Level</th>
+                            <th onclick="sortTable('item')">Item</th>
+                            <th onclick="sortTable('type')">Type</th>
+                            <th onclick="sortTable('base_xp')">Base XP</th>
+                            <th onclick="sortTable('actual_xp')">Actual XP</th>
+                            <th onclick="sortTable('actions')">Actions Needed</th>
                         </tr>
                     </thead>
                     <tbody id="items-body">
@@ -367,6 +379,8 @@
         let skillData = null;
         let currentSkill = 'Cooking';
         let currentTab = 'skill'; // 'skill' or 'penguin'
+        let sortColumn = null;
+        let sortDirection = 'asc'; // 'asc' or 'desc'
 
         const brawlerSkills = ['Agility', 'Prayer', 'Smithing', 'Mining', 'Fishing', 'Hunter', 'Thieving', 'Cooking'];
 
@@ -694,26 +708,125 @@
             const brawlerMultiplier = getBrawlerMultiplier();
 
             // Update items table
+            renderTable(xpNeeded, xpRate, prayerMultiplier, brawlerMultiplier);
+        }
+
+        function renderTable(xpNeeded, xpRate, prayerMultiplier, brawlerMultiplier) {
             const itemsBody = document.getElementById('items-body');
             itemsBody.innerHTML = '';
             
-            const skillItems = skillData.skills[currentSkill] || [];
+            let skillItems = skillData.skills[currentSkill] || [];
             
-            skillItems.forEach(item => {
+            // Calculate actual XP and actions for each item
+            skillItems = skillItems.map(item => {
                 const actualXp = item.base_xp * xpRate * prayerMultiplier * brawlerMultiplier;
                 const actionsNeeded = actualXp > 0 ? Math.ceil(xpNeeded / actualXp) : 0;
-                
+                return {
+                    ...item,
+                    actualXp,
+                    actionsNeeded
+                };
+            });
+
+            // Sort if a sort column is set
+            if (sortColumn) {
+                skillItems.sort((a, b) => {
+                    let valA, valB;
+                    
+                    switch (sortColumn) {
+                        case 'level':
+                            valA = a.level;
+                            valB = b.level;
+                            break;
+                        case 'item':
+                            valA = a.item.toLowerCase();
+                            valB = b.item.toLowerCase();
+                            break;
+                        case 'type':
+                            valA = (a.type || '').toLowerCase();
+                            valB = (b.type || '').toLowerCase();
+                            break;
+                        case 'base_xp':
+                            valA = a.base_xp;
+                            valB = b.base_xp;
+                            break;
+                        case 'actual_xp':
+                            valA = a.actualXp;
+                            valB = b.actualXp;
+                            break;
+                        case 'actions':
+                            valA = a.actionsNeeded;
+                            valB = b.actionsNeeded;
+                            break;
+                        default:
+                            return 0;
+                    }
+                    
+                    if (valA < valB) return sortDirection === 'asc' ? -1 : 1;
+                    if (valA > valB) return sortDirection === 'asc' ? 1 : -1;
+                    return 0;
+                });
+            }
+
+            // Render rows
+            skillItems.forEach(item => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>${item.level}</td>
                     <td>${item.item}</td>
                     <td>${item.type || '-'}</td>
                     <td>${item.base_xp.toFixed(2)}</td>
-                    <td>${actualXp.toFixed(2)}</td>
-                    <td>${actionsNeeded.toLocaleString()}</td>
+                    <td>${item.actualXp.toFixed(2)}</td>
+                    <td>${item.actionsNeeded.toLocaleString()}</td>
                 `;
                 itemsBody.appendChild(row);
             });
+
+            // Update header classes
+            updateHeaderClasses();
+        }
+
+        function sortTable(column) {
+            if (sortColumn === column) {
+                // Toggle direction if clicking same column
+                sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+            } else {
+                // New column, default to ascending
+                sortColumn = column;
+                sortDirection = 'asc';
+            }
+            
+            // Re-render table with new sort
+            const startingXp = parseInt(document.getElementById('starting-xp').value) || 0;
+            const goalLevel = parseInt(document.getElementById('goal-level').value) || 99;
+            const xpRate = parseFloat(document.getElementById('xp-rate').value) || 5;
+            const xpNeeded = Math.max(0, getXpForLevel(goalLevel) - startingXp);
+            const prayerMultiplier = getPrayerMultiplier();
+            const brawlerMultiplier = getBrawlerMultiplier();
+            
+            renderTable(xpNeeded, xpRate, prayerMultiplier, brawlerMultiplier);
+        }
+
+        function updateHeaderClasses() {
+            const headers = document.querySelectorAll('#items-table th');
+            headers.forEach(th => {
+                th.classList.remove('sort-asc', 'sort-desc');
+            });
+            
+            if (sortColumn) {
+                const columnIndex = {
+                    'level': 0,
+                    'item': 1,
+                    'type': 2,
+                    'base_xp': 3,
+                    'actual_xp': 4,
+                    'actions': 5
+                }[sortColumn];
+                
+                if (columnIndex !== undefined) {
+                    headers[columnIndex].classList.add(sortDirection === 'asc' ? 'sort-asc' : 'sort-desc');
+                }
+            }
         }
 
         // Load the calculator when page loads
