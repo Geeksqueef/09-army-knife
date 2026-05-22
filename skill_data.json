@@ -6781,77 +6781,92 @@
       {
         "level": 1,
         "item": "Bones",
-        "base_xp": 45.0
+        "base_xp": 4.5,
+        "type": "Bones"
       },
       {
         "level": 1,
         "item": "Wolf Bones",
-        "base_xp": 45.0
+        "base_xp": 4.5,
+        "type": "Bones"
       },
       {
         "level": 1,
         "item": "Burnt Bones",
-        "base_xp": 45.0
+        "base_xp": 4.5,
+        "type": "Bones"
       },
       {
         "level": 1,
         "item": "Monkey Bones",
-        "base_xp": 50.0
+        "base_xp": 5.0,
+        "type": "Bones"
       },
       {
         "level": 1,
         "item": "Bat Bones",
-        "base_xp": 53.0
+        "base_xp": 5.3,
+        "type": "Bones"
       },
       {
         "level": 1,
         "item": "Big Bones",
-        "base_xp": 150.0
+        "base_xp": 15.0,
+        "type": "Bones"
       },
       {
         "level": 1,
         "item": "Jogre Bones",
-        "base_xp": 150.0
+        "base_xp": 15.0,
+        "type": "Bones"
       },
       {
         "level": 1,
         "item": "Shaikahan Bones",
-        "base_xp": 250.0
+        "base_xp": 25.0,
+        "type": "Bones"
       },
       {
         "level": 1,
         "item": "Baby Dragon Bones",
-        "base_xp": 300.0
+        "base_xp": 30.0,
+        "type": "Bones"
       },
       {
         "level": 1,
         "item": "Wyvern Bones",
-        "base_xp": 500.0
+        "base_xp": 50.0,
+        "type": "Bones"
       },
       {
         "level": 1,
         "item": "Dragon Bones",
-        "base_xp": 720.0
+        "base_xp": 72.0,
+        "type": "Bones"
       },
       {
         "level": 1,
         "item": "Fayrg Bones",
-        "base_xp": 840.0
+        "base_xp": 84.0,
+        "type": "Bones"
       },
       {
         "level": 1,
         "item": "Raurg Bones",
-        "base_xp": 960.0
+        "base_xp": 96.0,
+        "type": "Bones"
       },
       {
         "level": 1,
         "item": "Dagannoth Bones",
-        "base_xp": 1250.0
+        "base_xp": 125.0,
+        "type": "Bones"
       },
       {
         "level": 1,
         "item": "Ourg Bones",
-        "base_xp": 1400.0
+        "base_xp": 140.0,
+        "type": "Bones"
       }
     ],
     "Herblore": [
@@ -8820,72 +8835,86 @@
       {
         "level": 1,
         "item": "Normal",
-        "base_xp": 25.0
+        "base_xp": 25.0,
+        "type": "Tree"
       },
       {
         "level": 1,
         "item": "Achey Tree",
-        "base_xp": 25.0
+        "base_xp": 25.0,
+        "type": "Tree"
       },
       {
         "level": 15,
         "item": "Oak",
-        "base_xp": 37.5
+        "base_xp": 37.5,
+        "type": "Tree"
       },
       {
         "level": 30,
         "item": "Willow",
-        "base_xp": 67.5
+        "base_xp": 67.5,
+        "type": "Tree"
       },
       {
         "level": 35,
         "item": "Teak",
-        "base_xp": 85.0
+        "base_xp": 85.0,
+        "type": "Tree"
       },
       {
         "level": 45,
         "item": "Maple",
-        "base_xp": 100.0
+        "base_xp": 100.0,
+        "type": "Tree"
       },
       {
         "level": 45,
         "item": "Maple + Seers",
-        "base_xp": 110.0
+        "base_xp": 110.0,
+        "type": "Tree"
       },
       {
         "level": 45,
         "item": "Hollow",
-        "base_xp": 82.5
+        "base_xp": 82.5,
+        "type": "Tree"
       },
       {
         "level": 50,
         "item": "Mahogany",
-        "base_xp": 125.0
+        "base_xp": 125.0,
+        "type": "Tree"
       },
       {
         "level": 54,
         "item": "Arctic Pine",
-        "base_xp": 40.0
+        "base_xp": 40.0,
+        "type": "Tree"
       },
       {
         "level": 58,
         "item": "Eucalyptus",
-        "base_xp": 165.0
+        "base_xp": 165.0,
+        "type": "Tree"
       },
       {
         "level": 60,
         "item": "Yew",
-        "base_xp": 175.0
+        "base_xp": 175.0,
+        "type": "Tree"
       },
       {
         "level": 75,
         "item": "Magic",
-        "base_xp": 250.0
+        "base_xp": 250.0,
+        "type": "Tree"
       },
       {
         "level": 82,
         "item": "Cursed Magic",
-        "base_xp": 275.0
+        "base_xp": 275.0,
+        "type": "Tree"
       }
     ],
     "Crafting": [
