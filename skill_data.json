@@ -8616,198 +8616,198 @@
         "type": "Dart"
       }
     ],
-    "Fire Making": [
+    "Firemaking": [
       {
         "level": 1,
         "item": "Normal",
-        "base_xp": 204.0,
+        "base_xp": 40.0,
         "type": "Normal"
       },
       {
         "level": 1,
-        "item": "Archery",
-        "base_xp": 204.0,
+        "item": "Achey Tree",
+        "base_xp": 40.0,
         "type": "Normal"
-      },
-      {
-        "level": 5,
-        "item": "Pyre Logs",
-        "base_xp": 255.0,
-        "type": "Pyre"
       },
       {
         "level": 15,
         "item": "Oak",
-        "base_xp": 306.0,
+        "base_xp": 60,
         "type": "Normal"
-      },
-      {
-        "level": 20,
-        "item": "Oak Pyre",
-        "base_xp": 357.0,
-        "type": "Pyre"
       },
       {
         "level": 30,
         "item": "Willow",
-        "base_xp": 459.0,
+        "base_xp": 90,
         "type": "Normal"
       },
       {
         "level": 35,
         "item": "Teak",
-        "base_xp": 535.5,
+        "base_xp": 105,
         "type": "Normal"
       },
       {
-        "level": 11,
-        "item": "Normal Pyre Ship",
-        "base_xp": 204.0,
-        "type": "Pyre Ship"
+        "level": 5,
+        "item": "Normal Pyre",
+        "base_xp": 40.0,
+        "type": "Pyre"
       },
       {
-        "level": 11,
-        "item": "Archery Pyre Ship",
-        "base_xp": 204.0,
-        "type": "Pyre Ship"
-      },
-      {
-        "level": 25,
-        "item": "Oak Pyre Ship",
-        "base_xp": 306.0,
-        "type": "Pyre Ship"
-      },
-      {
-        "level": 40,
-        "item": "Willow Pyre Ship",
-        "base_xp": 459.0,
-        "type": "Pyre Ship"
-      },
-      {
-        "level": 45,
-        "item": "Teak Pyre Ship",
-        "base_xp": 535.5,
-        "type": "Pyre Ship"
-      },
-      {
-        "level": 52,
-        "item": "Arctic Pyre Ship",
-        "base_xp": 637.5,
-        "type": "Pyre Ship"
-      },
-      {
-        "level": 55,
-        "item": "Maple Pyre Ship",
-        "base_xp": 688.5,
-        "type": "Pyre Ship"
-      },
-      {
-        "level": 60,
-        "item": "Mahogany Pyre Ship",
-        "base_xp": 803.25,
-        "type": "Pyre Ship"
-      },
-      {
-        "level": 68,
-        "item": "Eucalyptus Pyre Ship",
-        "base_xp": 872.1,
-        "type": "Pyre Ship"
-      },
-      {
-        "level": 70,
-        "item": "Yew Pyre Ship",
-        "base_xp": 1032.75,
-        "type": "Pyre Ship"
-      },
-      {
-        "level": 85,
-        "item": "Magic Pyre Ship",
-        "base_xp": 1549.38,
-        "type": "Pyre Ship"
+        "level": 20,
+        "item": "Oak Pyre",
+        "base_xp": 70.0,
+        "type": "Pyre"
       },
       {
         "level": 35,
         "item": "Willow Pyre",
-        "base_xp": 510.0,
+        "base_xp": 100.0,
         "type": "Pyre"
       },
       {
         "level": 40,
         "item": "Teak Pyre",
-        "base_xp": 612.0,
+        "base_xp": 120.0,
         "type": "Pyre"
-      },
-      {
-        "level": 42,
-        "item": "Arctic Pine",
-        "base_xp": 637.5,
-        "type": "Normal"
-      },
-      {
-        "level": 45,
-        "item": "Maple",
-        "base_xp": 688.5,
-        "type": "Normal"
       },
       {
         "level": 47,
         "item": "Arctic Pine Pyre",
-        "base_xp": 805.8,
+        "base_xp": 40.0,
         "type": "Pyre"
       },
       {
         "level": 50,
         "item": "Maple Pyre",
-        "base_xp": 892.5,
+        "base_xp": 175.0,
         "type": "Pyre"
-      },
-      {
-        "level": 50,
-        "item": "Mahogany",
-        "base_xp": 803.25,
-        "type": "Normal"
       },
       {
         "level": 55,
         "item": "Mahogany Pyre",
-        "base_xp": 1071.0,
+        "base_xp": 210.0,
         "type": "Pyre"
-      },
-      {
-        "level": 58,
-        "item": "Eucalyptus",
-        "base_xp": 986.85,
-        "type": "Normal"
-      },
-      {
-        "level": 60,
-        "item": "Yew",
-        "base_xp": 1032.75,
-        "type": "Normal"
       },
       {
         "level": 63,
         "item": "Eucalyptus Pyre",
-        "base_xp": 1104.15,
+        "base_xp": 216.5,
         "type": "Pyre"
       },
       {
         "level": 65,
         "item": "Yew Pyre",
-        "base_xp": 1147.5,
+        "base_xp": 225.0,
         "type": "Pyre"
-      },
-      {
-        "level": 75,
-        "item": "Magic",
-        "base_xp": 1549.38,
-        "type": "Normal"
       },
       {
         "level": 80,
         "item": "Magic Pyre",
-        "base_xp": 2062.95,
+        "base_xp": 404.5,
         "type": "Pyre"
+      },
+      {
+        "level": 11,
+        "item": "Normal Pyre Ship",
+        "base_xp": 40.0,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 11,
+        "item": "Achey Pyre Ship",
+        "base_xp": 40.0,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 25,
+        "item": "Oak Pyre Ship",
+        "base_xp": 60.0,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 40,
+        "item": "Willow Pyre Ship",
+        "base_xp": 90.0,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 45,
+        "item": "Teak Pyre Ship",
+        "base_xp": 105.0,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 52,
+        "item": "Arctic Pyre Ship",
+        "base_xp": 125.0,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 55,
+        "item": "Maple Pyre Ship",
+        "base_xp": 135,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 60,
+        "item": "Mahogany Pyre Ship",
+        "base_xp": 157.5,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 68,
+        "item": "Eucalyptus Pyre Ship",
+        "base_xp": 171.2,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 70,
+        "item": "Yew Pyre Ship",
+        "base_xp": 202.5,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 85,
+        "item": "Magic Pyre Ship",
+        "base_xp": 303.8,
+        "type": "Pyre Ship"
+      },
+      {
+        "level": 42,
+        "item": "Arctic Pine",
+        "base_xp": 125.0,
+        "type": "Normal"
+      },
+      {
+        "level": 45,
+        "item": "Maple",
+        "base_xp": 135.0,
+        "type": "Normal"
+      },
+      {
+        "level": 50,
+        "item": "Mahogany",
+        "base_xp": 157.5,
+        "type": "Normal"
+      },
+      {
+        "level": 58,
+        "item": "Eucalyptus",
+        "base_xp": 171.2,
+        "type": "Normal"
+      },
+      {
+        "level": 60,
+        "item": "Yew",
+        "base_xp": 202.5,
+        "type": "Normal"
+      },
+      {
+        "level": 75,
+        "item": "Magic",
+        "base_xp": 303.8,
+        "type": "Normal"
       },
       {
         "level": 82,
@@ -8816,91 +8816,76 @@
         "type": "Normal"
       }
     ],
-    "Wood Cutting": [
+    "Woodcutting": [
       {
         "level": 1,
         "item": "Normal",
-        "base_xp": 125.0
+        "base_xp": 25.0
       },
       {
         "level": 1,
-        "item": "Archery",
-        "base_xp": 125.0
-      },
-      {
-        "level": 10,
-        "item": "Light Jungle",
-        "base_xp": 160.0
+        "item": "Achey Tree",
+        "base_xp": 25.0
       },
       {
         "level": 15,
         "item": "Oak",
-        "base_xp": 187.5
-      },
-      {
-        "level": 20,
-        "item": "Medium Jungle",
-        "base_xp": 275.0
+        "base_xp": 37.5
       },
       {
         "level": 30,
         "item": "Willow",
-        "base_xp": 337.5
+        "base_xp": 67.5
       },
       {
         "level": 35,
         "item": "Teak",
-        "base_xp": 425.0
-      },
-      {
-        "level": 35,
-        "item": "Dense Jungle",
-        "base_xp": 400.0
+        "base_xp": 85.0
       },
       {
         "level": 45,
         "item": "Maple",
-        "base_xp": 500.0
+        "base_xp": 100.0
       },
       {
         "level": 45,
         "item": "Maple + Seers",
-        "base_xp": 550.0
+        "base_xp": 110.0
       },
       {
         "level": 45,
         "item": "Hollow",
-        "base_xp": 412.5
+        "base_xp": 82.5
       },
       {
         "level": 50,
         "item": "Mahogany",
-        "base_xp": 625.0
+        "base_xp": 125.0
       },
       {
         "level": 54,
         "item": "Arctic Pine",
-        "base_xp": 200.0
+        "base_xp": 40.0
       },
       {
         "level": 58,
         "item": "Eucalyptus",
-        "base_xp": 825.0
+        "base_xp": 165.0
       },
       {
         "level": 60,
         "item": "Yew",
-        "base_xp": 875.0
+        "base_xp": 175.0
       },
       {
         "level": 75,
         "item": "Magic",
-        "base_xp": 1250.0
+        "base_xp": 250.0
       },
       {
         "level": 82,
         "item": "Cursed Magic",
-        "base_xp": 1375.0
+        "base_xp": 275.0
       }
     ],
     "Crafting": [
