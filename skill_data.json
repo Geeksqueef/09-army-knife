@@ -9864,7 +9864,7 @@
       }
     ],
     "Hunter": [
-      {
+            {
         "level": 1,
         "item": "Crimson Swift",
         "base_xp": 34.0,
@@ -9928,13 +9928,13 @@
         "level": 17,
         "item": "Baby Impling (W)",
         "base_xp": 20.0,
-        "type": "Implin g"
+        "type": "Impling - Wild"
       },
       {
         "level": 17,
         "item": "Baby Impling (P)",
         "base_xp": 18.0,
-        "type": "Impling"
+        "type": "Puro Puro"
       },
       {
         "level": 19,
@@ -9946,13 +9946,13 @@
         "level": 22,
         "item": "Young Impling (W)",
         "base_xp": 22.0,
-        "type": "Impling"
+        "type": "Impling - Wild"
       },
       {
         "level": 22,
         "item": "Young Impling (P)",
         "base_xp": 20.0,
-        "type": "Impling"
+        "type": "Puro Puro"
       },
       {
         "level": 23,
@@ -10018,13 +10018,13 @@
         "level": 32,
         "item": "Young Impling (W)",
         "base_xp": 24.0,
-        "type": "Impling"
+        "type": "Impling - Wild"
       },
       {
         "level": 32,
         "item": "Gourmet Impling (P)",
         "base_xp": 22.0,
-        "type": "Impling"
+        "type": "Puro Puro"
       },
       {
         "level": 33,
@@ -10042,13 +10042,13 @@
         "level": 36,
         "item": "Earth Impling (W)",
         "base_xp": 27.0,
-        "type": "Impling"
+        "type": "Impling - Wild"
       },
       {
         "level": 36,
         "item": "Earth Impling (P)",
         "base_xp": 25.0,
-        "type": "Impling"
+        "type": "Puro Puro"
       },
       {
         "level": 37,
@@ -10072,13 +10072,13 @@
         "level": 42,
         "item": "Essence Impling (W)",
         "base_xp": 29.0,
-        "type": "Impling"
+        "type": "Impling - Wild"
       },
       {
         "level": 42,
         "item": "Essence Impling (P)",
         "base_xp": 27.0,
-        "type": "Impling"
+        "type": "Puro Puro"
       },
       {
         "level": 43,
@@ -10120,13 +10120,13 @@
         "level": 50,
         "item": "Eclectic Impling (W)",
         "base_xp": 32.0,
-        "type": "Impling"
+        "type": "Impling - Wild"
       },
       {
         "level": 50,
         "item": "Eclectic Impling (P)",
         "base_xp": 30.0,
-        "type": "Impling"
+        "type": "Puro Puro"
       },
       {
         "level": 51,
@@ -10156,13 +10156,13 @@
         "level": 58,
         "item": "Nature Impling (W)",
         "base_xp": 36.0,
-        "type": "Impling"
+       "type": "Impling - Wild"
       },
       {
         "level": 58,
         "item": "Nature Impling (P)",
         "base_xp": 34.0,
-        "type": "Impling"
+        "type": "Puro Puro"
       },
       {
         "level": 59,
@@ -10180,13 +10180,13 @@
         "level": 65,
         "item": "Magpie Impling (W)",
         "base_xp": 216.0,
-        "type": "Impling"
+        "type": "Impling - Wild"
       },
       {
         "level": 65,
         "item": "Magpie Impling (P)",
         "base_xp": 44.0,
-        "type": "Impling"
+        "type": "Puro Puro"
       },
       {
         "level": 66,
@@ -10216,13 +10216,13 @@
         "level": 74,
         "item": "Ninja Impling (W)",
         "base_xp": 240.0,
-        "type": "Impling"
+        "type": "Impling - Wild"
       },
       {
         "level": 74,
         "item": "Ninja Impling (P)",
         "base_xp": 52.0,
-        "type": "Impling"
+        "type": "Puro Puro"
       },
       {
         "level": 77,
@@ -10234,13 +10234,13 @@
         "level": 83,
         "item": "Dragon Impling (W)",
         "base_xp": 300.0,
-        "type": "Impling"
+        "type": "Impling - Wild"
       },
       {
         "level": 83,
         "item": "Dragon Impling (P)",
         "base_xp": 65.0,
-        "type": "Impling"
+        "type": "Puro Puro"
       }
     ]
   }
