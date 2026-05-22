@@ -1636,667 +1636,667 @@
       {
         "level": 1,
         "item": "Shrimp",
-        "base_xp": 150.0,
+        "base_xp": 30.0,
         "type": "Fish"
       },
       {
         "level": 1,
         "item": "Anchovies",
-        "base_xp": 150.0,
+        "base_xp": 30.0,
         "type": "Fish"
       },
       {
         "level": 1,
         "item": "Sardine",
-        "base_xp": 200.0,
+        "base_xp": 40.0,
         "type": "Fish"
       },
       {
         "level": 5,
         "item": "Herring",
-        "base_xp": 250.0,
+        "base_xp": 50.0,
         "type": "Fish"
       },
       {
         "level": 10,
         "item": "Mackerel",
-        "base_xp": 300.0,
+        "base_xp": 60.0,
         "type": "Fish"
       },
       {
         "level": 15,
         "item": "Trout",
-        "base_xp": 350.0,
+        "base_xp": 70.0,
         "type": "Fish"
       },
       {
         "level": 18,
         "item": "Cod",
-        "base_xp": 375.0,
+        "base_xp": 75.0,
         "type": "Fish"
       },
       {
         "level": 20,
         "item": "Pike",
-        "base_xp": 400.0,
+        "base_xp": 80.0,
         "type": "Fish"
       },
       {
         "level": 25,
         "item": "Salmon",
-        "base_xp": 450.0,
+        "base_xp": 90.0,
         "type": "Fish"
       },
       {
         "level": 28,
         "item": "Slimey Eel",
-        "base_xp": 475.0,
+        "base_xp": 95.0,
         "type": "Fish"
       },
       {
         "level": 30,
         "item": "Tuna",
-        "base_xp": 500.0,
+        "base_xp": 100.0,
         "type": "Fish"
       },
       {
         "level": 30,
         "item": "Karambwan",
-        "base_xp": 950.0,
+        "base_xp": 190.0,
         "type": "Fish"
       },
       {
         "level": 35,
         "item": "Rainbow",
-        "base_xp": 550.0,
+        "base_xp": 110.0,
         "type": "Fish"
       },
       {
         "level": 40,
         "item": "Lobster",
-        "base_xp": 600.0,
+        "base_xp": 120.0,
         "type": "Fish"
       },
       {
         "level": 43,
         "item": "Bass",
-        "base_xp": 650.0,
+        "base_xp": 130.0,
         "type": "Fish"
       },
       {
         "level": 45,
         "item": "Swordfish",
-        "base_xp": 700.0,
+        "base_xp": 140.0,
         "type": "Fish"
       },
       {
         "level": 53,
         "item": "Lava Eel",
-        "base_xp": 150.0,
+        "base_xp": 30.0,
         "type": "Fish"
       },
       {
         "level": 62,
         "item": "Monkfish ",
-        "base_xp": 750.0,
+        "base_xp": 150.0,
         "type": "Fish"
       },
       {
         "level": 80,
         "item": "Shark",
-        "base_xp": 1050.0,
+        "base_xp": 210.0,
         "type": "Fish"
       },
       {
         "level": 82,
         "item": "Sea Turtle",
-        "base_xp": 1056.5,
+        "base_xp": 211.3,
         "type": "Fish"
       },
       {
         "level": 91,
         "item": "Manta Ray",
-        "base_xp": 1081.0,
+        "base_xp": 216.2,
         "type": "Fish"
       },
       {
         "level": 1,
         "item": "Cooked Meat",
-        "base_xp": 150.0,
+        "base_xp": 30.0,
         "type": "Meat"
       },
       {
         "level": 1,
         "item": "Cooked Chicken",
-        "base_xp": 150.0,
+        "base_xp": 30.0,
         "type": "Meat"
       },
       {
         "level": 1,
         "item": "Cooked Rabbit",
-        "base_xp": 250.0,
+        "base_xp": 50.0,
         "type": "Meat"
       },
       {
         "level": 1,
         "item": "Sinew",
-        "base_xp": 50.0,
+        "base_xp": 10.0,
         "type": "Meat"
       },
       {
         "level": 11,
         "item": "Roasted Bird Meat",
-        "base_xp": 310.0,
+        "base_xp": 62.0,
         "type": "Meat"
       },
       {
         "level": 16,
         "item": "Roasted Rabbit",
-        "base_xp": 360.0,
+        "base_xp": 72.0,
         "type": "Meat"
       },
       {
         "level": 16,
         "item": "Spider on Stick",
-        "base_xp": 400.0,
+        "base_xp": 80.0,
         "type": "Meat"
       },
       {
         "level": 21,
         "item": "Crab Meat",
-        "base_xp": 500.0,
+        "base_xp": 100.0,
         "type": "Meat"
       },
       {
         "level": 21,
         "item": "Roasted Beast Meat",
-        "base_xp": 410.0,
+        "base_xp": 82.0,
         "type": "Meat"
       },
       {
         "level": 30,
         "item": "Cooked Chompy",
-        "base_xp": 700.0,
+        "base_xp": 140.0,
         "type": "Meat"
       },
       {
         "level": 40,
         "item": "Cooked Jubbly",
-        "base_xp": 800.0,
+        "base_xp": 160.0,
         "type": "Meat"
       },
       {
         "level": 50,
         "item": "Oomlie Wrap",
-        "base_xp": 150.0,
+        "base_xp": 30.0,
         "type": "Meat"
       },
       {
         "level": 1,
         "item": "Uthanki Meat",
-        "base_xp": 200.0,
+        "base_xp": 40.0,
         "type": "Meat"
       },
       {
         "level": 12,
         "item": "Thin Snail",
-        "base_xp": 350.0,
+        "base_xp": 70.0,
         "type": "Meat"
       },
       {
         "level": 17,
         "item": "Lean Snail",
-        "base_xp": 400.0,
+        "base_xp": 80.0,
         "type": "Meat"
       },
       {
         "level": 22,
         "item": "Fat Snail",
-        "base_xp": 475.0,
+        "base_xp": 95.0,
         "type": "Meat"
       },
       {
         "level": 1,
         "item": "Bread",
-        "base_xp": 200.0,
+        "base_xp": 40.0,
         "type": "Bread"
       },
       {
         "level": 58,
         "item": "Pitta Bread",
-        "base_xp": 200.0,
+        "base_xp": 40.0,
         "type": "Bread"
       },
       {
         "level": 10,
         "item": "Redberry Pie",
-        "base_xp": 390.0,
+        "base_xp": 78.0,
         "type": "Pie"
       },
       {
         "level": 20,
         "item": "Meat Pie",
-        "base_xp": 550.0,
+        "base_xp": 110.0,
         "type": "Pie"
       },
       {
         "level": 29,
         "item": "Mud Pie",
-        "base_xp": 640.0,
+        "base_xp": 128.0,
         "type": "Pie"
       },
       {
         "level": 30,
         "item": "Apple Pie",
-        "base_xp": 650.0,
+        "base_xp": 130.0,
         "type": "Pie"
       },
       {
         "level": 34,
         "item": "Garden Pie",
-        "base_xp": 640.0,
+        "base_xp": 128.0,
         "type": "Pie"
       },
       {
         "level": 47,
         "item": "Fish Pie",
-        "base_xp": 820.0,
+        "base_xp": 164.0,
         "type": "Pie"
       },
       {
         "level": 70,
         "item": "Admiral Pie",
-        "base_xp": 1050.0,
+        "base_xp": 210.0,
         "type": "Pie"
       },
       {
         "level": 85,
         "item": "Wild Pie",
-        "base_xp": 1200.0,
+        "base_xp": 240.0,
         "type": "Pie"
       },
       {
         "level": 95,
         "item": "Summer Pie",
-        "base_xp": 1300.0,
+        "base_xp": 260.0,
         "type": "Pie"
       },
       {
         "level": 25,
         "item": "Stew",
-        "base_xp": 585.0,
+        "base_xp": 117.0,
         "type": "Stew"
       },
       {
         "level": 60,
         "item": "Curry",
-        "base_xp": 1400.0,
+        "base_xp": 280.0,
         "type": "Stew"
       },
       {
         "level": 35,
         "item": "Plain Pizza",
-        "base_xp": 715.0,
+        "base_xp": 143.0,
         "type": "Pizza"
       },
       {
         "level": 45,
         "item": "Meat Pizza",
-        "base_xp": 130.0,
+        "base_xp": 26.0,
         "type": "Pizza"
       },
       {
         "level": 45,
         "item": "Full Meat Pizza",
-        "base_xp": 845.0,
+        "base_xp": 169.0,
         "type": "Pizza"
       },
       {
         "level": 55,
         "item": "Anchovy Pizza",
-        "base_xp": 195.0,
+        "base_xp": 39.0,
         "type": "Pizza"
       },
       {
         "level": 55,
         "item": "Full Anchovy Pizza",
-        "base_xp": 910.0,
+        "base_xp": 182.0,
         "type": "Pizza"
       },
       {
         "level": 65,
         "item": "Pineapple Pizza",
-        "base_xp": 260.0,
+        "base_xp": 52.0,
         "type": "Pizza"
       },
       {
         "level": 65,
         "item": "Full Pineapple Pizza",
-        "base_xp": 975.0,
+        "base_xp": 195.0,
         "type": "Pizza"
       },
       {
         "level": 31,
         "item": "Cooked Fishcake",
-        "base_xp": 500.0,
+        "base_xp": 100.0,
         "type": "Cake"
       },
       {
         "level": 40,
         "item": "Cake",
-        "base_xp": 900.0,
+        "base_xp": 180.0,
         "type": "Cake"
       },
       {
         "level": 50,
         "item": "Chocolate Cake",
-        "base_xp": 1050.0,
+        "base_xp": 210.0,
         "type": "Cake"
       },
       {
         "level": 21,
         "item": "Pot of Cream",
-        "base_xp": 115.0,
+        "base_xp": 23.0,
         "type": "Dairy"
       },
       {
         "level": 28,
         "item": "Pat of Butter",
-        "base_xp": 200.0,
+        "base_xp": 40.0,
         "type": "Dairy"
       },
       {
         "level": 48,
         "item": "Cheese",
-        "base_xp": 320.0,
+        "base_xp": 64.0,
         "type": "Dairy"
       },
       {
         "level": 35,
         "item": "Wine",
-        "base_xp": 1000.0,
+        "base_xp": 200.0,
         "type": "Drink"
       },
       {
         "level": 20,
         "item": "Nettle Tea",
-        "base_xp": 260.0,
+        "base_xp": 52.0,
         "type": "Drink"
       },
       {
         "level": 14,
         "item": "Cider",
-        "base_xp": 910.0,
+        "base_xp": 182.0,
         "type": "Drink"
       },
       {
         "level": 19,
         "item": "Dwarven Stout",
-        "base_xp": 1075.0,
+        "base_xp": 215.0,
         "type": "Drink"
       },
       {
         "level": 24,
         "item": "Asgarnian Ale",
-        "base_xp": 1240.0,
+        "base_xp": 248.0,
         "type": "Drink"
       },
       {
         "level": 29,
         "item": "Greenman's Ale",
-        "base_xp": 1405.0,
+        "base_xp": 281.0,
         "type": "Drink"
       },
       {
         "level": 34,
         "item": "Wizard's Mind Bomb",
-        "base_xp": 1570.0,
+        "base_xp": 314.0,
         "type": "Drink"
       },
       {
         "level": 39,
         "item": "Dragon Bitter",
-        "base_xp": 1735.0,
+        "base_xp": 347.0,
         "type": "Drink"
       },
       {
         "level": 44,
         "item": "Moonlight Mead",
-        "base_xp": 1900.0,
+        "base_xp": 380.0,
         "type": "Drink"
       },
       {
         "level": 49,
         "item": "Axeman's Folly",
-        "base_xp": 2065.0,
+        "base_xp": 413.0,
         "type": "Drink"
       },
       {
         "level": 54,
         "item": "Chef's Delight",
-        "base_xp": 2230.0,
+        "base_xp": 446.0,
         "type": "Drink"
       },
       {
         "level": 59,
         "item": "Slayer's Respite",
-        "base_xp": 2395.0,
+        "base_xp": 479.0,
         "type": "Drink"
       },
       {
         "level": 6,
         "item": "Fruit Blast",
-        "base_xp": 250.0,
+        "base_xp": 50.0,
         "type": "Gnome Cooking"
       },
       {
         "level": 8,
         "item": "Pineapple Punch",
-        "base_xp": 350.0,
+        "base_xp": 70.0,
         "type": "Gnome Cooking"
       },
       {
         "level": 10,
         "item": "Toad Crunchies",
-        "base_xp": 500.0,
+        "base_xp": 100.0,
         "type": "Gnome Cooking"
       },
       {
         "level": 12,
         "item": "Spicy Crunchies",
-        "base_xp": 500.0,
+        "base_xp": 100.0,
         "type": "Gnome Cooking"
       },
       {
         "level": 14,
         "item": "Worm Crunchies",
-        "base_xp": 500.0,
+        "base_xp": 100.0,
         "type": "Gnome Cooking"
       },
       {
         "level": 16,
         "item": "Chocchip Crunchies",
-        "base_xp": 500.0,
+        "base_xp": 100.0,
         "type": "Gnome Cooking"
       },
       {
         "level": 18,
         "item": "Wizard Blizzard",
-        "base_xp": 550.0,
+        "base_xp": 110.0,
         "type": "Gnome Cooking"
       },
       {
         "level": 20,
         "item": "Short Green Guy",
-        "base_xp": 600.0,
+        "base_xp": 120.0,
         "type": "Gnome Cooking"
       },
       {
         "level": 25,
         "item": "Fruit Batta",
-        "base_xp": 750.0,
+        "base_xp": 150.0,
         "type": "Gnome Cooking"
       },
       {
         "level": 26,
         "item": "Toad Batta",
-        "base_xp": 760.0,
+        "base_xp": 152.0,
         "type": "Gnome Cooking"
       },
       {
         "level": 27,
         "item": "Worm Batta",
-        "base_xp": 770.0,
+        "base_xp": 154.0,
         "type": "Gnome Cooking"
       },
       {
         "level": 28,
         "item": "Vegetable Batta",
-        "base_xp": 780.0,
+        "base_xp": 156.0,
         "type": "Gnome Cooking"
       },
       {
         "level": 29,
         "item": "Cheese and Tomato Batta",
-        "base_xp": 790.0,
+        "base_xp": 158.0,
         "type": "Gnome Cooking"
       },
       {
         "level": 30,
         "item": "Worm Hole",
-        "base_xp": 850.0,
+        "base_xp": 170.0,
         "type": "Gnome Cooking"
       },
       {
         "level": 32,
         "item": "Drunk Dragon",
-        "base_xp": 800.0,
+        "base_xp": 160.0,
         "type": "Gnome Cooking"
       },
       {
         "level": 33,
         "item": "Choc Saturday",
-        "base_xp": 850.0,
+        "base_xp": 170.0,
         "type": "Gnome Cooking"
       },
       {
         "level": 35,
         "item": "Vegetable Ball",
-        "base_xp": 875.0,
+        "base_xp": 175.0,
         "type": "Gnome Cooking"
       },
       {
         "level": 37,
         "item": "Blurberry SPecial",
-        "base_xp": 900.0,
+        "base_xp": 180.0,
         "type": "Gnome Cooking"
       },
       {
         "level": 40,
         "item": "Tangled Toad's Legs",
-        "base_xp": 925.0,
+        "base_xp": 185.0,
         "type": "Gnome Cooking"
       },
       {
         "level": 42,
         "item": "Chocolate Bomb",
-        "base_xp": 950.0,
+        "base_xp": 190.0,
         "type": "Gnome Cooking"
       },
       {
         "level": 28,
         "item": "Cooked Sweetcorn",
-        "base_xp": 520.0,
+        "base_xp": 104.0,
         "type": "Baked Potato Topping"
       },
       {
         "level": 9,
         "item": "Spicy Sauce",
-        "base_xp": 125.0,
+        "base_xp": 25.0,
         "type": "Baked Potato Topping"
       },
       {
         "level": 11,
         "item": "Chilli Con Carne",
-        "base_xp": 275.0,
+        "base_xp": 55.0,
         "type": "Baked Potato Topping"
       },
       {
         "level": 13,
         "item": "Scrambled Egg",
-        "base_xp": 250.0,
+        "base_xp": 50.0,
         "type": "Baked Potato Topping"
       },
       {
         "level": 23,
         "item": "Egg and Tomato",
-        "base_xp": 250.0,
+        "base_xp": 50.0,
         "type": "Baked Potato Topping"
       },
       {
         "level": 42,
         "item": "Fried Onions",
-        "base_xp": 300.0,
+        "base_xp": 60.0,
         "type": "Baked Potato Topping"
       },
       {
         "level": 46,
         "item": "Fried Mushrooms",
-        "base_xp": 300.0,
+        "base_xp": 60.0,
         "type": "Baked Potato Topping"
       },
       {
         "level": 57,
         "item": "Mushroom and Onion",
-        "base_xp": 600.0,
+        "base_xp": 120.0,
         "type": "Baked Potato Topping"
       },
       {
         "level": 67,
         "item": "Tuna and Corn",
-        "base_xp": 1020.0,
+        "base_xp": 204.0,
         "type": "Baked Potato Topping"
       },
       {
         "level": 7,
         "item": "Baked Potato",
-        "base_xp": 75.0,
+        "base_xp": 15.0,
         "type": "Baked Potato"
       },
       {
         "level": 39,
         "item": "Potato with Butter",
-        "base_xp": 477.5,
+        "base_xp": 95.5,
         "type": "Baked Potato"
       },
       {
         "level": 41,
         "item": "Chilli Potato",
-        "base_xp": 827.5,
+        "base_xp": 165.5,
         "type": "Baked Potato"
       },
       {
         "level": 47,
         "item": "Potato with Cheese",
-        "base_xp": 997.5,
+        "base_xp": 199.5,
         "type": "Baked Potato"
       },
       {
         "level": 51,
         "item": "Egg Potato",
-        "base_xp": 977.5,
+        "base_xp": 195.5,
         "type": "Baked Potato"
       },
       {
         "level": 64,
         "item": "Mushroom and Onion Potato",
-        "base_xp": 1352.5,
+        "base_xp": 270.5,
         "type": "Baked Potato"
       },
       {
         "level": 68,
         "item": "Tuna Potato",
-        "base_xp": 1547.5,
+        "base_xp": 309.5,
         "type": "Baked Potato"
       }
     ],
