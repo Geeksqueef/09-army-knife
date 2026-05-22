@@ -3170,367 +3170,367 @@
       {
         "level": 1,
         "item": "Man/Woman",
-        "base_xp": 40.0,
+        "base_xp": 8.0,
         "type": "Pickpocket"
       },
       {
         "level": 10,
         "item": "Farmer",
-        "base_xp": 75.0,
+        "base_xp": 15.0,
         "type": "Pickpocket"
       },
       {
         "level": 15,
         "item": "Female HAM",
-        "base_xp": 92.5,
+        "base_xp": 18.5,
         "type": "Pickpocket"
       },
       {
         "level": 20,
         "item": "Male Ham",
-        "base_xp": 112.5,
+        "base_xp": 22.5,
         "type": "Pickpocket"
       },
       {
         "level": 25,
         "item": "Warrior Woman",
-        "base_xp": 130.0,
+        "base_xp": 26.0,
         "type": "Pickpocket"
       },
       {
         "level": 25,
         "item": "Al-Kharid Warrior",
-        "base_xp": 130.0,
+        "base_xp": 26.0,
         "type": "Pickpocket"
       },
       {
         "level": 32,
         "item": "Rogue",
-        "base_xp": 177.5,
+        "base_xp": 35.5,
         "type": "Pickpocket"
       },
       {
         "level": 36,
         "item": "Cave Goblin",
-        "base_xp": 200.0,
+        "base_xp": 40.0,
         "type": "Pickpocket"
       },
       {
         "level": 38,
         "item": "Master Farmer",
-        "base_xp": 215.0,
+        "base_xp": 43.0,
         "type": "Pickpocket"
       },
       {
         "level": 40,
         "item": "Guard",
-        "base_xp": 232.5,
+        "base_xp": 46.5,
         "type": "Pickpocket"
       },
       {
         "level": 45,
         "item": "Fremennik Citizen",
-        "base_xp": 325.0,
+        "base_xp": 65.0,
         "type": "Pickpocket"
       },
       {
         "level": 45,
         "item": "Beared Pollnivnian Bandit",
-        "base_xp": 325.0,
+        "base_xp": 65.0,
         "type": "Pickpocket"
       },
       {
         "level": 53,
         "item": "Desert Bandit",
-        "base_xp": 397.5,
+        "base_xp": 79.5,
         "type": "Pickpocket"
       },
       {
         "level": 55,
         "item": "Knight of Ardougne",
-        "base_xp": 421.5,
+        "base_xp": 84.3,
         "type": "Pickpocket"
       },
       {
         "level": 55,
         "item": "Pollnivnian Bandit",
-        "base_xp": 420.0,
+        "base_xp": 84.0,
         "type": "Pickpocket"
       },
       {
         "level": 65,
         "item": "Yanille Watchman",
-        "base_xp": 687.5,
+        "base_xp": 137.5,
         "type": "Pickpocket"
       },
       {
         "level": 65,
         "item": "Menaphite Thug",
-        "base_xp": 687.5,
+        "base_xp": 137.5,
         "type": "Pickpocket"
       },
       {
         "level": 70,
         "item": "Paladin",
-        "base_xp": 758.75,
+        "base_xp": 151.75,
         "type": "Pickpocket"
       },
       {
         "level": 75,
         "item": "Gnome",
-        "base_xp": 992.5,
+        "base_xp": 198.5,
         "type": "Pickpocket"
       },
       {
         "level": 80,
         "item": "Hero",
-        "base_xp": 1375.0,
+        "base_xp": 275.0,
         "type": "Pickpocket"
       },
       {
         "level": 85,
         "item": "Elf",
-        "base_xp": 1765.0,
+        "base_xp": 353.0,
         "type": "Pickpocket"
       },
       {
         "level": 2,
         "item": "Vegetable Stall",
-        "base_xp": 50.0,
+        "base_xp": 10.0,
         "type": "Stall"
       },
       {
         "level": 5,
         "item": "Baker's Stall",
-        "base_xp": 80.0,
+        "base_xp": 16.0,
         "type": "Stall"
       },
       {
         "level": 5,
         "item": "Crafting Stall",
-        "base_xp": 80.0,
+        "base_xp": 16.0,
         "type": "Stall"
       },
       {
         "level": 5,
         "item": "Monkey Food Stall",
-        "base_xp": 80.0,
+        "base_xp": 16.0,
         "type": "Stall"
       },
       {
         "level": 5,
         "item": "Monkey General Store",
-        "base_xp": 80.0,
+        "base_xp": 16.0,
         "type": "Stall"
       },
       {
         "level": 5,
         "item": "Tea Stall",
-        "base_xp": 80.0,
+        "base_xp": 16.0,
         "type": "Stall"
       },
       {
         "level": 20,
         "item": "Silk Stall",
-        "base_xp": 120.0,
+        "base_xp": 24.0,
         "type": "Stall"
       },
       {
         "level": 22,
         "item": "Wine Stall",
-        "base_xp": 135.0,
+        "base_xp": 27.0,
         "type": "Stall"
       },
       {
         "level": 27,
         "item": "Seed Stall",
-        "base_xp": 50.0,
+        "base_xp": 10.0,
         "type": "Stall"
       },
       {
         "level": 35,
         "item": "Fur Steel",
-        "base_xp": 180.0,
+        "base_xp": 36.0,
         "type": "Stall"
       },
       {
         "level": 42,
         "item": "Fish Stall",
-        "base_xp": 210.0,
+        "base_xp": 42.0,
         "type": "Stall"
       },
       {
         "level": 49,
         "item": "Crossbow Stall",
-        "base_xp": 260.0,
+        "base_xp": 52.0,
         "type": "Stall"
       },
       {
         "level": 50,
         "item": "Silver Stall",
-        "base_xp": 270.0,
+        "base_xp": 54.0,
         "type": "Stall"
       },
       {
         "level": 63,
         "item": "Custom Evidence File",
-        "base_xp": 375.0,
+        "base_xp": 75.0,
         "type": "Stall"
       },
       {
         "level": 65,
         "item": "Spice Stall",
-        "base_xp": 405.0,
+        "base_xp": 81.0,
         "type": "Stall"
       },
       {
         "level": 65,
         "item": "Magic Stall",
-        "base_xp": 500.0,
+        "base_xp": 100.0,
         "type": "Stall"
       },
       {
         "level": 65,
         "item": "Scimitar Stall",
-        "base_xp": 500.0,
+        "base_xp": 100.0,
         "type": "Stall"
       },
       {
         "level": 75,
         "item": "Gem Stall",
-        "base_xp": 80.0,
+        "base_xp": 16.0,
         "type": "Stall"
       },
       {
         "level": 10,
         "item": "10-Coin Chest",
-        "base_xp": 35.0,
+        "base_xp": 7.0,
         "type": "Chest"
       },
       {
         "level": 20,
         "item": "Ogre Coffin",
-        "base_xp": 135.0,
+        "base_xp": 27.0,
         "type": "Chest"
       },
       {
         "level": 28,
         "item": "Nature Rune Chest",
-        "base_xp": 125.0,
+        "base_xp": 25.0,
         "type": "Chest"
       },
       {
         "level": 43,
         "item": "50-Coin Chest",
-        "base_xp": 625.0,
+        "base_xp": 125.0,
         "type": "Chest"
       },
       {
         "level": 39,
         "item": "Pirates' Hideout Chest",
-        "base_xp": 37.5,
+        "base_xp": 7.5,
         "type": "Chest"
       },
       {
         "level": 47,
         "item": "Arrowtip Chest",
-        "base_xp": 750.0,
+        "base_xp": 150.0,
         "type": "Chest"
       },
       {
         "level": 52,
         "item": "Dorgesh-Kaan Avearage Chest",
-        "base_xp": 1000.0,
+        "base_xp": 200.0,
         "type": "Chest"
       },
       {
         "level": 59,
         "item": "Blood Rune CHest",
-        "base_xp": 1250.0,
+        "base_xp": 200.0,
         "type": "Chest"
       },
       {
         "level": 72,
         "item": "Paladin Chest",
-        "base_xp": 2500.0,
+        "base_xp": 500.0,
         "type": "Chest"
       },
       {
         "level": 78,
         "item": "Dorgesh-Kaan Rich Chest",
-        "base_xp": 3250.0,
+        "base_xp": 650.0,
         "type": "Chest"
       },
       {
         "level": 1,
         "item": "Door to 10 Coin-Chest",
-        "base_xp": 17.5,
+        "base_xp": 3.5,
         "type": "Door"
       },
       {
         "level": 14,
         "item": "Door to Nature Rune Chest",
-        "base_xp": 75.0,
+        "base_xp": 15.0,
         "type": "Door"
       },
       {
         "level": 14,
         "item": "Ardougne House door",
-        "base_xp": 75.0,
+        "base_xp": 15.0,
         "type": "Door"
       },
       {
         "level": 17,
         "item": "HAM Trapdoor",
-        "base_xp": 20.0,
+        "base_xp": 4.0,
         "type": "Door"
       },
       {
         "level": 32,
         "item": "Axe Hut Door",
-        "base_xp": 125.0,
+        "base_xp": 25.0,
         "type": "Door"
       },
       {
         "level": 32,
         "item": "Ardougne Sewer Gate",
-        "base_xp": 125.0,
+        "base_xp": 25.0,
         "type": "Door"
       },
       {
         "level": 39,
         "item": "Pirates' Hideout Door",
-        "base_xp": 175.0,
+        "base_xp": 35.0,
         "type": "Door"
       },
       {
         "level": 46,
         "item": "Chaos Druid Tower Door",
-        "base_xp": 187.5,
+        "base_xp": 37.5,
         "type": "Door"
       },
       {
         "level": 61,
         "item": "Paladin Door",
-        "base_xp": 250.0,
+        "base_xp": 50.0,
         "type": "Door"
       },
       {
         "level": 82,
         "item": "Yanille Dungeon Door",
-        "base_xp": 250.0,
+        "base_xp": 50.0,
         "type": "Door"
       },
       {
         "level": 20,
         "item": "Candle Table",
-        "base_xp": 100.0,
+        "base_xp": 20.0,
         "type": "Other"
       },
       {
         "level": 50,
         "item": "Wall Safe",
-        "base_xp": 350.0,
+        "base_xp": 70.0,
         "type": "Other"
       }
     ],
@@ -3538,145 +3538,145 @@
       {
         "level": 1,
         "item": "Gnome Log Balance",
-        "base_xp": 37.5,
+        "base_xp": 7.5,
         "type": "Course - Part"
       },
       {
         "level": 1,
         "item": "Gnome Net Climb",
-        "base_xp": 37.5,
+        "base_xp": 7.5,
         "type": "Course - Part"
       },
       {
         "level": 1,
         "item": "Gnome Branch Climb",
-        "base_xp": 25.0,
+        "base_xp": 5.0,
         "type": "Course - Part"
       },
       {
         "level": 1,
         "item": "Gnome Balance Rope",
-        "base_xp": 37.5,
+        "base_xp": 7.5,
         "type": "Course - Part"
       },
       {
         "level": 1,
         "item": "Gnome Net Climb 2",
-        "base_xp": 37.5,
+        "base_xp": 7.5,
         "type": "Course - Part"
       },
       {
         "level": 1,
         "item": "Gnome Tunnel",
-        "base_xp": 37.5,
+        "base_xp": 7.5,
         "type": "Course - Part"
       },
       {
         "level": 1,
         "item": "Gnome Course",
-        "base_xp": 432.5,
+        "base_xp": 86.5,
         "type": "Course - Full"
       },
       {
         "level": 1,
         "item": "Toy Mouse",
-        "base_xp": 15.0,
+        "base_xp": 3.0,
         "type": "Toy"
       },
       {
         "level": 1,
         "item": "Brimhaven Low Wall",
-        "base_xp": 40.0,
+        "base_xp": 8.0,
         "type": "Course - Part"
       },
       {
         "level": 1,
         "item": "Brimhaven Rope Swing",
-        "base_xp": 100.0,
+        "base_xp": 20.0,
         "type": "Course - Part"
       },
       {
         "level": 1,
         "item": "Brimhaven Log Balance",
-        "base_xp": 60.0,
+        "base_xp": 12.0,
         "type": "Course - Part"
       },
       {
         "level": 1,
         "item": "Brimhaven Ledge",
-        "base_xp": 80.0,
+        "base_xp": 16.0,
         "type": "Course - Part"
       },
       {
         "level": 1,
         "item": "Brimhaven Plank Balance",
-        "base_xp": 30.0,
+        "base_xp": 6.0,
         "type": "Course - Part"
       },
       {
         "level": 1,
         "item": "Brimhaven Pillars",
-        "base_xp": 90.0,
+        "base_xp": 18.0,
         "type": "Course - Part"
       },
       {
         "level": 1,
         "item": "Brimhaven Monkey Bars",
-        "base_xp": 70.0,
+        "base_xp": 14.0,
         "type": "Course - Part"
       },
       {
         "level": 1,
         "item": "Brimhaven Rope Balance",
-        "base_xp": 50.0,
+        "base_xp": 10.0,
         "type": "Course - Part"
       },
       {
         "level": 1,
         "item": "Single Brimhaven Ticket",
-        "base_xp": 1200.0,
+        "base_xp": 240.0,
         "type": "Reward"
       },
       {
         "level": 1,
         "item": "10 Brimhaven Tickets",
-        "base_xp": 12400.0,
+        "base_xp": 2480.0,
         "type": "Reward"
       },
       {
         "level": 1,
         "item": "100 Brimhaven Tickets",
-        "base_xp": 140000.0,
+        "base_xp": 28000.0,
         "type": "Reward"
       },
       {
         "level": 1,
         "item": "1000 Brimhaven Tickets",
-        "base_xp": 1600000.0,
+        "base_xp": 320000.0,
         "type": "Reward"
       },
       {
         "level": 1,
         "item": "Stiles",
-        "base_xp": 15.0,
+        "base_xp": 3.0,
         "type": "Short Cut"
       },
       {
         "level": 5,
         "item": "North Yanille Wall Climbing Rocks",
-        "base_xp": 125.0,
+        "base_xp": 25.0,
         "type": "Short Cut"
       },
       {
         "level": 5,
         "item": "Falador Crumbling Wall",
-        "base_xp": 2.5,
+        "base_xp": 0.5,
         "type": "Short Cut"
       },
       {
         "level": 8,
         "item": "Lumbridge Broken Raft Grapple",
-        "base_xp": 75.0,
+        "base_xp": 15.0,
         "type": "Grapple"
       },
       {
@@ -3694,49 +3694,49 @@
       {
         "level": 15,
         "item": "Edgeville Monkey Bars",
-        "base_xp": 100.0,
+        "base_xp": 20.0,
         "type": "Short Cut"
       },
       {
         "level": 18,
         "item": "Yanille Watchtower Trellis",
-        "base_xp": 155.0,
+        "base_xp": 31.0,
         "type": "Short Cut"
       },
       {
         "level": 20,
         "item": "Brimhaven Spiked Floor",
-        "base_xp": 120.0,
+        "base_xp": 24.0,
         "type": "Course - Part"
       },
       {
         "level": 20,
         "item": "Brimhaven Pressure Pads",
-        "base_xp": 130.0,
+        "base_xp": 26.0,
         "type": "Course - Part"
       },
       {
         "level": 20,
         "item": "Brimhaven Handholds",
-        "base_xp": 110.0,
+        "base_xp": 22.0,
         "type": "Course - Part"
       },
       {
         "level": 20,
         "item": "Coal Truck Log Balance",
-        "base_xp": 42.5,
+        "base_xp": 8.5,
         "type": "Short Cut"
       },
       {
         "level": 22,
         "item": "Brimhaven Dungeon Moss Pipe Squeeze",
-        "base_xp": 42.5,
+        "base_xp": 8.5,
         "type": "Short Cut"
       },
       {
         "level": 25,
         "item": "Werewolf Skull Ball",
-        "base_xp": 3750.0,
+        "base_xp": 750.0,
         "type": "Course - Full"
       },
       {
@@ -3748,306 +3748,306 @@
       {
         "level": 30,
         "item": "Penguin Platform Climb",
-        "base_xp": 275.0,
+        "base_xp": 55.0,
         "type": "Course - Part"
       },
       {
         "level": 30,
         "item": "Penguin Platform Jumps",
-        "base_xp": 400.0,
+        "base_xp": 80.0,
         "type": "Course - Part"
       },
       {
         "level": 30,
         "item": "Penguin Icicles",
-        "base_xp": 200.0,
+        "base_xp": 40.0,
         "type": "Course - Part"
       },
       {
         "level": 30,
         "item": "Penguin Ice Slop",
-        "base_xp": 900.0,
+        "base_xp": 180.0,
         "type": "Course - Part"
       },
       {
         "level": 30,
         "item": "Penguin Course",
-        "base_xp": 2700.0,
+        "base_xp": 540.0,
         "type": "Course - Full"
       },
       {
         "level": 30,
         "item": "Agility Pyramid Rolling Blocks",
-        "base_xp": 60.0,
+        "base_xp": 12.0,
         "type": "Course - Part"
       },
       {
         "level": 30,
         "item": "Agility Pyramid Low Wall",
-        "base_xp": 40.0,
+        "base_xp": 8.0,
         "type": "Course - Part"
       },
       {
         "level": 30,
         "item": "Agility Pyramid Ledge",
-        "base_xp": 260.0,
+        "base_xp": 52.0,
         "type": "Course - Part"
       },
       {
         "level": 30,
         "item": "Agility Pyramid Plank",
-        "base_xp": 282.0,
+        "base_xp": 56.4,
         "type": "Course - Part"
       },
       {
         "level": 30,
         "item": "Agility Pyramid Cross Gap",
-        "base_xp": 282.0,
+        "base_xp": 56.4,
         "type": "Course - Part"
       },
       {
         "level": 30,
         "item": "Agility Pyramid Jump Gap",
-        "base_xp": 110.0,
+        "base_xp": 22.0,
         "type": "Course - Part"
       },
       {
         "level": 30,
         "item": "Agility Pyramid Course",
-        "base_xp": 5070.0,
+        "base_xp": 1014.0,
         "type": "Course - Full"
       },
       {
         "level": 31,
         "item": "River Lum Stepping Stones",
-        "base_xp": 15.0,
+        "base_xp": 3.0,
         "type": "Short Cut"
       },
       {
         "level": 32,
         "item": "Catherby to Taverly Grapple",
-        "base_xp": 75.0,
+        "base_xp": 15.0,
         "type": "Grapple"
       },
       {
         "level": 33,
         "item": "Ardougne Log Balance",
-        "base_xp": 20.0,
+        "base_xp": 4.0,
         "type": "Short Cut"
       },
       {
         "level": 34,
         "item": "Brimhaven Dungeon Demon Pipe Squeeze",
-        "base_xp": 50.0
+        "base_xp": 10.0
       },
       {
         "level": 35,
         "item": "Barbarian Entrance",
-        "base_xp": 50.0,
+        "base_xp": 10.0,
         "type": "Accessway"
       },
       {
         "level": 35,
         "item": "Barbarian Rope Swing",
-        "base_xp": 110.0,
+        "base_xp": 22.0,
         "type": "Course - Part"
       },
       {
         "level": 35,
         "item": "Barbarian Balance Log",
-        "base_xp": 67.5,
+        "base_xp": 13.5,
         "type": "Course - Part"
       },
       {
         "level": 35,
         "item": "Barbarian Net",
-        "base_xp": 40.0,
+        "base_xp": 8.0,
         "type": "Course - Part"
       },
       {
         "level": 35,
         "item": "Barbarian Balance Ledge",
-        "base_xp": 110.0,
+        "base_xp": 22.0,
         "type": "Course - Part"
       },
       {
         "level": 35,
         "item": "Barbarian Wall Climb",
-        "base_xp": 67.5,
+        "base_xp": 13.5,
         "type": "Course - Part"
       },
       {
         "level": 35,
         "item": "Barbarian Course",
-        "base_xp": 760.0,
+        "base_xp": 152.0,
         "type": "Course - Full"
       },
       {
         "level": 36,
         "item": "Water Obelisk Grapple",
-        "base_xp": 75.0,
+        "base_xp": 15.0,
         "type": "Grapple"
       },
       {
         "level": 39,
         "item": "South Yanille Wall Grapple",
-        "base_xp": 75.0,
+        "base_xp": 15.0,
         "type": "Grapple"
       },
       {
         "level": 40,
         "item": "Brimhaven Spinning Blades",
-        "base_xp": 140.0,
+        "base_xp": 28.0,
         "type": "Course - Part"
       },
       {
         "level": 40,
         "item": "Brimhaven Darts",
-        "base_xp": 150.0,
+        "base_xp": 30.0,
         "type": "Course - Part"
       },
       {
         "level": 48,
         "item": "Ape Atoll Stepping stones",
-        "base_xp": 200.0,
+        "base_xp": 40.0,
         "type": "Course - Part"
       },
       {
         "level": 48,
         "item": "Ape Atoll Climbing Tree",
-        "base_xp": 200.0,
+        "base_xp": 40.0,
         "type": "Course - Part"
       },
       {
         "level": 48,
         "item": "Ape Atoll Monkey Bars",
-        "base_xp": 200.0,
+        "base_xp": 40.0,
         "type": "Course - Part"
       },
       {
         "level": 48,
         "item": "Ape Atoll Skull Slope",
-        "base_xp": 300.0,
+        "base_xp": 60.0,
         "type": "Course - Part"
       },
       {
         "level": 48,
         "item": "Ape Atoll Rope Swing",
-        "base_xp": 500.0,
+        "base_xp": 100.0,
         "type": "Course - Part"
       },
       {
         "level": 48,
         "item": "Ape Atoll Zip Vine",
-        "base_xp": 1500.0,
+        "base_xp": 300.0,
         "type": "Course - Part"
       },
       {
         "level": 48,
         "item": "Ape Atoll Course",
-        "base_xp": 2900.0,
+        "base_xp": 580.0,
         "type": "Course - Full"
       },
       {
         "level": 52,
         "item": "Wilderness Pipe",
-        "base_xp": 62.5,
+        "base_xp": 12.5,
         "type": "Course - Part"
       },
       {
         "level": 52,
         "item": "Wilderness Rope Swing",
-        "base_xp": 100.0,
+        "base_xp": 20.0,
         "type": "Course - Part"
       },
       {
         "level": 52,
         "item": "Wilderness Stepping Stones",
-        "base_xp": 100.0,
+        "base_xp": 20.0,
         "type": "Course - Part"
       },
       {
         "level": 52,
         "item": "Wilderness Log Balance",
-        "base_xp": 100.0,
+        "base_xp": 20.0,
         "type": "Course - Part"
       },
       {
         "level": 52,
         "item": "Wilderness Course",
-        "base_xp": 2857.5,
+        "base_xp": 571.5,
         "type": "Course - Full"
       },
       {
         "level": 53,
         "item": "Karamaja Rock Grapple",
-        "base_xp": 75.0,
+        "base_xp": 15.0,
         "type": "Grapple"
       },
       {
         "level": 60,
         "item": "Werewolf Stepping Stones",
-        "base_xp": 250.0,
+        "base_xp": 50.0,
         "type": "Course - Part"
       },
       {
         "level": 60,
         "item": "Werewolf Hurdles",
-        "base_xp": 300.0,
+        "base_xp": 60.0,
         "type": "Course - Part"
       },
       {
         "level": 60,
         "item": "Werewolf Tunnels",
-        "base_xp": 75.0,
+        "base_xp": 15.0,
         "type": "Course - Part"
       },
       {
         "level": 60,
         "item": "Werewolf Skull Slope",
-        "base_xp": 125.0,
+        "base_xp": 25.0,
         "type": "Course - Part"
       },
       {
         "level": 60,
         "item": "Werewolf Deathslide",
-        "base_xp": 1000.0,
+        "base_xp": 200.0,
         "type": "Course - Part"
       },
       {
         "level": 60,
         "item": "Werewolf Course",
-        "base_xp": 2700.0,
-        "type": "Course - Full"
-      },
-      {
-        "level": 70,
-        "item": "Dorgesh-Kann Full",
-        "base_xp": 13750.0,
-        "type": "Course - Full"
-      },
-      {
-        "level": 70,
-        "item": "Dorgesh-Kann Half",
-        "base_xp": 7220.0,
-        "type": "Course - Full"
-      },
-      {
-        "level": 70,
-        "item": "Dorgesh-Kann Range",
         "base_xp": 540.0,
         "type": "Course - Full"
       },
       {
         "level": 70,
+        "item": "Dorgesh-Kann Full",
+        "base_xp": 2750.0,
+        "type": "Course - Full"
+      },
+      {
+        "level": 70,
+        "item": "Dorgesh-Kann Half",
+        "base_xp": 1444.0,
+        "type": "Course - Full"
+      },
+      {
+        "level": 70,
+        "item": "Dorgesh-Kann Range",
+        "base_xp": 108.0,
+        "type": "Course - Full"
+      },
+      {
+        "level": 70,
         "item": "Taverly Dungeon Pipe Squeeze",
-        "base_xp": 50.0,
+        "base_xp": 10.0,
         "type": "Short Cut"
       },
       {
         "level": 80,
         "item": "Taverly Dungeon Strange Floor",
-        "base_xp": 62.5,
+        "base_xp": 12.5,
         "type": "Short Cut"
       }
     ],
