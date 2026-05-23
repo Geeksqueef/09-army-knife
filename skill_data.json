@@ -7426,13 +7426,7 @@
       },
       {
         "level": 1,
-        "item": "Bronze Item (1 bar)",
-        "base_xp": 12.5,
-        "type": "Smithing"
-      },
-      {
-        "level": 1,
-        "item": "Bronze Item + Bar",
+        "item": "Bronze Dagger",
         "base_xp": 18.7,
         "type": "Smelting + Smithing"
       },
@@ -7450,7 +7444,7 @@
       },
       {
         "level": 15,
-        "item": "Iron Item (1 bar)",
+        "item": "Iron Dagger",
         "base_xp": 25.0,
         "type": "Smithing"
       },
@@ -7479,27 +7473,21 @@
         "type": "Smelting"
       },
       {
-        "level": 30,
-        "item": "Steel Item (1 bar)",
-        "base_xp": 37.5,
-        "type": "Smithing"
-      },
-      {
-        "level": 30,
-        "item": "Steel Item + Bar",
-        "base_xp": 55.0,
-        "type": "Smelting + Smithing"
-      },
-      {
         "level": 35,
-        "item": "Cannonballs",
+        "item": "Cannonball",
         "base_xp": 25.75,
         "type": "Smelting"
       },
       {
         "level": 35,
-        "item": "Cannonballs + Bar",
-        "base_xp": 43.25,
+        "item": "Cannonballs (4)",
+        "base_xp": 103.0,
+        "type": "Smelting"
+      },
+      {
+        "level": 35,
+        "item": "Cannonballs (4) + Bar",
+        "base_xp": 120.5,
         "type": "Smelting Bar + Ball"
       },
       {
@@ -7521,34 +7509,10 @@
         "type": "Smelting"
       },
       {
-        "level": 50,
-        "item": "Mithril Item (1 bar)",
-        "base_xp": 50.0,
-        "type": "Smithing"
-      },
-      {
-        "level": 50,
-        "item": "Mithril Item + Bar",
-        "base_xp": 80.0,
-        "type": "Smelting + Smithing"
-      },
-      {
         "level": 70,
         "item": "Adamanite Bar",
         "base_xp": 37.5,
         "type": "Smelting"
-      },
-      {
-        "level": 70,
-        "item": "Adamant Item (1 bar)",
-        "base_xp": 62.5,
-        "type": "Smithing"
-      },
-      {
-        "level": 70,
-        "item": "Adamant Item + Bar",
-        "base_xp": 100.0,
-        "type": "Smelting + Smithing"
       },
       {
         "level": 85,
@@ -7557,16 +7521,982 @@
         "type": "Smelting"
       },
       {
-        "level": 85,
-        "item": "Rune Item (1 bar)",
+        "level": 1,
+        "item": "Bronze dagger",
+        "base_xp": 12.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 1,
+        "item": "Bronze axe",
+        "base_xp": 12.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 2,
+        "item": "Bronze mace",
+        "base_xp": 12.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 3,
+        "item": "Bronze med helm",
+        "base_xp": 12.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 3,
+        "item": "Bronze bolts (unf)",
+        "base_xp": 12.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 4,
+        "item": "Bronze sword",
+        "base_xp": 12.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 4,
+        "item": "Bronze dart tip",
+        "base_xp": 12.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 4,
+        "item": "Bronze wire",
+        "base_xp": 12.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 4,
+        "item": "Bronze nails",
+        "base_xp": 12.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 5,
+        "item": "Bronze scimitar",
+        "base_xp": 25.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 5,
+        "item": "Bronze spear",
+        "base_xp": 25.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 5,
+        "item": "Bronze arrowtips",
+        "base_xp": 12.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 6,
+        "item": "Bronze limbs",
+        "base_xp": 12.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 6,
+        "item": "Bronze longsword",
+        "base_xp": 25.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 6,
+        "item": "Bronze javelin tips",
+        "base_xp": 12.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 7,
+        "item": "Bronze full helm",
+        "base_xp": 25.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 7,
+        "item": "Bronze knife",
+        "base_xp": 12.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 8,
+        "item": "Bronze sq shield",
+        "base_xp": 25.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 9,
+        "item": "Bronze warhammer",
+        "base_xp": 37.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 10,
+        "item": "Bronze battleaxe",
+        "base_xp": 37.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 11,
+        "item": "Bronze chainbody",
+        "base_xp": 37.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 12,
+        "item": "Bronze kiteshield",
+        "base_xp": 37.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 13,
+        "item": "Bronze claws",
+        "base_xp": 25.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 14,
+        "item": "Bronze 2h sword",
+        "base_xp": 37.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 16,
+        "item": "Bronze platelegs",
+        "base_xp": 37.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 16,
+        "item": "Bronze plateskirt",
+        "base_xp": 37.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 18,
+        "item": "Bronze platebody",
+        "base_xp": 62.5,
+        "type": "Forging - 5 bars"
+      },
+      {
+        "level": 15,
+        "item": "Iron dagger",
+        "base_xp": 25.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 16,
+        "item": "Iron axe",
+        "base_xp": 25.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 17,
+        "item": "Iron mace",
+        "base_xp": 25.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 17,
+        "item": "Iron spit",
+        "base_xp": 25.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 18,
+        "item": "Iron med helm",
+        "base_xp": 25.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 18,
+        "item": "Iron bolts (unf)",
+        "base_xp": 25.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 19,
+        "item": "Iron sword",
+        "base_xp": 25.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 19,
+        "item": "Iron dart tip",
+        "base_xp": 25.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 19,
+        "item": "Iron nails",
+        "base_xp": 25.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 20,
+        "item": "Iron scimitar",
+        "base_xp": 50.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 20,
+        "item": "Iron spear",
+        "base_xp": 50.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 20,
+        "item": "Iron arrowtips",
+        "base_xp": 25.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 21,
+        "item": "Iron longsword",
+        "base_xp": 50.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 21,
+        "item": "Iron javelin tips",
+        "base_xp": 25.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 22,
+        "item": "Iron full helm",
+        "base_xp": 50.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 22,
+        "item": "Iron knife",
+        "base_xp": 25.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 23,
+        "item": "Iron sq shield",
+        "base_xp": 50.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 23,
+        "item": "Iron limbs",
+        "base_xp": 25.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 24,
+        "item": "Iron warhammer",
         "base_xp": 75.0,
-        "type": "Smithing"
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 25,
+        "item": "Iron battleaxe",
+        "base_xp": 75.0,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 26,
+        "item": "Iron chainbody",
+        "base_xp": 75.0,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 26,
+        "item": "Oil lantern frame",
+        "base_xp": 25.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 27,
+        "item": "Iron kiteshield",
+        "base_xp": 75.0,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 28,
+        "item": "Iron claws",
+        "base_xp": 50.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 29,
+        "item": "Iron 2h sword",
+        "base_xp": 75.0,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 31,
+        "item": "Iron platelegs",
+        "base_xp": 75.0,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 31,
+        "item": "Iron plateskirt",
+        "base_xp": 75.0,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 33,
+        "item": "Iron platebody",
+        "base_xp": 125.0,
+        "type": "Forging - 5 bars"
+      },
+      {
+        "level": 30,
+        "item": "Steel dagger",
+        "base_xp": 37.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 31,
+        "item": "Steel axe",
+        "base_xp": 37.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 32,
+        "item": "Steel mace",
+        "base_xp": 37.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 33,
+        "item": "Steel med helm",
+        "base_xp": 37.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 33,
+        "item": "Steel bolts (unf)",
+        "base_xp": 37.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 34,
+        "item": "Steel sword",
+        "base_xp": 37.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 34,
+        "item": "Steel nails",
+        "base_xp": 37.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 34,
+        "item": "Steel dart tip",
+        "base_xp": 37.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 35,
+        "item": "Steel scimitar",
+        "base_xp": 75.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 35,
+        "item": "Steel spear",
+        "base_xp": 75.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 35,
+        "item": "Steel arrowtips",
+        "base_xp": 37.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 35,
+        "item": "Steel cannonball",
+        "base_xp": 25.6,
+        "type": "Forging - 1/4 bars"
+      },
+      {
+        "level": 36,
+        "item": "Steel limbs",
+        "base_xp": 37.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 36,
+        "item": "Steel longsword",
+        "base_xp": 75.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 36,
+        "item": "Steel javelin tips",
+        "base_xp": 37.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 36,
+        "item": "Steel studs",
+        "base_xp": 37.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 37,
+        "item": "Steel full helm",
+        "base_xp": 75.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 37,
+        "item": "Steel knife",
+        "base_xp": 37.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 38,
+        "item": "Steel sq shield",
+        "base_xp": 75.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 39,
+        "item": "Steel warhammer",
+        "base_xp": 112.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 40,
+        "item": "Steel battleaxe",
+        "base_xp": 112.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 41,
+        "item": "Steel chainbody",
+        "base_xp": 112.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 42,
+        "item": "Steel kiteshield",
+        "base_xp": 112.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 43,
+        "item": "Steel claws",
+        "base_xp": 75.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 44,
+        "item": "Steel 2h sword",
+        "base_xp": 112.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 46,
+        "item": "Steel platelegs",
+        "base_xp": 112.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 46,
+        "item": "Steel plateskirt",
+        "base_xp": 112.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 48,
+        "item": "Steel platebody",
+        "base_xp": 187.5,
+        "type": "Forging - 5 bars"
+      },
+      {
+        "level": 49,
+        "item": "Bullseye lantern (unf)",
+        "base_xp": 37.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 50,
+        "item": "Mithril dagger",
+        "base_xp": 50.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 51,
+        "item": "Mithril axe",
+        "base_xp": 50.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 52,
+        "item": "Mithril mace",
+        "base_xp": 50.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 53,
+        "item": "Mithril med helm",
+        "base_xp": 50.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 53,
+        "item": "Mithril bolts (unf)",
+        "base_xp": 50.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 54,
+        "item": "Mithril sword",
+        "base_xp": 50.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 54,
+        "item": "Mithril nails",
+        "base_xp": 50.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 54,
+        "item": "Mithril dart tip",
+        "base_xp": 50.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 55,
+        "item": "Mithril scimitar",
+        "base_xp": 100.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 55,
+        "item": "Mithril spear",
+        "base_xp": 100.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 55,
+        "item": "Mithril arrowtips",
+        "base_xp": 50.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 56,
+        "item": "Mithril limbs",
+        "base_xp": 50.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 56,
+        "item": "Mithril longsword",
+        "base_xp": 100.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 56,
+        "item": "Mithril javelin tips",
+        "base_xp": 50.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 57,
+        "item": "Mithril full helm",
+        "base_xp": 100.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 57,
+        "item": "Mithril knife",
+        "base_xp": 50.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 58,
+        "item": "Mithril sq shield",
+        "base_xp": 100.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 59,
+        "item": "Mithril warhammer",
+        "base_xp": 150.0,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 59,
+        "item": "Mith grapple tip",
+        "base_xp": 50.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 60,
+        "item": "Mithril battleaxe",
+        "base_xp": 150.0,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 61,
+        "item": "Mithril chainbody",
+        "base_xp": 150.0,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 62,
+        "item": "Mithril kiteshield",
+        "base_xp": 150.0,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 63,
+        "item": "Mithril claws",
+        "base_xp": 100.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 64,
+        "item": "Mithril 2h sword",
+        "base_xp": 150.0,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 66,
+        "item": "Mithril platelegs",
+        "base_xp": 150.0,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 66,
+        "item": "Mithril plateskirt",
+        "base_xp": 150.0,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 68,
+        "item": "Mithril platebody",
+        "base_xp": 250.0,
+        "type": "Forging - 5 bars"
+      },
+      {
+        "level": 70,
+        "item": "Adamant dagger",
+        "base_xp": 62.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 71,
+        "item": "Adamant axe",
+        "base_xp": 62.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 72,
+        "item": "Adamant mace",
+        "base_xp": 62.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 73,
+        "item": "Adamant med helm",
+        "base_xp": 62.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 73,
+        "item": "Adamant bolts(unf)",
+        "base_xp": 62.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 74,
+        "item": "Adamant sword",
+        "base_xp": 62.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 74,
+        "item": "Adamantite nails",
+        "base_xp": 62.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 74,
+        "item": "Adamant dart tip",
+        "base_xp": 62.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 75,
+        "item": "Adamant scimitar",
+        "base_xp": 125.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 75,
+        "item": "Adamant spear",
+        "base_xp": 125.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 75,
+        "item": "Adamant arrowtips",
+        "base_xp": 62.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 76,
+        "item": "Adamantite limbs",
+        "base_xp": 62.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 76,
+        "item": "Adamant longsword",
+        "base_xp": 125.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 76,
+        "item": "Adamant javelin tips",
+        "base_xp": 62.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 77,
+        "item": "Adamant full helm",
+        "base_xp": 125.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 77,
+        "item": "Adamant knife",
+        "base_xp": 62.5,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 78,
+        "item": "Adamant sq shield",
+        "base_xp": 125.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 79,
+        "item": "Adamant warhammer",
+        "base_xp": 187.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 80,
+        "item": "Adamant battleaxe",
+        "base_xp": 187.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 81,
+        "item": "Adamant chainbody",
+        "base_xp": 187.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 82,
+        "item": "Adamant kiteshield",
+        "base_xp": 187.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 83,
+        "item": "Adamant claws",
+        "base_xp": 125.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 84,
+        "item": "Adamant 2h sword",
+        "base_xp": 187.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 86,
+        "item": "Adamant platelegs",
+        "base_xp": 187.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 86,
+        "item": "Adamant plateskirt",
+        "base_xp": 187.5,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 88,
+        "item": "Adamant platebody",
+        "base_xp": 312.5,
+        "type": "Forging - 5 bars"
       },
       {
         "level": 85,
-        "item": "Rune Item + Bar",
-        "base_xp": 125.0,
-        "type": "Smelting + Smithing"
+        "item": "Rune dagger",
+        "base_xp": 75.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 86,
+        "item": "Rune axe",
+        "base_xp": 75.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 87,
+        "item": "Rune mace",
+        "base_xp": 75.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 88,
+        "item": "Rune med helm",
+        "base_xp": 75.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 88,
+        "item": "Runite bolts (unf)",
+        "base_xp": 75.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 89,
+        "item": "Rune sword",
+        "base_xp": 75.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 89,
+        "item": "Rune nails",
+        "base_xp": 75.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 89,
+        "item": "Rune dart tip",
+        "base_xp": 75.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 90,
+        "item": "Rune scimitar",
+        "base_xp": 150.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 90,
+        "item": "Rune spear",
+        "base_xp": 150.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 90,
+        "item": "Rune arrowtips",
+        "base_xp": 75.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 91,
+        "item": "Runite limbs",
+        "base_xp": 75.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 91,
+        "item": "Rune longsword",
+        "base_xp": 150.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 91,
+        "item": "Rune javelin tips",
+        "base_xp": 75.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 92,
+        "item": "Rune full helm",
+        "base_xp": 150.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 92,
+        "item": "Rune knife",
+        "base_xp": 75.0,
+        "type": "Forging - 1 bars"
+      },
+      {
+        "level": 93,
+        "item": "Rune sq shield",
+        "base_xp": 150.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 94,
+        "item": "Rune warhammer",
+        "base_xp": 225.0,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 95,
+        "item": "Rune battleaxe",
+        "base_xp": 225.0,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 96,
+        "item": "Rune chainbody",
+        "base_xp": 225.0,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 97,
+        "item": "Rune kiteshield",
+        "base_xp": 225.0,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 98,
+        "item": "Rune claws",
+        "base_xp": 150.0,
+        "type": "Forging - 2 bars"
+      },
+      {
+        "level": 99,
+        "item": "Rune 2h sword",
+        "base_xp": 225.0,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 99,
+        "item": "Rune platelegs",
+        "base_xp": 225.0,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 99,
+        "item": "Rune plateskirt",
+        "base_xp": 225.0,
+        "type": "Forging - 3 bars"
+      },
+      {
+        "level": 99,
+        "item": "Rune platebody",
+        "base_xp": 375.0,
+        "type": "Forging - 5 bars"
       }
     ],
     "Mining": [
