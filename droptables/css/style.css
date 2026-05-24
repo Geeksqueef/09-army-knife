@@ -1,6 +1,5 @@
 body{
     margin: 10px !important;
-    background-color: #b8a282 !important;
 }
 .stage {
     display: flex;
@@ -13,8 +12,8 @@ body{
   }
 
 .stat-data{
-    background-color: #605443;
-    color: white;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
     text-align: center;
 }
 
@@ -89,8 +88,8 @@ body{
     width: 70%;
 }
 td{
-    border: 1px solid #94866d;
-    background-color: #e2dbc8;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-background);
     padding: 10px !important;
     text-align: center;
 }
@@ -115,19 +114,19 @@ tbody{
 }
 
 .always{
-    background-color: #AFEEEE;
+    background-color: var(--color-always);
 }
 .common{
-    background-color: #56E156;
+    background-color: var(--color-common);
 }
 .uncommon{
-    background-color: #FFED4C;
+    background-color: var(--color-uncommon);
 }
 .rare{
-    background-color: #FF863C;
+    background-color: var(--color-rare);
 }
 .veryrare{
-    background-color: #FF6262;
+    background-color: var(--color-veryrare);
 }
 .hover-link img{
     padding-left: 10px;
