@@ -1,5 +1,5 @@
 body {
-    /* Background color now handled by theme.css */
+    background-color: #e2ddc8;
 }
 
 img {
@@ -9,8 +9,8 @@ img {
 .infobox {
     margin: 0 auto;
     width: 350px;
-    background-color: var(--color-background);
-    border: 1px solid var(--color-border);
+    background-color: #d8ccb4;
+    border: 1px solid #94866d;
     padding: 0;
     border-collapse: collapse;
     line-height: 1.4em;
@@ -18,7 +18,7 @@ img {
 }
 
 .infobox .infobox-header {
-    background-color: var(--color-primary);
+    background-color: #b8a282;
     text-align: center;
     padding: 0;
 }
@@ -33,16 +33,16 @@ img {
 }
 
 .infobox .infobox-nested + .infobox-nested {
-    border-left: 2px solid var(--color-primary);
+    border-left: 2px solid #b8a282;
 }
 
 .infobox .infobox-subheader {
-    background-color: var(--color-primary);
+    background-color: #b8a282;
     line-height: 2em;
 }
 
 .infobox th:not(.infobox-header):not(.infobox-subheader):not(.infobox-nested) {
     text-align: right;
-    border-right: 2px solid var(--color-primary);
+    border-right: 2px solid #b8a282;
     padding: 0.25em 0.5em;
 }

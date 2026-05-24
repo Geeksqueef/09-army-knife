@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skill Calculator</title>
-    <link rel="stylesheet" href="theme.css">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #b8a282;
+            color: #ffffff;
+        }
+        h1 {
+            color: #ffd700;
+            text-align: center;
+        }
         .calculator-container {
-            background-color: var(--color-secondary);
+            background-color: #685031;
             padding: 20px;
-            border-radius: var(--radius-md);
-            border: 2px solid var(--color-secondary-dark);
-            box-shadow: var(--shadow-lg);
+            border-radius: 8px;
+            border: 2px solid #2a1a0a;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
         }
         .input-section {
             display: grid;
@@ -19,9 +28,9 @@
             gap: 15px;
             margin-bottom: 20px;
             padding: 15px;
-            background-color: var(--color-primary-dark);
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--color-secondary-dark);
+            background-color: #876a38;
+            border-radius: 6px;
+            border: 1px solid #2a1a0a;
         }
         .input-group {
             display: flex;
@@ -29,20 +38,20 @@
         }
         .input-group label {
             margin-bottom: 5px;
-            color: var(--color-accent);
+            color: #ffd700;
             font-weight: bold;
         }
         .input-group input, .input-group select {
             padding: 8px;
-            border: 1px solid var(--color-primary-dark);
-            border-radius: var(--radius-sm);
-            background-color: var(--color-secondary-dark);
-            color: var(--color-white);
+            border: 1px solid #876a38;
+            border-radius: 4px;
+            background-color: #5c4a2a;
+            color: #ffffff;
             font-size: 14px;
         }
         .input-group input:focus, .input-group select:focus {
             outline: none;
-            border-color: var(--color-accent);
+            border-color: #ffd700;
         }
         .info-section {
             display: grid;
@@ -50,22 +59,22 @@
             gap: 15px;
             margin-bottom: 20px;
             padding: 15px;
-            background-color: var(--color-secondary-dark);
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--color-secondary-dark);
+            background-color: #5c4a2a;
+            border-radius: 6px;
+            border: 1px solid #2a1a0a;
         }
         .info-item {
             text-align: center;
         }
         .info-label {
-            color: var(--color-accent);
+            color: #ffd700;
             font-weight: bold;
             margin-bottom: 5px;
         }
         .info-value {
             font-size: 18px;
             font-weight: bold;
-            color: var(--color-white);
+            color: #ffffff;
         }
         table {
             border-collapse: collapse;
@@ -73,20 +82,20 @@
             min-width: 800px;
         }
         th, td {
-            border: 1px solid var(--color-primary-dark);
+            border: 1px solid #876a38;
             padding: 8px 12px;
             text-align: left;
         }
         th {
-            background-color: var(--color-primary-dark);
-            color: var(--color-accent);
+            background-color: #876a38;
+            color: #ffd700;
             font-weight: bold;
             cursor: pointer;
             user-select: none;
             position: relative;
         }
         th:hover {
-            background-color: var(--color-primary);
+            background-color: #9a7a42;
         }
         th.sort-asc::after {
             content: ' ▲';
@@ -95,10 +104,10 @@
             content: ' ▼';
         }
         tr:nth-child(even) {
-            background-color: rgba(104, 80, 49, 0.3);
+            background-color: #5c4a2a;
         }
         tr:hover {
-            background-color: rgba(104, 80, 49, 0.5);
+            background-color: #876a38;
         }
         .skill-tabs {
             margin-bottom: 20px;
@@ -108,28 +117,28 @@
         }
         .skill-tab {
             padding: 10px 20px;
-            background-color: var(--color-secondary-dark);
-            border: 1px solid var(--color-secondary-dark);
-            color: var(--color-accent);
+            background-color: #39281c;
+            border: 1px solid #2a1a0a;
+            color: #ffd700;
             cursor: pointer;
-            border-radius: var(--radius-sm);
+            border-radius: 4px;
             transition: all 0.2s;
             font-weight: bold;
         }
         .skill-tab:hover {
-            background-color: var(--color-secondary);
-            color: var(--color-white);
+            background-color: #5c4a2a;
+            color: #ffffff;
         }
         .skill-tab.active {
-            background-color: var(--color-primary-dark);
-            color: var(--color-white);
+            background-color: #876a38;
+            color: #ffffff;
             font-weight: bold;
         }
         #loading {
             text-align: center;
             padding: 40px;
             font-size: 18px;
-            color: var(--color-accent);
+            color: #ffd700;
         }
         .table-container {
             overflow-x: auto;
@@ -148,33 +157,31 @@
         }
         .penguin-description {
             text-align: center;
-            color: var(--color-accent);
+            color: #ffd700;
             margin-bottom: 20px;
             font-size: 18px;
         }
         .calculate-btn {
             padding: 12px 24px;
-            background-color: var(--color-primary-dark);
-            color: var(--color-accent);
-            border: 2px solid var(--color-accent);
-            border-radius: var(--radius-sm);
+            background-color: #876a38;
+            color: #ffd700;
+            border: 2px solid #ffd700;
+            border-radius: 4px;
             font-size: 16px;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.2s;
         }
         .calculate-btn:hover {
-            background-color: var(--color-accent);
-            color: var(--color-secondary);
+            background-color: #ffd700;
+            color: #5c4a2a;
         }
     </style>
 </head>
 <body>
-<div class="page-header">
-    <a href="./"><img src="images/logo.png" alt="Logo" class="logo"></a>
-    <h2>Skill Calculator</h2>
-    <p>To go back to the main page click <a href="index.html">here</a></p>
-</div>
+<center><a href="./"><img src="images/logo.png"></a>
+<h2 style="color: #F2C848; text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); -webkit-text-stroke: 0.5px black;">Skill Calculator</h2></center>
+    <center><p>To go back to the main page click <a href="index.html">here</a></p></center>
     <div id="loading">Loading calculator...</div>
     <div id="calculator" class="calculator-container" style="display: none;">
         <div class="skill-tabs" id="skill-tabs"></div>
