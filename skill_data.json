@@ -7425,12 +7425,6 @@
         "type": "Smelting"
       },
       {
-        "level": 1,
-        "item": "Bronze Dagger",
-        "base_xp": 18.7,
-        "type": "Smelting + Smithing"
-      },
-      {
         "level": 8,
         "item": "Blurite Bar",
         "base_xp": 8.0,
@@ -7442,19 +7436,7 @@
         "base_xp": 12.5,
         "type": "Smelting"
       },
-      {
-        "level": 15,
-        "item": "Iron Dagger",
-        "base_xp": 25.0,
-        "type": "Smithing"
-      },
-      {
-        "level": 15,
-        "item": "Iron Item + Bar",
-        "base_xp": 37.5,
-        "type": "Smelting + Smithing"
-      },
-      {
+      { 
         "level": 20,
         "item": "Elemental Bar",
         "base_xp": 7.5,
@@ -7697,12 +7679,6 @@
       {
         "level": 17,
         "item": "Iron mace",
-        "base_xp": 25.0,
-        "type": "Forging - 1 bars"
-      },
-      {
-        "level": 17,
-        "item": "Iron spit",
         "base_xp": 25.0,
         "type": "Forging - 1 bars"
       },
