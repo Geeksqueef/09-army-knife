@@ -7467,12 +7467,6 @@
         "type": "Smelting"
       },
       {
-        "level": 35,
-        "item": "Cannonballs (4) + Bar",
-        "base_xp": 120.5,
-        "type": "Smelting Bar + Ball"
-      },
-      {
         "level": 40,
         "item": "Gold Bar",
         "base_xp": 22.5,
@@ -7891,12 +7885,6 @@
         "item": "Steel arrowtips",
         "base_xp": 37.5,
         "type": "Forging - 1 bars"
-      },
-      {
-        "level": 35,
-        "item": "Steel cannonball",
-        "base_xp": 25.6,
-        "type": "Forging - 1/4 bars"
       },
       {
         "level": 36,
