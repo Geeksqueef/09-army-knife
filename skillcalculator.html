@@ -155,6 +155,9 @@
         #sawmill-section {
             display: none;
         }
+        #vinesweeper-section {
+            display: none;
+        }
         .penguin-description {
             text-align: center;
             color: #ffd700;
@@ -191,6 +194,43 @@
             <p class="penguin-description" style="font-size: 14px; margin-bottom: 15px;">Enter your current level and your target level, or current number of penguin points and whether or not you'll be using brawlers and click calculate.</p>
             
             <div class="input-section">
+                <div class="input-group">
+                    <label for="penguin-username">Username</label>
+                    <input type="text" id="penguin-username" placeholder="Enter username">
+                </div>
+                <div class="input-group">
+                    <label for="penguin-skill-select">Skill</label>
+                    <select id="penguin-skill-select">
+                        <option value="Attack">Attack</option>
+                        <option value="Defence">Defence</option>
+                        <option value="Strength">Strength</option>
+                        <option value="Hitpoints">Hitpoints</option>
+                        <option value="Ranged">Ranged</option>
+                        <option value="Prayer">Prayer</option>
+                        <option value="Magic">Magic</option>
+                        <option value="Cooking">Cooking</option>
+                        <option value="Woodcutting">Woodcutting</option>
+                        <option value="Fletching">Fletching</option>
+                        <option value="Fishing">Fishing</option>
+                        <option value="Firemaking">Firemaking</option>
+                        <option value="Crafting">Crafting</option>
+                        <option value="Smithing">Smithing</option>
+                        <option value="Mining">Mining</option>
+                        <option value="Herblore">Herblore</option>
+                        <option value="Agility">Agility</option>
+                        <option value="Thieving">Thieving</option>
+                        <option value="Slayer">Slayer</option>
+                        <option value="Farming">Farming</option>
+                        <option value="Runecrafting">Runecrafting</option>
+                        <option value="Hunter">Hunter</option>
+                        <option value="Construction">Construction</option>
+                        <option value="Summoning">Summoning</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>&nbsp;</label>
+                    <button class="calculate-btn" onclick="pullPenguinExperience()">Pull Live Experience</button>
+                </div>
                 <div class="input-group">
                     <label for="penguin-current-xp">Current XP</label>
                     <input type="number" id="penguin-current-xp" value="0" min="0">
@@ -293,8 +333,74 @@
             </div>
         </div>
         
+        <div id="vinesweeper-section">
+            <h2 class="penguin-description">Calculate Vinesweeper points to XP</h2>
+            <p class="penguin-description" style="font-size: 14px; margin-bottom: 15px;">Enter your current level or experience and vinesweeper points to calculate XP gained.</p>
+            
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="vinesweeper-username">Username</label>
+                    <input type="text" id="vinesweeper-username" placeholder="Enter username">
+                </div>
+                <div class="input-group">
+                    <label>&nbsp;</label>
+                    <button class="calculate-btn" onclick="pullVinesweeperExperience()">Pull Live Experience</button>
+                </div>
+                <div class="input-group">
+                    <label for="vinesweeper-current-xp">Current XP</label>
+                    <input type="number" id="vinesweeper-current-xp" value="0" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="vinesweeper-current-level">Current Level (1-99)</label>
+                    <input type="number" id="vinesweeper-current-level" value="1" min="1" max="99">
+                </div>
+                <div class="input-group">
+                    <label for="vinesweeper-points">Vinesweeper Points</label>
+                    <input type="number" id="vinesweeper-points" value="" min="1" placeholder="Enter points">
+                </div>
+            </div>
+
+            <div class="input-section">
+                <div class="input-group">
+                    <label>&nbsp;</label>
+                    <button class="calculate-btn" onclick="calculateVinesweeper()">Calculate</button>
+                </div>
+            </div>
+
+            <div class="info-section" id="vinesweeper-results" style="display: none;">
+                <div class="info-item">
+                    <div class="info-label">Points Per XP</div>
+                    <div class="info-value" id="vinesweeper-points-per-xp">1.0</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">XP Gained</div>
+                    <div class="info-value" id="vinesweeper-xp-gained">0</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">XP After</div>
+                    <div class="info-value" id="vinesweeper-xp-after">0</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">New Level</div>
+                    <div class="info-value" id="vinesweeper-new-level">1</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Levels Gained</div>
+                    <div class="info-value" id="vinesweeper-levels-gained">0</div>
+                </div>
+            </div>
+        </div>
+        
         <div id="skill-calculator-section">
             <div class="input-section">
+                <div class="input-group">
+                    <label for="skill-username">Username</label>
+                    <input type="text" id="skill-username" placeholder="Enter username">
+                </div>
+                <div class="input-group">
+                    <label>&nbsp;</label>
+                    <button class="calculate-btn" onclick="pullSkillExperience()">Pull Live Experience</button>
+                </div>
                 <div class="input-group">
                     <label for="starting-xp">Starting XP</label>
                     <input type="number" id="starting-xp" value="0" min="0">
@@ -383,6 +489,33 @@
 
         const brawlerSkills = ['Agility', 'Prayer', 'Smithing', 'Mining', 'Fishing', 'Hunter', 'Thieving', 'Cooking'];
 
+        const skillToIndex = {
+            'Attack': 0,
+            'Defence': 1,
+            'Strength': 2,
+            'Hitpoints': 3,
+            'Ranged': 4,
+            'Prayer': 5,
+            'Magic': 6,
+            'Cooking': 7,
+            'Woodcutting': 8,
+            'Fletching': 9,
+            'Fishing': 10,
+            'Firemaking': 11,
+            'Crafting': 12,
+            'Smithing': 13,
+            'Mining': 14,
+            'Herblore': 15,
+            'Agility': 16,
+            'Thieving': 17,
+            'Slayer': 18,
+            'Farming': 19,
+            'Runecrafting': 20,
+            'Hunter': 21,
+            'Construction': 22,
+            'Summoning': 23
+        };
+
         async function loadData() {
             try {
                 const response = await fetch('skill_data.json');
@@ -417,6 +550,13 @@
                 sawmillTab.onclick = () => selectSawmill();
                 tabsContainer.appendChild(sawmillTab);
                 
+                // Add vinesweeper tab
+                const vinesweeperTab = document.createElement('button');
+                vinesweeperTab.className = 'skill-tab' + (currentTab === 'vinesweeper' ? ' active' : '');
+                vinesweeperTab.textContent = 'Vinesweeper';
+                vinesweeperTab.onclick = () => selectVinesweeper();
+                tabsContainer.appendChild(vinesweeperTab);
+                
                 // event listeners for inputs
                 document.getElementById('starting-xp').addEventListener('input', updateCalculations);
                 document.getElementById('goal-level').addEventListener('input', updateCalculations);
@@ -432,6 +572,10 @@
                 // Sawmill event listeners
                 document.getElementById('sawmill-logs').addEventListener('input', calculateSawmill);
                 document.getElementById('sawmill-log-type').addEventListener('input', calculateSawmill);
+                
+                // Vinesweeper event listeners
+                document.getElementById('vinesweeper-current-xp').addEventListener('input', handleVinesweeperXpChange);
+                document.getElementById('vinesweeper-current-level').addEventListener('input', handleVinesweeperLevelChange);
                 
                 //  calculation
                 updateCalculations();
@@ -453,6 +597,7 @@
             document.getElementById('penguin-points-section').style.display = 'none';
             document.getElementById('skill-calculator-section').style.display = 'block';
             document.getElementById('sawmill-section').style.display = 'none';
+            document.getElementById('vinesweeper-section').style.display = 'none';
             
             // Show/hide prayer-specific section
             const prayerSection = document.getElementById('prayer-section');
@@ -484,6 +629,7 @@
             document.getElementById('penguin-points-section').style.display = 'block';
             document.getElementById('skill-calculator-section').style.display = 'none';
             document.getElementById('sawmill-section').style.display = 'none';
+            document.getElementById('vinesweeper-section').style.display = 'none';
         }
 
         function selectSawmill() {
@@ -497,9 +643,24 @@
             document.getElementById('sawmill-section').style.display = 'block';
             document.getElementById('penguin-points-section').style.display = 'none';
             document.getElementById('skill-calculator-section').style.display = 'none';
+            document.getElementById('vinesweeper-section').style.display = 'none';
             
             // Initial calculation
             calculateSawmill();
+        }
+
+        function selectVinesweeper() {
+            currentTab = 'vinesweeper';
+            
+            document.querySelectorAll('.skill-tab').forEach(tab => {
+                tab.classList.toggle('active', tab.textContent === 'Vinesweeper');
+            });
+            
+            // Show vinesweeper section
+            document.getElementById('vinesweeper-section').style.display = 'block';
+            document.getElementById('penguin-points-section').style.display = 'none';
+            document.getElementById('skill-calculator-section').style.display = 'none';
+            document.getElementById('sawmill-section').style.display = 'none';
         }
 
         function calculateSawmill() {
@@ -530,6 +691,18 @@
             const level = parseInt(document.getElementById('penguin-current-level').value) || 1;
             const xp = getXpForLevel(level);
             document.getElementById('penguin-current-xp').value = xp;
+        }
+
+        function handleVinesweeperXpChange() {
+            const xp = parseInt(document.getElementById('vinesweeper-current-xp').value) || 0;
+            const level = getLevelFromXp(xp);
+            document.getElementById('vinesweeper-current-level').value = level;
+        }
+
+        function handleVinesweeperLevelChange() {
+            const level = parseInt(document.getElementById('vinesweeper-current-level').value) || 1;
+            const xp = getXpForLevel(level);
+            document.getElementById('vinesweeper-current-xp').value = xp;
         }
 
         function calculatePenguinPoints() {
@@ -634,6 +807,116 @@
             document.getElementById('penguin-new-level').textContent = newLevel;
             document.getElementById('penguin-levels-gained').textContent = levelsGained;
             document.getElementById('penguin-points-needed').textContent = pointsNeeded > 0 ? pointsNeeded.toLocaleString() : '-';
+        }
+
+        function calculateVinesweeper() {
+            const currentXp = parseInt(document.getElementById('vinesweeper-current-xp').value) || 0;
+            const currentLevel = parseInt(document.getElementById('vinesweeper-current-level').value) || 1;
+            const points = parseInt(document.getElementById('vinesweeper-points').value) || 0;
+
+            if (!points) {
+                alert('Please enter the number of vinesweeper points.');
+                return;
+            }
+
+            // Calculate points_per_xp using the provided equation
+            let points_per_xp;
+            if (currentLevel < 40) {
+                points_per_xp = Math.max(1.0, 2.0 * (40.0 - currentLevel) / 10.0);
+            } else {
+                points_per_xp = 1.0;
+            }
+
+            // Calculate XP gained
+            const xpGained = points / points_per_xp;
+            const xpAfter = currentXp + xpGained;
+            const newLevel = getLevelFromXp(xpAfter);
+            const levelsGained = newLevel - currentLevel;
+
+            // Display results
+            document.getElementById('vinesweeper-results').style.display = 'grid';
+            document.getElementById('vinesweeper-points-per-xp').textContent = points_per_xp.toFixed(2);
+            document.getElementById('vinesweeper-xp-gained').textContent = Math.round(xpGained).toLocaleString();
+            document.getElementById('vinesweeper-xp-after').textContent = Math.round(xpAfter).toLocaleString();
+            document.getElementById('vinesweeper-new-level').textContent = newLevel;
+            document.getElementById('vinesweeper-levels-gained').textContent = levelsGained;
+        }
+
+        async function fetchLiveExperience(username) {
+            const formattedUsername = username.toLowerCase().replace(/ /g, '_');
+            const url = `http://api.2009scape.org:3000/hiscores/playerSkills/1/${formattedUsername}`;
+            
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch player data');
+                }
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                alert('Error fetching live experience: ' + error.message);
+                return null;
+            }
+        }
+
+        async function pullSkillExperience() {
+            const username = document.getElementById('skill-username').value.trim();
+            if (!username) {
+                alert('Please enter a username');
+                return;
+            }
+
+            const skillIndex = skillToIndex[currentSkill];
+            if (skillIndex === undefined) {
+                alert('Skill not found in API mapping');
+                return;
+            }
+
+            const data = await fetchLiveExperience(username);
+            if (data && data[skillIndex] !== undefined) {
+                const xp = data[skillIndex].experience || 0;
+                document.getElementById('starting-xp').value = xp;
+                updateCalculations();
+            }
+        }
+
+        async function pullPenguinExperience() {
+            const username = document.getElementById('penguin-username').value.trim();
+            if (!username) {
+                alert('Please enter a username');
+                return;
+            }
+
+            const selectedSkill = document.getElementById('penguin-skill-select').value;
+            const skillIndex = skillToIndex[selectedSkill];
+            if (skillIndex === undefined) {
+                alert('Skill not found in API mapping');
+                return;
+            }
+
+            const data = await fetchLiveExperience(username);
+            if (data && data[skillIndex] !== undefined) {
+                const xp = data[skillIndex].experience || 0;
+                document.getElementById('penguin-current-xp').value = xp;
+                handlePenguinXpChange();
+            }
+        }
+
+        async function pullVinesweeperExperience() {
+            const username = document.getElementById('vinesweeper-username').value.trim();
+            if (!username) {
+                alert('Please enter a username');
+                return;
+            }
+
+            // Vinesweeper gives Farming XP (index 19)
+            const skillIndex = 19;
+            const data = await fetchLiveExperience(username);
+            if (data && data[skillIndex] !== undefined) {
+                const xp = data[skillIndex].experience || 0;
+                document.getElementById('vinesweeper-current-xp').value = xp;
+                handleVinesweeperXpChange();
+            }
         }
 
         function getLevelFromXp(xp) {
