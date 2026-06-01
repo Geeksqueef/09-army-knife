@@ -358,6 +358,15 @@
                     <label for="vinesweeper-points">Vinesweeper Points</label>
                     <input type="number" id="vinesweeper-points" value="" min="1" placeholder="Enter points">
                 </div>
+                <div class="input-group">
+                    <label for="vinesweeper-xp-rate">XP Rate</label>
+                    <select id="vinesweeper-xp-rate">
+                        <option value="1">1x</option>
+                        <option value="2.5">2.5x</option>
+                        <option value="5" selected>5x</option>
+                        <option value="10">10x</option>
+                    </select>
+                </div>
             </div>
 
             <div class="input-section">
@@ -581,6 +590,7 @@
                 // Vinesweeper event listeners
                 document.getElementById('vinesweeper-current-xp').addEventListener('input', handleVinesweeperXpChange);
                 document.getElementById('vinesweeper-current-level').addEventListener('input', handleVinesweeperLevelChange);
+                document.getElementById('vinesweeper-xp-rate').addEventListener('input', calculateVinesweeper);
                 
                 //  calculation
                 updateCalculations();
@@ -830,6 +840,7 @@
             const currentXp = parseInt(document.getElementById('vinesweeper-current-xp').value) || 0;
             const currentLevel = parseInt(document.getElementById('vinesweeper-current-level').value) || 1;
             const points = parseInt(document.getElementById('vinesweeper-points').value) || 0;
+            const xpRate = parseFloat(document.getElementById('vinesweeper-xp-rate').value) || 5;
 
             if (!points) {
                 alert('Please enter the number of vinesweeper points.');
@@ -844,8 +855,8 @@
                 points_per_xp = 1.0;
             }
 
-            // Calculate XP gained
-            const xpGained = points / points_per_xp;
+            // Calculate XP gained with XP rate multiplier
+            const xpGained = (points / points_per_xp) * xpRate;
             const xpAfter = currentXp + xpGained;
             const newLevel = getLevelFromXp(xpAfter);
             const levelsGained = newLevel - currentLevel;
@@ -866,7 +877,13 @@
             // Try multiple CORS proxies in case one fails
             const proxies = [
                 `https://corsproxy.io/?${encodeURIComponent(apiUrl)}`,
-                `https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`
+                `https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`,
+                `https://proxy.corsfix.com/?${encodeURIComponent(apiUrl)}`,
+                `https://thingproxy.freeboard.io/fetch/${encodeURIComponent(apiUrl)}`,
+                `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(apiUrl)}`,
+                `https://cors-anywhere.herokuapp.com/${encodeURIComponent(apiUrl)}`,
+                `https://crossorigin.me/${encodeURIComponent(apiUrl)}`,
+                `https://jsonp.afeld.me/?url=${encodeURIComponent(apiUrl)}`
             ];
             
             for (const proxyUrl of proxies) {
