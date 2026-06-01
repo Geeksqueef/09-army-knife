@@ -406,6 +406,10 @@
                     <input type="number" id="starting-xp" value="0" min="0">
                 </div>
                 <div class="input-group">
+                    <label for="skill-current-level">Current Level</label>
+                    <input type="number" id="skill-current-level" value="1" min="1" max="99">
+                </div>
+                <div class="input-group">
                     <label for="goal-level">Goal Level</label>
                     <input type="number" id="goal-level" value="99" min="1" max="99">
                 </div>
@@ -558,7 +562,8 @@
                 tabsContainer.appendChild(vinesweeperTab);
                 
                 // event listeners for inputs
-                document.getElementById('starting-xp').addEventListener('input', updateCalculations);
+                document.getElementById('starting-xp').addEventListener('input', handleSkillXpChange);
+                document.getElementById('skill-current-level').addEventListener('input', handleSkillLevelChange);
                 document.getElementById('goal-level').addEventListener('input', updateCalculations);
                 document.getElementById('xp-rate').addEventListener('input', updateCalculations);
                 document.getElementById('prayer-method').addEventListener('input', updateCalculations);
@@ -703,6 +708,18 @@
             const level = parseInt(document.getElementById('vinesweeper-current-level').value) || 1;
             const xp = getXpForLevel(level);
             document.getElementById('vinesweeper-current-xp').value = xp;
+        }
+
+        function handleSkillXpChange() {
+            const xp = parseInt(document.getElementById('starting-xp').value) || 0;
+            const level = getLevelFromXp(xp);
+            document.getElementById('skill-current-level').value = level;
+        }
+
+        function handleSkillLevelChange() {
+            const level = parseInt(document.getElementById('skill-current-level').value) || 1;
+            const xp = getXpForLevel(level);
+            document.getElementById('starting-xp').value = xp;
         }
 
         function calculatePenguinPoints() {
@@ -879,6 +896,7 @@
             if (data && data[skillIndex] !== undefined) {
                 const xp = data[skillIndex].experience || 0;
                 document.getElementById('starting-xp').value = xp;
+                handleSkillXpChange();
                 updateCalculations();
             }
         }
@@ -980,6 +998,7 @@
             // Calc current level
             const currentLevel = getLevelFromXp(startingXp);
             document.getElementById('current-level').textContent = currentLevel;
+            document.getElementById('skill-current-level').value = currentLevel;
 
             // Calc goal XP and XP needed
             const goalXp = getXpForLevel(goalLevel);
