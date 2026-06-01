@@ -487,7 +487,7 @@
         let sortColumn = null;
         let sortDirection = 'asc'; // 'asc' or 'desc'
 
-        const brawlerSkills = ['Agility', 'Prayer', 'Smithing', 'Mining', 'Fishing', 'Hunter', 'Thieving', 'Cooking'];
+        const brawlerSkills = ['Agility', 'Prayer', 'Smithing', 'Mining', 'Fishing', 'Hunter', 'Thieving', 'Firemaking', 'Woodcutting'];
 
         const skillToIndex = {
             'Attack': 0,
@@ -844,10 +844,13 @@
 
         async function fetchLiveExperience(username) {
             const formattedUsername = username.toLowerCase().replace(/ /g, '_');
-            const url = `http://api.2009scape.org:3000/hiscores/playerSkills/1/${formattedUsername}`;
+            const apiUrl = `http://api.2009scape.org:3000/hiscores/playerSkills/1/${formattedUsername}`;
+            
+            // Use a CORS proxy to handle HTTP API from HTTPS pages
+            const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`;
             
             try {
-                const response = await fetch(url);
+                const response = await fetch(proxyUrl);
                 if (!response.ok) {
                     throw new Error('Failed to fetch player data');
                 }
