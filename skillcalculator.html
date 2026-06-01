@@ -863,20 +863,28 @@
             const formattedUsername = username.toLowerCase().replace(/ /g, '_');
             const apiUrl = `http://api.2009scape.org:3000/hiscores/playerSkills/1/${formattedUsername}`;
             
-            // Use a CORS proxy to handle HTTP API from HTTPS pages
-            const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`;
+            // Try multiple CORS proxies in case one fails
+            const proxies = [
+                `https://corsproxy.io/?${encodeURIComponent(apiUrl)}`,
+                `https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`
+            ];
             
-            try {
-                const response = await fetch(proxyUrl);
-                if (!response.ok) {
-                    throw new Error('Failed to fetch player data');
+            for (const proxyUrl of proxies) {
+                try {
+                    const response = await fetch(proxyUrl);
+                    if (!response.ok) {
+                        continue;
+                    }
+                    const data = await response.json();
+                    return data;
+                } catch (error) {
+                    console.log(`Proxy failed: ${proxyUrl}, trying next...`);
+                    continue;
                 }
-                const data = await response.json();
-                return data;
-            } catch (error) {
-                alert('Error fetching live experience: ' + error.message);
-                return null;
             }
+            
+            alert('Error fetching live experience: All CORS proxies failed. The API may be down or experiencing issues.');
+            return null;
         }
 
         async function pullSkillExperience() {
