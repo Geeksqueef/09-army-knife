@@ -864,7 +864,7 @@
             const apiUrl = `http://api.2009scape.org:3000/hiscores/playerSkills/1/${formattedUsername}`;
             
             // Use a CORS proxy to handle HTTP API from HTTPS pages
-            const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`;
+            const proxyUrl = `https://api.cors.lol/?url=${encodeURIComponent(apiUrl)}`;
             
             try {
                 const response = await fetch(proxyUrl);
