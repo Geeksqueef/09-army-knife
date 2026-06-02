@@ -197,6 +197,7 @@
                 <div class="input-group">
                     <label for="penguin-username">Username</label>
                     <input type="text" id="penguin-username" placeholder="Enter username">
+                    <span id="penguin-cache-status" style="font-size: 12px; margin-top: 5px;"></span>
                 </div>
                 <div class="input-group">
                     <label for="penguin-skill-select">Skill</label>
@@ -230,6 +231,10 @@
                 <div class="input-group">
                     <label>&nbsp;</label>
                     <button class="calculate-btn" onclick="pullPenguinExperience()">Pull Live Experience</button>
+                </div>
+                <div class="input-group">
+                    <label>&nbsp;</label>
+                    <button class="calculate-btn" onclick="pullPenguinExperience(true)" style="background-color: #5c4a2a; border-color: #876a38;">Refresh</button>
                 </div>
                 <div class="input-group">
                     <label for="penguin-current-xp">Current XP</label>
@@ -341,10 +346,15 @@
                 <div class="input-group">
                     <label for="vinesweeper-username">Username</label>
                     <input type="text" id="vinesweeper-username" placeholder="Enter username">
+                    <span id="vinesweeper-cache-status" style="font-size: 12px; margin-top: 5px;"></span>
                 </div>
                 <div class="input-group">
                     <label>&nbsp;</label>
                     <button class="calculate-btn" onclick="pullVinesweeperExperience()">Pull Live Experience</button>
+                </div>
+                <div class="input-group">
+                    <label>&nbsp;</label>
+                    <button class="calculate-btn" onclick="pullVinesweeperExperience(true)" style="background-color: #5c4a2a; border-color: #876a38;">Refresh</button>
                 </div>
                 <div class="input-group">
                     <label for="vinesweeper-current-xp">Current XP</label>
@@ -405,10 +415,15 @@
                 <div class="input-group">
                     <label for="skill-username">Username</label>
                     <input type="text" id="skill-username" placeholder="Enter username">
+                    <span id="skill-cache-status" style="font-size: 12px; margin-top: 5px;"></span>
                 </div>
                 <div class="input-group">
                     <label>&nbsp;</label>
                     <button class="calculate-btn" onclick="pullSkillExperience()">Pull Live Experience</button>
+                </div>
+                <div class="input-group">
+                    <label>&nbsp;</label>
+                    <button class="calculate-btn" onclick="pullSkillExperience(true)" style="background-color: #5c4a2a; border-color: #876a38;">Refresh</button>
                 </div>
                 <div class="input-group">
                     <label for="starting-xp">Starting XP</label>
@@ -502,6 +517,70 @@
 
         const brawlerSkills = ['Agility', 'Prayer', 'Smithing', 'Mining', 'Fishing', 'Hunter', 'Thieving', 'Firemaking', 'Woodcutting'];
 
+        // Cache configuration
+        const CACHE_KEY_PREFIX = 'skillcalc_cache_';
+        const CACHE_EXPIRY_MS = 24 * 60 * 60 * 1000; // 24 hours
+
+        function getCacheKey(username) {
+            return CACHE_KEY_PREFIX + username.toLowerCase().replace(/ /g, '_');
+        }
+
+        function getCache(username) {
+            const key = getCacheKey(username);
+            const cached = localStorage.getItem(key);
+            if (!cached) return null;
+            
+            try {
+                const data = JSON.parse(cached);
+                if (Date.now() - data.timestamp > CACHE_EXPIRY_MS) {
+                    localStorage.removeItem(key);
+                    return null;
+                }
+                return data.data;
+            } catch (e) {
+                localStorage.removeItem(key);
+                return null;
+            }
+        }
+
+        function setCache(username, data) {
+            const key = getCacheKey(username);
+            const cacheData = {
+                data: data,
+                timestamp: Date.now()
+            };
+            localStorage.setItem(key, JSON.stringify(cacheData));
+        }
+
+        function isCacheFresh(username) {
+            const key = getCacheKey(username);
+            const cached = localStorage.getItem(key);
+            if (!cached) return false;
+            
+            try {
+                const data = JSON.parse(cached);
+                return Date.now() - data.timestamp <= CACHE_EXPIRY_MS;
+            } catch (e) {
+                return false;
+            }
+        }
+
+        function getCacheAge(username) {
+            const key = getCacheKey(username);
+            const cached = localStorage.getItem(key);
+            if (!cached) return null;
+            
+            try {
+                const data = JSON.parse(cached);
+                const ageMs = Date.now() - data.timestamp;
+                const hours = Math.floor(ageMs / (60 * 60 * 1000));
+                const minutes = Math.floor((ageMs % (60 * 60 * 1000)) / (60 * 1000));
+                return `${hours}h ${minutes}m ago`;
+            } catch (e) {
+                return null;
+            }
+        }
+
         const skillToIndex = {
             'Attack': 0,
             'Defence': 1,
@@ -591,6 +670,11 @@
                 document.getElementById('vinesweeper-current-xp').addEventListener('input', handleVinesweeperXpChange);
                 document.getElementById('vinesweeper-current-level').addEventListener('input', handleVinesweeperLevelChange);
                 document.getElementById('vinesweeper-xp-rate').addEventListener('input', calculateVinesweeper);
+                
+                // Auto-populate from cache when username is entered
+                document.getElementById('skill-username').addEventListener('input', handleSkillUsernameChange);
+                document.getElementById('penguin-username').addEventListener('input', handlePenguinUsernameChange);
+                document.getElementById('vinesweeper-username').addEventListener('input', handleVinesweeperUsernameChange);
                 
                 //  calculation
                 updateCalculations();
@@ -870,41 +954,105 @@
             document.getElementById('vinesweeper-levels-gained').textContent = levelsGained;
         }
 
-        async function fetchLiveExperience(username) {
+        async function fetchLiveExperience(username, forceRefresh = false) {
             const formattedUsername = username.toLowerCase().replace(/ /g, '_');
-            const apiUrl = `http://api.2009scape.org:3000/hiscores/playerSkills/1/${formattedUsername}`;
             
-            // Try multiple CORS proxies in case one fails
-            const proxies = [
-                `https://corsproxy.io/?${encodeURIComponent(apiUrl)}`,
-                `https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`,
-                `https://proxy.corsfix.com/?${encodeURIComponent(apiUrl)}`,
-                `https://thingproxy.freeboard.io/fetch/${encodeURIComponent(apiUrl)}`,
-                `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(apiUrl)}`,
-                `https://cors-anywhere.herokuapp.com/${encodeURIComponent(apiUrl)}`,
-                `https://crossorigin.me/${encodeURIComponent(apiUrl)}`,
-                `https://jsonp.afeld.me/?url=${encodeURIComponent(apiUrl)}`
-            ];
-            
-            for (const proxyUrl of proxies) {
-                try {
-                    const response = await fetch(proxyUrl);
-                    if (!response.ok) {
-                        continue;
-                    }
-                    const data = await response.json();
-                    return data;
-                } catch (error) {
-                    console.log(`Proxy failed: ${proxyUrl}, trying next...`);
-                    continue;
+            // Check cache first if not forcing refresh
+            if (!forceRefresh) {
+                const cachedData = getCache(username);
+                if (cachedData) {
+                    console.log('Using cached data for:', username);
+                    return cachedData;
                 }
             }
             
-            alert('Error fetching live experience: All CORS proxies failed. The API may be down or experiencing issues.');
-            return null;
+            const apiUrl = `http://api.2009scape.org:3000/hiscores/playerSkills/1/${formattedUsername}`;
+            
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error(`API returned status: ${response.status}`);
+                }
+                const data = await response.json();
+                
+                // Cache the successful response
+                setCache(username, data);
+                console.log('Fetched and cached data for:', username);
+                
+                return data;
+            } catch (error) {
+                console.error('Error fetching live experience:', error);
+                alert(`Error fetching live experience: ${error.message}. The API may be down or experiencing CORS issues.`);
+                return null;
+            }
         }
 
-        async function pullSkillExperience() {
+        function handleSkillUsernameChange() {
+            const username = document.getElementById('skill-username').value.trim();
+            if (!username) {
+                updateCacheStatus('skill', null);
+                return;
+            }
+
+            const cachedData = getCache(username);
+            if (cachedData) {
+                updateCacheStatus('skill', 'cached', username);
+            } else {
+                updateCacheStatus('skill', 'none');
+            }
+        }
+
+        function handlePenguinUsernameChange() {
+            const username = document.getElementById('penguin-username').value.trim();
+            if (!username) {
+                updateCacheStatus('penguin', null);
+                return;
+            }
+
+            const cachedData = getCache(username);
+            if (cachedData) {
+                updateCacheStatus('penguin', 'cached', username);
+            } else {
+                updateCacheStatus('penguin', 'none');
+            }
+        }
+
+        function handleVinesweeperUsernameChange() {
+            const username = document.getElementById('vinesweeper-username').value.trim();
+            if (!username) {
+                updateCacheStatus('vinesweeper', null);
+                return;
+            }
+
+            const cachedData = getCache(username);
+            if (cachedData) {
+                updateCacheStatus('vinesweeper', 'cached', username);
+            } else {
+                updateCacheStatus('vinesweeper', 'none');
+            }
+        }
+
+        function updateCacheStatus(section, status, username = null) {
+            const statusElement = document.getElementById(`${section}-cache-status`);
+            if (!statusElement) return;
+
+            if (status === null) {
+                statusElement.textContent = '';
+                statusElement.style.color = '';
+                return;
+            }
+
+            if (status === 'cached' && username) {
+                const age = getCacheAge(username);
+                statusElement.textContent = `✓ Cached (${age})`;
+                statusElement.style.color = '#90EE90';
+            } else if (status === 'none') {
+                statusElement.textContent = '';
+                statusElement.style.color = '';
+            }
+        }
+
+        async function pullSkillExperience(forceRefresh = false) {
             const username = document.getElementById('skill-username').value.trim();
             if (!username) {
                 alert('Please enter a username');
@@ -917,16 +1065,17 @@
                 return;
             }
 
-            const data = await fetchLiveExperience(username);
+            const data = await fetchLiveExperience(username, forceRefresh);
             if (data && data[skillIndex] !== undefined) {
                 const xp = data[skillIndex].experience || 0;
                 document.getElementById('starting-xp').value = xp;
                 handleSkillXpChange();
                 updateCalculations();
+                updateCacheStatus('skill', 'cached', username);
             }
         }
 
-        async function pullPenguinExperience() {
+        async function pullPenguinExperience(forceRefresh = false) {
             const username = document.getElementById('penguin-username').value.trim();
             if (!username) {
                 alert('Please enter a username');
@@ -940,15 +1089,16 @@
                 return;
             }
 
-            const data = await fetchLiveExperience(username);
+            const data = await fetchLiveExperience(username, forceRefresh);
             if (data && data[skillIndex] !== undefined) {
                 const xp = data[skillIndex].experience || 0;
                 document.getElementById('penguin-current-xp').value = xp;
                 handlePenguinXpChange();
+                updateCacheStatus('penguin', 'cached', username);
             }
         }
 
-        async function pullVinesweeperExperience() {
+        async function pullVinesweeperExperience(forceRefresh = false) {
             const username = document.getElementById('vinesweeper-username').value.trim();
             if (!username) {
                 alert('Please enter a username');
@@ -957,11 +1107,12 @@
 
             // Vinesweeper gives Farming XP (index 19)
             const skillIndex = 19;
-            const data = await fetchLiveExperience(username);
+            const data = await fetchLiveExperience(username, forceRefresh);
             if (data && data[skillIndex] !== undefined) {
                 const xp = data[skillIndex].experience || 0;
                 document.getElementById('vinesweeper-current-xp').value = xp;
                 handleVinesweeperXpChange();
+                updateCacheStatus('vinesweeper', 'cached', username);
             }
         }
 
