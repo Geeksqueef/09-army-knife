@@ -967,25 +967,38 @@
             }
             
             const apiUrl = `http://api.2009scape.org:3000/hiscores/playerSkills/1/${formattedUsername}`;
-            const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`;
             
-            try {
-                const response = await fetch(proxyUrl);
-                if (!response.ok) {
-                    throw new Error(`API returned status: ${response.status}`);
+            // Try multiple CORS proxies in case one fails
+            const proxies = [
+                `https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`,
+                `https://corsproxy.io/?${encodeURIComponent(apiUrl)}`,
+                `https://proxy.corsfix.com/?${encodeURIComponent(apiUrl)}`,
+                `https://thingproxy.freeboard.io/fetch/${encodeURIComponent(apiUrl)}`,
+                `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(apiUrl)}`
+            ];
+            
+            for (const proxyUrl of proxies) {
+                try {
+                    const response = await fetch(proxyUrl);
+                    if (!response.ok) {
+                        console.log(`Proxy returned status ${response.status}, trying next...`);
+                        continue;
+                    }
+                    const data = await response.json();
+                    
+                    // Cache the successful response
+                    setCache(username, data);
+                    console.log('Fetched and cached data for:', username, 'via proxy');
+                    
+                    return data;
+                } catch (error) {
+                    console.log(`Proxy failed: ${proxyUrl}, trying next...`);
+                    continue;
                 }
-                const data = await response.json();
-                
-                // Cache the successful response
-                setCache(username, data);
-                console.log('Fetched and cached data for:', username);
-                
-                return data;
-            } catch (error) {
-                console.error('Error fetching live experience:', error);
-                alert(`Error fetching live experience: ${error.message}. The API may be down or the proxy service may be experiencing issues.`);
-                return null;
             }
+            
+            alert('Error fetching live experience: All CORS proxies failed. The API may be down or experiencing issues.');
+            return null;
         }
 
         function handleSkillUsernameChange() {
