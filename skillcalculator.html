@@ -179,6 +179,53 @@
             background-color: #ffd700;
             color: #5c4a2a;
         }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .modal-content {
+            background-color: #685031;
+            margin: 10% auto;
+            padding: 20px;
+            border: 2px solid #ffd700;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+        }
+        .close-btn {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            color: #ffd700;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .close-btn:hover {
+            color: #ffffff;
+        }
+        .legend-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+        .legend-item {
+            color: #ffffff;
+        }
+        .legend-item strong {
+            color: #ffd700;
+        }
     </style>
 </head>
 <body>
@@ -187,6 +234,9 @@
     <center><p>To go back to the main page click <a href="index.html">here</a></p></center>
     <div id="loading">Loading calculator...</div>
     <div id="calculator" class="calculator-container" style="display: none;">
+        <div class="info-bar" style="background-color: #5c4a2a; padding: 15px; border-radius: 6px; border: 1px solid #2a1a0a; margin-bottom: 20px; text-align: center;">
+            <p style="color: #ffd700; font-size: 16px; margin: 0;">Enter your name and click the button to pull up your experience from highscores in a new tab - Use the legend to determine which skill you are copying the experience from. *Some skills will show experience over 1 million in scientific notation, copy the value and put it in the field it will work just as if it was a regular number.</p>
+        </div>
         <div class="skill-tabs" id="skill-tabs"></div>
         
         <div id="penguin-points-section">
@@ -230,11 +280,15 @@
                 </div>
                 <div class="input-group">
                     <label>&nbsp;</label>
-                    <button class="calculate-btn" onclick="pullPenguinExperience()">Pull Live Experience</button>
+                    <button class="calculate-btn" onclick="openExperienceTable('penguin')">Open Experience Table</button>
                 </div>
                 <div class="input-group">
                     <label>&nbsp;</label>
-                    <button class="calculate-btn" onclick="pullPenguinExperience(true)" style="background-color: #5c4a2a; border-color: #876a38;">Refresh</button>
+                    <button class="calculate-btn" onclick="showLegend()">Show Skill ID Legend</button>
+                </div>
+                <div class="input-group">
+                    <label>&nbsp;</label>
+                    <!--button class="calculate-btn" onclick="pullPenguinExperience(true)" style="background-color: #5c4a2a; border-color: #876a38;">Refresh</button-->
                 </div>
                 <div class="input-group">
                     <label for="penguin-current-xp">Current XP</label>
@@ -350,7 +404,11 @@
                 </div>
                 <div class="input-group">
                     <label>&nbsp;</label>
-                    <button class="calculate-btn" onclick="pullVinesweeperExperience()">Pull Live Experience</button>
+                    <button class="calculate-btn" onclick="openExperienceTable('vinesweeper')">Open Experience Table</button>
+                </div>
+                <div class="input-group">
+                    <label>&nbsp;</label>
+                    <button class="calculate-btn" onclick="showLegend()">Show Skill ID Legend</button>
                 </div>
                 <div class="input-group">
                     <label>&nbsp;</label>
@@ -419,7 +477,11 @@
                 </div>
                 <div class="input-group">
                     <label>&nbsp;</label>
-                    <button class="calculate-btn" onclick="pullSkillExperience()">Pull Live Experience</button>
+                    <button class="calculate-btn" onclick="openExperienceTable('skill')">Open Experience Table</button>
+                </div>
+                <div class="input-group">
+                    <label>&nbsp;</label>
+                    <button class="calculate-btn" onclick="showLegend()">Show Skill ID Legend</button>
                 </div>
                 <div class="input-group">
                     <label>&nbsp;</label>
@@ -504,6 +566,39 @@
                     <tbody id="items-body">
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="legend-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeLegend()">&times;</button>
+            <h2 style="color: #ffd700; text-align: center; margin-top: 0;">Highscores Skill ID Legend</h2>
+            <div class="legend-grid">
+                <div class="legend-item"><strong>0:</strong> Attack</div>
+                <div class="legend-item"><strong>1:</strong> Defence</div>
+                <div class="legend-item"><strong>2:</strong> Strength</div>
+                <div class="legend-item"><strong>3:</strong> Hitpoints</div>
+                <div class="legend-item"><strong>4:</strong> Ranged</div>
+                <div class="legend-item"><strong>5:</strong> Prayer</div>
+                <div class="legend-item"><strong>6:</strong> Magic</div>
+                <div class="legend-item"><strong>7:</strong> Cooking</div>
+                <div class="legend-item"><strong>8:</strong> Woodcutting</div>
+                <div class="legend-item"><strong>9:</strong> Fletching</div>
+                <div class="legend-item"><strong>10:</strong> Fishing</div>
+                <div class="legend-item"><strong>11:</strong> Firemaking</div>
+                <div class="legend-item"><strong>12:</strong> Crafting</div>
+                <div class="legend-item"><strong>13:</strong> Smithing</div>
+                <div class="legend-item"><strong>14:</strong> Mining</div>
+                <div class="legend-item"><strong>15:</strong> Herblore</div>
+                <div class="legend-item"><strong>16:</strong> Agility</div>
+                <div class="legend-item"><strong>17:</strong> Thieving</div>
+                <div class="legend-item"><strong>18:</strong> Slayer</div>
+                <div class="legend-item"><strong>19:</strong> Farming</div>
+                <div class="legend-item"><strong>20:</strong> Runecrafting</div>
+                <div class="legend-item"><strong>21:</strong> Hunter</div>
+                <div class="legend-item"><strong>22:</strong> Construction</div>
+                <div class="legend-item"><strong>23:</strong> Summoning</div>
             </div>
         </div>
     </div>
@@ -781,7 +876,9 @@
         }
 
         function handlePenguinXpChange() {
-            const xp = parseInt(document.getElementById('penguin-current-xp').value) || 0;
+            const input = document.getElementById('penguin-current-xp');
+            processXpInput(input);
+            const xp = parseInt(input.value) || 0;
             const level = getLevelFromXp(xp);
             document.getElementById('penguin-current-level').value = level;
         }
@@ -793,7 +890,9 @@
         }
 
         function handleVinesweeperXpChange() {
-            const xp = parseInt(document.getElementById('vinesweeper-current-xp').value) || 0;
+            const input = document.getElementById('vinesweeper-current-xp');
+            processXpInput(input);
+            const xp = parseInt(input.value) || 0;
             const level = getLevelFromXp(xp);
             document.getElementById('vinesweeper-current-level').value = level;
         }
@@ -805,9 +904,33 @@
         }
 
         function handleSkillXpChange() {
-            const xp = parseInt(document.getElementById('starting-xp').value) || 0;
+            const input = document.getElementById('starting-xp');
+            processXpInput(input);
+            const xp = parseInt(input.value) || 0;
             const level = getLevelFromXp(xp);
             document.getElementById('skill-current-level').value = level;
+        }
+
+        function processXpInput(input) {
+            let value = input.value;
+            
+            // Remove commas
+            value = value.replace(/,/g, '');
+            
+            // Check for scientific notation (contains 'E' or 'e')
+            if (/[eE]/.test(value)) {
+                try {
+                    const num = parseFloat(value);
+                    if (!isNaN(num)) {
+                        value = num.toString();
+                    }
+                } catch (e) {
+                    // If conversion fails, keep original value
+                }
+            }
+            
+            // Update the input value
+            input.value = value;
         }
 
         function handleSkillLevelChange() {
@@ -1130,6 +1253,42 @@
             }
         }
 
+        function openExperienceTable(section) {
+            let username;
+            if (section === 'penguin') {
+                username = document.getElementById('penguin-username').value.trim();
+            } else if (section === 'vinesweeper') {
+                username = document.getElementById('vinesweeper-username').value.trim();
+            } else if (section === 'skill') {
+                username = document.getElementById('skill-username').value.trim();
+            }
+
+            if (!username) {
+                alert('Please enter a username first');
+                return;
+            }
+
+            const formattedUsername = username.toLowerCase().replace(/ /g, '_');
+            const apiUrl = `http://api.2009scape.org:3000/hiscores/playerSkills/1/${formattedUsername}`;
+            window.open(apiUrl, '_blank');
+        }
+
+        function showLegend() {
+            document.getElementById('legend-modal').style.display = 'block';
+        }
+
+        function closeLegend() {
+            document.getElementById('legend-modal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside the content
+        window.onclick = function(event) {
+            const modal = document.getElementById('legend-modal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+
         function getLevelFromXp(xp) {
             const xpTable = skillData.xp_table;
             for (let i = xpTable.length - 1; i >= 0; i--) {
@@ -1155,7 +1314,7 @@
             let multiplier = 1;
             
             if (method === 'altar') {
-                multiplier = 3; // 3x for altar
+                multiplier = 3.5; // 3x for altar
             } else if (method === 'ectofunctus') {
                 multiplier = 4; // 4x for ectofunctus
             }
