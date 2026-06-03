@@ -490,7 +490,7 @@
                 </div>
                 <div class="input-group">
                     <label for="starting-xp">Starting XP</label>
-                    <input type="number" id="starting-xp" value="0" min="0">
+                    <input type="number" id="starting-xp" placeholder="paste or enter experience" min="0">
                 </div>
                 <div class="input-group">
                     <label for="skill-current-level">Current Level</label>
@@ -516,7 +516,7 @@
                     <label for="prayer-method">Prayer Method</label>
                     <select id="prayer-method">
                         <option value="none">None</option>
-                        <option value="altar">Altar</option>
+                        <option value="altar">Gilded Altar</option>
                         <option value="ectofunctus">Ectofunctus</option>
                     </select>
                 </div>
@@ -1343,13 +1343,13 @@
             let multiplier = 1;
             
             if (method === 'altar') {
-                multiplier = 3.5; // 3x for altar
+                multiplier = 3; // 3x for altar
             } else if (method === 'ectofunctus') {
                 multiplier = 4; // 4x for ectofunctus
             }
             
             // Add burner bonus (50% per burner)
-            multiplier += (burners * 0.5);
+            multiplier += (burners * 0.25);
             
             return multiplier;
         }

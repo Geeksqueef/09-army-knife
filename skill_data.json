@@ -3676,19 +3676,19 @@
       {
         "level": 8,
         "item": "Lumbridge Broken Raft Grapple",
-        "base_xp": 15.0,
+        "base_xp": 3.0,
         "type": "Grapple"
       },
       {
         "level": 10,
-        "item": "Brimhaven West Rope Swing",
-        "base_xp": 15.0,
+        "item": "Brimhaven West Rope Swing (Moss Giant Island)",
+        "base_xp": 3.0,
         "type": "Short Cut"
       },
       {
         "level": 12,
         "item": "Brimhaven Dungeon Stepping Stones",
-        "base_xp": 15.0,
+        "base_xp": 3.0,
         "type": "Short Cut"
       },
       {
@@ -4018,24 +4018,6 @@
         "level": 60,
         "item": "Werewolf Course",
         "base_xp": 540.0,
-        "type": "Course - Full"
-      },
-      {
-        "level": 70,
-        "item": "Dorgesh-Kann Full",
-        "base_xp": 2750.0,
-        "type": "Course - Full"
-      },
-      {
-        "level": 70,
-        "item": "Dorgesh-Kann Half",
-        "base_xp": 1444.0,
-        "type": "Course - Full"
-      },
-      {
-        "level": 70,
-        "item": "Dorgesh-Kann Range",
-        "base_xp": 108.0,
         "type": "Course - Full"
       },
       {
