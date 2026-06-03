@@ -236,7 +236,7 @@
     <div id="calculator" class="calculator-container" style="display: none;">
         <div class="info-bar" style="background-color: #5c4a2a; padding: 15px; border-radius: 6px; border: 1px solid #2a1a0a; margin-bottom: 20px; text-align: center;">
             <p style="color: #ffd700; font-size: 16px; margin: 0;">Enter your username and click the button to pull up your experience from highscores in a new tab
-                <br>Use the legend to determine which skill you are copying the experience from. *Some skills will show experience over 1 million in scientific notation, copy the value and put it in the field it will work just as if it was a regular number.</p>
+                <br>Use the legend to determine which skill you are copying the experience from. *After copying and pasting the experience press the refresh button to refresh the calculator.</p>
         </div>
         <div class="skill-tabs" id="skill-tabs"></div>
         
@@ -1222,6 +1222,12 @@
                 handleSkillXpChange();
                 updateCalculations();
                 updateCacheStatus('skill', 'cached', username);
+            } else {
+                //process the current input field
+                const input = document.getElementById('starting-xp');
+                processXpInput(input);
+                handleSkillXpChange();
+                updateCalculations();
             }
         }
 
@@ -1245,6 +1251,11 @@
                 document.getElementById('penguin-current-xp').value = xp;
                 handlePenguinXpChange();
                 updateCacheStatus('penguin', 'cached', username);
+            } else {
+                //process the current input field
+                const input = document.getElementById('penguin-current-xp');
+                processXpInput(input);
+                handlePenguinXpChange();
             }
         }
 
@@ -1263,6 +1274,11 @@
                 document.getElementById('vinesweeper-current-xp').value = xp;
                 handleVinesweeperXpChange();
                 updateCacheStatus('vinesweeper', 'cached', username);
+            } else {
+                //process the current input field
+                const input = document.getElementById('vinesweeper-current-xp');
+                processXpInput(input);
+                handleVinesweeperXpChange();
             }
         }
 
