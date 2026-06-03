@@ -235,7 +235,8 @@
     <div id="loading">Loading calculator...</div>
     <div id="calculator" class="calculator-container" style="display: none;">
         <div class="info-bar" style="background-color: #5c4a2a; padding: 15px; border-radius: 6px; border: 1px solid #2a1a0a; margin-bottom: 20px; text-align: center;">
-            <p style="color: #ffd700; font-size: 16px; margin: 0;">Enter your name and click the button to pull up your experience from highscores in a new tab - Use the legend to determine which skill you are copying the experience from. *Some skills will show experience over 1 million in scientific notation, copy the value and put it in the field it will work just as if it was a regular number.</p>
+            <p style="color: #ffd700; font-size: 16px; margin: 0;">Enter your username and click the button to pull up your experience from highscores in a new tab
+                <br>Use the legend to determine which skill you are copying the experience from. *Some skills will show experience over 1 million in scientific notation, copy the value and put it in the field it will work just as if it was a regular number.</p>
         </div>
         <div class="skill-tabs" id="skill-tabs"></div>
         
@@ -923,6 +924,18 @@
                     const num = parseFloat(value);
                     if (!isNaN(num)) {
                         value = num.toString();
+                    }
+                } catch (e) {
+                    // If conversion fails, keep original value
+                }
+            }
+            
+            // Check for decimal numbers and convert to integer
+            if (/\./.test(value)) {
+                try {
+                    const num = parseFloat(value);
+                    if (!isNaN(num)) {
+                        value = Math.floor(num).toString();
                     }
                 } catch (e) {
                     // If conversion fails, keep original value
