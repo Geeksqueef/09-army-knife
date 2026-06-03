@@ -3747,36 +3747,6 @@
       },
       {
         "level": 30,
-        "item": "Penguin Platform Climb",
-        "base_xp": 55.0,
-        "type": "Course - Part"
-      },
-      {
-        "level": 30,
-        "item": "Penguin Platform Jumps",
-        "base_xp": 80.0,
-        "type": "Course - Part"
-      },
-      {
-        "level": 30,
-        "item": "Penguin Icicles",
-        "base_xp": 40.0,
-        "type": "Course - Part"
-      },
-      {
-        "level": 30,
-        "item": "Penguin Ice Slop",
-        "base_xp": 180.0,
-        "type": "Course - Part"
-      },
-      {
-        "level": 30,
-        "item": "Penguin Course",
-        "base_xp": 540.0,
-        "type": "Course - Full"
-      },
-      {
-        "level": 30,
         "item": "Agility Pyramid Rolling Blocks",
         "base_xp": 12.0,
         "type": "Course - Part"
