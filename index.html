@@ -132,6 +132,114 @@ height: 26px;
   color: #ffffff;
 }
 
+.navbar-btn {
+  position: relative;
+}
+
+.new-banner {
+  position: absolute;
+  top: 5px;
+  left: -5px;
+  background-color: white;
+  color: #000;
+  font-size: 8px;
+  font-weight: bold;
+  padding: 2px 2px;
+  transform: rotate(-45deg);
+  transform-origin: top left;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+
+.experimental-tag {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-285%) rotate(-45deg);
+  background-color: #ff0000;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  z-index: 5;
+  white-space: nowrap;
+}
+
+#fairy-rings-popup {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  background-color: #876A38FF;
+  border-radius: 15px;
+  z-index: 1000;
+  padding: 20px;
+  color: #1a0f0a;
+  overflow: auto;
+}
+
+#fairy-rings-popup h2 {
+  color: #1a0f0a;
+  font-weight: bold;
+  margin-top: 0;
+  text-align: center;
+}
+
+#fairy-rings-popup .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a0f0a;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+#fairy-rings-popup table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#fairy-rings-popup th, #fairy-rings-popup td {
+  border: 1px solid #5c4a2a;
+  padding: 8px;
+  text-align: left;
+}
+
+#fairy-rings-popup th {
+  background-color: #6B5028;
+  color: #1a0f0a;
+  cursor: pointer;
+}
+
+#fairy-rings-popup th:hover {
+  background-color: #5c4a2a;
+}
+
+#fairy-rings-popup tr:nth-child(even) {
+  background-color: #9E7E4C;
+}
+
+#fairy-rings-popup tr:hover {
+  background-color: #B8955E;
+}
+
+#fairy-rings-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+}
+
 msg { 
   background: green;
   border-radius: 10px;
@@ -193,7 +301,7 @@ function off() {
       <td colspan="3">
          <div class="navbar">
             <center>
-               <div style="background-color: red; color: white; font-weight: bold; padding: 5px; margin-bottom: 5px; display: inline-block;">[EXPERIMENTAL]</div>
+               <button class="navbar-btn" onclick="toggleFairyRings()">Fairy Rings<span class="new-banner">NEW!</span></button>
                <a href="skillcalculator.html">Skill Calc</a>
                <a href="shopsearch.html">Shop Viewer</a>
                <a href="droptables/index.html">Droptables</a>
@@ -210,7 +318,8 @@ function off() {
     <tr>
       <td rowspan="2" class="lborder_background" width="157"></td>
       <td class="iborder">
-      <div class="container">
+      <div class="container" style="position: relative;">
+      <div class="experimental-tag">[EXPERIMENTAL]</div>
       <div class="center">
       <span><iframe src="./worldmap.html"  height="400" width="800"></iframe>
       </span>
@@ -229,5 +338,101 @@ function off() {
    </tr>
     </table>
  </div>
+<div id="fairy-rings-overlay"></div>
+<div id="fairy-rings-popup">
+  <button class="close-btn" onclick="toggleFairyRings()">&times;</button>
+  <h2>Fairy Ring Codes</h2>
+  <table>
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">Ring Code</th>
+        <th onclick="sortTable(1)">Destination</th>
+      </tr>
+    </thead>
+    <tbody id="fairy-rings-body">
+    </tbody>
+  </table>
+</div>
+
+<script>
+const fairyRingData = [
+  ["A I Q", "Mudskipper point"],
+  ["A I R", "Necromancer Island"],
+  ["A J Q", "Dungeons: Cave south of Dorgesh-Kaan"],
+  ["A J R", "Kandarin: Slayer cave"],
+  ["A J S", "Penguin Island"],
+  ["A K Q", "Kandarin: Piscatoris Hunter"],
+  ["A K S", "Feldip Hills"],
+  ["A L R", "Abyssal Area"],
+  ["A L Q", "Morytania Haunted Woods"],
+  ["A L S", "McGrubor's Wood"],
+  ["B I P", "Morytania Island"],
+  ["B I Q", "Kalphite Lair"],
+  ["B I S", "Ardougne Zoo Unicorns"],
+  ["B K P", "Castle Wars"],
+  ["B K Q", "Enchanted Valley"],
+  ["B K R", "Mort Myre Swamp"],
+  ["B L P", "TzHaar Area"],
+  ["B L R", "Legends Guild"],
+  ["C I P", "Islands: Miscellania"],
+  ["C I Q", "Yanille"],
+  ["C J R", "Sinclair West"],
+  ["C K P", "Cosmic Entity's Plane"],
+  ["C K R", "Karamja Hunter"],
+  ["C K S", "Canafis"],
+  ["C K S", "Near Canifis"],
+  ["C L S", "Jungle Spiders"],
+  ["D I S", "Wizards Tower"],
+  ["D J P", "Tower of Life"],
+  ["D J R", "Sinclair North West"],
+  ["D K P", "East Karamja"],
+  ["D K R", "Edgeville/GE"],
+  ["D K S", "Kandarin: Snowy Hunter Area"],
+  ["D L Q", "Desert Lizard"],
+  ["D L R", "Poison Wastes"]
+];
+
+function populateFairyRings() {
+  const tbody = document.getElementById('fairy-rings-body');
+  tbody.innerHTML = '';
+  fairyRingData.forEach(row => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${row[0]}</td><td>${row[1]}</td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+function toggleFairyRings() {
+  const popup = document.getElementById('fairy-rings-popup');
+  const overlay = document.getElementById('fairy-rings-overlay');
+  if (popup.style.display === 'block') {
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+  } else {
+    populateFairyRings();
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+  }
+}
+
+let sortDirection = 0;
+
+function sortTable(columnIndex) {
+  const table = document.getElementById('fairy-rings-body');
+  const rows = Array.from(table.rows);
+  
+  sortDirection = sortDirection === 0 ? 1 : -sortDirection;
+  
+  rows.sort((a, b) => {
+    const aText = a.cells[columnIndex].textContent.trim();
+    const bText = b.cells[columnIndex].textContent.trim();
+    return aText.localeCompare(bText) * sortDirection;
+  });
+  
+  rows.forEach(row => table.appendChild(row));
+}
+
+populateFairyRings();
+</script>
 </body>
 </html>
