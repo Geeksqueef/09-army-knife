@@ -155,7 +155,7 @@ height: 26px;
   position: absolute;
   top: -15px;
   left: 50%;
-  transform: translateX(-285%) rotate(-45deg);
+  transform: translateX(-300%) rotate(-45deg);
   background-color: #ff0000;
   color: white;
   font-weight: bold;
@@ -240,6 +240,149 @@ height: 26px;
   z-index: 999;
 }
 
+#npc-viewer-popup {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  background-color: #876A38FF;
+  border-radius: 15px;
+  z-index: 1000;
+  padding: 20px;
+  color: #1a0f0a;
+  overflow: auto;
+}
+
+#npc-viewer-popup h2 {
+  color: #1a0f0a;
+  font-weight: bold;
+  margin-top: 0;
+  text-align: center;
+}
+
+#npc-viewer-popup .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a0f0a;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+#npc-viewer-popup iframe {
+  width: 100%;
+  height: calc(100% - 60px);
+  border: none;
+  border-radius: 10px;
+}
+
+#droptables-popup {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  background-color: #876A38FF;
+  border-radius: 15px;
+  z-index: 1000;
+  padding: 20px;
+  color: #1a0f0a;
+  overflow: auto;
+}
+
+#droptables-popup .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a0f0a;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+#droptables-popup iframe {
+  width: 100%;
+  height: calc(100% - 60px);
+  border: none;
+  border-radius: 10px;
+}
+
+#shop-viewer-popup {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  background-color: #876A38FF;
+  border-radius: 15px;
+  z-index: 1000;
+  padding: 20px;
+  color: #1a0f0a;
+  overflow: auto;
+}
+
+#shop-viewer-popup .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a0f0a;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+#shop-viewer-popup iframe {
+  width: 100%;
+  height: calc(100% - 60px);
+  border: none;
+  border-radius: 10px;
+}
+
+#skill-calc-popup {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  background-color: #876A38FF;
+  border-radius: 15px;
+  z-index: 1000;
+  padding: 20px;
+  color: #1a0f0a;
+  overflow: auto;
+}
+
+#skill-calc-popup .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a0f0a;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+#skill-calc-popup iframe {
+  width: 100%;
+  height: calc(100% - 60px);
+  border: none;
+  border-radius: 10px;
+}
+
 msg { 
   background: green;
   border-radius: 10px;
@@ -302,10 +445,10 @@ function off() {
          <div class="navbar">
             <center>
                <button class="navbar-btn" onclick="toggleFairyRings()">Fairy Rings<span class="new-banner">NEW!</span></button>
-               <a href="skillcalculator.html">Skill Calc</a>
-               <a href="shopsearch.html">Shop Viewer</a>
-               <a href="droptables/index.html">Droptables</a>
-               <a href="npc/index.html">NPC Viewer</a>
+               <button class="navbar-btn" onclick="toggleSkillCalc()">Skill Calc</button>
+               <button class="navbar-btn" onclick="toggleShopViewer()">Shop Viewer</button>
+               <button class="navbar-btn" onclick="toggleDroptables()">Droptables</button>
+               <button class="navbar-btn" onclick="toggleNpcViewer()">NPC Viewer</button>
             </center>
          </div>
           <table width="1164">
@@ -352,6 +495,22 @@ function off() {
     <tbody id="fairy-rings-body">
     </tbody>
   </table>
+</div>
+<div id="npc-viewer-popup">
+  <button class="close-btn" onclick="toggleNpcViewer()">&times;</button>
+  <iframe src="npc/index.html"></iframe>
+</div>
+<div id="droptables-popup">
+  <button class="close-btn" onclick="toggleDroptables()">&times;</button>
+  <iframe src="droptables/index.html"></iframe>
+</div>
+<div id="shop-viewer-popup">
+  <button class="close-btn" onclick="toggleShopViewer()">&times;</button>
+  <iframe src="shopsearch.html"></iframe>
+</div>
+<div id="skill-calc-popup">
+  <button class="close-btn" onclick="toggleSkillCalc()">&times;</button>
+  <iframe src="skillcalculator.html"></iframe>
 </div>
 
 <script>
@@ -410,6 +569,54 @@ function toggleFairyRings() {
     overlay.style.display = 'none';
   } else {
     populateFairyRings();
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+  }
+}
+
+function toggleNpcViewer() {
+  const popup = document.getElementById('npc-viewer-popup');
+  const overlay = document.getElementById('fairy-rings-overlay');
+  if (popup.style.display === 'block') {
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+  } else {
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+  }
+}
+
+function toggleDroptables() {
+  const popup = document.getElementById('droptables-popup');
+  const overlay = document.getElementById('fairy-rings-overlay');
+  if (popup.style.display === 'block') {
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+  } else {
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+  }
+}
+
+function toggleShopViewer() {
+  const popup = document.getElementById('shop-viewer-popup');
+  const overlay = document.getElementById('fairy-rings-overlay');
+  if (popup.style.display === 'block') {
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+  } else {
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+  }
+}
+
+function toggleSkillCalc() {
+  const popup = document.getElementById('skill-calc-popup');
+  const overlay = document.getElementById('fairy-rings-overlay');
+  if (popup.style.display === 'block') {
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+  } else {
     popup.style.display = 'block';
     overlay.style.display = 'block';
   }
