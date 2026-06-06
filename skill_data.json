@@ -8838,13 +8838,12 @@
         "level": 5,
         "item": "Shortbow (u)",
         "base_xp": 5.0,
-        "type": "Bow"
-      },
+        "type": "Fletch Unstrung Bow"      },
       {
         "level": 5,
         "item": "Shortbow (s)",
         "base_xp": 10.0,
-        "type": "Bow"
+        "type": "Fletch + String Bow"
       },
       {
         "level": 9,
@@ -8856,13 +8855,12 @@
         "level": 10,
         "item": "Longbow (u)",
         "base_xp": 10.0,
-        "type": "Bow"
-      },
+        "type": "Fletch Unstrung Bow"      },
       {
         "level": 10,
         "item": "Longbow (s)",
         "base_xp": 20.0,
-        "type": "Bow"
+        "type": "Fletch + String Bow"
       },
       {
         "level": 11,
@@ -8910,13 +8908,12 @@
         "level": 20,
         "item": "Oak Shortbow (u)",
         "base_xp": 16.5,
-        "type": "Bow"
-      },
+        "type": "Fletch Unstrung Bow"      },
       {
         "level": 20,
         "item": "Oak Shortbow (s)",
         "base_xp": 33.0,
-        "type": "Bow"
+        "type": "Fletch + String Bow"
       },
       {
         "level": 22,
@@ -8934,13 +8931,12 @@
         "level": 25,
         "item": "Oak Longbow (u)",
         "base_xp": 25.0,
-        "type": "Bow"
-      },
+        "type": "Fletch Unstrung Bow"      },
       {
         "level": 25,
         "item": "Oak Longbow (s)",
         "base_xp": 50.0,
-        "type": "Bow"
+        "type": "Fletch + String Bow"
       },
       {
         "level": 26,
@@ -8976,13 +8972,12 @@
         "level": 30,
         "item": "Comp Ogre Bow (u)",
         "base_xp": 45.0,
-        "type": "Bow"
-      },
+        "type": "Fletch Unstrung Bow"      },
       {
         "level": 30,
         "item": "Comp Ogre Bow (s)",
         "base_xp": 90.0,
-        "type": "Bow"
+        "type": "Fletch + String Bow"
       },
       {
         "level": 30,
@@ -9006,13 +9001,12 @@
         "level": 35,
         "item": "Willow Shortbow (u)",
         "base_xp": 33.3,
-        "type": "Bow"
-      },
+        "type": "Fletch Unstrung Bow"      },
       {
         "level": 35,
         "item": "Willow Shortbow (s)",
         "base_xp": 66.6,
-        "type": "Bow"
+        "type": "Fletch + String Bow"
       },
       {
         "level": 37,
@@ -9030,13 +9024,13 @@
         "level": 40,
         "item": "Willow Longbow (u)",
         "base_xp": 41.5,
-        "type": "Bow"
+        "type": "Fletch Unstrung Bow"
       },
       {
         "level": 40,
         "item": "Willow Longbow (s)",
         "base_xp": 83.0,
-        "type": "Bow"
+        "type": "Fletch + String Bow"
       },
       {
         "level": 41,
@@ -9126,13 +9120,13 @@
         "level": 50,
         "item": "Maple Shortbow (u)",
         "base_xp": 50.0,
-        "type": "Bow"
+        "type": "Fletch Unstrung Bow"
       },
       {
         "level": 50,
         "item": "Maple Shortbow (s)",
         "base_xp": 100.0,
-        "type": "Bow"
+        "type": "Fletch + String Bow"
       },
       {
         "level": 51,
@@ -9180,13 +9174,13 @@
         "level": 55,
         "item": "Maple Longbow (u)",
         "base_xp": 58.3,
-        "type": "Bow"
+        "type": "Fletch Unstrung Bow"
       },
       {
         "level": 55,
         "item": "Maple Longbow (s)",
         "base_xp": 116.6,
-        "type": "Bow"
+        "type": "Fletch + String Bow"
       },
       {
         "level": 55,
@@ -9300,14 +9294,13 @@
         "level": 65,
         "item": "Yew Shortbow (u)",
         "base_xp": 67.5,
-        "type": "Bow"
+        "type": "Fletch Unstrung Bow"
       },
       {
         "level": 65,
         "item": "Yew Shortbow (s)",
         "base_xp": 135.0,
-        "type": "Bow"
-      },
+        "type": "Fletch + String Bow"      },
       {
         "level": 65,
         "item": "Diamond Bolt Tips",
@@ -9348,14 +9341,13 @@
         "level": 70,
         "item": "Yew Longbow (u)",
         "base_xp": 75.0,
-        "type": "Bow"
+        "type": "Fletch Unstrung Bow"
       },
       {
         "level": 70,
         "item": "Yew Longbow (s)",
         "base_xp": 150.0,
-        "type": "Bow"
-      },
+        "type": "Fletch + String Bow"      },
       {
         "level": 71,
         "item": "Dragonstone Bolt Tips",
@@ -9426,13 +9418,13 @@
         "level": 80,
         "item": "Magic Shortbow (u)",
         "base_xp": 83.3,
-        "type": "Bow"
+        "type": "Fletch Unstrung Bow"
       },
       {
         "level": 80,
         "item": "Magic Shortbow (s)",
         "base_xp": 166.6,
-        "type": "Bow"
+        "type": "Fletch + String Bow"
       },
       {
         "level": 81,
@@ -9444,13 +9436,13 @@
         "level": 85,
         "item": "Magic Longbow (u)",
         "base_xp": 91.5,
-        "type": "Bow"
+        "type": "Fletch Unstrung Bow"
       },
       {
         "level": 85,
         "item": "Magic Longbow (s)",
         "base_xp": 183.0,
-        "type": "Bow"
+        "type": "Fletch + String Bow"
       },
       {
         "level": 90,
