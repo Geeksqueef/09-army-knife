@@ -1,13 +1,9 @@
-<table style="border-collapse: collapse; width: 100%;" border="1">
-<tbody>
-<tr>
-<td style="width: 50%;"><img src="https://zencro2009.github.io/images/2009scapewtmap.png" width="380"></td>
-</tr>
-<tr><td><b>2009Scape's World Transportation Map</b></td></tr>
-<tr><td>Map created and coordinates entered by Zencro</td></tr>
-<tr><td>Most of the original coding by: Szumaster</td></tr>
-<tr><td>Additional coding and graphics: Roderick (Kilerr14 & J 3 N N A)</td></tr>
-</tbody>
-</table>
-- leaflet map
-- source: https://github.com/Leaflet/Leaflet
+# 2009scape Swiss Army Knife
+
+The 2009scape Swiss Army Knife is a combination of tools by many developers, combined into one by player - **Geekstreek**
+
+## Thanks to:
+
+- **TheDiscordian** for the NPC Viewer - [GitHub Repo](https://github.com/TheDiscordian/2009ScapeNPCViewer)
+- **DownTheCrop** for the Droptables - [GitHub Repo](https://github.com/downthecrop/2009-droptables)
+- **Zencro2009 / Szumaster** for the World Map - [GitHub Repo](https://github.com/zencro2009/2009scapeWorldTranspoMap)
