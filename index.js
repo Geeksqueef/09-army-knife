@@ -6,7 +6,7 @@
     var img = [
       15104,
       12800
-      
+
     ]
 
     // create the map
@@ -17,6 +17,10 @@
 
     // assign map and image dimensions
     var rc = new L.RasterCoords(map, img)
+
+    // expose map and rasterCoords globally for cross-frame communication (fairy ring pop-over)
+    window.mapInstance = map
+    window.mapInstance.rasterCoords = rc
 
     // set the view on a marker ...
     map.setView(rc.unproject([9815,7258]), 5)

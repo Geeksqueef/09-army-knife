@@ -100,7 +100,7 @@ height: 26px;
 }
 
 .navbar a {
-  color: #ffd700;
+  color: #F2C848;
   text-decoration: none;
   font-weight: bold;
   font-size: 14px;
@@ -109,6 +109,8 @@ height: 26px;
   border: 1px solid #5c4a2a;
   background-color: #2a1a0a;
   display: inline-block;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  -webkit-text-stroke: 0.5px black;
 }
 
 .navbar a:hover {
@@ -117,7 +119,7 @@ height: 26px;
 }
 
 .navbar-btn {
-  color: #ffd700;
+  color: #F2C848;
   text-decoration: none;
   font-weight: bold;
   font-size: 14px;
@@ -125,6 +127,8 @@ height: 26px;
   border: 1px solid #5c4a2a;
   background-color: #2a1a0a;
   display: inline-block;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  -webkit-text-stroke: 0.5px black;
 }
 
 .navbar-btn:hover {
@@ -401,7 +405,7 @@ msg {
 
 <!--div id="overlay" onclick="off()">
   <msg id="text">
-  Welcome to the 2009Scape World Transportation map.<br>
+  Welcome to the 2009s map.<br>
   
   <p>For those already familiar with how to use Leaflet maps, feel free to click anywhere on this
   screen to close this window and proceed to the map.</p>
@@ -455,13 +459,17 @@ function off() {
          </div>
           <table width="1164">
               <td class="litd"></td>   
-              <td class="citd"><center><font color="yellow"><strong>2009Scape Swiss Army Knife</strong></font></center></td>
+              <td class="citd"><center><font color="#F2C848" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); -webkit-text-stroke: 0.5px black;"><strong>2009Scape Swiss Army Knife</strong></font></center></td>
               <td class="ritd"></td>
          </table>
       </td>
     </tr>
     <tr>
-      <td rowspan="2" class="lborder_background" width="157"></td>
+      <td rowspan="2" class="lborder_background" width="157" valign="top">
+      <div style="padding-top: 75px;">
+      <iframe src="./recentchanges.html" height="400" width="157"></iframe>
+      </div>
+      </td>
       <td class="iborder">
       <div class="container" style="position: relative;">
       <div class="experimental-tag">[EXPERIMENTAL]</div>
@@ -538,7 +546,7 @@ const fairyRingData = [
   ["C I P", "Islands: Miscellania"],
   ["C I Q", "Yanille"],
   ["C J R", "Sinclair West"],
-  ["C K P", "Cosmic Entity's Plane"],
+  ["C K P", "Cosmic Entity's Plane (Nowhere)"],
   ["C K R", "Karamja Hunter"],
   ["C K S", "Canafis"],
   ["C K S", "Near Canifis"],
@@ -553,14 +561,75 @@ const fairyRingData = [
   ["D L R", "Poison Wastes"]
 ];
 
+// Fairy ring code to coordinate mapping (from geojson.js)
+const fairyRingCoordinates = {
+  "AIQ": [8004, 8109],
+  "AIR": [5610, 6994],
+  "AJQ": [2500, 1400],
+  "AJR": [6255, 4022],
+  "AJS": [3990, 1724],
+  "AKQ": [2525, 4007],
+  "AKS": [4565, 9356],
+  "ALQ": [12882, 4990],
+  "ALR": [2500, 1350],
+  "ALS": [5157, 4979],
+  "BIP": [11352, 6373],
+  "BIQ": [10050, 8248],
+  "BIS": [5091, 6841],
+  "BKP": [3060, 8716],
+  "BKQ": [2500, 1300],
+  "BKR": [11830, 5502],
+  "BLP": [6770, 7555],
+  "BLR": [5932, 6151],
+  "CIP": [4096, 1820],
+  "CIQ": [4217, 7971],
+  "CJR": [5649, 4323],
+  "CKP": [0, 0], // Cosmic Entity's Plane - not in geojson.js
+  "CKR": [6424, 8980],
+  "CKS": [11654, 5184],
+  "CLS": [5464, 8343],
+  "DIS": [8927, 7807],
+  "DJP": [5269, 7134],
+  "DJR": [5415, 4234],
+  "DKP": [7228, 8100],
+  "DKR": [9065, 4989],
+  "DKS": [5964, 3161],
+  "DLQ": [11459, 8870],
+  "DLR": [1668, 8197]
+};
+
 function populateFairyRings() {
   const tbody = document.getElementById('fairy-rings-body');
   tbody.innerHTML = '';
   fairyRingData.forEach(row => {
     const tr = document.createElement('tr');
-    tr.innerHTML = `<td>${row[0]}</td><td>${row[1]}</td>`;
+    const code = row[0].replace(/\s/g, ''); // Remove spaces to match key format
+    const coords = fairyRingCoordinates[code];
+
+    if (coords && coordscape [0] !== 0) {
+      // Make both the code and destination clickable if coordinates exist
+      tr.innerHTML = `<td><a href="#" onclick="navigateToFairyRing(${coords[0]}, ${coords[1]}); return false;" style="color: #ffd700; text-decoration: underline; cursor: pointer;">${row[0]}</a></td><td><a href="#" onclick="navigateToFairyRing(${coords[0]}, ${coords[1]}); return false;" style="color: #ffd700; text-decoration: underline; cursor: pointer;">${row[1]}</a></td>`;
+    } else {
+      // Not clickable if no coordinates
+      tr.innerHTML = `<td>${row[0]}</td><td>${row[1]}</td>`;
+    }
     tbody.appendChild(tr);
   });
+}
+
+function navigateToFairyRing(x, y) {
+  const iframe = document.querySelector('iframe[src="./worldmap.html"]');
+  if (iframe && iframe.contentWindow) {
+    // Send message to iframe to navigate to coordinates
+    iframe.contentWindow.postMessage({
+      type: 'navigateTo',
+      x: x,
+      y: y
+    }, '*');
+    
+    // Close the popup after clicking
+    toggleFairyRings();
+  }
 }
 
 function toggleFairyRings() {
