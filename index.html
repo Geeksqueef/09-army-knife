@@ -606,7 +606,7 @@ function populateFairyRings() {
     const code = row[0].replace(/\s/g, ''); // Remove spaces to match key format
     const coords = fairyRingCoordinates[code];
 
-    if (coords && coordscape [0] !== 0) {
+    if (coords && coords[0] !== 0) {
       // Make both the code and destination clickable if coordinates exist
       tr.innerHTML = `<td><a href="#" onclick="navigateToFairyRing(${coords[0]}, ${coords[1]}); return false;" style="color: #ffd700; text-decoration: underline; cursor: pointer;">${row[0]}</a></td><td><a href="#" onclick="navigateToFairyRing(${coords[0]}, ${coords[1]}); return false;" style="color: #ffd700; text-decoration: underline; cursor: pointer;">${row[1]}</a></td>`;
     } else {
