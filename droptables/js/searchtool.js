@@ -56,7 +56,7 @@ Vue.createApp({
       this.input = newInput;
     },
     iconURL(id) {
-      switch (id) {
+      switch (parseInt(id)) {
         case 0: return "./img/items/nothing.png";
         case 1: return "./img/items/2677.png"; //Clue Scroll (easy)
         case 5733: return "./img/items/2801.png"; //Clue Scroll (medium)
