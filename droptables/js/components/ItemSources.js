@@ -1,7 +1,7 @@
 export default {
   template: `
     <div class="item-sources">
-      <div v-for="result in processedResults" :key="result.name" class="item-entry">
+      <div v-for="result in processedResults" :key="result.name + '-' + sortKey + '-' + sortDirection" class="item-entry">
         <h2 class="item-name">{{ result.name }}</h2>
         
         <div v-if="result.items.length > 0" class="npc-sources">
@@ -10,10 +10,10 @@ export default {
               <tr class="header-row">
                 <th></th>
                 <th @click="sortSection('name')">NPC</th>
-                <th @click="sortSection('sortValue')">Amount</th>
+                <th @click="sortSection('minAmount')">Amount</th>
                 <th @click="sortSection('weight')">Rarity</th>
               </tr>
-              <tr v-for="item in result.items" :key="item.id + '-' + item.name">
+              <tr v-for="(item, index) in result.items" :key="item.id + '-' + item.name + '-' + index">
                 <td><img :src="iconURL(item.id)" :alt="result.name" /></td>
                 <td>{{ item.name }}</td>
                 <td>
@@ -50,23 +50,48 @@ export default {
   },
   computed: {
     processedResults() {
-      return this.searchResults.map(result => ({
+      const sortedResults = this.searchResults.map(result => ({
         ...result,
         items: this.getSortedItems(result.items)
       }));
+      return sortedResults;
     }
   },
   methods: {
     getSortedItems(items) {
-      if (!this.sortKey) return items;
+      if (!this.sortKey || !items) return items;
       
-      return [...items].sort((a, b) => {
-        const aVal = a[this.sortKey];
-        const bVal = b[this.sortKey];
-        if (typeof aVal === 'string') {
-          return this.sortDirection === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+      const itemsCopy = [...items];
+      
+      return itemsCopy.sort((a, b) => {
+        let aVal, bVal;
+        
+        if (this.sortKey === 'weight') {
+          // Sort by actual percentage for rarity
+          aVal = parseFloat(a.percent);
+          bVal = parseFloat(b.percent);
+        } else if (this.sortKey === 'minAmount') {
+          // Sort by minimum amount
+          aVal = a.minAmount;
+          bVal = b.minAmount;
+        } else {
+          aVal = a[this.sortKey];
+          bVal = b[this.sortKey];
         }
-        return this.sortDirection === 'asc' ? aVal - bVal : bVal - aVal;
+        
+        let comparison;
+        if (typeof aVal === 'string') {
+          comparison = this.sortDirection === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+        } else {
+          comparison = this.sortDirection === 'asc' ? aVal - bVal : bVal - aVal;
+        }
+        
+        // If values are equal, sort by NPC name as secondary criterion for stability
+        if (comparison === 0) {
+          return a.name.localeCompare(b.name);
+        }
+        
+        return comparison;
       });
     },
     rarityClass(item) {
