@@ -57,8 +57,11 @@ export default {
             <tbody>
               <tr v-for="(value, index) in parseBonuses(item.bonuses)" :key="index">
                 <td>
-                  <img v-if="getStatIcon(index)" :src="getStatIcon(index)" :alt="getStatName(index)" class="stat-icon" />
-                  {{ getStatName(index) }}
+                  <div class="stat-wrapper">
+                    <img v-if="getStatIcon(index)" :src="getStatIcon(index)" :alt="getStatName(index)" class="stat-icon" 
+                      @mouseenter="showTooltip(index)" @mouseleave="hideTooltip" />
+                    <span v-if="tooltipIndex === index" class="stat-tooltip">{{ getStatName(index) }}</span>
+                  </div>
                 </td>
                 <td>{{ value }}</td>
               </tr>
@@ -76,6 +79,12 @@ export default {
     iconURL: {
       type: Function,
       required: true
+    }
+  },
+  data() {
+    return {
+      tooltipIndex: null,
+      tooltipTimeout: null
     }
   },
   methods: {
@@ -97,7 +106,7 @@ export default {
       const statNames = [
         'Attack Stab', 'Attack Slash', 'Attack Crush', 'Attack Magic', 'Attack Ranged',
         'Defence Stab', 'Defence Slash', 'Defence Crush', 'Defence Magic', 'Defence Ranged',
-        'Strength', 'Ranged Strength', 'Magic Damage', 'Prayer'
+        'Summoning Defense', 'Strength',  'Prayer', 'Magic Damage', "Ranged Strength"
       ];
       return statNames[index] || `Stat ${index}`;
     },
@@ -113,9 +122,11 @@ export default {
         7: '../npc/images/Defence_icon.webp',
         8: '../npc/images/Magic_defence_icon.webp',
         9: '../npc/images/Ranged_defence_icon.webp',
-        10: '../npc/images/Strength_icon.webp',
-        11: '../npc/images/Ranged_Strength_icon.webp',
-        12: '../npc/images/Magic_Damage_icon.webp'
+        10: './img/alt/summoning.png',
+        11: '../npc/images/Strength_icon.webp',
+        12: './img/alt/Prayer_icon.png',
+        13: '../npc/images/Magic_Damage_icon.webp',
+        14: '../npc/images/Ranged_Strength_icon.webp'
       };
       return iconMap[index] || null;
     },
@@ -158,6 +169,21 @@ export default {
         return requirements;
       }
       return requirements;
+    },
+    showTooltip(index) {
+      this.tooltipIndex = index;
+      if (this.tooltipTimeout) {
+        clearTimeout(this.tooltipTimeout);
+      }
+      this.tooltipTimeout = setTimeout(() => {
+        this.tooltipIndex = null;
+      }, 5000);
+    },
+    hideTooltip() {
+      if (this.tooltipTimeout) {
+        clearTimeout(this.tooltipTimeout);
+      }
+      this.tooltipIndex = null;
     }
   }
 }

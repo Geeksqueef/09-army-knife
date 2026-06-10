@@ -196,6 +196,27 @@ tbody{
     margin-right: 8px;
 }
 
+.stat-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.stat-tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3d3225;
+    color: #e2dbc8;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1000;
+    margin-bottom: 5px;
+    border: 1px solid #94866d;
+}
+
 .item-info {
     flex: 1;
 }
