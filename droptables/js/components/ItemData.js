@@ -56,7 +56,10 @@ export default {
             </thead>
             <tbody>
               <tr v-for="(value, index) in parseBonuses(item.bonuses)" :key="index">
-                <td>{{ getStatName(index) }}</td>
+                <td>
+                  <img v-if="getStatIcon(index)" :src="getStatIcon(index)" :alt="getStatName(index)" class="stat-icon" />
+                  {{ getStatName(index) }}
+                </td>
                 <td>{{ value }}</td>
               </tr>
             </tbody>
@@ -88,16 +91,33 @@ export default {
     parseBonuses(bonusesString) {
       if (!bonusesString) return [];
       const bonuses = bonusesString.split(',').map(b => parseInt(b) || 0);
-      // Remove stats 13 and 14 (last two in the array)
-      return bonuses.slice(0, -2);
+      return bonuses;
     },
     getStatName(index) {
       const statNames = [
         'Attack Stab', 'Attack Slash', 'Attack Crush', 'Attack Magic', 'Attack Ranged',
         'Defence Stab', 'Defence Slash', 'Defence Crush', 'Defence Magic', 'Defence Ranged',
-        'Strength', 'Prayer', 'Magic Damage'
+        'Strength', 'Ranged Strength', 'Magic Damage', 'Prayer'
       ];
       return statNames[index] || `Stat ${index}`;
+    },
+    getStatIcon(index) {
+      const iconMap = {
+        0: '../npc/images/Attack_icon.webp',
+        1: '../npc/images/Attack_icon.webp',
+        2: '../npc/images/Attack_icon.webp',
+        3: '../npc/images/Attack_icon.webp',
+        4: '../npc/images/Attack_icon.webp',
+        5: '../npc/images/Defence_icon.webp',
+        6: '../npc/images/Defence_icon.webp',
+        7: '../npc/images/Defence_icon.webp',
+        8: '../npc/images/Magic_defence_icon.webp',
+        9: '../npc/images/Ranged_defence_icon.webp',
+        10: '../npc/images/Strength_icon.webp',
+        11: '../npc/images/Ranged_Strength_icon.webp',
+        12: '../npc/images/Magic_Damage_icon.webp'
+      };
+      return iconMap[index] || null;
     },
     getEquipmentSlotName(slot) {
       const slotNames = {
