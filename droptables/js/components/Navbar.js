@@ -14,7 +14,7 @@ export default {
       <input 
         type="text" 
         v-model="searchInput" 
-        placeholder="Search..."
+        :placeholder="getPlaceholder"
         @input="updateInput"
         class="search-input"
       />
@@ -22,9 +22,19 @@ export default {
   `,
   data() {
     return {
-      tabs: ['Drop Tables', 'Item Sources', 'Item Data'],
-      currentTab: 'Drop Tables',
+      tabs: ['NPC Drop tables', 'Item Sources', 'Item Data'],
+      currentTab: 'NPC Drop tables',
       searchInput: ''
+    }
+  },
+  computed: {
+    getPlaceholder() {
+      const placeholders = {
+        'NPC Drop tables': 'Enter NPC name',
+        'Item Sources': 'Enter Item Name',
+        'Item Data': 'Enter an Item Name'
+      };
+      return placeholders[this.currentTab] || 'Search...';
     }
   },
   methods: {

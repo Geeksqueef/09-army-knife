@@ -11,7 +11,7 @@ Vue.createApp({
       <Navbar @update-pick="updateParentPick" @update-input="updateParentInput"/>
 
       <!-- NPC Droptables (bynpc) -->
-      <NPCDrops v-if="pick == 'Drop Tables'" :searchResults="searchResults" 
+      <NPCDrops v-if="pick == 'NPC Drop tables'" :searchResults="searchResults" 
       :sortItems="sortItems"
       :iconURL="iconURL" />
 
@@ -44,7 +44,7 @@ Vue.createApp({
       npcIdToName: {},
       itemSourceNPCIds: {},
       input: "",
-      pick: "Drop Tables",
+      pick: "NPC Drop tables",
       searchResults: [],
     }
   },
@@ -118,7 +118,7 @@ Vue.createApp({
             this.searchResults.push(result);
           });
 
-        } else if (this.pick == "Drop Tables") {
+        } else if (this.pick == "NPC Drop tables") {
           // bynpc.js
           Object.keys(this.npcObjects).forEach(npcName => {
             const npcObj = this.npcObjects[npcName];
