@@ -1,7 +1,7 @@
 export default {
   template: `
     <div class="item-sources">
-      <div v-for="result in searchResults" :key="result.name" class="item-entry">
+      <div v-for="result in processedResults" :key="result.name" class="item-entry">
         <h2 class="item-name">{{ result.name }}</h2>
         
         <div v-if="result.items.length > 0" class="npc-sources">
@@ -9,9 +9,9 @@ export default {
             <tbody>
               <tr class="header-row">
                 <th></th>
-                <th>NPC</th>
-                <th @click="sortSection(result.items, 'sortValue')">Amount</th>
-                <th @click="sortSection(result.items, 'weight')">Rarity</th>
+                <th @click="sortSection('name')">NPC</th>
+                <th @click="sortSection('sortValue')">Amount</th>
+                <th @click="sortSection('weight')">Rarity</th>
               </tr>
               <tr v-for="item in result.items" :key="item.id + '-' + item.name">
                 <td><img :src="iconURL(item.id)" :alt="result.name" /></td>
@@ -44,10 +44,31 @@ export default {
   },
   data() {
     return {
-      sortStates: {}
+      sortKey: null,
+      sortDirection: 'asc'
+    }
+  },
+  computed: {
+    processedResults() {
+      return this.searchResults.map(result => ({
+        ...result,
+        items: this.getSortedItems(result.items)
+      }));
     }
   },
   methods: {
+    getSortedItems(items) {
+      if (!this.sortKey) return items;
+      
+      return [...items].sort((a, b) => {
+        const aVal = a[this.sortKey];
+        const bVal = b[this.sortKey];
+        if (typeof aVal === 'string') {
+          return this.sortDirection === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
+        }
+        return this.sortDirection === 'asc' ? aVal - bVal : bVal - aVal;
+      });
+    },
     rarityClass(item) {
       const percent = parseFloat(item.percent);
       if (percent > 99.99) return 'always';
@@ -56,14 +77,13 @@ export default {
       if (percent > 0.1) return 'rare';
       return 'veryrare';
     },
-    sortSection(items, key) {
-      const stateKey = key;
-      this.sortStates[stateKey] = !this.sortStates[stateKey];
-      items.sort((a, b) => {
-        const aVal = a[key];
-        const bVal = b[key];
-        return this.sortStates[stateKey] ? aVal - bVal : bVal - aVal;
-      });
+    sortSection(key) {
+      if (this.sortKey === key) {
+        this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
+      } else {
+        this.sortKey = key;
+        this.sortDirection = 'asc';
+      }
     }
   }
 }
