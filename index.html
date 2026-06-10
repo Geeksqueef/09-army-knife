@@ -142,24 +142,24 @@ height: 26px;
 
 .new-banner {
   position: absolute;
-  top: 5px;
+  top: 0px;
   left: -5px;
   background-color: white;
   color: #000;
   font-size: 8px;
   font-weight: bold;
   padding: 2px 2px;
-  transform: rotate(-45deg);
+  transform: rotate(-19deg);
   transform-origin: top left;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
   z-index: 10;
 }
 
 .experimental-tag {
   position: absolute;
-  top: -15px;
+  top: 21px;
   left: 50%;
-  transform: translateX(-300%) rotate(-45deg);
+  transform: translateX(-300%) rotate(-17deg);
   background-color: #ff0000;
   color: white;
   font-weight: bold;
@@ -391,6 +391,130 @@ height: 26px;
   border-radius: 10px;
 }
 
+#wiki-popup {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  background-color: #876A38FF;
+  border-radius: 15px;
+  z-index: 1000;
+  padding: 20px;
+  color: #1a0f0a;
+  overflow: auto;
+}
+
+#wiki-popup .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a0f0a;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+#wiki-popup iframe {
+  width: 100%;
+  height: calc(100% - 60px);
+  border: none;
+  border-radius: 10px;
+}
+
+#rs-wiki-popup {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  background-color: #876A38FF;
+  border-radius: 15px;
+  z-index: 1000;
+  padding: 20px;
+  color: #1a0f0a;
+  overflow: auto;
+}
+
+#rs-wiki-popup .popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#rs-wiki-popup .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  color: #1a0f0a;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+#rs-wiki-popup .content {
+  padding: 20px;
+  color: #1a0f0a;
+}
+
+#rs-wiki-popup h2 {
+  color: #F2C848;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  -webkit-text-stroke: 0.5px black;
+  margin-top: 0;
+  text-align: center;
+}
+
+#rs-wiki-popup p {
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+#rs-wiki-popup .bookmarklet-code {
+  background-color: #2a1a0a;
+  color: #F2C848;
+  padding: 15px;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 12px;
+  word-break: break-all;
+  margin: 15px 0;
+  border: 1px solid #5c4a2a;
+}
+
+#rs-wiki-popup .copy-btn {
+  background-color: #2a1a0a;
+  color: #F2C848;
+  border: 1px solid #5c4a2a;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  -webkit-text-stroke: 0.5px black;
+  margin-top: 10px;
+}
+
+#rs-wiki-popup .copy-btn:hover {
+  background-color: #5c4a2a;
+  color: #ffffff;
+}
+
+#rs-wiki-popup .wiki-link {
+  color: #F2C848;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#rs-wiki-popup .wiki-link:hover {
+  color: #ffffff;
+}
+
 msg { 
   background: green;
   border-radius: 10px;
@@ -457,6 +581,8 @@ function off() {
                <button class="navbar-btn" onclick="toggleShopViewer()">Shop Viewer</button>
                <button class="navbar-btn" onclick="toggleDroptables()">Droptables</button>
                <button class="navbar-btn" onclick="toggleNpcViewer()">NPC Viewer</button>
+               <button class="navbar-btn" onclick="toggleWiki()">2009scape Wiki</button>
+               <button class="navbar-btn" onclick="toggleRsWiki()">RS Wiki Bookmarklet</button>
             </center>
          </div>
           <table width="1164">
@@ -523,6 +649,29 @@ function off() {
 <div id="skill-calc-popup">
   <button class="close-btn" onclick="toggleSkillCalc()">&times;</button>
   <iframe src="skillcalculator.html"></iframe>
+</div>
+<div id="wiki-popup">
+  <button class="close-btn" onclick="toggleWiki()">&times;</button>
+  <iframe src="https://cdn.2009scape.org/wiki/doku.php?id=start"></iframe>
+</div>
+<div id="rs-wiki-popup">
+  <button class="close-btn" onclick="toggleRsWiki()">&times;</button>
+  <div class="content">
+    <h2>Official Runescape Wiki Bookmarklet</h2>
+    <p>This bookmarklet allows you to convert any page on the <a href="https://runescape.wiki" target="_blank" class="wiki-link">Official Runescape Wiki</a> to its 2009 version by viewing the page history and navigating to the last revision before 2010.</p>
+    <p><strong>How to use:</strong></p>
+    <ol>
+      <li>Copy the bookmarklet code below</li>
+      <li>Create a new bookmark in your browser</li>
+      <li>Paste the code as the URL/location</li>
+      <li>Navigate to any Runescape Wiki page</li>
+      <li>Click the bookmark to convert the page to its 2009 version</li>
+    </ol>
+    <p><strong>Bookmarklet Code:</strong></p>
+    <div class="bookmarklet-code">javascript:fetch(location.href + "?action=history&date-range-to=2009-12-31&tagfilter=").then((resp) => resp.text()).then((html) => { document.body.innerHTML = html.substring(html.search("<body"), html.search("</body>")); document.getElementById("pagehistory").getElementsByTagName("ul")[0].getElementsByClassName("mw-changeslist-date")[0].click(); });</div>
+    <button class="copy-btn" onclick="copyBookmarklet()">Copy Bookmarklet Code</button>
+    <p style="margin-top: 20px;">Visit the <a href="https://runescape.wiki" target="_blank" class="wiki-link">Official Runescape Wiki</a></p>
+  </div>
 </div>
 
 <script>
@@ -693,6 +842,40 @@ function toggleSkillCalc() {
     popup.style.display = 'block';
     overlay.style.display = 'block';
   }
+}
+
+function toggleWiki() {
+  const popup = document.getElementById('wiki-popup');
+  const overlay = document.getElementById('fairy-rings-overlay');
+  if (popup.style.display === 'block') {
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+  } else {
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+  }
+}
+
+function toggleRsWiki() {
+  const popup = document.getElementById('rs-wiki-popup');
+  const overlay = document.getElementById('fairy-rings-overlay');
+  if (popup.style.display === 'block') {
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+  } else {
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+  }
+}
+
+function copyBookmarklet() {
+  const bookmarkletCode = `javascript:fetch(location.href + "?action=history&date-range-to=2009-12-31&tagfilter=").then((resp) => resp.text()).then((html) => { document.body.innerHTML = html.substring(html.search("<body"), html.search("</body>")); document.getElementById("pagehistory").getElementsByTagName("ul")[0].getElementsByClassName("mw-changeslist-date")[0].click(); });`;
+  navigator.clipboard.writeText(bookmarkletCode).then(() => {
+    alert('Bookmarklet copied to clipboard! Create a bookmark with this code and run it on any RS Wiki page to 2009-ify it.');
+  }).catch(err => {
+    console.error('Failed to copy:', err);
+    alert('Failed to copy bookmarklet. Please copy manually:\\n\\n' + bookmarkletCode);
+  });
 }
 
 let sortDirection = 0;
