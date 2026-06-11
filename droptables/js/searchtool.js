@@ -148,6 +148,10 @@ Vue.createApp({
     pick() { this.search(this.input) }
   },
   created() {
+    // Check for URL parameter for pre-loading search
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchParam = urlParams.get('search');
+    
     // Proxy is used because GitLAB has CORS restrictions while GitHUB doesn't.
     // this is refreshed every 15 minutes. If it's out of sync ping @downthecrop
     const PROXY = "https://downthecrop.github.io/2009scape-mirror/Server/data/configs/";
@@ -244,6 +248,11 @@ Vue.createApp({
           });
 
           this.npcObjects[npcName] = npcObj;
+        }
+        
+        // Set input from URL parameter after data is loaded
+        if (searchParam) {
+          this.input = searchParam;
         }
       }
     }, 100);

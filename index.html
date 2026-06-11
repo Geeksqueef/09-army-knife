@@ -896,6 +896,32 @@ function sortTable(columnIndex) {
 }
 
 populateFairyRings();
+
+// Handle messages from iframes (e.g., NPC viewer requesting to open droptables)
+window.addEventListener('message', function(event) {
+    if (event.data.type === 'openDroptables') {
+        // Close NPC viewer
+        const npcPopup = document.getElementById('npc-viewer-popup');
+        const overlay = document.getElementById('fairy-rings-overlay');
+        if (npcPopup.style.display === 'block') {
+            npcPopup.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+        
+        // Open droptables with NPC name as search parameter
+        const droptablesPopup = document.getElementById('droptables-popup');
+        const droptablesIframe = droptablesPopup.querySelector('iframe');
+        
+        if (event.data.npcName) {
+            droptablesIframe.src = 'droptables/index.html?search=' + encodeURIComponent(event.data.npcName);
+        } else {
+            droptablesIframe.src = 'droptables/index.html';
+        }
+        
+        droptablesPopup.style.display = 'block';
+        overlay.style.display = 'block';
+    }
+});
 </script>
 </body>
 </html>

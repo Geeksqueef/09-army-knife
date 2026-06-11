@@ -1,8 +1,5 @@
 ---
 
----
----
-
 # 2009scape Swiss Army Knife
 
 ---

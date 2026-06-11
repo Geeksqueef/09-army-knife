@@ -2,6 +2,7 @@
 var npc_data = {};
 // Stores NPC names all lowercase, points to NPC or array of NPCs
 var npc_names = {};
+var current_npc_name = "";
 
 function onload() {
     // load NPC data from data/npc_data.json
@@ -157,6 +158,7 @@ function load_npc(id) {
     let npc = npc_data[id];
     if (!npc) return;
 
+    current_npc_name = npc.name;
     document.getElementById('npc-name').innerText = npc.name;
     document.getElementById('npc-id').innerText = id;
     document.getElementById('npc-combat').innerText = npc.combat_level;
@@ -164,6 +166,19 @@ function load_npc(id) {
     document.getElementById('npc-clue').innerText = get_clue(npc.clue_level);
     document.getElementById('npc-attack_style').innerText = get_style(npc.combat_style);
     document.getElementById('npc-max_hit').innerHTML = get_max_hit(npc, npc.combat_style);
+
+    // Load NPC image
+    let imageName = npc.name.toLowerCase().replace(/ /g, '_') + '.png';
+    let imagePath = 'images/beastiary/' + imageName;
+    let npcImage = document.getElementById('npc-image');
+    
+    npcImage.onload = function() {
+        npcImage.style.display = 'block';
+    };
+    npcImage.onerror = function() {
+        npcImage.style.display = 'none';
+    };
+    npcImage.src = imagePath;
 
     if (npc.attack_speed) {
         document.getElementById('npc-attack_speed').innerText = Math.round((npc.attack_speed*0.6 + Number.EPSILON)*100)/100 + ' seconds';
@@ -217,4 +232,24 @@ function load_npc(id) {
         document.getElementById('npc-rngbns').innerText = bonuses[14];
     }
 
+}
+
+function openDroptables() {
+    // Send message to parent window to close NPC viewer and open droptables
+    if (window.parent !== window) {
+        window.parent.postMessage({
+            type: 'openDroptables',
+            npcName: current_npc_name
+        }, '*');
+    }
+}
+
+function closeDroptables() {
+    const popup = document.getElementById('droptables-popup');
+    const overlay = document.getElementById('droptables-overlay');
+    const iframe = document.getElementById('droptables-iframe');
+    
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+    iframe.src = '';
 }
