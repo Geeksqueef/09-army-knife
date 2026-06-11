@@ -11,7 +11,7 @@ The 2009scape Swiss Army Knife is a combination of tools by many developers, com
 
 ### <center><u>Preview</u></center>
 
-![Demo](demo.gif)
+[![Demo](demo.gif)](https://geeksqueef.github.io/09-army-knife/)
 
 ---
 
