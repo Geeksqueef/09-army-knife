@@ -549,6 +549,40 @@ height: 26px;
   border-radius: 10px;
 }
 
+#charm-drop-popup {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  background-color: #876A38FF;
+  border-radius: 15px;
+  z-index: 1000;
+  padding: 20px;
+  color: #1a0f0a;
+  overflow: auto;
+}
+
+#charm-drop-popup .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a0f0a;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+#charm-drop-popup iframe {
+  width: 100%;
+  height: calc(100% - 60px);
+  border: none;
+  border-radius: 10px;
+}
+
 msg { 
   background: green;
   border-radius: 10px;
@@ -612,6 +646,7 @@ function off() {
             <center>
                <button class="navbar-btn" onclick="toggleFairyRings()">Fairy Rings<span class="new-banner">NEW!</span></button>
                <button class="navbar-btn" onclick="toggleSkillCalc()">Skill Calc<span class="new-banner">NEW!</span></button>
+               <button class="navbar-btn" onclick="toggleCharmDrop()">Charm Drop Rates<span class="new-banner">NEW!</span></button>
                <button class="navbar-btn" onclick="toggleShopViewer()">Shop Viewer</button>
                <button class="navbar-btn" onclick="toggleDroptables()">Droptables</button>
                <button class="navbar-btn" onclick="toggleNpcViewer()">NPC Viewer</button>
@@ -710,6 +745,10 @@ function off() {
 <div id="npc-3d-popup">
   <button class="close-btn" onclick="toggleNpc3D()">&times;</button>
   <iframe src="3DNpc/09NPC3d.html"></iframe>
+</div>
+<div id="charm-drop-popup">
+  <button class="close-btn" onclick="toggleCharmDrop()">&times;</button>
+  <iframe src="charmdrop.html"></iframe>
 </div>
 
 <script>
@@ -918,6 +957,18 @@ function toggleNpc3D() {
   }
 }
 
+function toggleCharmDrop() {
+  const popup = document.getElementById('charm-drop-popup');
+  const overlay = document.getElementById('fairy-rings-overlay');
+  if (popup.style.display === 'block') {
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+  } else {
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+  }
+}
+
 function copyBookmarklet() {
   const bookmarkletCode = `javascript:fetch(location.href + "?action=history&date-range-to=2009-12-31&tagfilter=").then((resp) => resp.text()).then((html) => { document.body.innerHTML = html.substring(html.search("<body"), html.search("</body>")); document.getElementById("pagehistory").getElementsByTagName("ul")[0].getElementsByClassName("mw-changeslist-date")[0].click(); });`;
   navigator.clipboard.writeText(bookmarkletCode).then(() => {
@@ -969,6 +1020,29 @@ window.addEventListener('message', function(event) {
         }
         
         droptablesPopup.style.display = 'block';
+        overlay.style.display = 'block';
+    }
+    
+    if (event.data.type === 'openNpcViewer') {
+        // Close charm drop popup
+        const charmDropPopup = document.getElementById('charm-drop-popup');
+        const overlay = document.getElementById('fairy-rings-overlay');
+        if (charmDropPopup.style.display === 'block') {
+            charmDropPopup.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+        
+        // Open NPC viewer with NPC name as search parameter
+        const npcPopup = document.getElementById('npc-viewer-popup');
+        const npcIframe = npcPopup.querySelector('iframe');
+        
+        if (event.data.npcName) {
+            npcIframe.src = 'npc/index.html?search=' + encodeURIComponent(event.data.npcName);
+        } else {
+            npcIframe.src = 'npc/index.html';
+        }
+        
+        npcPopup.style.display = 'block';
         overlay.style.display = 'block';
     }
 });

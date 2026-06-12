@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Common Charm Drop Rates</title>
+    <meta charset="utf-8"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #F2C848;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #2a1a0a;
+            border: 2px solid #5c4a2a;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th, td {
+            border: 1px solid #5c4a2a;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #6B5028;
+            color: #F2C848;
+            font-weight: bold;
+            cursor: pointer;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+            position: relative;
+        }
+        
+        th:hover {
+            background-color: #5c4a2a;
+        }
+        
+        th::after {
+            content: ' ↕';
+            font-size: 0.8em;
+            margin-left: 5px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #3d2a1a;
+        }
+        
+        tr:hover {
+            background-color: #4d3a2a;
+        }
+        
+        .high-chance {
+            color: #00ff00;
+            font-weight: bold;
+        }
+        
+        .medium-high-chance {
+            color: #7fff00;
+        }
+        
+        .medium-chance {
+            color: #ffff00;
+        }
+        
+        .medium-low-chance {
+            color: #ff7f00;
+        }
+        
+        .low-chance {
+            color: #ff0000;
+        }
+        
+        .search-box {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #3d2a1a;
+            border: 1px solid #5c4a2a;
+            border-radius: 5px;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 10px;
+            background-color: #2a1a0a;
+            border: 1px solid #5c4a2a;
+            color: #f0f0f0;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        
+        .search-box input:focus {
+            outline: none;
+            border-color: #F2C848;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #2a1a0a;
+            color: #F2C848;
+            text-decoration: none;
+            border: 1px solid #5c4a2a;
+            border-radius: 5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+        }
+        
+        .back-button:hover {
+            background-color: #5c4a2a;
+            color: #ffffff;
+        }
+        
+        .npc-link {
+            color: #F2C848;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        
+        .npc-link:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-button">← Back to Main</a>
+        <h1>Common Charm Drop Rates</h1>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search NPCs..." onkeyup="filterTable()">
+        </div>
+        
+        <table id="charmTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">NPC</th>
+                    <th onclick="sortTable(1)">Combat Level(s)</th>
+                    <th onclick="sortTable(2)">Gold Charms</th>
+                    <th onclick="sortTable(3)">Green Charms</th>
+                    <th onclick="sortTable(4)">Crimson Charms</th>
+                    <th onclick="sortTable(5)">Blue Charms</th>
+                    <th onclick="sortTable(6)">Per Drop</th>
+                </tr>
+            </thead>
+            <tbody id="charmTableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const charmData = [
+            { npc: "Hill Giant", combat: "28", gold: 83.1, green: 7.6, crimson: 8.3, blue: 1.0, perDrop: 1 },
+            { npc: "Ogress Champion", combat: "99", gold: 81.9, green: 3.1, crimson: 3.3, blue: 1.1, perDrop: 1 },
+            { npc: "Waterfiend", combat: "115", gold: 7.6, green: 6.0, crimson: 80.0, blue: 2.2, perDrop: 1 },
+            { npc: "Giant Rock Crab", combat: "137", gold: 79.2, green: 10.6, crimson: 6.8, blue: 1.5, perDrop: 3 },
+            { npc: "Hellhound", combat: "122, 127", gold: 68.0, green: 4.4, crimson: 4.6, blue: 0.5, perDrop: 1 },
+            { npc: "Ork Legion", combat: "70", gold: 62.5, green: 26.4, crimson: 9.0, blue: 0.1, perDrop: 1 },
+            { npc: "King Black Dragon", combat: "276", gold: 4.5, green: 3.5, crimson: 62.2, blue: 1.2, perDrop: 4 },
+            { npc: "Skeletal Wyvern", combat: "140", gold: 7.3, green: 2.5, crimson: 57.0, blue: 2.1, perDrop: 2 },
+            { npc: "Fire Giant", combat: "86", gold: 56.1, green: 7.0, crimson: 4.9, blue: 1.5, perDrop: 1 },
+            { npc: "Dagannoth", combat: "74, 90, 92", gold: 28.6, green: 14.3, crimson: 55.3, blue: 1.8, perDrop: 1 },
+            { npc: "Mithril Dragon", combat: "304", gold: 20.3, green: 46.4, crimson: 20.6, blue: 3.2, perDrop: 4 },
+            { npc: "Ice Giant", combat: "53", gold: 46.2, green: 3.0, crimson: 4.3, blue: 1.2, perDrop: 1 },
+            { npc: "Ice Warrior", combat: "53, 57", gold: 45.4, green: 1.6, crimson: 2.8, blue: 0.4, perDrop: 1 },
+            { npc: "Black Demon", combat: "172", gold: 21.5, green: 9.7, crimson: 45.0, blue: 2.0, perDrop: 1 },
+            { npc: "Werewolf", combat: "88, 91", gold: 44.6, green: 4.8, crimson: 4.2, blue: 0.7, perDrop: 1 },
+            { npc: "Red Dragon", combat: "152", gold: 17.8, green: 42.8, crimson: 17.6, blue: 2.9, perDrop: 1 },
+            { npc: "Corporeal Beast", combat: "785", gold: 20.8, green: 12.5, crimson: 22.5, blue: 41.4, perDrop: 13 },
+            { npc: "Mutated Bloodveld", combat: "126, 146", gold: 41.0, green: 4.9, crimson: 3.0, blue: 1.1, perDrop: 1 },
+            { npc: "Troll General", combat: "113", gold: 40.8, green: 5.5, crimson: 2.8, blue: 1.9, perDrop: 1 },
+            { npc: "Tormented Demon", combat: "450", gold: 20.7, green: 8.8, crimson: 19.0, blue: 39.4, perDrop: 3 },
+            { npc: "Ogress Warrior", combat: "86", gold: 38.7, green: 2.4, crimson: 2.8, blue: 2.1, perDrop: 1 },
+            { npc: "Ogress", combat: "69", gold: 38.4, green: 3.7, crimson: 4.5, blue: 0.5, perDrop: 1 },
+            { npc: "Steel Dragon", combat: "246", gold: 13.7, green: 36.4, crimson: 14.6, blue: 2.1, perDrop: 3 },
+            { npc: "Jogre", combat: "53, 58", gold: 36.0, green: 2.5, crimson: 2.9, blue: 0.4, perDrop: 1 },
+            { npc: "Pee Hat", combat: "91", gold: 35.9, green: 6.8, crimson: 3.9, blue: 0.0, perDrop: 1 },
+            { npc: "Bloodveld", combat: "76, 81", gold: 10.1, green: 33.0, crimson: 4.9, blue: 0.8, perDrop: 1 },
+            { npc: "Moss Giant", combat: "42, 48, 84", gold: 32.6, green: 2.8, crimson: 2.4, blue: 0.8, perDrop: 1 },
+            { npc: "Infernal Mage", combat: "66", gold: 31.7, green: 2.9, crimson: 2.4, blue: 0.8, perDrop: 1 },
+            { npc: "Iron Dragon", combat: "189", gold: 11.3, green: 31.5, crimson: 13.1, blue: 2.8, perDrop: 2 },
+            { npc: "Abyssal Demon", combat: "124", gold: 9.2, green: 4.0, crimson: 31.4, blue: 1.3, perDrop: 1 },
+            { npc: "Bronze Dragon", combat: "131", gold: 13.4, green: 30.8, crimson: 10.7, blue: 3.5, perDrop: 1 },
+            { npc: "Nechryael", combat: "115", gold: 9.6, green: 4.9, crimson: 29.4, blue: 1.0, perDrop: 1 },
+            { npc: "Cockroach Soldier", combat: "83", gold: 9.0, green: 5.9, crimson: 28.2, blue: 1.2, perDrop: 1 },
+            { npc: "Blue Dragon", combat: "111", gold: 11.8, green: 27.6, crimson: 11.6, blue: 2.2, perDrop: 1 },
+            { npc: "Black Dragon", combat: "227", gold: 8.9, green: 26.8, crimson: 6.8, blue: 1.7, perDrop: 3 },
+            { npc: "Deadly Red Spider", combat: "34", gold: 25.7, green: 1.1, crimson: 1.5, blue: 0.3, perDrop: 1 },
+            { npc: "Revenants (All)", combat: "7-135", gold: 24.9, green: 24.4, crimson: 24.8, blue: 24.7, perDrop: 4 },
+            { npc: "Kurask", combat: "106", gold: 11.7, green: 24.6, crimson: 6.4, blue: 1.4, perDrop: 1 },
+            { npc: "Elf Warrior", combat: "90, 108", gold: 7.6, green: 24.1, crimson: 7.0, blue: 1.7, perDrop: 1 },
+            { npc: "Turoth", combat: "83-89", gold: 7.4, green: 24.0, crimson: 4.9, blue: 2.0, perDrop: 1 },
+            { npc: "Rock Lobster", combat: "127", gold: 18.6, green: 7.9, crimson: 23.9, blue: 3.3, perDrop: 2 },
+            { npc: "Ice Spider", combat: "61", gold: 23.6, green: 8.0, crimson: 5.1, blue: 1.4, perDrop: 1 },
+            { npc: "Greater Demon", combat: "82", gold: 6.3, green: 3.3, crimson: 23.3, blue: 1.0, perDrop: 1 },
+            { npc: "Dust Devil", combat: "93", gold: 12.7, green: 5.1, crimson: 22.8, blue: 1.4, perDrop: 1 },
+            { npc: "Locust Rider", combat: "68, 98, 106", gold: 4.6, green: 6.2, crimson: 22.6, blue: 0.5, perDrop: 1 },
+            { npc: "Brine Rat", combat: "70", gold: 22.5, green: 2.0, crimson: 1.3, blue: 0.2, perDrop: 1 },
+            { npc: "Ankou", combat: "75, 82, 86", gold: 22.1, green: 1.7, crimson: 2.9, blue: 0.3, perDrop: 1 },
+            { npc: "Zombie Hand", combat: "90", gold: 21.4, green: 1.4, crimson: 1.5, blue: 0.3, perDrop: 1 },
+            { npc: "Dire Wolf", combat: "88", gold: 6.2, green: 21.0, crimson: 10.2, blue: 1.8, perDrop: 1 },
+            { npc: "Catablepon", combat: "49, 64, 68", gold: 21.0, green: 1.0, crimson: 1.9, blue: 0.2, perDrop: 1 },
+            { npc: "Skeletal Hand", combat: "80", gold: 20.8, green: 2.5, crimson: 1.4, blue: 0.0, perDrop: 1 },
+            { npc: "Jelly", combat: "78", gold: 7.9, green: 20.7, crimson: 4.8, blue: 1.7, perDrop: 1 },
+            { npc: "Ghoul", combat: "42", gold: 20.4, green: 0.5, crimson: 1.1, blue: 0.2, perDrop: 1 },
+            { npc: "Baby Black Dragon", combat: "83", gold: 9.6, green: 19.8, crimson: 10.5, blue: 2.8, perDrop: 1 },
+            { npc: "Giant Bat", combat: "27", gold: 19.1, green: 0.4, crimson: 1.3, blue: 0.4, perDrop: 1 },
+            { npc: "Kraka", combat: "91", gold: 18.9, green: 4.9, crimson: 4.5, blue: 1.6, perDrop: 1 },
+            { npc: "Kalphite Queen", combat: "333", gold: 5.2, green: 6.0, crimson: 12.2, blue: 18.4, perDrop: 3 },
+            { npc: "Dark Warrior", combat: "8", gold: 18.4, green: 4.6, crimson: 2.1, blue: 0.9, perDrop: 1 },
+            { npc: "Zamorak Warrior", combat: "81, 84, 85", gold: 18.3, green: 3.0, crimson: 2.2, blue: 0.3, perDrop: 1 },
+            { npc: "Abyssal Walker", combat: "81", gold: 4.4, green: 17.9, crimson: 2.4, blue: 0.9, perDrop: 1 },
+            { npc: "Grizzly Bear", combat: "21, 42", gold: 17.7, green: 0.2, crimson: 0.3, blue: 0.3, perDrop: 1 },
+            { npc: "Basilisk", combat: "61", gold: 7.0, green: 17.2, crimson: 4.9, blue: 1.3, perDrop: 1 },
+            { npc: "Wallasalki", combat: "98", gold: 16.1, green: 7.6, crimson: 7.1, blue: 12.2, perDrop: 1 },
+            { npc: "Cockroach Worker", combat: "56", gold: 6.5, green: 3.5, crimson: 15.8, blue: 1.5, perDrop: 1 },
+            { npc: "Green Dragon", combat: "79", gold: 9.4, green: 15.6, crimson: 8.2, blue: 1.3, perDrop: 1 },
+            { npc: "Cave Horror", combat: "80", gold: 4.3, green: 2.1, crimson: 15.4, blue: 0.6, perDrop: 1 },
+            { npc: "Killerwatt", combat: "55", gold: 15.4, green: 1.2, crimson: 1.2, blue: 0.1, perDrop: 1 },
+            { npc: "Brutal Green Dragon", combat: "227", gold: 15.3, green: 13.3, crimson: 7.4, blue: 1.5, perDrop: 2 },
+            { npc: "Bat", combat: "6", gold: 15.0, green: 1.4, crimson: 0.3, blue: 1.2, perDrop: 1 },
+            { npc: "Wild Dog", combat: "63", gold: 6.2, green: 14.9, crimson: 7.1, blue: 1.2, perDrop: 1 },
+            { npc: "Suqah", combat: "111", gold: 14.7, green: 8.6, crimson: 6.4, blue: 7.7, perDrop: 1 },
+            { npc: "Dark Beast", combat: "182", gold: 8.6, green: 4.5, crimson: 8.2, blue: 14.4, perDrop: 1 },
+            { npc: "Hobgoblin", combat: "28, 42, 47", gold: 14.4, green: 0.2, crimson: 0.6, blue: 0.1, perDrop: 1 },
+            { npc: "Zamorak Ranger", combat: "81", gold: 1.2, green: 3.2, crimson: 4.5, blue: 13.7, perDrop: 1 },
+            { npc: "Ogre", combat: "53, 58, 63", gold: 13.6, green: 2.3, crimson: 1.2, blue: 0.1, perDrop: 1 },
+            { npc: "Kalphite Guardian", combat: "141", gold: 13.3, green: 6.9, crimson: 7.1, blue: 8.6, perDrop: 1 },
+            { npc: "Bloodworm", combat: "52", gold: 5.2, green: 12.9, crimson: 2.7, blue: 0.6, perDrop: 1 },
+            { npc: "Wizard", combat: "9", gold: 12.6, green: 5.7, crimson: 2.5, blue: 0.6, perDrop: 1 },
+            { npc: "Aberrant Spectre", combat: "96", gold: 12.4, green: 5.0, crimson: 4.8, blue: 4.0, perDrop: 1 },
+            { npc: "Jungle Horror", combat: "70", gold: 4.0, green: 12.3, crimson: 1.7, blue: 0.4, perDrop: 1 },
+            { npc: "White Wolf", combat: "25, 38", gold: 10.8, green: 4.7, crimson: 12.1, blue: 0.6, perDrop: 1 },
+            { npc: "Giant Ant Soldier", combat: "50, 58", gold: 3.4, green: 12.0, crimson: 1.7, blue: 0.7, perDrop: 1 },
+            { npc: "Black Guard", combat: "25, 48", gold: 4.6, green: 7.8, crimson: 2.1, blue: 11.6, perDrop: 1 },
+            { npc: "Terrorbird Gnome", combat: "31, 49", gold: 11.5, green: 0.6, crimson: 3.9, blue: 0.5, perDrop: 1 },
+            { npc: "Zogre", combat: "44", gold: 11.5, green: 1.6, crimson: 1.5, blue: 0.0, perDrop: 1 },
+            { npc: "Earth Warrior", combat: "51", gold: 10.0, green: 4.4, crimson: 11.1, blue: 0.9, perDrop: 1 },
+            { npc: "Gargoyle", combat: "111", gold: 11.1, green: 4.8, crimson: 5.2, blue: 6.3, perDrop: 1 },
+            { npc: "Ice Wolf", combat: "96, 132", gold: 11.1, green: 4.6, crimson: 1.3, blue: 1.1, perDrop: 1 },
+            { npc: "Thug", combat: "10", gold: 11.0, green: 0.9, crimson: 0.4, blue: 0.2, perDrop: 1 },
+            { npc: "Black Unicorn", combat: "27", gold: 6.8, green: 10.9, crimson: 0.5, blue: 0.3, perDrop: 1 },
+            { npc: "Giant Mole", combat: "230", gold: 8.5, green: 10.8, crimson: 6.7, blue: 2.2, perDrop: 2 },
+            { npc: "Shadow Warrior", combat: "48", gold: 10.4, green: 5.5, crimson: 10.5, blue: 0.3, perDrop: 1 },
+            { npc: "Terror Dog", combat: "100, 110", gold: 10.3, green: 6.7, crimson: 7.5, blue: 3.8, perDrop: 1 },
+            { npc: "Stick", combat: "104", gold: 3.3, green: 9.3, crimson: 10.2, blue: 9.9, perDrop: 1 }
+        ];
+
+        function getChanceColor(chance) {
+            if (chance >= 50) return 'high-chance';
+            if (chance >= 30) return 'medium-high-chance';
+            if (chance >= 20) return 'medium-chance';
+            if (chance >= 10) return 'medium-low-chance';
+            return 'low-chance';
+        }
+
+        function formatChance(chance) {
+            return chance.toFixed(1) + '%';
+        }
+
+        function populateTable() {
+            const tbody = document.getElementById('charmTableBody');
+            tbody.innerHTML = '';
+            
+            charmData.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><span class="npc-link" onclick="openNpcViewer('${row.npc}')">${row.npc}</span></td>
+                    <td>${row.combat}</td>
+                    <td class="${getChanceColor(row.gold)}">${formatChance(row.gold)}</td>
+                    <td class="${getChanceColor(row.green)}">${formatChance(row.green)}</td>
+                    <td class="${getChanceColor(row.crimson)}">${formatChance(row.crimson)}</td>
+                    <td class="${getChanceColor(row.blue)}">${formatChance(row.blue)}</td>
+                    <td>${row.perDrop}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        let sortDirection = {};
+
+        function sortTable(columnIndex) {
+            const table = document.getElementById('charmTable');
+            const tbody = document.getElementById('charmTableBody');
+            const rows = Array.from(tbody.rows);
+            
+            sortDirection[columnIndex] = sortDirection[columnIndex] === 'asc' ? 'desc' : 'asc';
+            
+            rows.sort((a, b) => {
+                let aText = a.cells[columnIndex].textContent.trim();
+                let bText = b.cells[columnIndex].textContent.trim();
+                
+                // Handle numeric sorting for percentage columns
+                if (columnIndex >= 2 && columnIndex <= 5) {
+                    aText = parseFloat(aText);
+                    bText = parseFloat(bText);
+                } else if (columnIndex === 6) {
+                    aText = parseInt(aText);
+                    bText = parseInt(bText);
+                }
+                
+                if (typeof aText === 'number' && typeof bText === 'number') {
+                    return sortDirection[columnIndex] === 'asc' ? aText - bText : bText - aText;
+                }
+                
+                return sortDirection[columnIndex] === 'asc' 
+                    ? aText.localeCompare(bText) 
+                    : bText.localeCompare(aText);
+            });
+            
+            rows.forEach(row => tbody.appendChild(row));
+        }
+
+        function filterTable() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const tbody = document.getElementById('charmTableBody');
+            const rows = tbody.getElementsByTagName('tr');
+            
+            for (let i = 0; i < rows.length; i++) {
+                const npcName = rows[i].cells[0].textContent.toLowerCase();
+                if (npcName.includes(filter)) {
+                    rows[i].style.display = '';
+                } else {
+                    rows[i].style.display = 'none';
+                }
+            }
+        }
+
+        function openNpcViewer(npcName) {
+            // Send message to parent window to open NPC viewer with this NPC
+            if (window.parent) {
+                window.parent.postMessage({
+                    type: 'openNpcViewer',
+                    npcName: npcName
+                }, '*');
+            }
+        }
+
+        // Initialize table on page load
+        populateTable();
+    </script>
+</body>
+</html>
