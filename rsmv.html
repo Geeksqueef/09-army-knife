@@ -109,7 +109,8 @@
         </div>
 
         <div id="model-canvas-container">
-            <p style="color: #F2C848;">Enter an NPC ID above to load a 3D NPC model</p>
+            <canvas id="model-canvas" width="800" height="600"></canvas>
+            <p id="canvas-placeholder" style="color: #F2C848;">Enter an NPC ID above to load a 3D NPC model</p>
         </div>
 
         <div class="info-panel">
@@ -129,6 +130,7 @@
     <script>
         let currentNPCId = null;
         const CACHE_VERSION = 530;
+        let modelViewerInitialized = false;
 
         // Configure cache preloading for version 530
         const cacheConfig = {
@@ -147,38 +149,36 @@
             document.getElementById('status').textContent = 'Loading NPC model ' + npcId + ' (v530 cache)...';
             currentNPCId = npcId;
             
-            // The modelviewer.bundle.js is a bundled React application
-            // It likely renders into a specific element or needs initialization
-            const container = document.getElementById('model-canvas-container');
-            container.innerHTML = `
-                <div style="text-align: center; color: #F2C848;">
-                    <p>NPC ID: ${npcId}</p>
-                    <p>Cache Version: ${CACHE_VERSION}</p>
-                    <p>Loading NPC model from v530 cache...</p>
-                    <p>The modelviewer.bundle.js should initialize automatically.</p>
-                    <p>If you see this message, the model viewer may need additional configuration.</p>
-                    <p>Check the browser console for any errors.</p>
-                </div>
-            `;
+            // Hide placeholder, show canvas
+            document.getElementById('canvas-placeholder').style.display = 'none';
+            document.getElementById('model-canvas').style.display = 'block';
             
             console.log('Attempting to load NPC model:', npcId, 'from cache version:', CACHE_VERSION);
             
-            // Try to find if the bundle exposes any global API
-            setTimeout(() => {
-                const globalKeys = Object.keys(window).filter(key => 
-                    key.toLowerCase().includes('model') || 
-                    key.toLowerCase().includes('viewer') ||
-                    key.toLowerCase().includes('rsmv') ||
-                    key.toLowerCase().includes('npc')
-                );
-                console.log('Potential model viewer globals:', globalKeys);
-                
-                if (globalKeys.length > 0) {
-                    document.getElementById('status').textContent = 'Found potential APIs: ' + globalKeys.join(', ');
-                } else {
-                    document.getElementById('status').textContent = 'Model viewer loaded but no global API found. Check console.';
+            // Use the actual API functions from modelviewer.bundle.js
+            try {
+                if (typeof initModelViewer === 'function' && !modelViewerInitialized) {
+                    initModelViewer('model-canvas', CACHE_VERSION);
+                    modelViewerInitialized = true;
+                    console.log('Model viewer initialized');
                 }
-            }, 1000);
+                
+                if (typeof loadNPC3DModel === 'function') {
+                    loadNPC3DModel(parseInt(npcId), CACHE_VERSION);
+                    document.getElementById('status').textContent = 'NPC model ' + npcId + ' loaded successfully';
+                    console.log('NPC model loaded:', npcId);
+                } else if (typeof loadNPC === 'function') {
+                    loadNPC(parseInt(npcId), CACHE_VERSION);
+                    document.getElementById('status').textContent = 'NPC model ' + npcId + ' loaded successfully';
+                    console.log('NPC model loaded:', npcId);
+                } else {
+                    document.getElementById('status').textContent = 'Error: No NPC loading function found';
+                    console.error('No NPC loading function found');
+                }
+            } catch (error) {
+                document.getElementById('status').textContent = 'Error loading NPC model: ' + error.message;
+                console.error('Error loading NPC model:', error);
+            }
         }
 
         function loadPreset() {
@@ -202,20 +202,26 @@
             document.getElementById('status').textContent = 'Ready - Preloading v530 NPC cache...';
             console.log('RSMV page loaded');
             console.log('Cache configuration:', cacheConfig);
-            console.log('Window globals that might be relevant:', 
-                Object.keys(window).filter(key => 
-                    key.toLowerCase().includes('model') || 
-                    key.toLowerCase().includes('viewer') ||
-                    key.toLowerCase().includes('react') ||
-                    key.toLowerCase().includes('webpack') ||
-                    key.toLowerCase().includes('npc')
-                )
-            );
             
-            // Simulate cache preloading
+            // Hide canvas initially
+            document.getElementById('model-canvas').style.display = 'none';
+            
+            // Check for available API functions
             setTimeout(() => {
-                document.getElementById('status').textContent = 'Ready - Enter an NPC ID to begin';
-                console.log('v530 NPC cache preloaded');
+                const availableFunctions = [];
+                if (typeof initModelViewer === 'function') availableFunctions.push('initModelViewer');
+                if (typeof loadNPC3DModel === 'function') availableFunctions.push('loadNPC3DModel');
+                if (typeof loadNPC === 'function') availableFunctions.push('loadNPC');
+                
+                console.log('Available model viewer functions:', availableFunctions);
+                
+                if (availableFunctions.length > 0) {
+                    document.getElementById('status').textContent = 'Ready - Enter an NPC ID to begin';
+                    console.log('v530 NPC cache preloaded, API functions available');
+                } else {
+                    document.getElementById('status').textContent = 'Error: No model viewer API found';
+                    console.error('No model viewer API functions found');
+                }
             }, 1500);
         });
     </script>
