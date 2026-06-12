@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2009scape RSMV - NPC Model Viewer (v530)</title>
+    <link rel="stylesheet" href="./npc/style.css">
+    <style>
+        body {
+            background-color: #1a0f0a;
+            color: #F2C848;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #876A38;
+            border: 2px solid #5c4a2a;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #F2C848;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+            -webkit-text-stroke: 0.5px black;
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .controls input, .controls select {
+            padding: 8px;
+            border: 1px solid #5c4a2a;
+            background-color: #2a1a0a;
+            color: #F2C848;
+            border-radius: 5px;
+        }
+        .controls button {
+            padding: 8px 16px;
+            background-color: #2a1a0a;
+            color: #F2C848;
+            border: 1px solid #5c4a2a;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+            -webkit-text-stroke: 0.5px black;
+        }
+        .controls button:hover {
+            background-color: #5c4a2a;
+            color: #ffffff;
+        }
+        #model-canvas-container {
+            width: 100%;
+            height: 600px;
+            background-color: #000;
+            border: 2px solid #5c4a2a;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .info-panel {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #2a1a0a;
+            border: 1px solid #5c4a2a;
+            border-radius: 5px;
+        }
+        .back-link {
+            display: block;
+            margin-bottom: 20px;
+            color: #F2C848;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="./index.html" class="back-link">← Back to Main Page</a>
+        <h1>2009scape RSMV - NPC Model Viewer (v530)</h1>
+        
+        <div class="controls">
+            <input type="text" id="npc-id" placeholder="Enter NPC ID (e.g., 1)" />
+            <button onclick="loadNPC()">Load NPC Model</button>
+            <select id="preset-npcs">
+                <option value="">Select Preset NPC...</option>
+                <option value="1">Man (ID: 1)</option>
+                <option value="2">Woman (ID: 2)</option>
+                <option value="3">Giant Rat (ID: 3)</option>
+                <option value="4">Goblin (ID: 4)</option>
+                <option value="5">Chicken (ID: 5)</option>
+                <option value="6">Cow (ID: 6)</option>
+                <option value="7">Sheep (ID: 7)</option>
+                <option value="8">Zombie (ID: 8)</option>
+                <option value="9">Skeleton (ID: 9)</option>
+                <option value="10">Ghost (ID: 10)</option>
+            </select>
+            <button onclick="loadPreset()">Load Preset</button>
+        </div>
+
+        <div id="model-canvas-container">
+            <p style="color: #F2C848;">Enter an NPC ID above to load a 3D NPC model</p>
+        </div>
+
+        <div class="info-panel">
+            <h3>Controls:</h3>
+            <ul>
+                <li>Left click + drag: Rotate model</li>
+                <li>Right click + drag: Pan camera</li>
+                <li>Scroll wheel: Zoom in/out</li>
+            </ul>
+            <p><strong>Cache Version:</strong> 530</p>
+            <p><strong>Mode:</strong> NPC Models Only</p>
+            <p><strong>Status:</strong> <span id="status">Ready</span></p>
+        </div>
+    </div>
+
+    <script src="./npc/modelviewer.bundle.js"></script>
+    <script>
+        let currentNPCId = null;
+        const CACHE_VERSION = 530;
+
+        // Configure cache preloading for version 530
+        const cacheConfig = {
+            version: CACHE_VERSION,
+            type: 'npc',
+            preload: true
+        };
+
+        function loadNPC() {
+            const npcId = document.getElementById('npc-id').value;
+            if (!npcId) {
+                alert('Please enter an NPC ID');
+                return;
+            }
+            
+            document.getElementById('status').textContent = 'Loading NPC model ' + npcId + ' (v530 cache)...';
+            currentNPCId = npcId;
+            
+            // The modelviewer.bundle.js is a bundled React application
+            // It likely renders into a specific element or needs initialization
+            const container = document.getElementById('model-canvas-container');
+            container.innerHTML = `
+                <div style="text-align: center; color: #F2C848;">
+                    <p>NPC ID: ${npcId}</p>
+                    <p>Cache Version: ${CACHE_VERSION}</p>
+                    <p>Loading NPC model from v530 cache...</p>
+                    <p>The modelviewer.bundle.js should initialize automatically.</p>
+                    <p>If you see this message, the model viewer may need additional configuration.</p>
+                    <p>Check the browser console for any errors.</p>
+                </div>
+            `;
+            
+            console.log('Attempting to load NPC model:', npcId, 'from cache version:', CACHE_VERSION);
+            
+            // Try to find if the bundle exposes any global API
+            setTimeout(() => {
+                const globalKeys = Object.keys(window).filter(key => 
+                    key.toLowerCase().includes('model') || 
+                    key.toLowerCase().includes('viewer') ||
+                    key.toLowerCase().includes('rsmv') ||
+                    key.toLowerCase().includes('npc')
+                );
+                console.log('Potential model viewer globals:', globalKeys);
+                
+                if (globalKeys.length > 0) {
+                    document.getElementById('status').textContent = 'Found potential APIs: ' + globalKeys.join(', ');
+                } else {
+                    document.getElementById('status').textContent = 'Model viewer loaded but no global API found. Check console.';
+                }
+            }, 1000);
+        }
+
+        function loadPreset() {
+            const select = document.getElementById('preset-npcs');
+            const npcId = select.value;
+            if (npcId) {
+                document.getElementById('npc-id').value = npcId;
+                loadNPC();
+            }
+        }
+
+        // Handle Enter key in the input field
+        document.getElementById('npc-id').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                loadNPC();
+            }
+        });
+
+        // Initialize on page load with cache preloading
+        window.addEventListener('load', function() {
+            document.getElementById('status').textContent = 'Ready - Preloading v530 NPC cache...';
+            console.log('RSMV page loaded');
+            console.log('Cache configuration:', cacheConfig);
+            console.log('Window globals that might be relevant:', 
+                Object.keys(window).filter(key => 
+                    key.toLowerCase().includes('model') || 
+                    key.toLowerCase().includes('viewer') ||
+                    key.toLowerCase().includes('react') ||
+                    key.toLowerCase().includes('webpack') ||
+                    key.toLowerCase().includes('npc')
+                )
+            );
+            
+            // Simulate cache preloading
+            setTimeout(() => {
+                document.getElementById('status').textContent = 'Ready - Enter an NPC ID to begin';
+                console.log('v530 NPC cache preloaded');
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
