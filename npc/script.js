@@ -23,6 +23,21 @@ function onload() {
                     npc_names[name].push(id);
                 }
             }
+
+            // Check URL parameters for NPC ID or search term
+            const urlParams = new URLSearchParams(window.location.search);
+            const npcId = urlParams.get('id');
+            const searchTerm = urlParams.get('search');
+
+            if (npcId && npc_data[npcId]) {
+                // Load NPC directly by ID
+                document.getElementById('npc-box').hidden = false;
+                load_npc(npcId);
+            } else if (searchTerm) {
+                // Search for NPC by name
+                document.getElementById('npc-search').value = searchTerm;
+                search_npc();
+            }
         });
 }
 

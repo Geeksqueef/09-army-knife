@@ -1032,11 +1032,14 @@ window.addEventListener('message', function(event) {
             overlay.style.display = 'none';
         }
         
-        // Open NPC viewer with NPC name as search parameter
+        // Open NPC viewer with NPC ID
         const npcPopup = document.getElementById('npc-viewer-popup');
         const npcIframe = npcPopup.querySelector('iframe');
         
-        if (event.data.npcName) {
+        if (event.data.npcId) {
+            npcIframe.src = 'npc/index.html?id=' + encodeURIComponent(event.data.npcId);
+        } else if (event.data.npcName) {
+            // Fallback to name if ID is not available
             npcIframe.src = 'npc/index.html?search=' + encodeURIComponent(event.data.npcName);
         } else {
             npcIframe.src = 'npc/index.html';
