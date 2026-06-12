@@ -300,7 +300,7 @@
             charmData.forEach(row => {
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
-                    <td><span class="npc-link" onclick="openNpcViewer('${row.npc}')">${row.npc}</span></td>
+                    <td><span class="npc-link" data-npc-name="${encodeURIComponent(row.npc)}">${row.npc}</span></td>
                     <td>${row.combat}</td>
                     <td class="${getChanceColor(row.gold)}">${formatChance(row.gold)}</td>
                     <td class="${getChanceColor(row.green)}">${formatChance(row.green)}</td>
@@ -309,6 +309,14 @@
                     <td>${row.perDrop}</td>
                 `;
                 tbody.appendChild(tr);
+            });
+
+            // Add event listeners to all npc-link elements
+            document.querySelectorAll('.npc-link').forEach(link => {
+                link.addEventListener('click', function() {
+                    const npcName = decodeURIComponent(this.getAttribute('data-npc-name'));
+                    openNpcViewer(npcName);
+                });
             });
         }
 
