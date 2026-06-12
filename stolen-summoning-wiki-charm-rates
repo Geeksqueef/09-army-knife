@@ -1,0 +1,172 @@
+<title>
+
+;#;
+Summoning
+;#; 
+
+</title>
+
+\\ \\ Summoning is the newest skill to the game of this era. To start the skill you will be required to complete the [[quest_guides:wolf_whistle|Wolf Whistle]] quest. It is a skill that works with every skill by creating pouches that contain familiars that are used for various things.
+
+
+===== Familiars =====
+
+;#;
+List containing all available familiars:
+;#;
+
+[[  skill_guides:summoning:familiars|{{  skill_guides:summoning:summoning-familiars-logo.png  }}]]
+
+
+===== Charms =====
+
+;#;
+
+{{https://2009legacy.github.io/site/img/main/kbase/items/charms/gold_charm.gif}} Gold Charms {{https://2009legacy.github.io/site/img/main/kbase/items/charms/green_charm.gif}} Green Charms  {{https://2009legacy.github.io/site/img/main/kbase/items/charms/crimson-charm.gif}} Crimson Charms
+{{https://2009legacy.github.io/site/img/main/kbase/items/charms/blue_charm.gif}} Blue Charms  
+;#;
+
+#;;
+Charms are required to make pouches.  Below is a list of NPCs with notable drop rates for each charm.  Drop rates are approximated with 1000 loot rolls.  If an enemy's name is in //italics//, that enemy may not be implemented into the game yet.
+#;;
+
+^  NPC  ^  Combat Level(s)  ^  Gold Charms  ^  Green Charms  ^  Crimson Charms  ^  Blue Charms  ^  Per Drop  ^
+|  Ogress Champion  |{{skill_guides:summoning:charms_table:ogress_champion_combat.png?84x33  }}|{{skill_guides:summoning:charms_table:ogress_champion_gold.png?84x33  }}|{{skill_guides:summoning:charms_table:ogress_champion_green.png?84x33  }}|{{skill_guides:summoning:charms_table:ogress_champion_red.png?84x33  }}|{{skill_guides:summoning:charms_table:ogress_champion_blue.png?84x33  }}|1|
+
+^NPC^Combat Level(s)^Gold Charms^Green Charms^Crimson Charms^Blue Charms^Per Drop^
+|Hill Giant|28|**83.1%**|7.6%|8.3%|1.0%|1|
+|Ogress Champion|99|**81.9%**|3.1%|3.3%|1.1%|1|
+|Waterfiend|115|7.6%|6.0%|**80.0%**|2.2%|1|
+|Giant Rock Crab|137|**79.2%**|10.6%|6.8%|1.5%|3|
+|Hellhound|122, 127|**68.0%**|4.4%|4.6%|0.5%|1|
+|Ork Legion|70|**62.5%**|26.4%|9.0%|0.1%|1|
+|King Black Dragon|276|4.5%|3.5%|**62.2%**|1.2%|4|
+|Skeletal Wyvern|140|7.3%|2.5%|**57.0%**|2.1%|2|
+|Fire Giant|86|**56.1%**|7.0%|4.9%|1.5%|1|
+|Dagannoth|74, 90, 92|28.6%|14.3%|**55.3%**|1.8%|1|
+|Mithril Dragon|304|20.3%|**46.4%**|20.6%|3.2%|4|
+|Ice Giant|53|**46.2%**|3.0%|4.3%|1.2%|1|
+|Ice Warrior|53, 57|**45.4%**|1.6%|2.8%|0.4%|1|
+|Black Demon|172|21.5%|9.7%|**45.0%**|2.0%|1|
+|Werewolf|88, 91|**44.6%**|4.8%|4.2%|0.7%|1|
+|Red Dragon|152|17.8%|**42.8%**|17.6%|2.9%|1|
+|Corporeal Beast|785|20.8%|12.5%|22.5%|**41.4%**|13|
+|//Mutated Bloodveld//|126, 146|**41.0%**|4.9%|3.0%|1.1%|1|
+|Troll General|113|**40.8%**|5.5%|2.8%|1.9%|1|
+|[[activities:bosses:tormented_demons | Tormented Demon]]|450|20.7%|8.8%|19.0%|**39.4%**|3|
+|Ogress Warrior|86|**38.7%**|2.4%|2.8%|2.1%|1|
+|Ogress|69|**38.4%**|3.7%|4.5%|0.5%|1|
+|Steel Dragon|246|13.7%|**36.4%**|14.6%|2.1%|3|
+|Jogre|53, 58|**36.0%**|2.5%|2.9%|0.4%|1|
+|Pee Hat|91|**35.9%**|6.8%|3.9%|0.0%|1|
+|Bloodveld|76, 81|10.1%|**33.0%**|4.9%|0.8%|1|
+|Moss Giant|42, 48, 84|**32.6%**|2.8%|2.4%|0.8%|1|
+|Infernal Mage|66|**31.7%**|2.9%|2.4%|0.8%|1|
+|Iron Dragon|189|11.3%|**31.5%**|13.1%|2.8%|2|
+|Abyssal Demon|124|9.2%|4.0%|**31.4%**|1.3%|1|
+|Bronze Dragon|131|13.4%|**30.8%**|10.7%|3.5%|1|
+|Nechryael|115|9.6%|4.9%|**29.4%**|1.0%|1|
+|Cockroach Soldier|83|9.0%|5.9%|**28.2%**|1.2%|1|
+|Blue Dragon|111|11.8%|**27.6%**|11.6%|2.2%|1|
+|Black Dragon|227|8.9%|**26.8%**|6.8%|1.7%|3|
+|Deadly Red Spider|34|**25.7%**|1.1%|1.5%|0.3%|1|
+|Revenants (All)|7-135|**24.9%**|24.4%|24.8%|24.7%|4|
+|Kurask|106|11.7%|**24.6%**|6.4%|1.4%|1|
+|Elf Warrior|90, 108|7.6%|**24.1%**|7.0%|1.7%|1|
+|Turoth|83-89|7.4%|**24.0%**|4.9%|2.0%|1|
+|//Rock Lobster//|127|18.6%|7.9%|**23.9%**|3.3%|2|
+|Ice Spider|61|**23.6%**|8.0%|5.1%|1.4%|1|
+|Greater Demon|82|6.3%|3.3%|**23.3%**|1.0%|1|
+|Dust Devil|93|12.7%|5.1%|**22.8%**|1.4%|1|
+|//Locust Rider//|68, 98, 106|4.6%|6.2%|**22.6%**|0.5%|1|
+|Brine Rat|70|**22.5%**|2.0%|1.3%|0.2%|1|
+|Ankou|75, 82, 86|**22.1%**|1.7%|2.9%|0.3%|1|
+|//Zombie Hand//|90|**21.4%**|1.4%|1.5%|0.3%|1|
+|Dire Wolf|88|6.2%|**21.0%**|10.2%|1.8%|1|
+|Catablepon|49, 64, 68|**21.0%**|1.0%|1.9%|0.2%|1|
+|//Skeletal Hand//|80|**20.8%**|2.5%|1.4%|0.0%|1|
+|Jelly|78|7.9%|**20.7%**|4.8%|1.7%|1|
+|Ghoul|42|**20.4%**|0.5%|1.1%|0.2%|1|
+|Baby Black Dragon|83|9.6%|**19.8%**|10.5%|2.8%|1|
+|Giant Bat|27|**19.1%**|0.4%|1.3%|0.4%|1|
+|Kraka|91|**18.9%**|4.9%|4.5%|1.6%|1|
+|Kalphite Queen|333|5.2%|6.0%|12.2%|**18.4%**|3|
+|Dark Warrior|8|**18.4%**|4.6%|2.1%|0.9%|1|
+|Zamorak Warrior|81, 84, 85|**18.3%**|3.0%|2.2%|0.3%|1|
+|Abyssal Walker|81|4.4%|**17.9%**|2.4%|0.9%|1|
+|Grizzly Bear|21, 42|**17.7%**|0.2%|0.3%|0.3%|1|
+|Basilisk|61|7.0%|**17.2%**|4.9%|1.3%|1|
+|Wallasalki|98|**16.1%**|7.6%|7.1%|12.2%|1|
+|Cockroach Worker|56|6.5%|3.5%|**15.8%**|1.5%|1|
+|Green Dragon|79|9.4%|**15.6%**|8.2%|1.3%|1|
+|Cave Horror|80|4.3%|2.1%|**15.4%**|0.6%|1|
+|//Killerwatt//|55|**15.4%**|1.2%|1.2%|0.1%|1|
+|Brutal Grn Dragon|227|**15.3%**|13.3%|7.4%|1.5%|2|
+|Bat|6|**15.0%**|1.4%|0.3%|1.2%|1|
+|Wild Dog|63|6.2%|**14.9%**|7.1%|1.2%|1|
+|Suqah|111|**14.7%**|8.6%|6.4%|7.7%|1|
+|Dark Beast|182|8.6%|4.5%|8.2%|**14.4%**|1|
+|Hobgoblin|28, 42, 47|**14.4%**|0.2%|0.6%|0.1%|1|
+|Zamorak Ranger|81|1.2%|3.2%|4.5%|**13.7%**|1|
+|Ogre|53, 58, 63|**13.6%**|2.3%|1.2%|0.1%|1|
+|Kalphite Guardian|141|**13.3%**|6.9%|7.1%|8.6%|1|
+|Bloodworm|52|5.2%|**12.9%**|2.7%|0.6%|1|
+|Wizard|9|**12.6%**|5.7%|2.5%|0.6%|1|
+|Aberrant Spectre|96|**12.4%**|5.0%|4.8%|4.0%|1|
+|Jungle Horror|70|4.0%|**12.3%**|1.7%|0.4%|1|
+|White Wolf|25, 38|10.8%|4.7%|**12.1%**|0.6%|1|
+|//Giant Ant Soldier//|50, 58|3.4%|**12.0%**|1.7%|0.7%|1|
+|Black Guard|25, 48|4.6%|7.8%|2.1%|**11.6%**|1|
+|Terrorbird Gnome|31,49|**11.5%**|0.6%|3.9%|0.5%|1|
+|Zogre|44|**11.5%**|1.6%|1.5%|0.0%|1|
+|Earth Warrior|51|10.0%|4.4%|**11.1%**|0.9%|1|
+|Gargoyle|111|**11.1%**|4.8%|5.2%|6.3%|1|
+|Ice Wolf|96, 132|**11.1%**|4.6%|1.3%|1.1%|1|
+|Thug|10|**11.0%**|0.9%|0.4%|0.2%|1|
+|Black Unicorn|27|6.8%|**10.9%**|0.5%|0.3%|1|
+|Giant Mole|230|8.5%|**10.8%**|6.7%|2.2%|2|
+|//Shadow Warrior//|48|10.4%|5.5%|**10.5%**|0.3%|1|
+|//Terror Dog//|100, 110|**10.3%**|6.7%|7.5%|3.8%|1|
+|Stick|104|3.3%|9.3%|**10.2%**|9.9%|1|
+
+===== Extra Summoning Information =====
+
+\\ {{https://2009legacy.github.io/site/2009scape-resources/img/game_guide/skill_capes/summoningcape.png?40x60 }} **//Skill Mastery//**\\ In 2009scape, we had decided in the polls that we would add Skill Cape Perks in the game. You are able to find more perks by clicking [[skill_guides:skill_cape_perks|here]]. There has not been any decided skill cape perks for this skill yet.\\ \\ \\ \\ 
+
+===== Hax Recommends =====
+This section was added because a lot of people dont have a clue on how to start training summoning, or what to make, how many to make, what should i use X charm on at X level etc. So consider this the hax methods. This is for 5X but consider the "what to make" applicable for other xp rates as well. Again this is just my personal preference and is no way perfect. I prioritize on ease of secondary gathering rather than making the best possible pouch for each level.
+
+  - Level 1- Do Wolf Whistle - will instantly get you to level 9
+  - Level 9 - Make 1-2 spirit wolfs/dreadfowl to get to spirit spider. 
+  - Level 10 - Make enough spirit spider pouches to get to granite crab - keep these pouches, since they are an excellent source of red spider eggs used for herblore - spider carcuses can be obtained by the fairy ring CLS by killing spiders ( there are some spawns as well)
+  - Level 16 - Make enough granite crabs to get to level 28 for Compost mounds - Iron ore can be bought at blast furnace, jatizo, or mined
+  - Level 28 - make enough compost mounds to get to level 33 for Beaver - Buckets of compost can be bought at Catherby farming patch
+  - Level 33 - Make enough Beavers to get to level 49 for Bloated Leech - There are plenty of willow logs on the ge and are quick to cut yourself.
+
+At this point I would recommend you buy Raw beef in Oo'glog, along with raw bird meat. Raw beef may also be purchased in Canfis. Remember, Crimson charms are easily farmable by killing dags (AFK Melee or blast throug them by bursting, the rate of crimsons is exceptional.
+
+  - Level 49 - Make Bloated leeches until level 52 - Bogrog Swap all of your pouches you have made up until this part (except for spirit spiders)
+  - Dump ALL of your gold charms into Terrorbirds - These will be useful indefinitly. Do not Bogrog shard swap these.
+
+From this point, you have to determine what do you have more of in terms of charms. Unless you have been specifically farming charms you would most likely be out of Gold charms, have a few crimsons, greens, and maybe a few blue charms. I recommend not using blue charms until Lava Titans at level 83 as the secondary item will be a byproduct of you farming Tzhaar for Tokkul. Your main goal should be to reach level 74 summoning for Granite Lobsters. If you have a good amount of crimsons, feel free to keep making bloated leeches, but remember, you get better xp per charm for higher level summons. 
+
+Key Items to consider once they are unlocked.
+  * Switch to Ibis at 56 summoning, and then to Bunyip at level 68. Bunyips are great to keep for Barrows and Slayer training as it all but replaces Guthans for passive healing. - Harpoons can be bought at catherby fishing store.
+  * Fruit Bats at level 69 can be useful if you just want XP but the pouch is sort of useless when compared to a bunyip. Sharks can be easily bought in the GE for around 850 each, however buying bones on the GE is viable and using bones to bananas to obtain large quantities of bananas can be cheaper than sharks, especially if you plan on bogrog swapping them.
+  * At level 74 summoning, dump ALL of your crimson charms into Granite Lobsters. Granite is very easy to obtain by mining (Mine the 5KG, bank a full inventory, then chisel them into 5G at the bank). A full inventory and terrorbird of 5KG granite is hundreds of granite to use for making Granite Lobbies.
+  * IF money is not a factor, feel free to switch to the best pouch you can make for your level (example would be making Adamant Minotaurs at 76 instead of waiting for 83 for lava titans. I choose to wait for Lava titans because of the cost of secondaries. Some secondaries are not viable in bulk ( example: elemental talismans)
+
+
+Eventually, you will end up using gold on terrorbirds, greens on bunyips, crimsons on granite lobbies, and Blues on Lava titans for training. At level 96 summoning you will need to make around 900-1000 Pak Yaks in order to get 99 Summoning.
+----
+
+;#;
+[[:skill_guides|Back to skill guides]]
+;#;
+
+;#;
+[[:start|Back to main page]]
+;#;
+
+
+<wrap lo>**Credit: Summer, Sully, Szumaster, Hax.**</wrap>
