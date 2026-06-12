@@ -25,6 +25,7 @@
             border: 2px solid #5c4a2a;
             border-radius: 10px;
             padding: 20px;
+            position: relative;
         }
         
         table {
@@ -136,12 +137,30 @@
         .npc-link:hover {
             color: #ffffff;
         }
+        
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a0f0a;
+            background-color: #d4b896;
+            border: 2px solid #5c4a2a;
+            cursor: pointer;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+        
+        .close-btn:hover {
+            background-color: #c4a886;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-button">← Back to Main</a>
-        <h1>Common Charm Drop Rates</h1>
+        <button class="close-btn" onclick="closePage()">×</button>
+        <h1>Charm Drop Rates</h1>
         
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="Search NPCs..." onkeyup="filterTable()">
@@ -349,6 +368,15 @@
                 window.parent.postMessage({
                     type: 'openNpcViewer',
                     npcName: npcName
+                }, '*');
+            }
+        }
+
+        function closePage() {
+            // Send message to parent window to close this popup
+            if (window.parent) {
+                window.parent.postMessage({
+                    type: 'closePopup'
                 }, '*');
             }
         }

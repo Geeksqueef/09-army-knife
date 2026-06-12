@@ -1045,6 +1045,16 @@ window.addEventListener('message', function(event) {
         npcPopup.style.display = 'block';
         overlay.style.display = 'block';
     }
+    
+    if (event.data.type === 'closePopup') {
+        // Close charm drop popup
+        const charmDropPopup = document.getElementById('charm-drop-popup');
+        const overlay = document.getElementById('fairy-rings-overlay');
+        if (charmDropPopup.style.display === 'block') {
+            charmDropPopup.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+    }
 });
 </script>
 </body>
