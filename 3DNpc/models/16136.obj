@@ -1,0 +1,9 @@
+# RS2 Model 16136
+# Vertices: 3
+# Faces: 1
+
+v 64 -64 0
+v 64 64 0
+v 0 64 0
+
+f 1 2 3

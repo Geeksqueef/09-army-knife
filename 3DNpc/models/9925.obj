@@ -1,0 +1,9 @@
+# RS2 Model 9925
+# Vertices: 3
+# Faces: 1
+
+v 6 -2 -6
+v -6 -2 -6
+v 0 6 -6
+
+f 1 2 3

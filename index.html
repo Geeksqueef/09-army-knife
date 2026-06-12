@@ -515,6 +515,40 @@ height: 26px;
   color: #ffffff;
 }
 
+#npc-3d-popup {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  background-color: #876A38FF;
+  border-radius: 15px;
+  z-index: 1000;
+  padding: 20px;
+  color: #1a0f0a;
+  overflow: auto;
+}
+
+#npc-3d-popup .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a0f0a;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+#npc-3d-popup iframe {
+  width: 100%;
+  height: calc(100% - 60px);
+  border: none;
+  border-radius: 10px;
+}
+
 msg { 
   background: green;
   border-radius: 10px;
@@ -587,7 +621,7 @@ function off() {
          </div>
           <table width="1164">
               <td class="litd"></td>   
-              <td class="citd"><center><a href="./rsmv.html" style="text-decoration: none; color: #F2C848; text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); -webkit-text-stroke: 0.5px black;"><strong>2009Scape Swiss Army Knife</strong></a></center></td>
+              <td class="citd"><center><a href="#" onclick="toggleNpc3D(); return false;" style="text-decoration: none; color: #F2C848; text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); -webkit-text-stroke: 0.5px black;"><strong>2009Scape Swiss Army Knife</strong></a></center></td>
               <td class="ritd"></td>
          </table>
       </td>
@@ -672,6 +706,10 @@ function off() {
     <button class="copy-btn" onclick="copyBookmarklet()">Copy Bookmarklet Code</button>
     <p style="margin-top: 20px;">Visit the <a href="https://runescape.wiki" target="_blank" class="wiki-link">Official Runescape Wiki</a></p>
   </div>
+</div>
+<div id="npc-3d-popup">
+  <button class="close-btn" onclick="toggleNpc3D()">&times;</button>
+  <iframe src="3DNpc/09NPC3d.html"></iframe>
 </div>
 
 <script>
@@ -858,6 +896,18 @@ function toggleWiki() {
 
 function toggleRsWiki() {
   const popup = document.getElementById('rs-wiki-popup');
+  const overlay = document.getElementById('fairy-rings-overlay');
+  if (popup.style.display === 'block') {
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+  } else {
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+  }
+}
+
+function toggleNpc3D() {
+  const popup = document.getElementById('npc-3d-popup');
   const overlay = document.getElementById('fairy-rings-overlay');
   if (popup.style.display === 'block') {
     popup.style.display = 'none';
