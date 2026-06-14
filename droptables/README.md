@@ -1,2 +1,4 @@
-# 2009-Droptables
-https://downthecrop.github.io/2009-droptables
+# 2009Scape Droptables in Vue.js
+
+Thanks to **DownTheCrop** - (Original Legacy codebase and inspiration)
+https://github.com/downthecrop/2009-droptables
