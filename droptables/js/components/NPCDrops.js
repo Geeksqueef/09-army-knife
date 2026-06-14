@@ -2,7 +2,9 @@ export default {
   template: `
     <div class="npc-drops">
       <div v-for="result in processedResults" :key="result.name" class="npc-entry">
-        <h2 class="npc-name">{{ result.name }}</h2>
+        <h2 class="npc-name">
+          <a href="#" @click.prevent="openNpcViewer(result.ids, result.name)" class="npc-name-link">{{ result.name }}</a>
+        </h2>
         <div class="npc-ids">IDs: {{ result.ids }}</div>
         
         <div v-if="result.defaultDrops.length > 0" class="drop-section">
@@ -17,7 +19,10 @@ export default {
               </tr>
               <tr v-for="item in result.defaultDrops" :key="item.id">
                 <td><img :src="iconURL(item.id)" :alt="item.name" /></td>
-                <td>{{ item.name }}</td>
+                <td>
+                  <a v-if="getDropTableLink(item.name)" :href="getDropTableLink(item.name)" target="_blank">{{ item.name }}</a>
+                  <span v-else>{{ item.name }}</span>
+                </td>
                 <td>
                   <div>{{ item.amountDisplay }}</div>
                   <div class="debug-hide">{{ item.perKillAverage }}</div>
@@ -40,7 +45,10 @@ export default {
               </tr>
               <tr v-for="item in result.mainDrops" :key="item.id">
                 <td><img :src="iconURL(item.id)" :alt="item.name" /></td>
-                <td>{{ item.name }}</td>
+                <td>
+                  <a v-if="getDropTableLink(item.name)" :href="getDropTableLink(item.name)" target="_blank" class="npc-link">{{ item.name }}</a>
+                  <span v-else>{{ item.name }}</span>
+                </td>
                 <td>
                   <div>{{ item.amountDisplay }}</div>
                   <div class="debug-hide">{{ item.perKillAverage }}</div>
@@ -63,7 +71,10 @@ export default {
               </tr>
               <tr v-for="item in result.tertiaryDrops" :key="item.id">
                 <td><img :src="iconURL(item.id)" :alt="item.name" /></td>
-                <td>{{ item.name }}</td>
+                <td>
+                  <a v-if="getDropTableLink(item.name)" :href="getDropTableLink(item.name)" target="_blank" class="npc-link">{{ item.name }}</a>
+                  <span v-else>{{ item.name }}</span>
+                </td>
                 <td>
                   <div>{{ item.amountDisplay }}</div>
                   <div class="debug-hide">{{ item.perKillAverage }}</div>
@@ -86,7 +97,10 @@ export default {
               </tr>
               <tr v-for="item in result.charmDrops" :key="item.id">
                 <td><img :src="iconURL(item.id)" :alt="item.name" /></td>
-                <td>{{ item.name }}</td>
+                <td>
+                  <a v-if="getDropTableLink(item.name)" :href="getDropTableLink(item.name)" target="_blank" class="npc-link">{{ item.name }}</a>
+                  <span v-else>{{ item.name }}</span>
+                </td>
                 <td>
                   <div>{{ item.amountDisplay }}</div>
                   <div class="debug-hide">{{ item.perKillAverage }}</div>
@@ -172,6 +186,33 @@ export default {
     sortSection(sectionKey, key) {
       this.sortStates[`${sectionKey}Key`] = key;
       this.sortStates[`${sectionKey}Direction`] = this.sortStates[`${sectionKey}Direction`] === 'asc' ? 'desc' : 'asc';
+    },
+    getDropTableLink(itemName) {
+      const dropTableMapping = {
+        'RDT Slot': 'rdt.html',
+        'Rare Drop Table': 'rdt.html',
+        'C. Ele Minor Drop Table': 'CELEDT.html',
+        'Chaos Elemental Minor Drop Table': 'CELEDT.html',
+        'Rare Seed Drop Table': 'RSDT.html',
+        'Uncommon Seed Drop Table': 'USDT.html',
+        'Herb Drop Table': 'HDT.html',
+        'Gem Drop Table': 'GDT.html',
+        'Allotment Seed Drop Table': 'ASDT.html'
+      };
+      return dropTableMapping[itemName] || null;
+    },
+    openNpcViewer(npcIds, npcName) {
+      // Get the first NPC ID from the comma-separated list
+      const npcId = npcIds.split(',')[0];
+      
+      // Send message to parent window to close droptables and open NPC viewer
+      if (window.parent) {
+        window.parent.postMessage({
+          type: 'openNpcViewer',
+          npcId: npcId,
+          npcName: npcName
+        }, '*');
+      }
     }
   }
 }

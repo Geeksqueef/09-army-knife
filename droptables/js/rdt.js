@@ -60,6 +60,22 @@ function sortByRarity(table,order){
 
 function fillRDT(){
     // creates a <table> element and a <tbody> element
+    var table = document.createElement("table");
+    var thead = document.createElement("thead");
+    var headerRow = document.createElement("tr");
+    headerRow.className = "header-row";
+    
+    // Add header cells
+    var headers = ["", "Name", "Amount", "Rarity"];
+    headers.forEach(function(headerText) {
+        var th = document.createElement("th");
+        th.textContent = headerText;
+        headerRow.appendChild(th);
+    });
+    
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+    
     var tblBody = document.createElement("tbody");
 
     // Get the combined weight of everything for later
@@ -127,20 +143,14 @@ function fillRDT(){
         tblBody.appendChild(row);
     }
     if (tblBody.innerText){
-        let h1 = document.createElement("h1")
-        let debugDiv = document.createElement('div')
-        debugDiv.className = debugClass
-        var debugText = document.createElement('p');
-        debugDiv.appendChild(debugText)
-        table.appendChild(h1)
-        table.appendChild(debugDiv)
+        table.appendChild(tblBody);
 
         sortByRarity(tblBody,true)
         tblBody.addEventListener('click', function(e){
             sortTable(e)
         })
 
-        document.getElementById("table").appendChild(tblBody)
+        document.getElementById("table").appendChild(table)
     }
 }
 

@@ -9,13 +9,14 @@ export class Result {
 }
 
 export class DisplayItem {
-  constructor(id, name, minAmount, maxAmount, weight, totalWeight) {
+  constructor(id, name, minAmount, maxAmount, weight, totalWeight, npcId = null) {
     this.id = id;
     this.name = name;
     this.minAmount = minAmount;
     this.maxAmount = maxAmount;
     this.weight = weight;
     this.totalWeight = totalWeight;
+    this.npcId = npcId;
   }
 
   get rarity() {

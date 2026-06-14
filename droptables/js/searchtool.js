@@ -109,9 +109,9 @@ Vue.createApp({
                   result.name = result.name || item.name;
                   const totalWeight = this.isNormalCharm(item.id) ? npcObj.totalCharmWeight : npcObj.totalWeight;
                   if(item.isTertiary)
-                    result.items.push(new DisplayItem(item.id, npcName, item.minAmount, item.maxAmount, item.weight, npcObj.totalTertiaryWeight));
+                    result.items.push(new DisplayItem(item.id, npcName, item.minAmount, item.maxAmount, item.weight, npcObj.totalTertiaryWeight, id));
                   else
-                    result.items.push(new DisplayItem(item.id, npcName, item.minAmount, item.maxAmount, item.weight, totalWeight));
+                    result.items.push(new DisplayItem(item.id, npcName, item.minAmount, item.maxAmount, item.weight, totalWeight, id));
                 }
               }
             }

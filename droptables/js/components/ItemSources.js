@@ -15,7 +15,7 @@ export default {
               </tr>
               <tr v-for="(item, index) in result.items" :key="item.id + '-' + item.name + '-' + index">
                 <td><img :src="iconURL(item.id)" :alt="result.name" /></td>
-                <td>{{ item.name }}</td>
+                <td><a href="#" @click.prevent="openNpcViewer(item.npcId, item.name)" class="npc-link">{{ item.name }}</a></td>
                 <td>
                   <div>{{ item.amountDisplay }}</div>
                   <div class="debug-hide">{{ item.perKillAverage }}</div>
@@ -108,6 +108,16 @@ export default {
       } else {
         this.sortKey = key;
         this.sortDirection = 'asc';
+      }
+    },
+    openNpcViewer(npcId, npcName) {
+      // Send message to parent window to close droptables and open NPC viewer
+      if (window.parent) {
+        window.parent.postMessage({
+          type: 'openNpcViewer',
+          npcId: npcId,
+          npcName: npcName
+        }, '*');
       }
     }
   }

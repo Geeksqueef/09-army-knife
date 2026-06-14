@@ -1032,6 +1032,13 @@ window.addEventListener('message', function(event) {
             overlay.style.display = 'none';
         }
         
+        // Close droptables popup
+        const droptablesPopup = document.getElementById('droptables-popup');
+        if (droptablesPopup.style.display === 'block') {
+            droptablesPopup.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+        
         // Open NPC viewer with NPC ID
         const npcPopup = document.getElementById('npc-viewer-popup');
         const npcIframe = npcPopup.querySelector('iframe');
