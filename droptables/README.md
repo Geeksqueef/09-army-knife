@@ -1,2 +1,2 @@
-# 2009-Droptables
-https://downthecrop.github.io/2009-droptables
+# 2009-Droptables (Original Legacy codebase and inspiration)
+https://github.com/downthecrop/2009-droptables
