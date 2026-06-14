@@ -189,14 +189,18 @@ export default {
     },
     getDropTableLink(itemName) {
       const dropTableMapping = {
+        'RDT': 'rdt.html',
         'RDT Slot': 'rdt.html',
         'Rare Drop Table': 'rdt.html',
+        'GDT': 'GDT.html',
+        'Gem Drop Table': 'GDT.html',
+        'USDT': 'USDT.html',
+        'Uncommon Seed Drop Table': 'USDT.html',
+        'HDT': 'HDT.html',
+        'Herb Drop Table': 'HDT.html',
         'C. Ele Minor Drop Table': 'CELEDT.html',
         'Chaos Elemental Minor Drop Table': 'CELEDT.html',
         'Rare Seed Drop Table': 'RSDT.html',
-        'Uncommon Seed Drop Table': 'USDT.html',
-        'Herb Drop Table': 'HDT.html',
-        'Gem Drop Table': 'GDT.html',
         'Allotment Seed Drop Table': 'ASDT.html'
       };
       return dropTableMapping[itemName] || null;
