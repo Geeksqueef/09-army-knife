@@ -201,10 +201,14 @@ export default {
         'HDT': 'HDT.html',
         'HDT Slot': 'HDT.html',
         'Herb Drop Table': 'HDT.html',
-        'C. Ele Minor Drop Table': 'CELEDT.html',
-        'Chaos Elemental Minor Drop Table': 'CELEDT.html',
+        'ASDT': 'ASDT.html',
+        'ASDT Slot': 'ASDT.html',
+        'Allotment Seed Drop Table': 'ASDT.html',
+        'RSDT': 'RSDT.html',
+        'RSDT Slot': 'RSDT.html',
         'Rare Seed Drop Table': 'RSDT.html',
-        'Allotment Seed Drop Table': 'ASDT.html'
+        'C. Ele Minor Drop Table': 'CELEDT.html',
+        'Chaos Elemental Minor Drop Table': 'CELEDT.html'
       };
       return dropTableMapping[itemName] || null;
     },
