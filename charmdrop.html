@@ -363,15 +363,6 @@
             }
         }
 
-        function closePage() {
-            // Send message to parent window to close this popup
-            if (window.parent) {
-                window.parent.postMessage({
-                    type: 'closePopup'
-                }, '*');
-            }
-        }
-
         // Initialize table on page load
         populateTable();
     </script>

@@ -258,13 +258,3 @@ function openDroptables() {
         }, '*');
     }
 }
-
-function closeDroptables() {
-    const popup = document.getElementById('droptables-popup');
-    const overlay = document.getElementById('droptables-overlay');
-    const iframe = document.getElementById('droptables-iframe');
-    
-    popup.style.display = 'none';
-    overlay.style.display = 'none';
-    iframe.src = '';
-}

@@ -37,7 +37,8 @@ background-color: #bbab8c;
       window.addEventListener('message', function(event) {
         if (!event.data) return;
 
-        if (event.data.type === 'navigateTo' && event.data.x && event.data.y) {
+        // Use finite-number checks, not truthiness: 0 is a valid map coordinate.
+        if (event.data.type === 'navigateTo' && Number.isFinite(event.data.x) && Number.isFinite(event.data.y)) {
           // Get the map instance from the global scope
           if (window.mapInstance) {
             const rc = window.mapInstance.rasterCoords;

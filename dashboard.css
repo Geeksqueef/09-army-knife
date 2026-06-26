@@ -140,26 +140,9 @@ html, body {
   display: block;
 }
 
-/* Backdrop */
-.dashboard-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 150;
-  display: none;
-}
-
-.dashboard-backdrop.active {
-  display: block;
-}
-
 /* Maximize map state */
 body.map-maximized .dashboard-toolbar,
-body.map-maximized .dashboard-panel,
-body.map-maximized .dashboard-backdrop {
+body.map-maximized .dashboard-panel {
   display: none !important;
 }
 

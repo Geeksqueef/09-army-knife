@@ -4,6 +4,8 @@
   const panels = {};
   let activePanel = null;
   let nextZ = 300;
+  // Onboarding tip; dismissed (and forgotten) the first time a panel opens.
+  let maximizeHint = document.querySelector('.maximize-hint');
 
   const panelConfigs = {
     'fairy-rings': { title: 'Fairy Ring Codes', src: './fairy-rings.html', width: 800, height: 500 },
@@ -126,6 +128,10 @@
       const iframe = panel.querySelector('iframe');
       if (iframe) iframe.setAttribute('src', src);
     }
+    if (maximizeHint) {
+      maximizeHint.style.display = 'none';
+      maximizeHint = null;
+    }
     panel.classList.add('active');
     bringToFront(id);
   };
@@ -167,23 +173,13 @@
     if (!event.data) return;
     const data = event.data;
 
-    if (data.type === 'navigateTo' && data.x && data.y) {
+    // Use finite-number checks, not truthiness: 0 is a valid map coordinate.
+    if (data.type === 'navigateTo' && Number.isFinite(data.x) && Number.isFinite(data.y)) {
       const mapFrame = document.getElementById('map-frame');
       if (mapFrame && mapFrame.contentWindow) {
         mapFrame.contentWindow.postMessage(data, '*');
       }
       closePanel('fairy-rings');
-    }
-
-    if (data.type === 'closePopup') {
-      // Find which panel the message came from and close it
-      for (const id in panels) {
-        const iframe = panels[id].querySelector('iframe');
-        if (iframe && iframe.contentWindow === event.source) {
-          closePanel(id);
-          break;
-        }
-      }
     }
 
     if (data.type === 'openNpcViewer') {
