@@ -102,9 +102,17 @@
     document.addEventListener('mouseup', onMouseUp);
   }
 
-  window.openPanel = function(id) {
+  // Open a panel. An explicit `src` (e.g. './npc/index.html?id=50') is an
+  // authoritative deep-link request and always reloads the iframe, so the panel
+  // lands on the requested target even if it was navigated since it last opened.
+  // Toolbar buttons pass no src and leave the iframe in its current state.
+  window.openPanel = function(id, src) {
     const panel = getPanel(id);
     if (!panel) return;
+    if (src) {
+      const iframe = panel.querySelector('iframe');
+      if (iframe) iframe.setAttribute('src', src);
+    }
     panel.classList.add('active');
     bringToFront(id);
   };
@@ -165,8 +173,24 @@
       }
     }
 
-    if (data.type === 'openNpcViewer' && data.npcId) {
-      openPanel('npc-viewer');
+    if (data.type === 'openNpcViewer') {
+      // Deep-link to a specific NPC: prefer id, fall back to a name search.
+      let src = './npc/index.html';
+      if (data.npcId != null && data.npcId !== '') {
+        src += '?id=' + encodeURIComponent(data.npcId);
+      } else if (data.npcName) {
+        src += '?search=' + encodeURIComponent(data.npcName);
+      }
+      openPanel('npc-viewer', src);
+    }
+
+    if (data.type === 'openDroptables') {
+      // Open the drop tables panel, optionally filtered to the NPC's name.
+      let src = './droptables/index.html';
+      if (data.npcName) {
+        src += '?search=' + encodeURIComponent(data.npcName);
+      }
+      openPanel('droptables', src);
     }
   });
 })();
