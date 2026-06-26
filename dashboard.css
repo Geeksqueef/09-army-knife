@@ -24,7 +24,9 @@ html, body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  /* Above the floating panel band (panels start at z-index 301 in dashboard.js)
+     so the toolbar stays clickable even if it wraps over an already-open panel. */
+  z-index: 10000;
   background-image: url(./dialog/2009-bg_footer.png);
   background-color: #876a38;
   background-position: center;

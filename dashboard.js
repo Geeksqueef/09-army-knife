@@ -15,6 +15,17 @@
     'npc-3d': { title: '3D NPC Viewer', src: './3DNpc/09NPC3d.html', width: 900, height: 600 }
   };
 
+  // Lowest top a panel may occupy: just below the toolbar's measured height
+  // plus a small gap. The toolbar wraps to multiple rows on narrow viewports,
+  // so its height is read live rather than hard-coded; the 44 is only a floor
+  // for the rare case where it cannot be measured (e.g. zero-height/hidden).
+  // Keeping panels below this means they never cover the toolbar.
+  function minPanelTop() {
+    const toolbar = document.querySelector('.dashboard-toolbar');
+    const height = toolbar ? toolbar.getBoundingClientRect().height : 0;
+    return Math.round(height || 44) + 8;
+  }
+
   function getPanel(id) {
     if (!panels[id]) {
       panels[id] = createPanel(id);
@@ -32,7 +43,7 @@
     panel.style.width = cfg.width + 'px';
     panel.style.height = cfg.height + 'px';
     panel.style.left = Math.max(20, (window.innerWidth - cfg.width) / 2) + 'px';
-    panel.style.top = Math.max(60, (window.innerHeight - cfg.height) / 2) + 'px';
+    panel.style.top = Math.max(minPanelTop(), (window.innerHeight - cfg.height) / 2) + 'px';
     panel.style.zIndex = ++nextZ;
 
     panel.innerHTML = `
@@ -82,13 +93,15 @@
     const startLeft = rect.left;
     const startTop = rect.top;
 
+    const topLimit = minPanelTop();
+
     function onMouseMove(ev) {
       let newLeft = startLeft + (ev.clientX - startX);
       let newTop = startTop + (ev.clientY - startY);
       const maxLeft = window.innerWidth - panel.offsetWidth;
       const maxTop = window.innerHeight - panel.offsetHeight;
       newLeft = Math.max(0, Math.min(newLeft, maxLeft));
-      newTop = Math.max(0, Math.min(newTop, maxTop));
+      newTop = Math.max(topLimit, Math.min(newTop, maxTop));
       panel.style.left = newLeft + 'px';
       panel.style.top = newTop + 'px';
     }
