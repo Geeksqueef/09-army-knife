@@ -94,6 +94,7 @@ td{
     background-color: #e2dbc8;
     padding: 10px !important;
     text-align: center;
+    vertical-align: middle;
 }
 td:first-child {
     width: 40px;
@@ -175,7 +176,15 @@ tbody{
 }
 .hover-link img{
     padding-left: 10px;
-    display: "inline";
+    display: inline;
+    vertical-align: middle;
+}
+
+/* Center item icons in table cells */
+td img {
+    display: block;
+    margin: 0 auto;
+    vertical-align: middle;
 }
 
 .npc-link {
