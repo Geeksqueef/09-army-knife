@@ -35,6 +35,8 @@ background-color: #bbab8c;
     <script>
       // Listen for navigation messages from parent window
       window.addEventListener('message', function(event) {
+        if (!event.data) return;
+
         if (event.data.type === 'navigateTo' && event.data.x && event.data.y) {
           // Get the map instance from the global scope
           if (window.mapInstance) {
@@ -42,6 +44,12 @@ background-color: #bbab8c;
             const latlng = rc.unproject([event.data.x, event.data.y]);
             window.mapInstance.setView(latlng, 5);
           }
+        }
+
+        if (event.data.type === 'dashboardMaximizeToggled') {
+          // The parent dashboard hides/shows chrome via CSS.
+          // The map iframe already fills the viewport, so no action is required here.
+          // This listener exists for future use (e.g., hiding map attribution).
         }
       });
     </script>
