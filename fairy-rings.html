@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fairy Ring Codes</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="./leaflet.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #876A38;
+      color: #1a0f0a;
+    }
+    .fr-container {
+      display: flex;
+      height: 100%;
+    }
+    .fr-col {
+      border-right: 1px solid #5c4a2a;
+      overflow: auto;
+      background-color: #9E7E4C;
+    }
+    .fr-col.codes {
+      width: 90px;
+      flex-shrink: 0;
+    }
+    .fr-col.destinations {
+      flex: 1;
+      min-width: 180px;
+    }
+    .fr-col.preview {
+      width: 220px;
+      flex-shrink: 0;
+      border-right: none;
+      display: flex;
+      flex-direction: column;
+    }
+    .fr-header {
+      background-color: #6B5028;
+      color: #F2C848;
+      padding: 8px;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+      border-bottom: 1px solid #5c4a2a;
+    }
+    .fr-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .fr-list li {
+      padding: 6px 10px;
+      border-bottom: 1px solid #5c4a2a;
+      cursor: pointer;
+    }
+    .fr-list li:hover,
+    .fr-list li.selected {
+      background-color: #B8955E;
+    }
+    .fr-list a {
+      color: #1a0f0a;
+      text-decoration: none;
+      display: block;
+    }
+    .preview-map {
+      flex: 1;
+      background-color: #B0B0B0;
+    }
+    .preview-info {
+      padding: 8px;
+      background-color: #6B5028;
+      color: #F2C848;
+      font-size: 12px;
+      text-align: center;
+      min-height: 36px;
+    }
+  </style>
+</head>
+<body>
+  <div class="fr-container">
+    <div class="fr-col codes">
+      <div class="fr-header">Code</div>
+      <ul class="fr-list" id="code-list"></ul>
+    </div>
+    <div class="fr-col destinations">
+      <div class="fr-header">Destination</div>
+      <ul class="fr-list" id="dest-list"></ul>
+    </div>
+    <div class="fr-col preview">
+      <div class="fr-header">Preview</div>
+      <div id="preview-map" class="preview-map"></div>
+      <div id="preview-info" class="preview-info">Select a ring to see the area.</div>
+    </div>
+  </div>
+
+  <script src="./leaflet.js"></script>
+  <script src="./rastercoords.js"></script>
+  <script>
+    const fairyRingData = [
+      ["A I Q", "Mudskipper point"],
+      ["A I R", "Necromancer Island"],
+      ["A J Q", "Dungeons: Cave south of Dorgesh-Kaan"],
+      ["A J R", "Kandarin: Slayer cave"],
+      ["A J S", "Penguin Island"],
+      ["A K Q", "Kandarin: Piscatoris Hunter"],
+      ["A K S", "Feldip Hills"],
+      ["A L R", "Abyssal Area"],
+      ["A L Q", "Morytania Haunted Woods"],
+      ["A L S", "McGrubor's Wood"],
+      ["B I P", "Morytania Island"],
+      ["B I Q", "Kalphite Lair"],
+      ["B I S", "Ardougne Zoo Unicorns"],
+      ["B K P", "Castle Wars"],
+      ["B K Q", "Enchanted Valley"],
+      ["B K R", "Mort Myre Swamp"],
+      ["B L P", "TzHaar Area"],
+      ["B L R", "Legends Guild"],
+      ["C I P", "Islands: Miscellania"],
+      ["C I Q", "Yanille"],
+      ["C J R", "Sinclair West"],
+      ["C K P", "Cosmic Entity's Plane (Nowhere)"],
+      ["C K R", "Karamja Hunter"],
+      ["C K S", "Canafis"],
+      ["C K S", "Near Canifis"],
+      ["C L S", "Jungle Spiders"],
+      ["D I S", "Wizards Tower"],
+      ["D J P", "Tower of Life"],
+      ["D J R", "Sinclair North West"],
+      ["D K P", "East Karamja"],
+      ["D K R", "Edgeville/GE"],
+      ["D K S", "Kandarin: Snowy Hunter Area"],
+      ["D L Q", "Desert Lizard"],
+      ["D L R", "Poison Wastes"]
+    ];
+
+    const fairyRingCoordinates = {
+      "AIQ": [8004, 8109],
+      "AIR": [5610, 6994],
+      "AJQ": [2500, 1400],
+      "AJR": [6255, 4022],
+      "AJS": [3990, 1724],
+      "AKQ": [2525, 4007],
+      "AKS": [4565, 9356],
+      "ALQ": [12882, 4990],
+      "ALR": [2500, 1350],
+      "ALS": [5157, 4979],
+      "BIP": [11352, 6373],
+      "BIQ": [10050, 8248],
+      "BIS": [5091, 6841],
+      "BKP": [3060, 8716],
+      "BKQ": [2500, 1300],
+      "BKR": [11830, 5502],
+      "BLP": [6770, 7555],
+      "BLR": [5932, 6151],
+      "CIP": [4096, 1820],
+      "CIQ": [4217, 7971],
+      "CJR": [5649, 4323],
+      "CKP": [0, 0],
+      "CKR": [6424, 8980],
+      "CKS": [11654, 5184],
+      "CLS": [5464, 8343],
+      "DIS": [8927, 7807],
+      "DJP": [5269, 7134],
+      "DJR": [5415, 4234],
+      "DKP": [7228, 8100],
+      "DKR": [9065, 4989],
+      "DKS": [5964, 3161],
+      "DLQ": [11459, 8870],
+      "DLR": [1668, 8197]
+    };
+
+    let previewMap = null;
+    let previewRc = null;
+    const mapImageSize = [15104, 12800];
+
+    function initPreviewMap() {
+      previewMap = L.map('preview-map', {
+        minZoom: 1,
+        maxZoom: 6,
+        zoomControl: false,
+        attributionControl: false
+      });
+      previewRc = new L.RasterCoords(previewMap, mapImageSize);
+      L.tileLayer('./tiles/{z}/{x}/{y}.png', {
+        noWrap: true,
+        minZoom: 0,
+        maxZoom: 6
+      }).addTo(previewMap);
+      previewMap.setView(previewRc.unproject([7500, 6400]), 1);
+    }
+
+    function selectRing(code, dest, coords) {
+      document.querySelectorAll('.fr-list li').forEach(li => li.classList.remove('selected'));
+      const key = code.replace(/\s/g, '');
+      const codeItems = document.querySelectorAll('#code-list li');
+      const destItems = document.querySelectorAll('#dest-list li');
+      for (let i = 0; i < codeItems.length; i++) {
+        if (codeItems[i].dataset.code === key) {
+          codeItems[i].classList.add('selected');
+          destItems[i].classList.add('selected');
+          break;
+        }
+      }
+
+      const info = document.getElementById('preview-info');
+      if (coords && coords[0] !== 0) {
+        info.textContent = code + ' — ' + dest;
+        if (previewMap && previewRc) {
+          previewMap.setView(previewRc.unproject(coords), 4);
+          // Remove existing markers
+          previewMap.eachLayer(function(layer) {
+            if (layer instanceof L.Marker) previewMap.removeLayer(layer);
+          });
+          L.marker(previewRc.unproject(coords)).addTo(previewMap);
+        }
+      } else {
+        info.textContent = code + ' — ' + dest + ' (no map location)';
+        if (previewMap && previewRc) {
+          previewMap.setView(previewRc.unproject([7500, 6400]), 1);
+          previewMap.eachLayer(function(layer) {
+            if (layer instanceof L.Marker) previewMap.removeLayer(layer);
+          });
+        }
+      }
+    }
+
+    function navigateToRing(coords) {
+      if (coords && coords[0] !== 0) {
+        window.parent.postMessage({ type: 'navigateTo', x: coords[0], y: coords[1] }, '*');
+      }
+    }
+
+    function populate() {
+      const codeList = document.getElementById('code-list');
+      const destList = document.getElementById('dest-list');
+      codeList.innerHTML = '';
+      destList.innerHTML = '';
+
+      fairyRingData.forEach(row => {
+        const code = row[0];
+        const dest = row[1];
+        const key = code.replace(/\s/g, '');
+        const coords = fairyRingCoordinates[key];
+
+        const codeLi = document.createElement('li');
+        codeLi.dataset.code = key;
+        codeLi.innerHTML = coords && coords[0] !== 0
+          ? '<a href="#">' + code + '</a>'
+          : code;
+        codeLi.addEventListener('click', function(e) {
+          e.preventDefault();
+          selectRing(code, dest, coords);
+        });
+        codeList.appendChild(codeLi);
+
+        const destLi = document.createElement('li');
+        destLi.dataset.code = key;
+        destLi.innerHTML = coords && coords[0] !== 0
+          ? '<a href="#">' + dest + '</a>'
+          : dest;
+        destLi.addEventListener('click', function(e) {
+          e.preventDefault();
+          if (coords && coords[0] !== 0) {
+            navigateToRing(coords);
+          } else {
+            selectRing(code, dest, coords);
+          }
+        });
+        destList.appendChild(destLi);
+      });
+    }
+
+    populate();
+    initPreviewMap();
+  </script>
+</body>
+</html>
