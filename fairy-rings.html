@@ -124,7 +124,7 @@
       ["C K P", "Cosmic Entity's Plane (Nowhere)"],
       ["C K R", "Karamja Hunter"],
       ["C K S", "Canafis"],
-      ["C K S", "Near Canifis"],
+      ["C L P", "Island South of Draynor Village"],
       ["C L S", "Jungle Spiders"],
       ["D I S", "Wizards Tower"],
       ["D J P", "Tower of Life"],
@@ -136,6 +136,10 @@
       ["D L R", "Poison Wastes"]
     ];
 
+    // Map coordinates [east, north] per fairy ring code. These mirror the
+    // fairy-ring marker coordinates in geojson.js (window.fringInfo, used by
+    // the world map); keep the two consistent when adding or moving rings.
+    // CKP has no in-game map location and is intentionally [0, 0].
     const fairyRingCoordinates = {
       "AIQ": [8004, 8109],
       "AIR": [5610, 6994],
@@ -161,6 +165,7 @@
       "CKP": [0, 0],
       "CKR": [6424, 8980],
       "CKS": [11654, 5184],
+      "CLP": [8698, 7331],
       "CLS": [5464, 8343],
       "DIS": [8927, 7807],
       "DJP": [5269, 7134],
@@ -192,18 +197,14 @@
       previewMap.setView(previewRc.unproject([7500, 6400]), 1);
     }
 
-    function selectRing(code, dest, coords) {
+    function selectRing(index, code, dest, coords) {
       document.querySelectorAll('.fr-list li').forEach(li => li.classList.remove('selected'));
-      const key = code.replace(/\s/g, '');
-      const codeItems = document.querySelectorAll('#code-list li');
-      const destItems = document.querySelectorAll('#dest-list li');
-      for (let i = 0; i < codeItems.length; i++) {
-        if (codeItems[i].dataset.code === key) {
-          codeItems[i].classList.add('selected');
-          destItems[i].classList.add('selected');
-          break;
-        }
-      }
+      // Select by row index, not by code: some codes (e.g. CKS) can repeat,
+      // and matching on code alone would always highlight the first such row.
+      const codeItem = document.querySelector('#code-list li[data-index="' + index + '"]');
+      const destItem = document.querySelector('#dest-list li[data-index="' + index + '"]');
+      if (codeItem) codeItem.classList.add('selected');
+      if (destItem) destItem.classList.add('selected');
 
       const info = document.getElementById('preview-info');
       if (coords && coords[0] !== 0) {
@@ -239,7 +240,7 @@
       codeList.innerHTML = '';
       destList.innerHTML = '';
 
-      fairyRingData.forEach(row => {
+      fairyRingData.forEach((row, index) => {
         const code = row[0];
         const dest = row[1];
         const key = code.replace(/\s/g, '');
@@ -247,17 +248,19 @@
 
         const codeLi = document.createElement('li');
         codeLi.dataset.code = key;
+        codeLi.dataset.index = index;
         codeLi.innerHTML = coords && coords[0] !== 0
           ? '<a href="#">' + code + '</a>'
           : code;
         codeLi.addEventListener('click', function(e) {
           e.preventDefault();
-          selectRing(code, dest, coords);
+          selectRing(index, code, dest, coords);
         });
         codeList.appendChild(codeLi);
 
         const destLi = document.createElement('li');
         destLi.dataset.code = key;
+        destLi.dataset.index = index;
         destLi.innerHTML = coords && coords[0] !== 0
           ? '<a href="#">' + dest + '</a>'
           : dest;
@@ -266,7 +269,7 @@
           if (coords && coords[0] !== 0) {
             navigateToRing(coords);
           } else {
-            selectRing(code, dest, coords);
+            selectRing(index, code, dest, coords);
           }
         });
         destList.appendChild(destLi);
