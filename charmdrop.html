@@ -292,7 +292,6 @@
                 tbody.appendChild(tr);
             });
 
-            // Add event listeners to all npc-link elements
             document.querySelectorAll('.npc-link').forEach(link => {
                 link.addEventListener('click', function() {
                     const npcId = this.getAttribute('data-npc-id');
@@ -353,7 +352,6 @@
         }
 
         function openNpcViewer(npcId, npcName) {
-            // Send message to parent window to open NPC viewer with this NPC ID
             if (window.parent) {
                 window.parent.postMessage({
                     type: 'openNpcViewer',
@@ -363,7 +361,6 @@
             }
         }
 
-        // Initialize table on page load
         populateTable();
     </script>
 </body>

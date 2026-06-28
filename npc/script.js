@@ -1,16 +1,12 @@
-// Always vanilla JS, no libraries or frameworks
 var npc_data = {};
-// Stores NPC names all lowercase, points to NPC or array of NPCs
 var npc_names = {};
 var current_npc_name = "";
 
 function onload() {
-    // load NPC data from data/npc_data.json
     fetch('data/npc_data.json')
         .then(response => response.json())
         .then(data => {
             npc_data = data;
-            // Process NPC data into a searchable list
             for (let id in npc_data) {
                 let npc = npc_data[id];
                 let name = (npc.name || "??").toLowerCase();
@@ -24,17 +20,14 @@ function onload() {
                 }
             }
 
-            // Check URL parameters for NPC ID or search term
             const urlParams = new URLSearchParams(window.location.search);
             const npcId = urlParams.get('id');
             const searchTerm = urlParams.get('search');
 
             if (npcId && npc_data[npcId]) {
-                // Load NPC directly by ID
                 document.getElementById('npc-box').hidden = false;
                 load_npc(npcId);
             } else if (searchTerm) {
-                // Search for NPC by name
                 document.getElementById('npc-search').value = searchTerm;
                 search_npc();
             }
@@ -44,13 +37,14 @@ function onload() {
 function get_style(n) {
     if (!n) {
         return "Melee";
-    } else if (n == "1") {
-        return "Ranged";
-    } else if (n == "2") {
-        return "Magic";
-    } else {
-        return "Unknown ("+n+")";
     }
+    if (n == "1") {
+        return "Ranged";
+    }
+    if (n == "2") {
+        return "Magic";
+    }
+    return "Unknown ("+n+")";
 }
 
 function get_max_hit(npc, n) {
@@ -111,12 +105,14 @@ function get_max_hit(npc, n) {
 function get_clue(n) {
     if (n == "0") {
         return "Easy";
-    } else if (n == "1") {
+    }
+    if (n == "1") {
         return "Medium";
-    } else if (n == "2") {
+    }
+    if (n == "2") {
         return "Hard";
     }
-        return "None";
+    return "None";
 }
 
 function search_npcs(input) {
@@ -130,7 +126,6 @@ function search_npcs(input) {
     if (results.length > 0) {
         let list = document.getElementById('npc-dropdown');
         list.innerHTML = '';
-        // Create dropdown options, each name should be paired with their ID (ex: 'Goblin (12)'), the ID should be used to load the NPC
         results.forEach(name => {
             let ids = npc_names[name];
             if (!Array.isArray(ids)) {
@@ -182,7 +177,6 @@ function load_npc(id) {
     document.getElementById('npc-attack_style').innerText = get_style(npc.combat_style);
     document.getElementById('npc-max_hit').innerHTML = get_max_hit(npc, npc.combat_style);
 
-    // Load NPC image
     let imageName = npc.name.toLowerCase().replace(/ /g, '_') + '.png';
     let imagePath = 'images/beastiary/' + imageName;
     let npcImage = document.getElementById('npc-image');
@@ -206,7 +200,6 @@ function load_npc(id) {
         document.getElementById('npc-respawn').innerText = '15 seconds';
     }
 
-    // Yes or No
     document.getElementById('npc-aggressive').innerText = npc.aggressive ? 'Yes' : 'No';
 
     if (npc.poisonous) {
@@ -250,7 +243,6 @@ function load_npc(id) {
 }
 
 function openDroptables() {
-    // Send message to parent window to close NPC viewer and open droptables
     if (window.parent !== window) {
         window.parent.postMessage({
             type: 'openDroptables',

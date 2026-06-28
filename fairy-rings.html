@@ -17,14 +17,21 @@
       display: flex;
       height: 100%;
     }
-    .fr-col {
+    .fr-lists-wrapper {
+      display: flex;
+      flex: 1;
+      min-width: 0;
+      overflow-y: auto;
       border-right: 1px solid #5c4a2a;
-      overflow: auto;
+      align-items: flex-start;
+    }
+    .fr-col {
       background-color: #9E7E4C;
     }
     .fr-col.codes {
       width: 90px;
       flex-shrink: 0;
+      border-right: 1px solid #5c4a2a;
     }
     .fr-col.destinations {
       flex: 1;
@@ -36,6 +43,8 @@
       border-right: none;
       display: flex;
       flex-direction: column;
+      background-color: #9E7E4C;
+      overflow: hidden;
     }
     .fr-header {
       background-color: #6B5028;
@@ -45,6 +54,9 @@
       text-align: center;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
       border-bottom: 1px solid #5c4a2a;
+      position: sticky;
+      top: 0;
+      z-index: 2;
     }
     .fr-list {
       list-style: none;
@@ -65,9 +77,21 @@
       text-decoration: none;
       display: block;
     }
+    .fr-resize-handle {
+      width: 6px;
+      flex-shrink: 0;
+      background-color: #5c4a2a;
+      cursor: ew-resize;
+      position: relative;
+      z-index: 10;
+    }
+    .fr-resize-handle:hover {
+      background-color: #F2C848;
+    }
     .preview-map {
       flex: 1;
       background-color: #B0B0B0;
+      min-height: 0;
     }
     .preview-info {
       padding: 8px;
@@ -76,20 +100,24 @@
       font-size: 12px;
       text-align: center;
       min-height: 36px;
+      flex-shrink: 0;
     }
   </style>
 </head>
 <body>
   <div class="fr-container">
-    <div class="fr-col codes">
-      <div class="fr-header">Code</div>
-      <ul class="fr-list" id="code-list"></ul>
+    <div class="fr-lists-wrapper" id="lists-wrapper">
+      <div class="fr-col codes">
+        <div class="fr-header">Code</div>
+        <ul class="fr-list" id="code-list"></ul>
+      </div>
+      <div class="fr-col destinations">
+        <div class="fr-header">Destination</div>
+        <ul class="fr-list" id="dest-list"></ul>
+      </div>
     </div>
-    <div class="fr-col destinations">
-      <div class="fr-header">Destination</div>
-      <ul class="fr-list" id="dest-list"></ul>
-    </div>
-    <div class="fr-col preview">
+    <div class="fr-resize-handle" id="resize-handle"></div>
+    <div class="fr-col preview" id="preview-col">
       <div class="fr-header">Preview</div>
       <div id="preview-map" class="preview-map"></div>
       <div id="preview-info" class="preview-info">Select a ring to see the area.</div>
@@ -185,6 +213,7 @@
       previewMap = L.map('preview-map', {
         minZoom: 1,
         maxZoom: 6,
+        zoomSnap: 0, // allow fractional zoom so the default can be 50% tighter than a whole level
         zoomControl: false,
         attributionControl: false
       });
@@ -210,20 +239,12 @@
       if (coords && coords[0] !== 0) {
         info.textContent = code + ' — ' + dest;
         if (previewMap && previewRc) {
-          previewMap.setView(previewRc.unproject(coords), 4);
-          // Remove existing markers
-          previewMap.eachLayer(function(layer) {
-            if (layer instanceof L.Marker) previewMap.removeLayer(layer);
-          });
-          L.marker(previewRc.unproject(coords)).addTo(previewMap);
+          previewMap.setView(previewRc.unproject(coords), 4.585); // ~50% more zoom than level 4
         }
       } else {
         info.textContent = code + ' — ' + dest + ' (no map location)';
         if (previewMap && previewRc) {
           previewMap.setView(previewRc.unproject([7500, 6400]), 1);
-          previewMap.eachLayer(function(layer) {
-            if (layer instanceof L.Marker) previewMap.removeLayer(layer);
-          });
         }
       }
     }
@@ -247,7 +268,6 @@
         const coords = fairyRingCoordinates[key];
 
         const codeLi = document.createElement('li');
-        codeLi.dataset.code = key;
         codeLi.dataset.index = index;
         codeLi.innerHTML = coords && coords[0] !== 0
           ? '<a href="#">' + code + '</a>'
@@ -259,7 +279,6 @@
         codeList.appendChild(codeLi);
 
         const destLi = document.createElement('li');
-        destLi.dataset.code = key;
         destLi.dataset.index = index;
         destLi.innerHTML = coords && coords[0] !== 0
           ? '<a href="#">' + dest + '</a>'
@@ -275,6 +294,46 @@
         destList.appendChild(destLi);
       });
     }
+
+    (function() {
+      const handle = document.getElementById('resize-handle');
+      const previewCol = document.getElementById('preview-col');
+      const container = document.querySelector('.fr-container');
+      const MIN_PREVIEW = 140;
+      const MIN_LISTS  = 270; // codes(90) + destinations(180)
+
+      let dragging = false;
+      let startX = 0;
+      let startWidth = 0;
+
+      handle.addEventListener('mousedown', function(e) {
+        dragging = true;
+        startX = e.clientX;
+        startWidth = previewCol.getBoundingClientRect().width;
+        document.body.style.cursor = 'ew-resize';
+        document.body.style.userSelect = 'none';
+        e.preventDefault();
+      });
+
+      document.addEventListener('mousemove', function(e) {
+        if (!dragging) return;
+        const delta = startX - e.clientX; // positive = dragging left = wider preview
+        const containerWidth = container.getBoundingClientRect().width;
+        const handleWidth = handle.getBoundingClientRect().width;
+        const maxPreview = containerWidth - handleWidth - MIN_LISTS;
+        let newWidth = Math.min(Math.max(startWidth + delta, MIN_PREVIEW), maxPreview);
+        previewCol.style.width = newWidth + 'px';
+        if (previewMap) previewMap.invalidateSize();
+      });
+
+      document.addEventListener('mouseup', function() {
+        if (!dragging) return;
+        dragging = false;
+        document.body.style.cursor = '';
+        document.body.style.userSelect = '';
+        if (previewMap) previewMap.invalidateSize();
+      });
+    })();
 
     populate();
     initPreviewMap();

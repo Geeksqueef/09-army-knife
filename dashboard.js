@@ -14,8 +14,28 @@
     'shop-viewer': { title: 'Shop Inventories', src: './shopsearch.html', width: 900, height: 550 },
     'droptables': { title: 'Drop Tables', src: './droptables/index.html', width: 1000, height: 650 },
     'npc-viewer': { title: 'NPC Viewer', src: './npc/index.html', width: 900, height: 600 },
-    'npc-3d': { title: '3D NPC Viewer', src: './3DNpc/09NPC3d.html', width: 900, height: 600 }
+    'wiki-reader': { title: 'RS Wiki Reader', src: './wiki-reader/index.html', width: 1000, height: 700 }
   };
+
+  // Minimum sizes for resizable panels; matches the CSS floor so resize
+  // handles can never shrink a panel below its styled minimum.
+  const MIN_PANEL_W = 300;
+  const MIN_PANEL_H = 200;
+  const RESIZE_DIRS = ['n', 'ne', 'e', 'se', 's', 'sw', 'w', 'nw'];
+
+  const MAXIMIZE_GLYPH = '⛶';
+  const RESTORE_GLYPH = '❐';
+
+  // Edge/corner snap (tiling) thresholds. EDGE: how close to a left/right edge
+  // the cursor must be to arm a snap. CORNER: within that edge band, how close
+  // to the top/bottom of the map view turns a half-snap into a quarter-snap.
+  const SNAP_EDGE = 28;
+  const SNAP_CORNER = 150;
+
+  // How far the cursor must move after pressing the header before it counts as a
+  // drag. Below this, the press is treated as a plain click so the header still
+  // receives click/dblclick (double-click vertically maximizes the panel).
+  const DRAG_THRESHOLD = 4;
 
   // Lowest top a panel may occupy: just below the toolbar's measured height
   // plus a small gap. The toolbar wraps to multiple rows on narrow viewports,
@@ -39,32 +59,41 @@
     const cfg = panelConfigs[id];
     if (!cfg) return null;
 
+    const minTop = minPanelTop();
+    const width = Math.min(cfg.width, window.innerWidth - 40);
+    const height = Math.min(cfg.height, window.innerHeight - minTop - 40);
+
     const panel = document.createElement('div');
     panel.className = 'dashboard-panel';
     panel.id = 'panel-' + id;
-    panel.style.width = cfg.width + 'px';
-    panel.style.height = cfg.height + 'px';
-    panel.style.left = Math.max(20, (window.innerWidth - cfg.width) / 2) + 'px';
-    panel.style.top = Math.max(minPanelTop(), (window.innerHeight - cfg.height) / 2) + 'px';
+    panel.style.width = width + 'px';
+    panel.style.height = height + 'px';
+    panel.style.left = Math.max(20, (window.innerWidth - width) / 2) + 'px';
+    panel.style.top = Math.max(minTop, (window.innerHeight - height) / 2) + 'px';
     panel.style.zIndex = ++nextZ;
 
     panel.innerHTML = `
       <div class="dashboard-panel-header">
         <h3>${cfg.title}</h3>
-        <button class="close-btn" aria-label="Close">&times;</button>
+        <div class="panel-header-actions">
+          <button class="maximize-btn" aria-label="Maximize" title="Maximize">${MAXIMIZE_GLYPH}</button>
+          <button class="close-btn" aria-label="Close">&times;</button>
+        </div>
       </div>
       <div class="dashboard-panel-body">
         <iframe src="${cfg.src}" title="${cfg.title}"></iframe>
       </div>
+      ${RESIZE_DIRS.map(function(dir) { return '<div class="resize-handle resize-' + dir + '" data-dir="' + dir + '"></div>'; }).join('')}
     `;
 
     document.body.appendChild(panel);
 
     const header = panel.querySelector('.dashboard-panel-header');
     const closeBtn = panel.querySelector('.close-btn');
+    const maxBtn = panel.querySelector('.maximize-btn');
 
     header.addEventListener('mousedown', function(e) {
-      if (e.target === closeBtn) return;
+      if (e.target === closeBtn || e.target === maxBtn) return;
       bringToFront(id);
       startDrag(e, panel);
     });
@@ -77,7 +106,59 @@
       closePanel(id);
     });
 
+    maxBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      bringToFront(id);
+      toggleMaximizePanel(panel);
+    });
+
+    // Double-clicking the header fills the panel vertically (full map-view
+    // height, same width/x); double-clicking again restores it.
+    header.addEventListener('dblclick', function(e) {
+      if (e.target === closeBtn || e.target === maxBtn) return;
+      toggleVerticalMaximizePanel(panel);
+    });
+
+    panel.querySelectorAll('.resize-handle').forEach(function(handle) {
+      handle.addEventListener('mousedown', function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        bringToFront(id);
+        startResize(e, panel, handle.dataset.dir);
+      });
+    });
+
     return panel;
+  }
+
+  // Single full-viewport overlay shown only during drag/resize. The embedded
+  // iframes (panel bodies and the map background) otherwise swallow mousemove
+  // events that fire over them, stalling any gesture that crosses their edge.
+  // The overlay sits below the toolbar (z-index 10000) so toolbar clicks keep
+  // working, but above every panel so the gesture keeps receiving events.
+  let viewportOverlay = null;
+  function getViewportOverlay() {
+    if (!viewportOverlay) {
+      viewportOverlay = document.createElement('div');
+      viewportOverlay.className = 'drag-viewport-overlay';
+      document.body.appendChild(viewportOverlay);
+    }
+    return viewportOverlay;
+  }
+
+  function setOverlayActive(active, cursor) {
+    const overlay = getViewportOverlay();
+    overlay.style.cursor = cursor || 'default';
+    overlay.classList.toggle('active', active);
+  }
+
+  // CSS cursor that matches each resize direction so the user sees the right
+  // double-headed arrow while dragging an edge or corner.
+  function dirCursor(dir) {
+    if (dir === 'ne' || dir === 'sw') return 'nesw-resize';
+    if (dir === 'nw' || dir === 'se') return 'nwse-resize';
+    if (dir === 'n' || dir === 's') return 'ns-resize';
+    return 'ew-resize';
   }
 
   function bringToFront(id) {
@@ -88,16 +169,184 @@
     activePanel = panel;
   }
 
-  function startDrag(e, panel) {
-    const startX = e.clientX;
-    const startY = e.clientY;
+  // The usable "map view" rectangle: the whole viewport below the toolbar.
+  // Maximize fills it; tiling carves halves/quarters out of it.
+  function mapViewRect() {
+    const top = minPanelTop();
+    return { left: 0, top: top, width: window.innerWidth, height: window.innerHeight - top };
+  }
+
+  function applyRect(panel, r) {
+    panel.style.left = Math.round(r.left) + 'px';
+    panel.style.top = Math.round(r.top) + 'px';
+    panel.style.width = Math.round(r.width) + 'px';
+    panel.style.height = Math.round(r.height) + 'px';
+  }
+
+  function captureRect(panel) {
     const rect = panel.getBoundingClientRect();
-    const startLeft = rect.left;
-    const startTop = rect.top;
+    return { left: rect.left, top: rect.top, width: rect.width, height: rect.height };
+  }
+
+  function setMaximized(panel, on) {
+    panel._maximized = on;
+    panel.classList.toggle('maximized', on);
+    const btn = panel.querySelector('.maximize-btn');
+    if (btn) {
+      btn.innerHTML = on ? RESTORE_GLYPH : MAXIMIZE_GLYPH;
+      btn.title = on ? 'Restore' : 'Maximize';
+      btn.setAttribute('aria-label', on ? 'Restore' : 'Maximize');
+    }
+  }
+
+  // Maximize fills the map view; restore returns to the pre-maximize rect.
+  function toggleMaximizePanel(panel) {
+    if (!panel._maximized) {
+      // Only sample the restore rect while genuinely floating, so coming from a
+      // tiled/vertical-fill state still restores to the original float size.
+      if (!panel._tiled && !panel._vmaximized) {
+        panel._restoreRect = captureRect(panel);
+      }
+      applyRect(panel, mapViewRect());
+      setMaximized(panel, true);
+      panel._tiled = false;
+      panel._vmaximized = false;
+    } else {
+      if (panel._restoreRect) applyRect(panel, panel._restoreRect);
+      setMaximized(panel, false);
+    }
+  }
+
+  // Fill the panel to the full map-view height while keeping its current width
+  // and x-position; double-clicking the header toggles this. Restores to the
+  // pre-fill float rect on toggle-off.
+  function toggleVerticalMaximizePanel(panel) {
+    if (panel._vmaximized) {
+      if (panel._restoreRect) applyRect(panel, panel._restoreRect);
+      panel._vmaximized = false;
+      return;
+    }
+    // Coming out of a maximized/tiled state, restore the float rect first so the
+    // vertical fill keeps a sensible width/x rather than the full-width one.
+    if ((panel._maximized || panel._tiled) && panel._restoreRect) {
+      applyRect(panel, panel._restoreRect);
+      setMaximized(panel, false);
+      panel._tiled = false;
+    } else {
+      panel._restoreRect = captureRect(panel);
+    }
+    const view = mapViewRect();
+    panel.style.top = Math.round(view.top) + 'px';
+    panel.style.height = Math.round(view.height) + 'px';
+    panel._vmaximized = true;
+  }
+
+  // Decide which tile region (if any) the cursor is hovering, given the live
+  // pointer position. Left/right edges → that half of the map view; the top or
+  // bottom of an edge band → the matching quarter. Returns null when free.
+  function computeSnapZone(clientX, clientY) {
+    const view = mapViewRect();
+    const W = window.innerWidth;
+    const H = window.innerHeight;
+    const top = view.top;
+    const side = clientX <= SNAP_EDGE ? 'L' : (clientX >= W - SNAP_EDGE ? 'R' : null);
+    if (!side) return null;
+
+    const halfW = Math.round(W / 2);
+    const halfH = Math.round(view.height / 2);
+    const x0 = side === 'L' ? 0 : halfW;
+    const w = side === 'L' ? halfW : W - halfW;
+
+    if (clientY <= top + SNAP_CORNER) {
+      return { left: x0, top: top, width: w, height: halfH };
+    }
+    if (clientY >= H - SNAP_CORNER) {
+      return { left: x0, top: top + halfH, width: w, height: view.height - halfH };
+    }
+    return { left: x0, top: top, width: w, height: view.height };
+  }
+
+  // Translucent highlight that previews where a dragged panel will tile.
+  let snapPreviewEl = null;
+  function getSnapPreview() {
+    if (!snapPreviewEl) {
+      snapPreviewEl = document.createElement('div');
+      snapPreviewEl.className = 'snap-preview';
+      document.body.appendChild(snapPreviewEl);
+    }
+    return snapPreviewEl;
+  }
+  function showSnapPreview(rect) {
+    const el = getSnapPreview();
+    applyRect(el, rect);
+    el.classList.add('active');
+  }
+  function hideSnapPreview() {
+    if (snapPreviewEl) snapPreviewEl.classList.remove('active');
+  }
+
+  function startDrag(e, panel) {
+    e.preventDefault();
+
+    // A panel that is maximized, tiled, or vertically filled un-snaps back to
+    // its floating size on the first actual drag movement (not a bare click),
+    // repositioned so the header stays under the cursor — matching how OS
+    // windows behave when you drag a maximized/snapped window loose.
+    const wasExpanded = panel._maximized || panel._tiled || panel._vmaximized;
+    if (!wasExpanded) {
+      // Remember the current floating rect so a later snap/fill can restore it.
+      panel._restoreRect = captureRect(panel);
+    }
+
+    let startX = e.clientX;
+    let startY = e.clientY;
+    const rect = panel.getBoundingClientRect();
+    let startLeft = rect.left;
+    let startTop = rect.top;
 
     const topLimit = minPanelTop();
+    let pendingSnap = null;
+    let popped = !wasExpanded; // floating panels need no pop
+    // The drag (and its full-viewport overlay) only begins once the cursor
+    // moves past DRAG_THRESHOLD. Activating the overlay on mousedown would put
+    // it under the pointer for the following mouseup, stealing the header's
+    // click/dblclick events and breaking double-click-to-maximize.
+    let dragging = false;
+
+    // Pop a maximized/tiled/vertical panel back to its floating size, centering
+    // the header under the cursor and re-baselining the drag origin so the very
+    // next translation produces no jump.
+    function popToFloat(ev) {
+      const prev = panel._restoreRect
+        || { width: panel.offsetWidth / 2, height: panel.offsetHeight / 2 };
+      const w = Math.max(MIN_PANEL_W, prev.width);
+      const h = Math.max(MIN_PANEL_H, prev.height);
+      startLeft = Math.max(0, ev.clientX - w / 2);
+      startTop = Math.max(minPanelTop(), ev.clientY - 16);
+      startX = ev.clientX;
+      startY = ev.clientY;
+      panel.style.width = w + 'px';
+      panel.style.height = h + 'px';
+      panel.style.left = startLeft + 'px';
+      panel.style.top = startTop + 'px';
+      setMaximized(panel, false);
+      panel._tiled = false;
+      panel._vmaximized = false;
+    }
 
     function onMouseMove(ev) {
+      if (!dragging) {
+        if (Math.abs(ev.clientX - startX) < DRAG_THRESHOLD &&
+            Math.abs(ev.clientY - startY) < DRAG_THRESHOLD) {
+          return;
+        }
+        dragging = true;
+        setOverlayActive(true, 'move');
+      }
+      if (!popped) {
+        popped = true;
+        popToFloat(ev);
+      }
       let newLeft = startLeft + (ev.clientX - startX);
       let newTop = startTop + (ev.clientY - startY);
       const maxLeft = window.innerWidth - panel.offsetWidth;
@@ -106,9 +355,82 @@
       newTop = Math.max(topLimit, Math.min(newTop, maxTop));
       panel.style.left = newLeft + 'px';
       panel.style.top = newTop + 'px';
+
+      // Preview an edge/corner tile when the cursor enters a snap zone.
+      pendingSnap = computeSnapZone(ev.clientX, ev.clientY);
+      if (pendingSnap) showSnapPreview(pendingSnap); else hideSnapPreview();
     }
 
     function onMouseUp() {
+      if (dragging) {
+        setOverlayActive(false);
+        hideSnapPreview();
+        if (pendingSnap) {
+          applyRect(panel, pendingSnap);
+          // A tiled panel is not "maximized". Mark it tiled (not maximized) and
+          // keep _restoreRect so grabbing the header drags it loose to the prior
+          // float size.
+          setMaximized(panel, false);
+          panel._tiled = true;
+        }
+      }
+      document.removeEventListener('mousemove', onMouseMove);
+      document.removeEventListener('mouseup', onMouseUp);
+    }
+
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseup', onMouseUp);
+  }
+
+  // Resize a panel from one of its eight edges/corners. `dir` is a string
+  // containing any combination of 'n','s','e','w'; each axis is solved
+  // independently so combined corners (e.g. 'ne') resize both axes at once.
+  function startResize(e, panel, dir) {
+    setOverlayActive(true, dirCursor(dir));
+    const startX = e.clientX;
+    const startY = e.clientY;
+    const rect = panel.getBoundingClientRect();
+    const startWidth = rect.width;
+    const startHeight = rect.height;
+    const startLeft = rect.left;
+    const startTop = rect.top;
+    const topLimit = minPanelTop();
+
+    function onMouseMove(ev) {
+      const dx = ev.clientX - startX;
+      const dy = ev.clientY - startY;
+      let newLeft = startLeft;
+      let newTop = startTop;
+      let newWidth = startWidth;
+      let newHeight = startHeight;
+
+      if (dir.indexOf('e') !== -1) {
+        newWidth = Math.max(MIN_PANEL_W, Math.min(startWidth + dx, window.innerWidth - startLeft));
+      }
+      if (dir.indexOf('s') !== -1) {
+        newHeight = Math.max(MIN_PANEL_H, Math.min(startHeight + dy, window.innerHeight - startTop));
+      }
+      if (dir.indexOf('w') !== -1) {
+        let wDx = Math.min(dx, startWidth - MIN_PANEL_W);
+        wDx = Math.max(wDx, -startLeft);
+        newWidth = startWidth - wDx;
+        newLeft = startLeft + wDx;
+      }
+      if (dir.indexOf('n') !== -1) {
+        let nDy = Math.min(dy, startHeight - MIN_PANEL_H);
+        nDy = Math.max(nDy, topLimit - startTop);
+        newHeight = startHeight - nDy;
+        newTop = startTop + nDy;
+      }
+
+      panel.style.left = newLeft + 'px';
+      panel.style.top = newTop + 'px';
+      panel.style.width = newWidth + 'px';
+      panel.style.height = newHeight + 'px';
+    }
+
+    function onMouseUp() {
+      setOverlayActive(false);
       document.removeEventListener('mousemove', onMouseMove);
       document.removeEventListener('mouseup', onMouseUp);
     }
@@ -154,24 +476,65 @@
 
   window.toggleMaximizeMap = function() {
     document.body.classList.toggle('map-maximized');
-    const mapFrame = document.getElementById('map-frame');
-    if (mapFrame && mapFrame.contentWindow) {
-      mapFrame.contentWindow.postMessage({ type: 'dashboardMaximizeToggled' }, '*');
-    }
   };
 
   window.openWiki = function() {
     window.open('https://cdn.2009scape.org/wiki/doku.php?id=start', '_blank');
   };
 
-  window.openRsWikiReader = function() {
-    window.open('https://github.com/AdamLantz/2009scape-wiki-reader', '_blank');
-  };
+  // Tell the world-map iframe how far down to push its Leaflet controls so the
+  // zoom (+/-) and legend buttons clear the fixed toolbar that overlays the map.
+  // The toolbar can wrap to multiple rows, so the inset is measured live.
+  function postMapTopInset() {
+    const mapFrame = document.getElementById('map-frame');
+    if (mapFrame && mapFrame.contentWindow) {
+      mapFrame.contentWindow.postMessage({ type: 'setTopInset', value: minPanelTop() }, '*');
+    }
+  }
+
+  // Keep maximized panels filling the map view, and re-push the map inset, when
+  // the viewport (and thus the toolbar height/layout) changes.
+  let resizeRaf = null;
+  window.addEventListener('resize', function() {
+    if (resizeRaf) return;
+    resizeRaf = requestAnimationFrame(function() {
+      resizeRaf = null;
+      postMapTopInset();
+      Object.keys(panels).forEach(function(id) {
+        const panel = panels[id];
+        if (!panel) return;
+        if (panel._maximized) {
+          applyRect(panel, mapViewRect());
+        } else if (panel._vmaximized) {
+          const view = mapViewRect();
+          panel.style.top = Math.round(view.top) + 'px';
+          panel.style.height = Math.round(view.height) + 'px';
+        }
+      });
+    });
+  });
+
+  // Push the inset once the map iframe has loaded (and again on a late ready
+  // ping from the map itself, in case the load event was missed).
+  (function wireMapInset() {
+    const mapFrame = document.getElementById('map-frame');
+    if (!mapFrame) return;
+    if (mapFrame.contentWindow && mapFrame.contentDocument
+        && mapFrame.contentDocument.readyState === 'complete') {
+      postMapTopInset();
+    }
+    mapFrame.addEventListener('load', postMapTopInset);
+  })();
 
   // Message routing from tool iframes
   window.addEventListener('message', function(event) {
     if (!event.data) return;
     const data = event.data;
+
+    // The world map announces it is ready to receive its control inset.
+    if (data.type === 'mapReady') {
+      postMapTopInset();
+    }
 
     // Use finite-number checks, not truthiness: 0 is a valid map coordinate.
     if (data.type === 'navigateTo' && Number.isFinite(data.x) && Number.isFinite(data.y)) {

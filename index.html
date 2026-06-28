@@ -7,18 +7,17 @@
   <link rel="stylesheet" href="./dashboard.css">
 </head>
 <body>
-  <iframe id="map-frame" src="./worldmap.html"></iframe>
+  <iframe id="map-frame" src="./worldmap.html" title="Interactive world map"></iframe>
 
   <nav class="dashboard-toolbar">
-    <button class="dashboard-btn new" onclick="togglePanel('fairy-rings')">Fairy Rings<span class="new-banner">NEW!</span></button>
-    <button class="dashboard-btn new" onclick="togglePanel('skill-calc')">Skill Calc<span class="new-banner">NEW!</span></button>
-    <button class="dashboard-btn new" onclick="togglePanel('charm-drop')">Charm Drop Rates<span class="new-banner">NEW!</span></button>
-    <button class="dashboard-btn" onclick="togglePanel('shop-viewer')">Shop Viewer</button>
-    <button class="dashboard-btn" onclick="togglePanel('droptables')">Droptables</button>
-    <button class="dashboard-btn" onclick="togglePanel('npc-viewer')">NPC Viewer</button>
-    <button class="dashboard-btn" onclick="togglePanel('npc-3d')">3D NPC</button>
-    <button class="dashboard-btn" onclick="openWiki()">2009scape Wiki</button>
-    <button class="dashboard-btn" onclick="openRsWikiReader()">RS Wiki Reader</button>
+    <button class="dashboard-btn new" onclick="togglePanel('fairy-rings')" title="Open Fairy Rings panel">Fairy Rings<span class="new-banner">NEW!</span></button>
+    <button class="dashboard-btn new" onclick="togglePanel('skill-calc')" title="Open Skill Calculator panel">Skill Calc<span class="new-banner">NEW!</span></button>
+    <button class="dashboard-btn new" onclick="togglePanel('charm-drop')" title="Open Charm Drop Rates panel">Charm Drop Rates<span class="new-banner">NEW!</span></button>
+    <button class="dashboard-btn" onclick="togglePanel('shop-viewer')" title="Open Shop Viewer panel">Shop Viewer</button>
+    <button class="dashboard-btn" onclick="togglePanel('droptables')" title="Open Droptables panel">Droptables</button>
+    <button class="dashboard-btn" onclick="togglePanel('npc-viewer')" title="Open NPC Viewer panel">NPC Viewer</button>
+    <button class="dashboard-btn" onclick="openWiki()" title="Open 2009scape Wiki">2009scape Wiki</button>
+    <button class="dashboard-btn new" onclick="togglePanel('wiki-reader')" title="Open RS Wiki Reader panel">RS Wiki Reader<span class="new-banner">NEW!</span></button>
     <button class="dashboard-btn" onclick="toggleMaximizeMap()" title="Hide all panels and fill screen with the map">Maximize Map</button>
   </nav>
 
