@@ -7,8 +7,21 @@ const WIKI_API = "https://runescape.wiki/api.php";
 const DOKU_BASE = "https://cdn.2009scape.org/wiki/doku.php";
 
 // --- State Management ---
-let bookmarks = JSON.parse(localStorage.getItem('wiki_bookmarks')) || [];
-let history = JSON.parse(localStorage.getItem('wiki_history')) || [];
+// localStorage entries can be malformed by a prior buggy write, manual edit,
+// quota-error partial write, or browser-extension tampering. Parsing happens at
+// module top level (the file is loaded as <script type="module">), so an
+// uncaught throw here would silently brick the whole panel — none of the
+// handlers below would ever wire up. Wrap the parse and fall back to empty.
+function loadJSON(key, fallback) {
+    try {
+        const parsed = JSON.parse(localStorage.getItem(key));
+        return parsed || fallback;
+    } catch {
+        return fallback;
+    }
+}
+let bookmarks = loadJSON('wiki_bookmarks', []);
+let history = loadJSON('wiki_history', []);
 let currentSideTab = 'bookmarks';
 let activeSearchMode = 'wiki-search';
 
@@ -164,22 +177,77 @@ function formatWikiList(str) {
     return str.split(/[*#;]|\<br\s*\/?\>/i)
         .map(s => s.replace(/\[\[(?:[^\]|]*\|)?([^\]]*)\]\]/g, '$1')) // Handle [[Link|Display]]
         .map(s => s.replace(/\{\{[^}]*\}\}/g, '')) // Remove {{Templates}}
-        .map(s => s.replace(/[|'\]\[]/g, '').trim()) // Final cleanup
+        // Also strip angle brackets so infobox <...> fragments aren't rendered
+        // as HTML by the <li> consumer below.
+        .map(s => s.replace(/[|'\][<>]/g, '').trim()) // Final cleanup
         .filter(s => s.length > 2)
         .map(s => `<li>${s}</li>`)
         .join('') || "<li>Refer to archive</li>";
 }
 
+// MediaWiki caps revisions at 500 per request for anonymous callers, so
+// `rvlimit=max` resolves to 500 anyway — set it explicitly to make the cap
+// obvious and ensure we never request an unbounded payload. The earliest-
+// match scan is therefore bounded by this per-request revision cap.
+const FIND_EARLIEST_RVLIMIT = 500;
+
 async function performFindEarliest(title, text) {
+    const startRev = document.getElementById('start-rev').value.trim();
+    const useRegex = document.getElementById('regex-chk').checked;
+    const raw = document.getElementById('raw-chk').checked;
+    let matcher;
     try {
-        const res = await fetch(`${WIKI_API}?action=query&prop=revisions&titles=${encodeURIComponent(title)}&rvlimit=max&rvdir=newer&rvprop=ids|timestamp|content&format=json&origin=*`).then(r => r.json());
+        matcher = useRegex ? new RegExp(text, raw ? '' : 'i') : null;
+    } catch {
+        resultsArea.innerHTML = `<p class="validation-msg">Invalid regular expression.</p>`;
+        return;
+    }
+
+    try {
+        const params = new URLSearchParams({
+            action: 'query',
+            prop: 'revisions',
+            titles: title,
+            rvlimit: String(FIND_EARLIEST_RVLIMIT),
+            rvdir: 'newer',
+            rvprop: 'ids|timestamp|content',
+            format: 'json',
+            origin: '*'
+        });
+        if (startRev) params.set('rvstartid', startRev);
+
+        const res = await fetch(`${WIKI_API}?${params.toString()}`).then(r => r.json());
         const page = Object.values(res.query.pages)[0];
-        const first = page.revisions?.find(r => (r['*'] || "").toLowerCase().includes(text.toLowerCase()));
+        const first = page.revisions?.find(r => {
+            const content = r['*'] || '';
+            if (matcher) return matcher.test(content);
+            if (raw) return content.includes(text);
+            return content.toLowerCase().includes(text.toLowerCase());
+        });
+        resultsArea.innerHTML = '';
         if (first) {
             const d = new Date(first.timestamp).toLocaleDateString();
-            resultsArea.innerHTML = `<div class="result-card"><h3>${title}</h3><p>"${text}" first appeared in rev ${first.revid} on ${d}</p></div>`;
-        } else { resultsArea.innerHTML = `<p class="subtitle">Search term not found in history.</p>`; }
-    } catch { resultsArea.innerHTML = "Scan failed."; }
+            // Build with createElement/textContent so the article title and the
+            // user-supplied search text can't inject markup if they contain
+            // anything unexpected.
+            const card = document.createElement('div');
+            card.className = 'result-card';
+            const h3 = document.createElement('h3');
+            h3.textContent = title;
+            const p = document.createElement('p');
+            p.textContent = `"${text}" first appeared in rev ${first.revid} on ${d}`;
+            card.appendChild(h3);
+            card.appendChild(p);
+            resultsArea.appendChild(card);
+        } else {
+            const note = document.createElement('p');
+            note.className = 'subtitle';
+            note.textContent = 'Search term not found in scanned history.';
+            resultsArea.appendChild(note);
+        }
+    } catch {
+        resultsArea.innerHTML = "Scan failed.";
+    }
 }
 
 // --- UI Rendering ---
@@ -189,13 +257,29 @@ function renderMWCard(title, date, oldid, snippet) {
     const isBook = bookmarks.some(b => b.oldid.toString() === oldid.toString());
     const card = document.createElement('div');
     card.className = 'result-card';
-    card.innerHTML = `
-        <button class="bookmark-btn ${isBook ? 'active' : ''}" onclick="toggleBookmark('${title.replace(/'/g, "\\'")}', '${date}', '${oldid}', '${url}', this)">
-            <svg class="bookmark-icon-svg" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-        </button>
-        <h3 onclick="window.open('${url}', '_blank')">${title}</h3>
-        <div class="search-snippet">${snippet}...</div>
-    `;
+
+    // Title comes from the MediaWiki API and the user can navigate to it;
+    // build the structure imperatively so it can never reach the HTML parser.
+    // `snippet` is intentionally HTML (MediaWiki wraps matches in
+    // <span class="searchmatch">…</span>), so it stays as innerHTML on a
+    // dedicated element.
+    const bookmarkBtn = document.createElement('button');
+    bookmarkBtn.className = 'bookmark-btn' + (isBook ? ' active' : '');
+    bookmarkBtn.innerHTML = '<svg class="bookmark-icon-svg" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>';
+    bookmarkBtn.addEventListener('click', () => toggleBookmark(title, date, oldid, url, bookmarkBtn));
+
+    const h3 = document.createElement('h3');
+    h3.style.cursor = 'pointer';
+    h3.textContent = title;
+    h3.addEventListener('click', () => window.open(url, '_blank'));
+
+    const snippetDiv = document.createElement('div');
+    snippetDiv.className = 'search-snippet';
+    snippetDiv.innerHTML = snippet + '...';
+
+    card.appendChild(bookmarkBtn);
+    card.appendChild(h3);
+    card.appendChild(snippetDiv);
     resultsArea.appendChild(card);
 }
 
@@ -204,12 +288,19 @@ function renderCdnPortalCard(q) {
     const card = document.createElement('div');
     card.className = 'result-card';
     card.style.borderLeft = "2px solid var(--cyan)";
-    card.innerHTML = `
-        <h3 onclick="window.open('${url}', '_blank')" style="color: var(--cyan)">Search CDN for "${q}"</h3>
-        <p style="font-size: 11px; color: var(--text-dim); margin-top: 5px;">
-            Visit the community portal for direct 2009Scape guides.
-        </p>
-    `;
+
+    const h3 = document.createElement('h3');
+    h3.style.color = 'var(--cyan)';
+    h3.style.cursor = 'pointer';
+    h3.textContent = `Search CDN for "${q}"`;
+    h3.addEventListener('click', () => window.open(url, '_blank'));
+
+    const p = document.createElement('p');
+    p.style.cssText = 'font-size: 11px; color: var(--text-dim); margin-top: 5px;';
+    p.textContent = 'Visit the community portal for direct 2009Scape guides.';
+
+    card.appendChild(h3);
+    card.appendChild(p);
     resultsArea.appendChild(card);
 }
 
@@ -217,20 +308,50 @@ function renderCdnPortalCard(q) {
 
 function renderSidebar() {
     if (currentSideTab === 'changelog') {
+        // Changelog entries are hardcoded trusted constants in this file.
         sideList.innerHTML = changelog.map(c => `
             <div class="changelog-item"><span class="changelog-tag">${c.version}</span> <strong>${c.date}</strong><br>${c.note}</div>
         `).join('');
         return;
     }
+    // Bookmarks/history store titles that originated from MediaWiki API
+    // responses; rebuild the list with createElement/textContent so a
+    // surprising title can't execute as markup.
+    sideList.textContent = '';
     const data = currentSideTab === 'bookmarks' ? bookmarks : history;
-    sideList.innerHTML = data.map(i => `
-        <div class="side-item">
-            <div onclick="quickReload('${(i.title || i.query).replace(/'/g, "\\'")}')" style="cursor:pointer; flex-grow:1;">
-                <strong>${i.title || i.query}</strong><br><small>${i.date || ''}</small>
-            </div>
-            <button onclick="deleteItem('${i.oldid || i.timestamp}')" style="background:none; border:none; color:var(--text-dim); cursor:pointer;">✕</button>
-        </div>
-    `).join('') || `<p class="subtitle" style="padding:10px;">Empty.</p>`;
+    if (!data.length) {
+        const empty = document.createElement('p');
+        empty.className = 'subtitle';
+        empty.style.padding = '10px';
+        empty.textContent = 'Empty.';
+        sideList.appendChild(empty);
+        return;
+    }
+    data.forEach(i => {
+        const wrap = document.createElement('div');
+        wrap.className = 'side-item';
+
+        const label = document.createElement('div');
+        label.style.cssText = 'cursor:pointer; flex-grow:1;';
+        const strong = document.createElement('strong');
+        strong.textContent = i.title || i.query;
+        const br = document.createElement('br');
+        const small = document.createElement('small');
+        small.textContent = i.date || '';
+        label.appendChild(strong);
+        label.appendChild(br);
+        label.appendChild(small);
+        label.addEventListener('click', () => quickReload(i.title || i.query));
+
+        const del = document.createElement('button');
+        del.textContent = '✕';
+        del.style.cssText = 'background:none; border:none; color:var(--text-dim); cursor:pointer;';
+        del.addEventListener('click', () => deleteItem(i.oldid || i.timestamp));
+
+        wrap.appendChild(label);
+        wrap.appendChild(del);
+        sideList.appendChild(wrap);
+    });
 }
 
 window.toggleBookmark = (title, date, oldid, url, btn) => {

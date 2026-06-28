@@ -176,6 +176,41 @@
     return { left: 0, top: top, width: window.innerWidth, height: window.innerHeight - top };
   }
 
+  // Classify the cursor position into one of six named tile zones, or null
+  // when not in a snap region. Zones: 'L'/'R' (full-height halves), and
+  // 'TL'/'TR'/'BL'/'BR' (quarter quadrants). Named (not just rect-valued) so
+  // the snap can be recomputed on window resize — see snapZoneRect below.
+  function classifySnapZone(clientX, clientY) {
+    const view = mapViewRect();
+    const W = window.innerWidth;
+    const H = window.innerHeight;
+    const side = clientX <= SNAP_EDGE ? 'L' : (clientX >= W - SNAP_EDGE ? 'R' : null);
+    if (!side) return null;
+    if (clientY <= view.top + SNAP_CORNER) return 'T' + side;
+    if (clientY >= H - SNAP_CORNER) return 'B' + side;
+    return side;
+  }
+
+  // The rectangle for a named tile zone relative to the current map view.
+  // Used both at snap time (via classifySnapZone → snapZoneRect) and on
+  // window resize to reflow an already-tiled panel into the new zone rect.
+  function snapZoneRect(zone) {
+    const view = mapViewRect();
+    const W = window.innerWidth;
+    const halfW = Math.round(W / 2);
+    const halfH = Math.round(view.height / 2);
+    const isLeft = zone === 'L' || zone === 'TL' || zone === 'BL';
+    const x0 = isLeft ? 0 : halfW;
+    const w = isLeft ? halfW : W - halfW;
+    if (zone === 'TL' || zone === 'TR') {
+      return { left: x0, top: view.top, width: w, height: halfH };
+    }
+    if (zone === 'BL' || zone === 'BR') {
+      return { left: x0, top: view.top + halfH, width: w, height: view.height - halfH };
+    }
+    return { left: x0, top: view.top, width: w, height: view.height };
+  }
+
   function applyRect(panel, r) {
     panel.style.left = Math.round(r.left) + 'px';
     panel.style.top = Math.round(r.top) + 'px';
@@ -242,28 +277,11 @@
   }
 
   // Decide which tile region (if any) the cursor is hovering, given the live
-  // pointer position. Left/right edges → that half of the map view; the top or
-  // bottom of an edge band → the matching quarter. Returns null when free.
+  // pointer position. Returns the rect (or null) so the drag handler can
+  // preview it; classifySnapZone is the source of truth for the zone name.
   function computeSnapZone(clientX, clientY) {
-    const view = mapViewRect();
-    const W = window.innerWidth;
-    const H = window.innerHeight;
-    const top = view.top;
-    const side = clientX <= SNAP_EDGE ? 'L' : (clientX >= W - SNAP_EDGE ? 'R' : null);
-    if (!side) return null;
-
-    const halfW = Math.round(W / 2);
-    const halfH = Math.round(view.height / 2);
-    const x0 = side === 'L' ? 0 : halfW;
-    const w = side === 'L' ? halfW : W - halfW;
-
-    if (clientY <= top + SNAP_CORNER) {
-      return { left: x0, top: top, width: w, height: halfH };
-    }
-    if (clientY >= H - SNAP_CORNER) {
-      return { left: x0, top: top + halfH, width: w, height: view.height - halfH };
-    }
-    return { left: x0, top: top, width: w, height: view.height };
+    const zone = classifySnapZone(clientX, clientY);
+    return zone ? snapZoneRect(zone) : null;
   }
 
   // Translucent highlight that previews where a dragged panel will tile.
@@ -305,7 +323,8 @@
     let startTop = rect.top;
 
     const topLimit = minPanelTop();
-    let pendingSnap = null;
+    let pendingSnapRect = null;
+    let pendingSnapZone = null;
     let popped = !wasExpanded; // floating panels need no pop
     // The drag (and its full-viewport overlay) only begins once the cursor
     // moves past DRAG_THRESHOLD. Activating the overlay on mousedown would put
@@ -357,21 +376,24 @@
       panel.style.top = newTop + 'px';
 
       // Preview an edge/corner tile when the cursor enters a snap zone.
-      pendingSnap = computeSnapZone(ev.clientX, ev.clientY);
-      if (pendingSnap) showSnapPreview(pendingSnap); else hideSnapPreview();
+      pendingSnapZone = classifySnapZone(ev.clientX, ev.clientY);
+      pendingSnapRect = pendingSnapZone ? snapZoneRect(pendingSnapZone) : null;
+      if (pendingSnapRect) showSnapPreview(pendingSnapRect); else hideSnapPreview();
     }
 
     function onMouseUp() {
       if (dragging) {
         setOverlayActive(false);
         hideSnapPreview();
-        if (pendingSnap) {
-          applyRect(panel, pendingSnap);
+        if (pendingSnapRect) {
+          applyRect(panel, pendingSnapRect);
           // A tiled panel is not "maximized". Mark it tiled (not maximized) and
           // keep _restoreRect so grabbing the header drags it loose to the prior
-          // float size.
+          // float size. Remember the zone name so the resize handler can reflow
+          // the panel back into the correct half/quarter on viewport changes.
           setMaximized(panel, false);
           panel._tiled = true;
+          panel._tiledZone = pendingSnapZone;
         }
       }
       document.removeEventListener('mousemove', onMouseMove);
@@ -509,6 +531,10 @@
           const view = mapViewRect();
           panel.style.top = Math.round(view.top) + 'px';
           panel.style.height = Math.round(view.height) + 'px';
+        } else if (panel._tiled && panel._tiledZone) {
+          // Reflow the tiled panel into its (possibly resized) zone so a
+          // half-/quarter-snapped panel keeps matching its half/quarter.
+          applyRect(panel, snapZoneRect(panel._tiledZone));
         }
       });
     });

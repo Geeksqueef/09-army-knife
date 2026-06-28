@@ -167,7 +167,10 @@
     // Map coordinates [east, north] per fairy ring code. These mirror the
     // fairy-ring marker coordinates in geojson.js (window.fringInfo, used by
     // the world map); keep the two consistent when adding or moving rings.
-    // CKP has no in-game map location and is intentionally [0, 0].
+    // CKP (Cosmic Entity's Plane) has no in-game map location and is
+    // intentionally absent — callers check `coords` for that case rather
+    // than a sentinel like [0, 0], since 0 is a valid pixel column on a
+    // 15104-wide image.
     const fairyRingCoordinates = {
       "AIQ": [8004, 8109],
       "AIR": [5610, 6994],
@@ -190,7 +193,7 @@
       "CIP": [4096, 1820],
       "CIQ": [4217, 7971],
       "CJR": [5649, 4323],
-      "CKP": [0, 0],
+      // CKP omitted — no in-game map location.
       "CKR": [6424, 8980],
       "CKS": [11654, 5184],
       "CLP": [8698, 7331],
@@ -236,7 +239,7 @@
       if (destItem) destItem.classList.add('selected');
 
       const info = document.getElementById('preview-info');
-      if (coords && coords[0] !== 0) {
+      if (coords) {
         info.textContent = code + ' — ' + dest;
         if (previewMap && previewRc) {
           previewMap.setView(previewRc.unproject(coords), 4.585); // ~50% more zoom than level 4
@@ -250,7 +253,7 @@
     }
 
     function navigateToRing(coords) {
-      if (coords && coords[0] !== 0) {
+      if (coords) {
         window.parent.postMessage({ type: 'navigateTo', x: coords[0], y: coords[1] }, '*');
       }
     }
@@ -269,7 +272,7 @@
 
         const codeLi = document.createElement('li');
         codeLi.dataset.index = index;
-        codeLi.innerHTML = coords && coords[0] !== 0
+        codeLi.innerHTML = coords
           ? '<a href="#">' + code + '</a>'
           : code;
         codeLi.addEventListener('click', function(e) {
@@ -280,12 +283,12 @@
 
         const destLi = document.createElement('li');
         destLi.dataset.index = index;
-        destLi.innerHTML = coords && coords[0] !== 0
+        destLi.innerHTML = coords
           ? '<a href="#">' + dest + '</a>'
           : dest;
         destLi.addEventListener('click', function(e) {
           e.preventDefault();
-          if (coords && coords[0] !== 0) {
+          if (coords) {
             navigateToRing(coords);
           } else {
             selectRing(index, code, dest, coords);
