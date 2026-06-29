@@ -103,12 +103,20 @@ async function handleSearch() {
     }
 }
 
+// Section dividers in the results column share one styling spec; only the
+// accent color and whether they need top spacing differ. `label` is a trusted
+// in-file constant at every call site.
+function sectionHeaderHTML(label, colorVar, topGap = false) {
+    const margins = topGap ? 'margin-top: 25px; margin-bottom: 10px;' : 'margin-bottom: 10px;';
+    return `<h3 style="font-size: 11px; color: var(${colorVar}); text-transform: uppercase; border-bottom: 1px solid var(--border); padding-bottom: 4px; ${margins}">${label}</h3>`;
+}
+
 async function performDualSearch(query) {
     const date = refDateInput.value;
     try {
         const mwRes = await fetch(`${WIKI_API}?action=query&list=search&srsearch=${encodeURIComponent(query)}&srlimit=6&srprop=snippet&format=json&origin=*`).then(r => r.json());
-        
-        resultsArea.innerHTML = `<h3 style="font-size: 11px; color: var(--text-dim); text-transform: uppercase; border-bottom: 1px solid var(--border); padding-bottom: 4px; margin-bottom: 10px;">Historical Archives</h3>`;
+
+        resultsArea.innerHTML = sectionHeaderHTML('Historical Archives', '--text-dim');
         
         if (mwRes.query?.search && mwRes.query.search.length > 0) {
             for (let s of mwRes.query.search) {
@@ -125,7 +133,7 @@ async function performDualSearch(query) {
             }
         }
         
-        resultsArea.innerHTML += `<h3 style="font-size: 11px; color: var(--cyan); text-transform: uppercase; border-bottom: 1px solid var(--border); padding-bottom: 4px; margin-top: 25px; margin-bottom: 10px;">2009Scape CDN</h3>`;
+        resultsArea.insertAdjacentHTML('beforeend', sectionHeaderHTML('2009Scape CDN', '--cyan', true));
         renderCdnPortalCard(query);
 
         addHistory(query, date);

@@ -17,7 +17,7 @@ export default {
                 <th @click="sortSection('default', 'sortValue')">Amount</th>
                 <th>Rarity</th>
               </tr>
-              <tr v-for="item in result.defaultDrops" :key="item.id">
+              <tr v-for="(item, index) in result.defaultDrops" :key="item.id + '-' + item.name + '-' + index">
                 <td><img :src="iconURL(item.id)" :alt="item.name" /></td>
                 <td>
                   <a v-if="getDropTableLink(item.name)" :href="getDropTableLink(item.name)" target="_blank">{{ item.name }}</a>
@@ -43,7 +43,7 @@ export default {
                 <th @click="sortSection('main', 'sortValue')">Amount</th>
                 <th @click="sortSection('main', 'weight')">Rarity</th>
               </tr>
-              <tr v-for="item in result.mainDrops" :key="item.id">
+              <tr v-for="(item, index) in result.mainDrops" :key="item.id + '-' + item.name + '-' + index">
                 <td><img :src="iconURL(item.id)" :alt="item.name" /></td>
                 <td>
                   <a v-if="getDropTableLink(item.name)" :href="getDropTableLink(item.name)" target="_blank" class="npc-link">{{ item.name }}</a>
@@ -69,7 +69,7 @@ export default {
                 <th @click="sortSection('tertiary', 'sortValue')">Amount</th>
                 <th @click="sortSection('tertiary', 'weight')">Rarity</th>
               </tr>
-              <tr v-for="item in result.tertiaryDrops" :key="item.id">
+              <tr v-for="(item, index) in result.tertiaryDrops" :key="item.id + '-' + item.name + '-' + index">
                 <td><img :src="iconURL(item.id)" :alt="item.name" /></td>
                 <td>
                   <a v-if="getDropTableLink(item.name)" :href="getDropTableLink(item.name)" target="_blank" class="npc-link">{{ item.name }}</a>
@@ -95,7 +95,7 @@ export default {
                 <th @click="sortSection('charms', 'sortValue')">Amount</th>
                 <th @click="sortSection('charms', 'weight')">Rarity</th>
               </tr>
-              <tr v-for="item in result.charmDrops" :key="item.id">
+              <tr v-for="(item, index) in result.charmDrops" :key="item.id + '-' + item.name + '-' + index">
                 <td><img :src="iconURL(item.id)" :alt="item.name" /></td>
                 <td>
                   <a v-if="getDropTableLink(item.name)" :href="getDropTableLink(item.name)" target="_blank" class="npc-link">{{ item.name }}</a>
@@ -145,30 +145,30 @@ export default {
   },
   methods: {
     getSortedFiltered(items, filterFn, sectionKey) {
-      const filtered = items.filter(filterFn);
-      const sortKey = this.sortStates[`${sectionKey}Key`];
-      const sortDirection = this.sortStates[`${sectionKey}Direction`] || 'asc';
-      
-      if (!sortKey) return filtered;
-      
-      return [...filtered].sort((a, b) => {
-        const aVal = a[sortKey];
-        const bVal = b[sortKey];
-        if (typeof aVal === 'string') {
-          return sortDirection === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
-        }
-        return sortDirection === 'asc' ? aVal - bVal : bVal - aVal;
-      });
+      return this.sortBySection(items.filter(filterFn), sectionKey);
     },
     getSortedArray(items, sectionKey) {
+      return this.sortBySection(items, sectionKey);
+    },
+    sortBySection(items, sectionKey) {
       const sortKey = this.sortStates[`${sectionKey}Key`];
       const sortDirection = this.sortStates[`${sectionKey}Direction`] || 'asc';
-      
-      if (!sortKey) return items;
-      
+
+      if (!sortKey || !items) return items;
+
       return [...items].sort((a, b) => {
-        const aVal = a[sortKey];
-        const bVal = b[sortKey];
+        let aVal, bVal;
+        if (sortKey === 'weight') {
+          // Rarity column: the raw `weight` is a string from the JSON, so a
+          // generic compare would sort it lexicographically ("128" < "16").
+          // Sort by the numeric percent instead, matching ItemSources.
+          aVal = parseFloat(a.percent);
+          bVal = parseFloat(b.percent);
+        } else {
+          aVal = a[sortKey];
+          bVal = b[sortKey];
+        }
+
         if (typeof aVal === 'string') {
           return sortDirection === 'asc' ? aVal.localeCompare(bVal) : bVal.localeCompare(aVal);
         }
