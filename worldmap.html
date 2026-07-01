@@ -4,8 +4,6 @@
     <title>2009Scape World Transportation Map</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1/dist/leaflet.css" /> -->
-
     <link rel="stylesheet" href="./leaflet.css" />
     <style>
       html, body, #map {
@@ -22,28 +20,45 @@ padding: 15px;
 border-image: url(./box-81.png) 30 stretch;
 box-shadow: 10px 10px 10px #999;
 background-color: #bbab8c;
-}       
+}
+/* Push Leaflet's top controls (zoom +/- on the left, the layers/legend toggle
+   on the right) below the dashboard toolbar that floats over the map. The exact
+   inset is sent by the parent dashboard via postMessage (--map-top-inset); the
+   default here covers a single-row toolbar when the map is opened standalone. */
+.leaflet-top { margin-top: var(--map-top-inset, 52px); }
 </style>
   </head>
   <body>
     <div id="map"></div>
-    <!-- <script src="https://unpkg.com/leaflet@1/dist/leaflet.js"></script> -->
     <script src="./leaflet.js"></script>
     <script src="rastercoords.js"></script>
     <script src="geojson.js"></script>
     <script src="index.js"></script>
     <script>
-      // Listen for navigation messages from parent window
       window.addEventListener('message', function(event) {
-        if (event.data.type === 'navigateTo' && event.data.x && event.data.y) {
-          // Get the map instance from the global scope
+        if (!event.data) return;
+
+        // Use finite-number checks, not truthiness: 0 is a valid map coordinate.
+        if (event.data.type === 'navigateTo' && Number.isFinite(event.data.x) && Number.isFinite(event.data.y)) {
           if (window.mapInstance) {
             const rc = window.mapInstance.rasterCoords;
             const latlng = rc.unproject([event.data.x, event.data.y]);
             window.mapInstance.setView(latlng, 5);
           }
         }
+
+        // The parent measures its toolbar and tells us how far to push the
+        // Leaflet controls down so the zoom and legend buttons stay clear of it.
+        if (event.data.type === 'setTopInset' && Number.isFinite(event.data.value)) {
+          document.documentElement.style.setProperty('--map-top-inset', event.data.value + 'px');
+        }
       });
+
+      // Ask the parent for the current toolbar inset as soon as we are ready,
+      // covering the case where the parent's iframe load event already fired.
+      if (window.parent && window.parent !== window) {
+        window.parent.postMessage({ type: 'mapReady' }, '*');
+      }
     </script>
     </body>
 </html>

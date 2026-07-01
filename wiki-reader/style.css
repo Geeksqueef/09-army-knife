@@ -1,0 +1,432 @@
+/**
+ * 2009Scape Wiki Reader - Stylesheet v4.4
+ * Protected by AGPL-3.0
+ */
+
+:root {
+    /* Dark Mode (Default) */
+    --bg: #1a1714;
+    --panel: #24211b;
+    --panel-hover: #2a2722;
+    --accent: #c29d4d;          /* Gold */
+    --accent-dim: #6b5a33;
+    --cyan: #5ec6ca;            /* Headers */
+    --text: #d1ced1;
+    --text-dim: #928e85;
+    --border: #38342e;
+    --input-bg: #2a2723;
+    --modal-overlay: rgba(0, 0, 0, 0.85);
+}
+
+/* Seashell Light Mode */
+body.light-mode {
+    --bg: #fff5ee; 
+    --panel: #f5ebe4;
+    --panel-hover: #ede2d8;
+    --accent: #8b6d2d;
+    --accent-dim: #c29d4d;
+    --cyan: #007a7e;
+    --text: #2e2b26;
+    --text-dim: #6d665e;
+    --border: #dcd0c5;
+    --input-bg: #fffafa;
+}
+
+/* --- Base Styles --- */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.4;
+    transition: background 0.3s ease;
+}
+
+header {
+    text-align: center;
+    padding: 35px 20px;
+    position: relative;
+}
+
+header h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--text);
+}
+
+.subtitle {
+    color: var(--text-dim);
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+/* --- Navigation --- */
+.top-nav {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.icon-btn, .top-nav a.icon-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.icon-btn:hover, .top-nav a.icon-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* --- Layout --- */
+.app-container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 40px;
+    width: 95%;
+    max-width: 1150px;
+    margin: 0 auto 50px;
+}
+
+/* --- Tabs --- */
+.tabs {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 15px;
+}
+
+.tab-btn {
+    background: #2a2723;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    padding: 8px 18px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.tab-btn.active {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+}
+
+/* --- Search Panel --- */
+.input-row {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+input {
+    flex: 1; /* This makes the search bar take up all available space */
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    color: #fff;
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 3px;
+    outline: none;
+}
+
+
+body.light-mode input {
+    color: var(--text);
+}
+
+#search-btn {
+    background: var(--accent-dim);
+    border: 1px solid var(--accent);
+    color: #fff;
+    padding: 0 25px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#search-btn:hover {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+.checkbox-row {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    font-size: 11px;
+    color: var(--text-dim);
+}
+
+/* --- Results --- */
+.result-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    padding: 20px;
+    margin-top: 12px;
+    position: relative;
+    border-radius: 4px;
+}
+
+.result-card h3 {
+    color: var(--cyan);
+    margin: 0 0 5px 0;
+    font-family: 'Times New Roman', serif;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.result-card h3:hover {
+    text-decoration: underline;
+}
+
+.search-snippet {
+    font-size: 11px;
+    color: var(--text-dim);
+    line-height: 1.5;
+}
+
+.searchmatch {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* --- Bookmark Icon --- */
+.bookmark-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.bookmark-icon-svg {
+    width: 18px;
+    height: 22px;
+    fill: none;
+    stroke: var(--text-dim);
+    stroke-width: 2;
+    transition: 0.2s;
+}
+
+.bookmark-btn.active .bookmark-icon-svg {
+    fill: var(--accent);
+    stroke: var(--accent);
+}
+
+/* --- Sidebar --- */
+.sidebar {
+    border-left: 1px solid var(--border);
+    padding-left: 20px;
+}
+
+.side-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 15px;
+}
+
+.side-tab {
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    padding: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    position: relative;
+}
+
+.side-tab.active {
+    color: var(--accent);
+}
+
+.side-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent);
+}
+
+.side-item {
+    background: var(--panel);
+    padding: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- Quest Runner HUD --- */
+#quest-hud {
+    background: var(--panel);
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.hud-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-bottom: 15px; }
+.hud-header h2 { color: var(--accent); font-family: 'Times New Roman', serif; margin: 0; font-size: 1.6rem; }
+
+.hud-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.hud-box h4 { color: var(--cyan); margin: 0 0 10px 0; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+.hud-box ul { list-style: none; padding: 0; margin: 0; font-size: 12px; color: var(--text); }
+.hud-box li { padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+
+.hud-icon { margin-right: 5px; }
+
+@media (max-width: 600px) { .hud-grid { grid-template-columns: 1fr; } }
+
+/* --- Changelog Styling --- */
+.changelog-item {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--border);
+    font-size: 11px;
+}
+
+.changelog-tag {
+    background: var(--accent);
+    color: var(--bg);
+    padding: 1px 4px;
+    border-radius: 2px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* --- Modals --- */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--modal-overlay);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--panel);
+    padding: 30px;
+    border: 1px solid var(--border);
+    width: 320px;
+}
+
+.primary-btn {
+    background: var(--accent);
+    color: var(--bg);
+    width: 100%;
+    padding: 12px;
+    border: none;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* --- Utilities --- */
+.hidden { display: none !important; }
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.error-shake {
+    animation: shake 0.2s ease-in-out 0s 2;
+    border-color: #ff5555 !important;
+}
+
+.validation-msg {
+    color: #ff5555;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+@media (max-width: 900px) {
+    .app-container { grid-template-columns: 1fr; }
+    .sidebar { border-left: none; border-top: 1px solid var(--border); padding: 20px 0; }
+}
+
+/* --- Responsive Design (Mobile & Tablet) --- */
+
+@media (max-width: 900px) {
+    /* Stack Sidebar below Main Content */
+    .app-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 92%;
+    }
+
+    .sidebar {
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding-left: 0;
+        padding-top: 30px;
+        margin-top: 20px;
+    }
+
+    /* Make buttons and inputs easier to tap */
+    #search-btn {
+        padding: 12px 20px;
+    }
+
+    .tab-btn {
+        flex: 1;
+        text-align: center;
+        padding: 12px 5px;
+    }
+
+    /* Adjust Quest HUD for small screens */
+    .hud-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .top-nav {
+        right: 15px;
+        top: 15px;
+    }
+}
+
+/* Specific fix for very small phones */
+@media (max-width: 480px) {
+    .input-row {
+        flex-direction: column;
+    }
+
+    #search-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .top-nav {
+        position: static;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}

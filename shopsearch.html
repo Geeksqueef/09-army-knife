@@ -8,42 +8,52 @@
 }
 
 body {
-  background-color: #876A38FF;
+  background-color: #876A38;
   margin: 10px;
+  font-family: Arial, sans-serif;
+  color: #1a0f0a;
 }
 
 #myInput {
-  background-image: url('/css/searchicon.png');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%231a0f0a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>');
   background-position: 10px 10px;
   background-repeat: no-repeat;
+  background-size: 18px 18px;
   width: 100%;
   font-size: 16px;
   padding: 12px 20px 12px 40px;
-  border: 1px solid #94866d;
+  border: 1px solid #5c4a2a;
   margin-bottom: 12px;
   background-color: #e2dbc8;
+  color: #1a0f0a;
 }
 
 #myTable {
   border-collapse: collapse;
   width: 100%;
-  border: 1px solid #94866d;
-  font-size: 18px;
+  border: 1px solid #5c4a2a;
+  font-size: 16px;
 }
 
 #myTable th, #myTable td {
   text-align: left;
-  padding: 12px;
-  border: 1px solid #94866d;
+  padding: 10px;
+  border: 1px solid #5c4a2a;
   background-color: #e2dbc8;
+  color: #1a0f0a;
 }
 
 #myTable tr {
-  border-bottom: 1px solid #94866d;
+  border-bottom: 1px solid #5c4a2a;
 }
 
 #myTable tr.header, #myTable tr:hover {
   background-color: #d4cbb0;
+}
+
+#myTable th {
+  background-color: #6B5028;
+  color: #F2C848;
 }
 </style>
 </head>
@@ -51,7 +61,6 @@ body {
 
 <center><a href="./"><img src="images/logo.png"></a>
   <h2 style="color: #F2C848; text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); -webkit-text-stroke: 0.5px black;">Shop Inventories</h2></center>
-<center><!--p>To go back to the main page click <a href="index.html">here</a></p!--></center>
 <font size="2">
 Search for items present in the inventories of most of the shops in 2009Scape based on the information in the code base circa 23 December 2023.<br>
 Note: This search does not accept punctuation in an item's name.<br>

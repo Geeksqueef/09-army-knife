@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fairy Ring Codes</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="./leaflet.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #876A38;
+      color: #1a0f0a;
+    }
+    .fr-container {
+      display: flex;
+      height: 100%;
+    }
+    .fr-lists-wrapper {
+      display: flex;
+      flex: 1;
+      min-width: 0;
+      overflow-y: auto;
+      border-right: 1px solid #5c4a2a;
+      align-items: flex-start;
+    }
+    .fr-col {
+      background-color: #9E7E4C;
+    }
+    .fr-col.codes {
+      width: 90px;
+      flex-shrink: 0;
+      border-right: 1px solid #5c4a2a;
+    }
+    .fr-col.destinations {
+      flex: 1;
+      min-width: 180px;
+    }
+    .fr-col.preview {
+      width: 220px;
+      flex-shrink: 0;
+      border-right: none;
+      display: flex;
+      flex-direction: column;
+      background-color: #9E7E4C;
+      overflow: hidden;
+    }
+    .fr-header {
+      background-color: #6B5028;
+      color: #F2C848;
+      padding: 8px;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+      border-bottom: 1px solid #5c4a2a;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .fr-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .fr-list li {
+      padding: 6px 10px;
+      border-bottom: 1px solid #5c4a2a;
+      cursor: pointer;
+    }
+    .fr-list li:hover,
+    .fr-list li.selected {
+      background-color: #B8955E;
+    }
+    .fr-list a {
+      color: #1a0f0a;
+      text-decoration: none;
+      display: block;
+    }
+    .fr-resize-handle {
+      width: 6px;
+      flex-shrink: 0;
+      background-color: #5c4a2a;
+      cursor: ew-resize;
+      position: relative;
+      z-index: 10;
+    }
+    .fr-resize-handle:hover {
+      background-color: #F2C848;
+    }
+    .preview-map {
+      flex: 1;
+      background-color: #B0B0B0;
+      min-height: 0;
+    }
+    .preview-info {
+      padding: 8px;
+      background-color: #6B5028;
+      color: #F2C848;
+      font-size: 12px;
+      text-align: center;
+      min-height: 36px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="fr-container">
+    <div class="fr-lists-wrapper" id="lists-wrapper">
+      <div class="fr-col codes">
+        <div class="fr-header">Code</div>
+        <ul class="fr-list" id="code-list"></ul>
+      </div>
+      <div class="fr-col destinations">
+        <div class="fr-header">Destination</div>
+        <ul class="fr-list" id="dest-list"></ul>
+      </div>
+    </div>
+    <div class="fr-resize-handle" id="resize-handle"></div>
+    <div class="fr-col preview" id="preview-col">
+      <div class="fr-header">Preview</div>
+      <div id="preview-map" class="preview-map"></div>
+      <div id="preview-info" class="preview-info">Select a ring to see the area.</div>
+    </div>
+  </div>
+
+  <script src="./leaflet.js"></script>
+  <script src="./rastercoords.js"></script>
+  <script>
+    const fairyRingData = [
+      ["A I Q", "Mudskipper point"],
+      ["A I R", "Necromancer Island"],
+      ["A J Q", "Dungeons: Cave south of Dorgesh-Kaan"],
+      ["A J R", "Kandarin: Slayer cave"],
+      ["A J S", "Penguin Island"],
+      ["A K Q", "Kandarin: Piscatoris Hunter"],
+      ["A K S", "Feldip Hills"],
+      ["A L R", "Abyssal Area"],
+      ["A L Q", "Morytania Haunted Woods"],
+      ["A L S", "McGrubor's Wood"],
+      ["B I P", "Morytania Island"],
+      ["B I Q", "Kalphite Lair"],
+      ["B I S", "Ardougne Zoo Unicorns"],
+      ["B K P", "Castle Wars"],
+      ["B K Q", "Enchanted Valley"],
+      ["B K R", "Mort Myre Swamp"],
+      ["B L P", "TzHaar Area"],
+      ["B L R", "Legends Guild"],
+      ["C I P", "Islands: Miscellania"],
+      ["C I Q", "Yanille"],
+      ["C J R", "Sinclair West"],
+      ["C K P", "Cosmic Entity's Plane (Nowhere)"],
+      ["C K R", "Karamja Hunter"],
+      ["C K S", "Canafis"],
+      ["C L P", "Island South of Draynor Village"],
+      ["C L S", "Jungle Spiders"],
+      ["D I S", "Wizards Tower"],
+      ["D J P", "Tower of Life"],
+      ["D J R", "Sinclair North West"],
+      ["D K P", "East Karamja"],
+      ["D K R", "Edgeville/GE"],
+      ["D K S", "Kandarin: Snowy Hunter Area"],
+      ["D L Q", "Desert Lizard"],
+      ["D L R", "Poison Wastes"]
+    ];
+
+    // Map coordinates [east, north] per fairy ring code. These mirror the
+    // fairy-ring marker coordinates in geojson.js (window.fringInfo, used by
+    // the world map); keep the two consistent when adding or moving rings.
+    // CKP (Cosmic Entity's Plane) has no in-game map location and is
+    // intentionally absent — callers check `coords` for that case rather
+    // than a sentinel like [0, 0], since 0 is a valid pixel column on a
+    // 15104-wide image.
+    const fairyRingCoordinates = {
+      "AIQ": [8004, 8109],
+      "AIR": [5610, 6994],
+      "AJQ": [2500, 1400],
+      "AJR": [6255, 4022],
+      "AJS": [3990, 1724],
+      "AKQ": [2525, 4007],
+      "AKS": [4565, 9356],
+      "ALQ": [12882, 4990],
+      "ALR": [2500, 1350],
+      "ALS": [5157, 4979],
+      "BIP": [11352, 6373],
+      "BIQ": [10050, 8248],
+      "BIS": [5091, 6841],
+      "BKP": [3060, 8716],
+      "BKQ": [2500, 1300],
+      "BKR": [11830, 5502],
+      "BLP": [6770, 7555],
+      "BLR": [5932, 6151],
+      "CIP": [4096, 1820],
+      "CIQ": [4217, 7971],
+      "CJR": [5649, 4323],
+      // CKP omitted — no in-game map location.
+      "CKR": [6424, 8980],
+      "CKS": [11654, 5184],
+      "CLP": [8698, 7331],
+      "CLS": [5464, 8343],
+      "DIS": [8927, 7807],
+      "DJP": [5269, 7134],
+      "DJR": [5415, 4234],
+      "DKP": [7228, 8100],
+      "DKR": [9065, 4989],
+      "DKS": [5964, 3161],
+      "DLQ": [11459, 8870],
+      "DLR": [1668, 8197]
+    };
+
+    let previewMap = null;
+    let previewRc = null;
+    const mapImageSize = [15104, 12800];
+
+    function initPreviewMap() {
+      previewMap = L.map('preview-map', {
+        minZoom: 1,
+        maxZoom: 6,
+        zoomSnap: 0, // allow fractional zoom so the default can be 50% tighter than a whole level
+        zoomControl: false,
+        attributionControl: false
+      });
+      previewRc = new L.RasterCoords(previewMap, mapImageSize);
+      L.tileLayer('./tiles/{z}/{x}/{y}.png', {
+        noWrap: true,
+        minZoom: 0,
+        maxZoom: 6
+      }).addTo(previewMap);
+      previewMap.setView(previewRc.unproject([7500, 6400]), 1);
+    }
+
+    function selectRing(index, code, dest, coords) {
+      document.querySelectorAll('.fr-list li').forEach(li => li.classList.remove('selected'));
+      // Select by row index, not by code: some codes (e.g. CKS) can repeat,
+      // and matching on code alone would always highlight the first such row.
+      const codeItem = document.querySelector('#code-list li[data-index="' + index + '"]');
+      const destItem = document.querySelector('#dest-list li[data-index="' + index + '"]');
+      if (codeItem) codeItem.classList.add('selected');
+      if (destItem) destItem.classList.add('selected');
+
+      const info = document.getElementById('preview-info');
+      if (coords) {
+        info.textContent = code + ' — ' + dest;
+        if (previewMap && previewRc) {
+          previewMap.setView(previewRc.unproject(coords), 4.585); // ~50% more zoom than level 4
+        }
+      } else {
+        info.textContent = code + ' — ' + dest + ' (no map location)';
+        if (previewMap && previewRc) {
+          previewMap.setView(previewRc.unproject([7500, 6400]), 1);
+        }
+      }
+    }
+
+    function navigateToRing(coords) {
+      if (coords) {
+        window.parent.postMessage({ type: 'navigateTo', x: coords[0], y: coords[1] }, '*');
+      }
+    }
+
+    function populate() {
+      const codeList = document.getElementById('code-list');
+      const destList = document.getElementById('dest-list');
+      codeList.innerHTML = '';
+      destList.innerHTML = '';
+
+      fairyRingData.forEach((row, index) => {
+        const code = row[0];
+        const dest = row[1];
+        const key = code.replace(/\s/g, '');
+        const coords = fairyRingCoordinates[key];
+
+        const codeLi = document.createElement('li');
+        codeLi.dataset.index = index;
+        codeLi.innerHTML = coords
+          ? '<a href="#">' + code + '</a>'
+          : code;
+        codeLi.addEventListener('click', function(e) {
+          e.preventDefault();
+          selectRing(index, code, dest, coords);
+        });
+        codeList.appendChild(codeLi);
+
+        const destLi = document.createElement('li');
+        destLi.dataset.index = index;
+        destLi.innerHTML = coords
+          ? '<a href="#">' + dest + '</a>'
+          : dest;
+        destLi.addEventListener('click', function(e) {
+          e.preventDefault();
+          if (coords) {
+            navigateToRing(coords);
+          } else {
+            selectRing(index, code, dest, coords);
+          }
+        });
+        destList.appendChild(destLi);
+      });
+    }
+
+    (function() {
+      const handle = document.getElementById('resize-handle');
+      const previewCol = document.getElementById('preview-col');
+      const container = document.querySelector('.fr-container');
+      const MIN_PREVIEW = 140;
+      const MIN_LISTS  = 270; // codes(90) + destinations(180)
+
+      let dragging = false;
+      let startX = 0;
+      let startWidth = 0;
+
+      handle.addEventListener('mousedown', function(e) {
+        dragging = true;
+        startX = e.clientX;
+        startWidth = previewCol.getBoundingClientRect().width;
+        document.body.style.cursor = 'ew-resize';
+        document.body.style.userSelect = 'none';
+        e.preventDefault();
+      });
+
+      document.addEventListener('mousemove', function(e) {
+        if (!dragging) return;
+        const delta = startX - e.clientX; // positive = dragging left = wider preview
+        const containerWidth = container.getBoundingClientRect().width;
+        const handleWidth = handle.getBoundingClientRect().width;
+        const maxPreview = containerWidth - handleWidth - MIN_LISTS;
+        let newWidth = Math.min(Math.max(startWidth + delta, MIN_PREVIEW), maxPreview);
+        previewCol.style.width = newWidth + 'px';
+        if (previewMap) previewMap.invalidateSize();
+      });
+
+      document.addEventListener('mouseup', function() {
+        if (!dragging) return;
+        dragging = false;
+        document.body.style.cursor = '';
+        document.body.style.userSelect = '';
+        if (previewMap) previewMap.invalidateSize();
+      });
+    })();
+
+    populate();
+    initPreviewMap();
+  </script>
+</body>
+</html>

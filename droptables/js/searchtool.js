@@ -69,7 +69,11 @@ Vue.createApp({
       d.items.sort((a, b) => d[`${key}Sorted`] ? a[key] - b[key] : b[key] - a[key]);
     },
     spaceToUnder(str) {
-      return str.replaceAll(' ', '_').toLowerCase()
+      // Drop apostrophes so users can find NPCs like "K'ril Tsutsaroth" or
+      // "Kree'arra" without typing the ' symbol. Applied to both the search
+      // term and the indexed names, so the two normalize the same way. Covers
+      // straight ('), curly (’) and backtick (`) variants.
+      return str.replaceAll(' ', '_').replace(/['’`]/g, '').toLowerCase()
     },
     isNormalCharm(id) {
       const charms = ["12163", "12160", "12159", "12158"]

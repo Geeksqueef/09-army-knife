@@ -1,1 +1,7 @@
 /2009Scape Skill Calc local.xlsx
+
+# Session continuations and browser logs
+.omo/
+.omc/
+.playwright-mcp/
+

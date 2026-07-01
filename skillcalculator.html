@@ -501,6 +501,10 @@
                     <input type="number" id="goal-level" value="99" min="1" max="99">
                 </div>
                 <div class="input-group">
+                    <label for="goal-xp-input">Goal XP (optional)</label>
+                    <input type="number" id="goal-xp-input" min="0" max="200000000" placeholder="Up to 200,000,000 — overrides goal level">
+                </div>
+                <div class="input-group">
                     <label for="xp-rate">XP Rate Multiplier</label>
                     <select id="xp-rate">
                         <option value="1">1x</option>
@@ -749,6 +753,7 @@
                 document.getElementById('starting-xp').addEventListener('input', handleSkillXpChange);
                 document.getElementById('skill-current-level').addEventListener('input', handleSkillLevelChange);
                 document.getElementById('goal-level').addEventListener('input', updateCalculations);
+                document.getElementById('goal-xp-input').addEventListener('input', updateCalculations);
                 document.getElementById('xp-rate').addEventListener('input', updateCalculations);
                 document.getElementById('prayer-method').addEventListener('input', updateCalculations);
                 document.getElementById('burners').addEventListener('input', updateCalculations);
@@ -1334,6 +1339,15 @@
             return entry ? entry.total_xp : 0;
         }
 
+        function getGoalXp() {
+            const goalXpInput = parseInt(document.getElementById('goal-xp-input').value);
+            if (Number.isFinite(goalXpInput) && goalXpInput > 0) {
+                return Math.min(goalXpInput, 200000000);
+            }
+            const goalLevel = parseInt(document.getElementById('goal-level').value) || 99;
+            return getXpForLevel(goalLevel);
+        }
+
         function getPrayerMultiplier() {
             if (currentSkill !== 'Prayer') return 1;
             
@@ -1379,7 +1393,7 @@
             document.getElementById('skill-current-level').value = currentLevel;
 
             // Calc goal XP and XP needed
-            const goalXp = getXpForLevel(goalLevel);
+            const goalXp = getGoalXp();
             const xpNeeded = Math.max(0, goalXp - startingXp);
             
             document.getElementById('goal-xp').textContent = goalXp.toLocaleString();
@@ -1482,7 +1496,7 @@
             const startingXp = parseInt(document.getElementById('starting-xp').value) || 0;
             const goalLevel = parseInt(document.getElementById('goal-level').value) || 99;
             const xpRate = parseFloat(document.getElementById('xp-rate').value) || 5;
-            const xpNeeded = Math.max(0, getXpForLevel(goalLevel) - startingXp);
+            const xpNeeded = Math.max(0, getGoalXp() - startingXp);
             const prayerMultiplier = getPrayerMultiplier();
             const brawlerMultiplier = getBrawlerMultiplier();
             

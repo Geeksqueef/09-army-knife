@@ -94,6 +94,7 @@ td{
     background-color: #e2dbc8;
     padding: 10px !important;
     text-align: center;
+    vertical-align: middle;
 }
 td:first-child {
     width: 40px;
@@ -175,7 +176,19 @@ tbody{
 }
 .hover-link img{
     padding-left: 10px;
-    display: "inline";
+    display: inline;
+    vertical-align: middle;
+}
+
+/* Center item icons in table cells.
+   The icon (36px) can be wider than the cell's content box (Bootstrap's
+   border-box + padding leaves ~18px), so `display:block; margin:0 auto`
+   would left-align it (auto margins collapse to 0 on overflow). Using
+   inline-block lets the cell's text-align:center center it and split any
+   overflow symmetrically, keeping it on the cell's true center. */
+td img {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .npc-link {
