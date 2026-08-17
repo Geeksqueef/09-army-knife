@@ -179,6 +179,28 @@
             background-color: #ffd700;
             color: #5c4a2a;
         }
+        .pull-tracker-btn {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: #ffffff;
+            border: 3px solid #2E7D32;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .pull-tracker-btn:hover {
+            background: linear-gradient(135deg, #5CBF60, #4CAF50);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+        }
+        .pull-tracker-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
         .modal {
             display: none;
             position: fixed;
@@ -235,7 +257,7 @@
     <div id="loading">Loading calculator...</div>
     <div id="calculator" class="calculator-container" style="display: none;">
         <div class="info-bar" style="background-color: #5c4a2a; padding: 15px; border-radius: 6px; border: 1px solid #2a1a0a; margin-bottom: 20px; text-align: center;">
-            <p style="color: #ffd700; font-size: 16px; margin: 0;">Enter your username and click the button to pull up your experience from highscores in a new tab
+            <p style="color: #ffd700; font-size: 16px; margin: 0;">Enter your username and click the button to pull up your experience from the 09-Tracker repository (with fallback to highscores API)
                 <br>Use the legend to determine which skill you are copying the experience from. *After copying and pasting the experience press the calculate button.</p>
         </div>
         <div class="skill-tabs" id="skill-tabs"></div>
@@ -475,6 +497,10 @@
                     <label for="skill-username">Username</label>
                     <input type="text" id="skill-username" placeholder="Enter username">
                     <span id="skill-cache-status" style="font-size: 12px; margin-top: 5px;"></span>
+                </div>
+                <div class="input-group">
+                    <label>&nbsp;</label>
+                    <button class="pull-tracker-btn" onclick="pullAllExperienceFromTracker()">Pull Exp from Tracker</button>
                 </div>
                 <div class="input-group">
                     <label>&nbsp;</label>
@@ -1107,6 +1133,44 @@
                 }
             }
             
+            // Try fetching from 09-Tracker GitHub repository first
+            const trackerUrl = `https://raw.githubusercontent.com/Magiepie/09-Tracker/main/data/players/${formattedUsername}.json`;
+            
+            try {
+                const response = await fetch(trackerUrl);
+                if (response.ok) {
+                    const trackerData = await response.json();
+                    
+                    // Transform 09-Tracker format to match expected API format
+                    // 09-Tracker: { snapshots: [{ skills: [{ id, level, xp }] }] }
+                    // Expected: [{ experience, level, rank }] indexed by skill ID
+                    const transformedData = [];
+                    if (trackerData.snapshots && trackerData.snapshots.length > 0) {
+                        const latestSnapshot = trackerData.snapshots[0];
+                        if (latestSnapshot.skills) {
+                            latestSnapshot.skills.forEach(skill => {
+                                transformedData[skill.id] = {
+                                    experience: skill.xp,
+                                    level: skill.level,
+                                    rank: 0 // 09-Tracker doesn't provide rank
+                                };
+                            });
+                        }
+                    }
+                    
+                    // Cache the successful response
+                    setCache(username, transformedData);
+                    console.log('Fetched and cached data for:', username, 'from 09-Tracker');
+                    
+                    return transformedData;
+                } else {
+                    console.log('09-Tracker returned status', response.status, '- user may not have data in repository');
+                }
+            } catch (error) {
+                console.log('09-Tracker fetch failed, trying API:', error);
+            }
+            
+            // Fallback to 2009scape API
             const apiUrl = `http://api.2009scape.org:3000/hiscores/playerSkills/1/${formattedUsername}`;
             
             // Try multiple CORS proxies in case one fails
@@ -1138,7 +1202,7 @@
                 }
             }
             
-            alert('Error fetching live experience: All CORS proxies failed. The API may be down or experiencing issues.');
+            alert('Error fetching live experience: All sources failed. The 09-Tracker repository may not have data for this user, or the API may be down. Make sure the username exists in the 09-Tracker repository.');
             return null;
         }
 
@@ -1285,6 +1349,65 @@
                 processXpInput(input);
                 handleVinesweeperXpChange();
             }
+        }
+
+        async function pullAllExperienceFromTracker() {
+            const username = document.getElementById('skill-username').value.trim();
+            if (!username) {
+                alert('Please enter a username first');
+                return;
+            }
+
+            console.log('Pulling experience for username:', username);
+            console.log('Current skill:', currentSkill);
+
+            // Fetch data from tracker
+            const data = await fetchLiveExperience(username, true);
+            if (!data) {
+                alert('Failed to fetch experience data from tracker');
+                return;
+            }
+
+            console.log('Fetched data:', data);
+            console.log('Skill to index mapping:', skillToIndex);
+
+            // Populate skill calculator section
+            const skillIndex = skillToIndex[currentSkill];
+            console.log('Skill index for', currentSkill, ':', skillIndex);
+            console.log('Data at skill index:', data[skillIndex]);
+
+            if (data[skillIndex] !== undefined) {
+                const xp = data[skillIndex].experience || 0;
+                console.log('Setting starting-xp to:', xp);
+                document.getElementById('starting-xp').value = xp;
+                handleSkillXpChange();
+                updateCalculations();
+                updateCacheStatus('skill', 'cached', username);
+            } else {
+                console.log('Skill data not found at index:', skillIndex);
+                alert('Skill data not found for current skill. The user may not have data in the tracker for this skill.');
+            }
+
+            // Populate penguin points section
+            const penguinSkill = document.getElementById('penguin-skill-select').value;
+            const penguinSkillIndex = skillToIndex[penguinSkill];
+            if (data[penguinSkillIndex] !== undefined) {
+                const xp = data[penguinSkillIndex].experience || 0;
+                document.getElementById('penguin-current-xp').value = xp;
+                handlePenguinXpChange();
+                updateCacheStatus('penguin', 'cached', username);
+            }
+
+            // Populate vinesweeper section (Farming - index 19)
+            const farmingIndex = 19;
+            if (data[farmingIndex] !== undefined) {
+                const xp = data[farmingIndex].experience || 0;
+                document.getElementById('vinesweeper-current-xp').value = xp;
+                handleVinesweeperXpChange();
+                updateCacheStatus('vinesweeper', 'cached', username);
+            }
+
+            alert('Successfully pulled experience data from tracker for all calculator sections!');
         }
 
         function openExperienceTable(section) {

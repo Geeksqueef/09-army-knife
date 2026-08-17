@@ -14,7 +14,8 @@
     'shop-viewer': { title: 'Shop Inventories', src: './shopsearch.html', width: 900, height: 550 },
     'droptables': { title: 'Drop Tables', src: './droptables/index.html', width: 1000, height: 650 },
     'npc-viewer': { title: 'NPC Viewer', src: './npc/index.html', width: 900, height: 600 },
-    'wiki-reader': { title: 'RS Wiki Reader', src: './wiki-reader/index.html', width: 1000, height: 700 }
+    'wiki-reader': { title: 'RS Wiki Reader', src: './wiki-reader/index.html', width: 1000, height: 700 },
+    'tracker': { title: '09-Tracker', src: 'https://magiepie.github.io/09-Tracker/', width: 1200, height: 800 }
   };
 
   // Minimum sizes for resizable panels; matches the CSS floor so resize
